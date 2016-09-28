@@ -1,0 +1,67 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: Paper_v1.aux
+The style file: plos2009.bst
+Database file #1: References_v1.bib
+Warning--I didn't find a database entry for "Jewett:2008aa"
+Warning--I didn't find a database entry for "MATTHAEI:1961aa"
+Warning--I didn't find a database entry for "NIRENBERG:1961aa"
+Warning--I didn't find a database entry for "Lu:2014aa"
+Warning--I didn't find a database entry for "Hodgman:2012aa"
+Warning--I didn't find a database entry for "2012_lewis_palsson_NatRevMicrobio"
+Warning--I didn't find a database entry for "2000_edwards_palsson_PNAS"
+Warning--I didn't find a database entry for "Feist:2007aa"
+Warning--I didn't find a database entry for "Oh:2007aa"
+Warning--I didn't find a database entry for "2009_feist_palsson_NatRevMicrobio"
+Warning--I didn't find a database entry for "2002_ibarra_edwards_palsson_Nat"
+Warning--I didn't find a database entry for "2007_schuetz_sauer_MolSysBio"
+Warning--I didn't find a database entry for "2013_hyduke_lewis_palsson_MolBioSys"
+Warning--I didn't find a database entry for "2013_mccloskey_palsson_feist_MolSysBio"
+Warning--I didn't find a database entry for "2012_zomorrodi_maranas_MetaEng"
+Warning--I didn't find a database entry for "GLPK"
+Warning--I didn't find a database entry for "SOBOL_METHOD"
+Warning--I didn't find a database entry for "Saltelli:2010"
+Warning--I didn't find a database entry for "SALIB"
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+You've used 0 entries,
+            2441 wiz_defined-function locations,
+            573 strings with 5125 characters,
+and the built_in function-call counts, 42 in all, are:
+= -- 0
+> -- 0
+< -- 0
++ -- 0
+- -- 0
+* -- 2
+:= -- 7
+add.period$ -- 0
+call.type$ -- 0
+change.case$ -- 0
+chr.to.int$ -- 0
+cite$ -- 0
+duplicate$ -- 0
+empty$ -- 1
+format.name$ -- 0
+if$ -- 1
+int.to.chr$ -- 0
+int.to.str$ -- 0
+missing$ -- 0
+newline$ -- 15
+num.names$ -- 0
+pop$ -- 0
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 1
+stack$ -- 0
+substring$ -- 0
+swap$ -- 0
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 0
+width$ -- 0
+write$ -- 14
+(There were 19 warnings)
