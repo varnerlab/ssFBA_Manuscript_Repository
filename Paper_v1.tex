@@ -192,6 +192,77 @@ Taken together, sequence specific constraints based modeling offers a novel mean
 
 
 \section*{Results}
+The protein concentration levels of deGFP produced with TX-TL 2.0 at different plasmid concentrations was modeled using a sequence specific constraints based modeling approach in a \textit{E. coli} cell free network (Fig. \ref{fig:deGFP_Plasmid}).
+The metabolic network was formulated by removing all cell wall associated reactions and incorporating amino acid synthesis and transcription/translation associated reactions. 
+The network consisted of 281 reactions and 132 species. 
+The transcription and translation rates were constrained to experimental measurements \cite{2016_Garamella_etal_TXTL} for the RNA polymerase and ribosome elongation rates. 
+The production time for TX-TL 2.0 is approximately 8 hours \cite{2016_Garamella_etal_TXTL}. 
+The concentration of deGFP was determined at each plasmid concentration by multiplying the corresponding production flux by the production time. 
+The sequence specific constraints based model was able to capture the deGFP concentration up to a plasmid concentration of 5 nM and overestimates deGFP measurements above that.
+TX-TL 2.0 has a saturation on protein production mostly due to limited resources which our model begins to see saturating effects at ~9 nM plasmid concentration. 
+This may be due to oxidative phosphorylation activity which has been observed to take place in other cell free systems \cite{2008_Jewett_etal_OxPhos}.
+
+\begin{figure}[!t]\centering
+\includegraphics[width=0.45\textwidth]{./figures/deGFP_Plasmid.png}
+\caption{Model simulation (solid line) versus deGFP protein concentration (dots) at different plasmid concentrations produced in TX-TL 2.0. 
+}
+\label{fig:deGFP_Plasmid}
+\end{figure}
+
+\begin{figure}[!t]\centering
+\includegraphics[width=0.45\textwidth]{./figures/CAT_oxphos.pdf}
+\caption{
+}
+\label{fig:CAT_oxphos}
+\end{figure}
+
+Oxidative phosphorylation activity influences the protein production flux as well as acetate and lactate flux.    
+Our model suggests higher oxidative phosphorylation activity increases the protein production rate for CAT (Fig. \ref{fig:oxphos.pdf}) and other proteins. 
+Consistent with literature, limiting oxidative phosphorylation results in lower protein yields in cell free systems as seen in our model. 
+Oxidative phosphorylation activity was limited to have a maximum flux of 3.0 mmol/hr in it's reactions, determined from a tradeoff between acetate and lactate flux (Fig. \ref{fig:oxhos}). 
+Experimental data has shown lactate and acetate to have similar fluxes during glucose consumption during the production of CAT (data not shown).
+Low oxidative phosphorylation leads to NADH overflow which is re-oxidized with lactate dehydrogenase reducing pyruvate to lactate leading to high lactate formation.
+High oxidative phosphorylation relative to our cell free system leads to lower lactate and higher acetate formation.
+
+%\begin{figure}[!t]\centering
+%\includegraphics[width=0.45\textwidth]{./figures/YieldNumber.pdf}
+%\caption{Oxidative phosphorylation activity influences protein, acetate and lactate production. A) Increasing oxidative phosphorylation leads to higher protein (CAT) production %rates and begins to saturate. B) Lactate versus acetate flux at different oxidative phosphorylation activity levels. As oxidative phosphorylation increases, lactate formation %decreases and acetate formation increases.
+%}
+%\label{fig:oxphos}
+%\end{figure}
+
+Theoritical carbon yields were calculated for nine different proteins using a sequence specific constraints based modeling approach in a \textit{E. coli} cell free network. 
+Carbon yields were calculated for three different cases: unconstrained, limited oxidative phosphorylation and TX-TL constraints (Fig. \ref{fig:CarbonYield}). 
+In the unconstrained case, amino acids uptake and oxidative phosphorylation activity were unbounded. 
+Most of the proteins studied in this paper resulted in a carbon yield near forty percent for a cell free system.
+In the limited oxidative phosphorylation case, carbon yields were reduced for each of the proteins. 
+   
+In the TX-TL 2.0 case, oxidative phosphorylation activity was limited in addition to limited transcription and translation fluxes.
+Following these constraints, an optimal plasmid concentration was determined for each protein which was used to determine the carbon yield for TX-TL 2.0 at that plasmid concentration.
+Carbon yields are significantly reduced compared to the unconstrained and limited oxidative phosphorylation cases.
+The carbon yields are being lost mostly due to lactate and acetate formation.
+The constrained TX-TL case requires additional ATP to optimize for the protein of interest production leading to acetate formation.
+
+TX-TL 2.0 carbon yields were then compared to the carbon number of each protein of interest (Fig. \ref{fig:YieldNumber}). 
+There is a relative inverse relationship between the carbon yield and the carbon number of each protein with the exception of FGF21. 
+In comparing the amino acids of each protein, the proteins with a carbon yield below ten percent have a high abundance of proline which is a non polar amino acid and may have a negative impact on increasing carbon yield. 
+
+\begin{figure*}[!t]\centering
+\includegraphics[width=0.90\textwidth]{./figures/CarbonYield.pdf}
+\caption{Theoriticcal carbon yield of nine different proteins for three different cases in a cell free system. 
+Unconstrained yields (white bar) produced the highest carbon yield out of the three cases. In the limited oxidative phosphorylation case (gray bar), carbon yields were slightly lower than for the unconstrained case. TXTL 2.0 (black bar) constraints had low carbon yields compared to unconstrained and limited oxidative phosphorylation cases. 
+}
+\label{fig:CarbonYield}
+\end{figure*}
+
+\begin{figure}[!t]\centering
+\includegraphics[width=0.45\textwidth]{./figures/YieldNumber.pdf}
+\caption{Theoretical maximum carbon yield of nine proteins versus the corresponding carbon number of each protein. There is a relative inverse relationship of carbon yield to number of carbons in each protein except for the protein FGF21. 
+}
+\label{fig:YieldNumber}
+\end{figure}
+
+
 
 
 \clearpage
@@ -215,8 +286,44 @@ where $\mathbf{S}$ denotes the stoichiometric matrix, $\mathbf{w}$ denotes the u
 and $\alpha_i$ and $\beta_i$ denote the lower and upper bounds on flux $w_{i}$, respectively.
 The flux balance analysis problem was solved using the GNU Linear Programming Kit (v4.52) \cite{GLPK}.
 In this study, the objective $w_{obj}$ was to maximize the production of circuit output.
+The specific glucose uptake rate was constrained to allow a maximum flux of 10 mmol/hr \cite{2002_Mahadevan_BiophysJ}; the amino acids were also bound to allow a maximum flux of 10 mmol/hr, but did not reach this maximum flux.
 
 \subsection*{Transcription and translation template reactions.}
+The transcription and translation template reactions are based off sequence specific FBA \cite{2002_allen_palsson} involving transcription initiaion, transcription, mRNA degradation, translation initiation, translation, and tRNA charging. 
+The mRNA and protein sequence of each protein was determined from literature. 
+The transcription rate was constrained by the following formulation:
+
+\begin{equation}\nonumber
+	w_{tx} = [RNAP]\frac{v_{RNAP}}{l_{mRNA}}\left(\frac{[Gene]}{km+[Gene]}\right)P
+\end{equation}
+
+where $[RNAP]$ is the concentration of RNA polymerase which was determined from literature values based on the number of copies per cell, $v_{RNAP}$ is the elongation rate (nucleotides/hr) of the RNA polymerase, $l_{mRNA}$ is the number of nucleotides in the mRNA for the protein of interest, $[Gene]$ is the gene concentration of the protein of interest, $km$ is the plasmid saturation coefficient, and $P$ is the promoter activity. 
+The promoter activity was formulated following Moon et al. for synthetic circuits by the following:
+
+\begin{equation}\nonumber
+	P = \frac{K_{1}+K_{2}f_{p70}}{1 + K_{1}+K_{2}f_{p70}}
+\end{equation}
+
+where $K_{1}$ represents the state of RNA polymerase binding, $K_{2}$ is the state of sigma-70 binding along with RNA polymerase, and $f_{p70}$ is the fraction of the transcription factor, sigma-70, bound to the promoter following Hills kinetics. 
+
+The translation rate was constrained by the following formulation:
+
+ \begin{equation}\nonumber
+	w_{tl} = [Ribo]K_{P}\frac{v_{Ribo}}{l_{protein}}[mRNA_{ss}]
+\end{equation}
+
+where $[Ribo]$ is the ribosome concentration determined from literature values based on the number of copies per cell, $K_{P}$ is the polysome amplification constant, $v_{Ribo}$ is the elongation rate (amino acids/hr) of the ribosome, $l_{protein}$ is the number of amino acids in the protein of interest, and $[mRNA_{ss}]$ is the mRNA concentration at steady state determined by the transcription rate divided by the degradation rate of mRNA.  
+
+\subsection*{Theoritical carbon yield.}
+The theortical carbon yield of each protein was formulated as:
+
+\begin{equation}\nonumber
+	Yield = \frac{C_{POI}v_{POI}}{\sum_{i = 1}^{\mathcal{R}}C_{i}v_{i}}
+\end{equation}
+
+where $C_{POI}$ and $C_{i}$ denote the carbon number of the protein of interest (POI) and substrate $i$, respectively, $v_{POI}$ and $v_{i}$ denote the flux of the POI and substrate $i$, respectively,
+and $\mathcal{R}$ denotes the number of substrates consumed.
+
 
 \subsection*{Global sensitivity analysis.}
 We conducted a global sensitivity analysis, using the variance-based method of Sobol, to estimate which parameters controlled the performance of synthetic circuits \citep{SOBOL_METHOD}.

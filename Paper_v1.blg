@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2015)
+This is BibTeX, Version 0.99d (TeX Live 2015/dev/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: Paper_v1.aux
 The style file: plos2009.bst
@@ -18,14 +18,18 @@ Warning--I didn't find a database entry for "2007_schuetz_sauer_MolSysBio"
 Warning--I didn't find a database entry for "2013_hyduke_lewis_palsson_MolBioSys"
 Warning--I didn't find a database entry for "2013_mccloskey_palsson_feist_MolSysBio"
 Warning--I didn't find a database entry for "2012_zomorrodi_maranas_MetaEng"
+Warning--I didn't find a database entry for "2016_Garamella_etal_TXTL"
+Warning--I didn't find a database entry for "2008_Jewett_etal_OxPhos"
 Warning--I didn't find a database entry for "GLPK"
+Warning--I didn't find a database entry for "2002_Mahadevan_BiophysJ"
+Warning--I didn't find a database entry for "2002_allen_palsson"
 Warning--I didn't find a database entry for "SOBOL_METHOD"
 Warning--I didn't find a database entry for "Saltelli:2010"
 Warning--I didn't find a database entry for "SALIB"
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 You've used 0 entries,
             2441 wiz_defined-function locations,
-            573 strings with 5125 characters,
+            580 strings with 5283 characters,
 and the built_in function-call counts, 42 in all, are:
 = -- 0
 > -- 0
@@ -64,4 +68,4 @@ warning$ -- 0
 while$ -- 0
 width$ -- 0
 write$ -- 14
-(There were 19 warnings)
+(There were 23 warnings)
