@@ -1,16 +1,165 @@
-\begin{thebibliography}{}
-\providecommand{\url}[1]{\texttt{#1}}
-\providecommand{\urlprefix}{URL }
-\expandafter\ifx\csname urlstyle\endcsname\relax
-  \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
-  \providecommand{\doi}{doi:\discretionary{}{}{}\begingroup
-  \urlstyle{rm}\Url}\fi
-\providecommand{\bibAnnoteFile}[1]{%
-  \IfFileExists{#1}{\begin{quotation}\noindent\textsc{Key:} #1\\
-  \textsc{Annotation:}\ \input{#1}\end{quotation}}{}}
-\providecommand{\bibAnnote}[2]{%
-  \begin{quotation}\noindent\textsc{Key:} #1\\
-  \textsc{Annotation:}\ #2\end{quotation}}
-\providecommand{\eprint}[2][]{\url{#2}}
+\providecommand{\latin}[1]{#1}
+\providecommand*\mcitethebibliography{\thebibliography}
+\csname @ifundefined\endcsname{endmcitethebibliography}
+  {\let\endmcitethebibliography\endthebibliography}{}
+\begin{mcitethebibliography}{17}
+\providecommand*\natexlab[1]{#1}
+\providecommand*\mciteSetBstSublistMode[1]{}
+\providecommand*\mciteSetBstMaxWidthForm[2]{}
+\providecommand*\mciteBstWouldAddEndPuncttrue
+  {\def\EndOfBibitem{\unskip.}}
+\providecommand*\mciteBstWouldAddEndPunctfalse
+  {\let\EndOfBibitem\relax}
+\providecommand*\mciteSetBstMidEndSepPunct[3]{}
+\providecommand*\mciteSetBstSublistLabelBeginEnd[3]{}
+\providecommand*\EndOfBibitem{}
+\mciteSetBstSublistMode{f}
+\mciteSetBstMaxWidthForm{subitem}{(\alph{mcitesubitemcount})}
+\mciteSetBstSublistLabelBeginEnd
+  {\mcitemaxwidthsubitemform\space}
+  {\relax}
+  {\relax}
 
-\end{thebibliography}
+\bibitem[Jewett \latin{et~al.}(2008)Jewett, Calhoun, Voloshin, Wuu, and
+  Swartz]{Jewett:2008aa}
+Jewett,~M.~C., Calhoun,~K.~A., Voloshin,~A., Wuu,~J.~J., and Swartz,~J.~R.
+  (2008) An integrated cell-free metabolic platform for protein production and
+  synthetic biology. \emph{Mol Syst Biol} \emph{4}, 220\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Matthaei and Nirenberg(1961)Matthaei, and Nirenberg]{MATTHAEI:1961aa}
+Matthaei,~J.~H., and Nirenberg,~M.~W. (1961) Characteristics and stabilization
+  of DNAase-sensitive protein synthesis in E. coli extracts. \emph{Proc Natl
+  Acad Sci U S A} \emph{47}, 1580--8\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Nirenberg and Matthaei(1961)Nirenberg, and Matthaei]{NIRENBERG:1961aa}
+Nirenberg,~M.~W., and Matthaei,~J.~H. (1961) The dependence of cell-free
+  protein synthesis in E. coli upon naturally occurring or synthetic
+  polyribonucleotides. \emph{Proc Natl Acad Sci U S A} \emph{47},
+  1588--602\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Lu \latin{et~al.}(2014)Lu, Welsh, and Swartz]{Lu:2014aa}
+Lu,~Y., Welsh,~J.~P., and Swartz,~J.~R. (2014) Production and stabilization of
+  the trimeric influenza hemagglutinin stem domain for potentially broadly
+  protective influenza vaccines. \emph{Proc Natl Acad Sci U S A} \emph{111},
+  125--30\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Hodgman and Jewett(2012)Hodgman, and Jewett]{Hodgman:2012aa}
+Hodgman,~C.~E., and Jewett,~M.~C. (2012) Cell-free synthetic biology: thinking
+  outside the cell. \emph{Metab Eng} \emph{14}, 261--9\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Lewis \latin{et~al.}(2012)Lewis, Nagarajan, and
+  Palsson]{2012_lewis_palsson_NatRevMicrobio}
+Lewis,~N.~E., Nagarajan,~H., and Palsson,~B.~{\O}. (2012) Constraining the
+  metabolic genotype-phenotype relationship using a phylogeny of in silico
+  methods. \emph{Nat Rev Microbiol} \emph{10}, 291--305\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Edwards and Palsson(2000)Edwards, and
+  Palsson]{2000_edwards_palsson_PNAS}
+Edwards,~J.~S., and Palsson,~B.~{\O}. (2000) The Escherichia coli MG1655 in
+  silico metabolic genotype: its definition, characteristics, and capabilities.
+  \emph{Proc Natl Acad Sci U S A} \emph{97}, 5528--33\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Feist \latin{et~al.}(2007)Feist, Henry, Reed, Krummenacker, Joyce,
+  Karp, Broadbelt, Hatzimanikatis, and Palsson]{Feist:2007aa}
+Feist,~A.~M., Henry,~C.~S., Reed,~J.~L., Krummenacker,~M., Joyce,~A.~R.,
+  Karp,~P.~D., Broadbelt,~L.~J., Hatzimanikatis,~V., and Palsson,~B.~{\O}.
+  (2007) {A genome-scale metabolic reconstruction for Escherichia coli K-12
+  MG1655 that accounts for 1260 ORFs and thermodynamic information}. \emph{Mol
+  Syst Biol} \emph{3}, 121\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Oh \latin{et~al.}(2007)Oh, Palsson, Park, Schilling, and
+  Mahadevan]{Oh:2007aa}
+Oh,~Y.-K., Palsson,~B.~{\O}., Park,~S.~M., Schilling,~C.~H., and Mahadevan,~R.
+  (2007) Genome-scale reconstruction of metabolic network in Bacillus subtilis
+  based on high-throughput phenotyping and gene essentiality data. \emph{J Biol
+  Chem} \emph{282}, 28791--9\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Feist \latin{et~al.}(2009)Feist, Herrg{\aa}rd, Thiele, Reed, and
+  Palsson]{2009_feist_palsson_NatRevMicrobio}
+Feist,~A.~M., Herrg{\aa}rd,~M.~J., Thiele,~I., Reed,~J.~L., and
+  Palsson,~B.~{\O}. (2009) Reconstruction of biochemical networks in
+  microorganisms. \emph{Nat Rev Microbiol} \emph{7}, 129--43\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Ibarra \latin{et~al.}(2002)Ibarra, Edwards, and
+  Palsson]{2002_ibarra_edwards_palsson_Nat}
+Ibarra,~R.~U., Edwards,~J.~S., and Palsson,~B.~{\O}. (2002) Escherichia coli
+  K-12 undergoes adaptive evolution to achieve in silico predicted optimal
+  growth. \emph{Nature} \emph{420}, 186--9\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Schuetz \latin{et~al.}(2007)Schuetz, Kuepfer, and
+  Sauer]{2007_schuetz_sauer_MolSysBio}
+Schuetz,~R., Kuepfer,~L., and Sauer,~U. (2007) Systematic evaluation of
+  objective functions for predicting intracellular fluxes in Escherichia coli.
+  \emph{Mol Syst Biol} \emph{3}, 119\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Hyduke \latin{et~al.}(2013)Hyduke, Lewis, and
+  Palsson]{2013_hyduke_lewis_palsson_MolBioSys}
+Hyduke,~D.~R., Lewis,~N.~E., and Palsson,~B.~{\O}. (2013) Analysis of omics
+  data with genome-scale models of metabolism. \emph{Mol Biosyst} \emph{9},
+  167--74\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[McCloskey \latin{et~al.}(2013)McCloskey, Palsson, and
+  Feist]{2013_mccloskey_palsson_feist_MolSysBio}
+McCloskey,~D., Palsson,~B.~{\O}., and Feist,~A.~M. (2013) Basic and applied
+  uses of genome-scale metabolic network reconstructions of Escherichia coli.
+  \emph{Mol Syst Biol} \emph{9}, 661\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Zomorrodi \latin{et~al.}(2012)Zomorrodi, Suthers, Ranganathan, and
+  Maranas]{2012_zomorrodi_maranas_MetaEng}
+Zomorrodi,~A.~R., Suthers,~P.~F., Ranganathan,~S., and Maranas,~C.~D. (2012)
+  Mathematical optimization applications in metabolic networks. \emph{Metab
+  Eng} \emph{14}, 672--86\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Not()]{Note-1}
+This is a note. The text will be moved the the references section. The title of
+  the section will change to ``Notes and References''.\relax
+\mciteBstWouldAddEndPunctfalse
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\end{mcitethebibliography}

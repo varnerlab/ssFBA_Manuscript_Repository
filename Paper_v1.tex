@@ -1,5 +1,8 @@
-\documentclass[12pt]{article}
-% Load packages
+\documentclass[journal=asbcd6,manuscript=article]{achemso}
+
+\usepackage{natbib}
+\usepackage{setspace}
+\usepackage{xkeyval}
 \usepackage{url}  % Formatting web addresses
 \usepackage{ifthen}  % Conditional
 \usepackage{multicol}   %Columns
@@ -11,117 +14,90 @@
 \usepackage{epstopdf}
 \usepackage{graphicx}
 \usepackage[margin=0.1pt,font=footnotesize,labelfont=bf]{caption}
-\usepackage{setspace}
-%\usepackage{longtable}
-\usepackage{colortbl}
-%\usepackage{palatino,lettrine}
-%\usepackage{times}
-%\usepackage[applemac]{inputenc} %applemac support if unicode package fails
-%\usepackage[latin1]{inputenc} %UNIX support if unicode package fails
-\usepackage[wide]{sidecap}
-%\usepackage[authoryear,round,comma,sort&compress]{natbib}
-\usepackage[square,sort,comma,numbers,sort&compress]{natbib}
-%\usepackage[authoryear,round]{natbib}
-\usepackage{supertabular}
-\usepackage{simplemargins}
-\usepackage{fullpage}
-\usepackage{comment}
-\usepackage{lineno}
-%\usepackage{chicago}
-\usepackage{textcomp}
-\usepackage{multirow}
-\usepackage{amsmath}
-\usepackage[linesnumbered,lined,boxed,commentsnumbered]{algorithm2e}
-\DeclareMathOperator*{\argmin}{\arg\!\min}
+\usepackage[version=3]{mhchem} % Formula subscripts using \ce{}
+\usepackage[T1]{fontenc}       % Use modern font encodings
+%\usepackage[square,sort,comma,numbers,sort&compress]{natbib}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% If issues arise when submitting your manuscript, you may want to
+%% un-comment the next line.  This provides information on the
+%% version of every file you have used.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%\listfiles
 
-\usepackage{algorithm2e}
-\usepackage{algpseudocode}
-%\usepackage[space]{cite}
-\urlstyle{rm}
+\bibliographystyle{achemso}
+\newcommand*\mycommand[1]{\texttt{\emph{#1}}}
 
-%\textwidth = 6.50 in
-%\textheight = 9.5 in
-%\oddsidemargin =  0.0 in
-%\evensidemargin = 0.0 in
-%\topmargin = -0.50 in
-%\headheight = 0.0 in
-%\headsep = 0.25 in
-%\parskip = 0.15in
-%\linespread{1.75}
-\doublespace
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Meta-data block
+%% ---------------
+%% Each author should be given as a separate \author command.
+%%
+%% Corresponding authors should have an e-mail given after the author
+%% name as an \email command. Phone and fax numbers can be given
+%% using \phone and \fax, respectively; this information is optional.
+%%
+%% The affiliation of authors is given after the authors; each
+%% \affiliation command applies to all preceding authors not already
+%% assigned an affiliation.
+%%
+%% The affiliation takes an option argument for the short name.  This
+%% will typically be something like "University of Somewhere".
+%%
+%% The \altaffiliation macro should be used for new address, etc.
+%% On the other hand, \alsoaffiliation is used on a per author basis
+%% when authors are associated with multiple institutions.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\author{Michael Vilkhovoy}
+\author{Nicholas Horvath}
+\author{Jeffrey D. Varner}
+\email{jdv27@cornell.edu}
+\phone{+1 607 2554258}
+\fax{+1 607 2559166}
+\affiliation[Cornell University]
+{Robert Frederick Smith School of Chemical and Biomolecular Engineering, Cornell University, Ithaca, NY 14853}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Analysis of Cell-Free Synthetic Circuits using Sequence Specific Constraints Based Modeling}
+%\abbreviations{MV,NH,JDV}
+\keywords{Synthetic biology, Constraints based modeling, Biochemical modeling}
 
-%\bibliographystyle{chicago}
-\bibliographystyle{plos2009}
-
-\makeatletter
-\renewcommand\subsection{\@startsection
-	{subsection}{2}{0mm}
-	{-0.05in}
-	{-0.5\baselineskip}
-	{\normalfont\normalsize\bfseries}}
-\renewcommand\subsubsection{\@startsection
-	{subsubsection}{2}{0mm}
-	{-0.05in}
-	{-0.5\baselineskip}
-	{\normalfont\normalsize\itshape}}
-\renewcommand\section{\@startsection
-	{subsection}{2}{0mm}
-	{-0.2in}
-	{0.05\baselineskip}
-	{\normalfont\large\bfseries}}
-\renewcommand\paragraph{\@startsection
-	{paragraph}{2}{0mm}
-	{-0.05in}
-	{-0.5\baselineskip}
-	{\normalfont\normalsize\itshape}}
-\makeatother
-
-%Review style settings
-%\newenvironment{bmcformat}{\begin{raggedright}\baselineskip20pt\sloppy\setboolean{publ}{false}}{\end{raggedright}\baselineskip20pt\sloppy}
-
-%Publication style settings
-
-% Single space'd bib -
-\setlength\bibsep{0pt}
-
-\renewcommand{\rmdefault}{phv}\renewcommand{\sfdefault}{phv}
-\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
-
-% Change the number format in the ref list -
-\renewcommand{\bibnumfmt}[1]{#1.}
-
-% Change Figure to Fig.
-\renewcommand{\figurename}{Fig.}
-
-% Begin ...
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% The manuscript does not need to include \maketitle, which is
+%% executed automatically.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
-\begin{titlepage}
-{\par\centering\textbf{\Large {Analysis of TX-TL Synthetic Circuits using Sequence Specific Constraints Based Modeling}}}
-\vspace{0.05in}
-{\par \centering \large{Jeffrey D. Varner$^{*}$}}
-\vspace{0.10in}
-{\par \centering {School of Chemical and Biomolecular Engineering}}
-{\par \centering {Cornell University, Ithaca NY 14853}}
-\vspace{0.1in}
-{\par \centering \textbf{Running Title:}~Constraints based models of synthetic circuits}
-\vspace{0.1in}
-{\par \centering \textbf{To be submitted:}~\emph{Scientific~Reports}}
-\vspace{0.5in}
-{\par \centering $^{*}$Corresponding author:}
-{\par \centering Jeffrey D. Varner,}
-{\par \centering Professor, School of Chemical and Biomolecular Engineering,}
-{\par \centering 244 Olin Hall, Cornell University, Ithaca NY, 14853}
-{\par \centering Email: jdv27@cornell.edu}
-{\par \centering Phone: (607) 255 - 4258}
-{\par \centering Fax: (607) 255 - 9166}
-\end{titlepage}
-\date{}
-\thispagestyle{empty}
-\pagebreak
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section*{Abstract}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% The "tocentry" environment can be used to create an entry for the
+%% graphical table of contents. It is given here as some journals
+%% require that it is printed as part of the abstract page. It will
+%% be automatically moved as appropriate.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{tocentry}
+
+Some journals require a graphical entry for the Table of Contents.
+This should be laid out ``print ready'' so that the sizing of the
+text is correct.
+
+Inside the \texttt{tocentry} environment, the font used is Helvetica
+8\,pt, as required by \emph{Journal of the American Chemical
+Society}.
+
+The surrounding frame is 9\,cm by 3.5\,cm, which is the maximum
+permitted for  \emph{Journal of the American Chemical Society}
+graphical table of content entries. The box will not resize if the
+content is too big: instead it will overflow the edge of the box.
+
+This box and the associated title will always be printed on a
+separate page at the end of the document.
+
+\end{tocentry}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% The abstract environment will automatically gobble the contents
+%% if an abstract is not used by the target journal.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{abstract}
 In this study, we used sequence specific constraints based modeling to evaluate the performance of synthetic circuits in an \emph{E.~coli} TX-TL system.
 A core \emph{E.~coli} metabolic model, consisting of XX metabolites and YY reactions, was developed from literature [REF].
 This model, which described glycolysis, pentose phosphate pathway, amino acid biosynthesis and degradation and energy metabolism, was then augmented with
@@ -133,38 +109,30 @@ We tested this approach by first simulating $\sigma_{70}$-induced deGFP expressi
 First principles predictions of circuit performance were consistent with measurements for a variety of cases.
 Further, global sensitivity analysis identified the key metabolic processes that controlled circuit performance.
 Taken together, sequence specific constraints based modeling offers a novel means to \emph{a~priori} estimate the performance of cell free synthetic circuits.
+\end{abstract}
 
-\vspace{0.1in}
-{\noindent \textbf{Keywords:}~Synthetic biology, Constraints based modeling, Biochemical modeling}
-
-
-\pagebreak
-
-\setcounter{page}{1}
-
-\linenumbers
-
-
-\section*{Introduction}
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Start the main part of the manuscript here.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
 Cell free systems offer many advantages for the study, manipulation and modeling of metabolism compared to \textit{in vivo} processes.
 Central amongst these advantages is direct access to metabolites and the microbial biosynthetic machinery without the interference of a cell wall.
 This allows us to control as well as interrogate the chemical environment while the biosynthetic machinery is operating, potentially at a fine time resolution.
 Second, cell-free systems also allow us to study biological processes without the complications associated with cell growth.
-Cell-free protein synthesis (CFPS) systems are arguably the most prominent examples of cell-free systems used today \citep{Jewett:2008aa}.
-However, CFPS is not new; CFPS in crude \textit{E. coli} extracts has been used since the 1960s to explore fundamentally important biological mechanisms \citep{MATTHAEI:1961aa,NIRENBERG:1961aa}.
-Today, cell-free systems are used in a variety of applications ranging from therapeutic protein production \citep{Lu:2014aa} to synthetic biology \citep{Hodgman:2012aa}.
+Cell-free protein synthesis (CFPS) systems are arguably the most prominent examples of cell-free systems used today \cite{Jewett:2008aa}.
+However, CFPS is not new; CFPS in crude \textit{E. coli} extracts has been used since the 1960s to explore fundamentally important biological mechanisms \cite{MATTHAEI:1961aa,NIRENBERG:1961aa}.
+Today, cell-free systems are used in a variety of applications ranging from therapeutic protein production \cite{Lu:2014aa} to synthetic biology \cite{Hodgman:2012aa}.
 Interestingly, many of the challenges confronting in-vivo genome-scale kinetic modeling can potentially be overcome in a cell-free system.
 For example, there is no complex transcriptional regulation to consider, transient metabolic measurements are easier to obtain, and we no longer have to consider cell growth.
 Thus, cell-free operation holds several significant advantages for model development, identification and validation.
 Theoretically, genome-scale cell-free kinetic models may be possible for industrially important organisms, such as \textit{E. coli} or \textit{B. subtilis}, if a simple, tractable framework for integrating allosteric regulation with enzyme kinetics can be formulated.
 
-Stoichiometric reconstructions of microbial metabolism popularized by constraint based modeling techniques such as flux balance analysis (FBA) have become standard tools to interrogate biological networks \citep{2012_lewis_palsson_NatRevMicrobio}.
-Since the first genome-scale stoichiometric model of \textit{E. coli}, developed by Edwards and Palsson \citep{2000_edwards_palsson_PNAS}, stoichiometric reconstructions of hundreds of organisms, including industrially important prokaryotes such as \textit{E. coli} \citep{Feist:2007aa} or \textit{B. subtilis} \citep{Oh:2007aa}, are now available \citep{2009_feist_palsson_NatRevMicrobio}.
+Stoichiometric reconstructions of microbial metabolism popularized by constraint based modeling techniques such as flux balance analysis (FBA) have become standard tools to interrogate biological networks \cite{2012_lewis_palsson_NatRevMicrobio}.
+Since the first genome-scale stoichiometric model of \textit{E. coli}, developed by Edwards and Palsson \cite{2000_edwards_palsson_PNAS}, stoichiometric reconstructions of hundreds of organisms, including industrially important prokaryotes such as \textit{E. coli} \cite{Feist:2007aa} or \textit{B. subtilis} \cite{Oh:2007aa}, are now available \cite{2009_feist_palsson_NatRevMicrobio}.
 Stoichiometric models rely on a pseudo-steady-state assumption to reduce unidentifiable genome-scale kinetic models to an underdetermined linear algebraic system, which can be solved efficiently even for large systems using linear programming.
 Traditionally, stoichiometric models have also neglected explicit descriptions of metabolic regulation and control mechanisms, instead opting to describe the choice of pathways by prescribing an objective function on metabolism.
-Interestingly, similar to early cybernetic models, the most common metabolic objective function has been the optimization of biomass formation \citep{2002_ibarra_edwards_palsson_Nat}, although other metabolic objectives have also been estimated \citep{2007_schuetz_sauer_MolSysBio}.
-Recent advances in constraint-based modeling have overcome the early shortcomings of the platform, including capturing metabolic regulation and control \citep{2013_hyduke_lewis_palsson_MolBioSys}. Thus, modern constraint-based approaches are extremely useful for the discovery of metabolic engineering strategies and represent the state of the art in metabolic modeling \citep{2013_mccloskey_palsson_feist_MolSysBio, 2012_zomorrodi_maranas_MetaEng}.
+Interestingly, similar to early cybernetic models, the most common metabolic objective function has been the optimization of biomass formation \cite{2002_ibarra_edwards_palsson_Nat}, although other metabolic objectives have also been estimated \cite{2007_schuetz_sauer_MolSysBio}.
+Recent advances in constraint-based modeling have overcome the early shortcomings of the platform, including capturing metabolic regulation and control \cite{2013_hyduke_lewis_palsson_MolBioSys}. Thus, modern constraint-based approaches are extremely useful for the discovery of metabolic engineering strategies and represent the state of the art in metabolic modeling \cite{2013_mccloskey_palsson_feist_MolSysBio, 2012_zomorrodi_maranas_MetaEng}.
 
 In this study, we used sequence specific constraints based modeling to evaluate the performance of synthetic circuits in an \emph{E.~coli} TX-TL system.
 A core \emph{E.~coli} cell free metabolic model, consisting of XX metabolites and YY reactions, was developed from literature [REF].
@@ -178,182 +146,228 @@ First principles predictions of circuit performance were consistent with measure
 Further, global sensitivity analysis identified the key metabolic processes that controlled circuit performance.
 Taken together, sequence specific constraints based modeling offers a novel means to \emph{a~priori} estimate the performance of cell free synthetic circuits.
 
-\clearpage
+\section{Results and discussion}
 
-%Constraints based models are important tools to understand and ultimately to predict how cells utilize nutrients to produce products.
-%Constraints based methods such as flux balance analysis (FBA) \cite{2010_orth_NatBiotech} and network decomposition approaches such as elementary modes (EMs) \cite{Schuster:2000aa}
-%or extreme pathways (EPs) \cite{Schilling:2000aa}
-%model intracellular metabolism using the biochemical stoichiometry and other constraints such as thermodynamical feasibility under pseudo-steady state conditions.
-%FBA has been used to efficiently estimate the performance of metabolic networks of arbitrary complexity, including genome scale networks, using linear programming  \cite{Covert:2004aa}.
-%On the other hand, EMs (or EPs) catalog all possible metabolic behaviors such that any flux distribution predicted by FBA is a convex combination
-%of the EMs (or EPs) \cite{Wiback:2003aa}.
-%However, the calculation of EMs (or EPs) is computationally expensive and currently infeasible for genome scale networks \cite{2004_lee_varner_ko_ieee}.
+\subsection{Outline}
 
+The document layout should follow the style of the journal concerned.
+Where appropriate, sections and subsections should be added in the
+normal way. If the class options are set correctly, warnings will be
+given if these should not be present.
 
+\subsection{References}
 
-\section*{Results}
-The protein concentration levels of deGFP produced with TX-TL 2.0 at different plasmid concentrations was modeled using a sequence specific constraints based modeling approach in a \textit{E. coli} cell free network (Fig. \ref{fig:deGFP_Plasmid}).
-The metabolic network was formulated by removing all cell wall associated reactions and incorporating amino acid synthesis and transcription/translation associated reactions. 
-The network consisted of 281 reactions and 132 species. 
-The transcription and translation rates were constrained to experimental measurements \cite{2016_Garamella_etal_TXTL} for the RNA polymerase and ribosome elongation rates. 
-The production time for TX-TL 2.0 is approximately 8 hours \cite{2016_Garamella_etal_TXTL}. 
-The concentration of deGFP was determined at each plasmid concentration by multiplying the corresponding production flux by the production time. 
-The sequence specific constraints based model was able to capture the deGFP concentration up to a plasmid concentration of 5 nM and overestimates deGFP measurements above that.
-TX-TL 2.0 has a saturation on protein production mostly due to limited resources which our model begins to see saturating effects at ~9 nM plasmid concentration. 
-This may be due to oxidative phosphorylation activity which has been observed to take place in other cell free systems \cite{2008_Jewett_etal_OxPhos}.
+The class makes various changes to the way that references are
+handled.  The class loads \textsf{natbib}, and also the
+appropriate bibliography style.  References can be made using
+the normal method; the citation should be placed before any
+punctuation, as the class will move it if using a superscript
+citation style
+The use of \textsf{natbib} allows the use of the various citation
+commands of that package: \citeauthor{Abernethy2003} have shown
+something, in \citeyear{Cotton1999}, or as given by
+Ref.~\citenum{Mena2000}.  Long lists of authors will be
+automatically truncated in most article formats, but not in
+supplementary information or reviews. If you
+encounter problems with the citation macros, please check that
+your copy of \textsf{natbib} is up to date. The demonstration
+database file \texttt{achemso-demo.bib} shows how to complete
+entries correctly. Notice that ``\latin{et al.}'' is auto-formatted
+using the \texttt{\textbackslash latin} command.
 
-\begin{figure}[!t]\centering
-\includegraphics[width=0.45\textwidth]{./figures/deGFP_Plasmid.png}
-\caption{Model simulation (solid line) versus deGFP protein concentration (dots) at different plasmid concentrations produced in TX-TL 2.0. 
-}
-\label{fig:deGFP_Plasmid}
+Multiple citations to be combined into a list can be given as
+a single citation.  This uses the \textsf{mcitelus} package
+\cite{Johnson1972,*Arduengo1992,*Eisenstein2005,*Arduengo1994}.
+Citations other than the first of the list should be indicated
+with a star. If the \textsf{mcitelus} package is not installed,
+the standard bibliography tools will still work but starred
+references will be ignored. Individual references can be referred
+to using \texttt{\textbackslash mciteSubRef}:
+``ref.~\mciteSubRef{Eisenstein2005}''.
+
+The class also handles notes to be added to the bibliography.  These
+should be given in place in the document \bibnote{This is a note.
+The text will be moved the the references section.  The title of the
+section will change to ``Notes and References''.}.  As with
+citations, the text should be placed before punctuation.  A note is
+also generated if a citation has an optional note.  This assumes that
+the whole work has already been cited: odd numbering will result if
+this is not the case .
+
+\subsection{Floats}
+
+New float types are automatically set up by the class file.  The
+means graphics are included as follows (Scheme~\ref{sch:example}).  As
+illustrated, the float is ``here'' if possible.
+\begin{scheme}
+  Your scheme graphic would go here: \texttt{.eps} format\\
+  for \LaTeX\, or \texttt{.pdf} (or \texttt{.png}) for pdf\LaTeX\\
+  \textsc{ChemDraw} files are best saved as \texttt{.eps} files:\\
+  these can be scaled without loss of quality, and can be\\
+  converted to \texttt{.pdf} files easily using \texttt{eps2pdf}.\\
+  %\includegraphics{graphic}
+  \caption{An example scheme}
+  \label{sch:example}
+\end{scheme}
+
+\begin{figure}
+  As well as the standard float types \texttt{table}\\
+  and \texttt{figure}, the class also recognises\\
+  \texttt{scheme}, \texttt{chart} and \texttt{graph}.
+  \caption{An example figure}
+  \label{fgr:example}
 \end{figure}
 
-\begin{figure}[!t]\centering
-\includegraphics[width=0.45\textwidth]{./figures/CAT_oxphos.pdf}
-\caption{
-}
-\label{fig:CAT_oxphos}
-\end{figure}
+Charts, figures and schemes do not necessarily have to be labelled or
+captioned.  However, tables should always have a title. It is
+possible to include a number and label for a graphic without any
+title, using an empty argument to the \texttt{\textbackslash caption}
+macro.
 
-Oxidative phosphorylation activity influences the protein production flux as well as acetate and lactate flux.    
-Our model suggests higher oxidative phosphorylation activity increases the protein production rate for CAT (Fig. \ref{fig:oxphos.pdf}) and other proteins. 
-Consistent with literature, limiting oxidative phosphorylation results in lower protein yields in cell free systems as seen in our model. 
-Oxidative phosphorylation activity was limited to have a maximum flux of 3.0 mmol/hr in it's reactions, determined from a tradeoff between acetate and lactate flux (Fig. \ref{fig:oxhos}). 
-Experimental data has shown lactate and acetate to have similar fluxes during glucose consumption during the production of CAT (data not shown).
-Low oxidative phosphorylation leads to NADH overflow which is re-oxidized with lactate dehydrogenase reducing pyruvate to lactate leading to high lactate formation.
-High oxidative phosphorylation relative to our cell free system leads to lower lactate and higher acetate formation.
+The use of the different floating environments is not required, but
+it is intended to make document preparation easier for authors. In
+general, you should place your graphics where they make logical
+sense; the production process will move them if needed.
 
-%\begin{figure}[!t]\centering
-%\includegraphics[width=0.45\textwidth]{./figures/YieldNumber.pdf}
-%\caption{Oxidative phosphorylation activity influences protein, acetate and lactate production. A) Increasing oxidative phosphorylation leads to higher protein (CAT) production %rates and begins to saturate. B) Lactate versus acetate flux at different oxidative phosphorylation activity levels. As oxidative phosphorylation increases, lactate formation %decreases and acetate formation increases.
-%}
-%\label{fig:oxphos}
-%\end{figure}
+\subsection{Math(s)}
 
-Theoritical carbon yields were calculated for nine different proteins using a sequence specific constraints based modeling approach in a \textit{E. coli} cell free network. 
-Carbon yields were calculated for three different cases: unconstrained, limited oxidative phosphorylation and TX-TL constraints (Fig. \ref{fig:CarbonYield}). 
-In the unconstrained case, amino acids uptake and oxidative phosphorylation activity were unbounded. 
-Most of the proteins studied in this paper resulted in a carbon yield near forty percent for a cell free system.
-In the limited oxidative phosphorylation case, carbon yields were reduced for each of the proteins. 
-   
-In the TX-TL 2.0 case, oxidative phosphorylation activity was limited in addition to limited transcription and translation fluxes.
-Following these constraints, an optimal plasmid concentration was determined for each protein which was used to determine the carbon yield for TX-TL 2.0 at that plasmid concentration.
-Carbon yields are significantly reduced compared to the unconstrained and limited oxidative phosphorylation cases.
-The carbon yields are being lost mostly due to lactate and acetate formation.
-The constrained TX-TL case requires additional ATP to optimize for the protein of interest production leading to acetate formation.
+The \textsf{achemso} class does not load any particular additional
+support for mathematics.  If packages such as \textsf{amsmath} are
+required, they should be loaded in the preamble.  However,
+the basic \LaTeX\ math(s) input should work correctly without
+this.  Some inline material \( y = mx + c \) or $ 1 + 1 = 2 $
+followed by some display. \[ A = \pi r^2 \]
 
-TX-TL 2.0 carbon yields were then compared to the carbon number of each protein of interest (Fig. \ref{fig:YieldNumber}). 
-There is a relative inverse relationship between the carbon yield and the carbon number of each protein with the exception of FGF21. 
-In comparing the amino acids of each protein, the proteins with a carbon yield below ten percent have a high abundance of proline which is a non polar amino acid and may have a negative impact on increasing carbon yield. 
-
-\begin{figure*}[!t]\centering
-\includegraphics[width=0.90\textwidth]{./figures/CarbonYield.pdf}
-\caption{Theoriticcal carbon yield of nine different proteins for three different cases in a cell free system. 
-Unconstrained yields (white bar) produced the highest carbon yield out of the three cases. In the limited oxidative phosphorylation case (gray bar), carbon yields were slightly lower than for the unconstrained case. TXTL 2.0 (black bar) constraints had low carbon yields compared to unconstrained and limited oxidative phosphorylation cases. 
-}
-\label{fig:CarbonYield}
-\end{figure*}
-
-\begin{figure}[!t]\centering
-\includegraphics[width=0.45\textwidth]{./figures/YieldNumber.pdf}
-\caption{Theoretical maximum carbon yield of nine proteins versus the corresponding carbon number of each protein. There is a relative inverse relationship of carbon yield to number of carbons in each protein except for the protein FGF21. 
-}
-\label{fig:YieldNumber}
-\end{figure}
-
-
-
-
-\clearpage
-\section*{Discussion}
-
-\clearpage
-
-\section*{Materials and Methods}
-
-\subsection*{Formulation and solution of the model equations.}
-The flux balance analysis problem was formulated as:
-\begin{equation}\nonumber
- \begin{multlined}
-	\qquad \qquad \qquad \max_{\boldsymbol{w}}{} \! \left( w_{obj} = \mathbf{\boldsymbol{\theta}}^T \boldsymbol{w} \right) \\
-	\mathrm{Subject \; to:}
-	 \; \; \mathbf{S}\mathbf{w}=\mathbf{0} \\
-\alpha_i \leq w_i \leq \beta_i  \qquad i=1,2,\hdots,\mathcal{R}
- \end{multlined}
+It is possible to label equations in the usual way (Eq.~\ref{eqn:example}).
+\begin{equation}
+  \frac{\mathrm{d}}{\mathrm{d}x} \, r^2 = 2r \label{eqn:example}
 \end{equation}
-where $\mathbf{S}$ denotes the stoichiometric matrix, $\mathbf{w}$ denotes the unknown flux vector, $\boldsymbol{\theta}$ denotes the objective selection vector
-and $\alpha_i$ and $\beta_i$ denote the lower and upper bounds on flux $w_{i}$, respectively.
-The flux balance analysis problem was solved using the GNU Linear Programming Kit (v4.52) \cite{GLPK}.
-In this study, the objective $w_{obj}$ was to maximize the production of circuit output.
-The specific glucose uptake rate was constrained to allow a maximum flux of 10 mmol/hr \cite{2002_Mahadevan_BiophysJ}; the amino acids were also bound to allow a maximum flux of 10 mmol/hr, but did not reach this maximum flux.
-
-\subsection*{Transcription and translation template reactions.}
-The transcription and translation template reactions are based off sequence specific FBA \cite{2002_allen_palsson} involving transcription initiaion, transcription, mRNA degradation, translation initiation, translation, and tRNA charging. 
-The mRNA and protein sequence of each protein was determined from literature. 
-The transcription rate was constrained by the following formulation:
-
-\begin{equation}\nonumber
-	w_{tx} = [RNAP]\frac{v_{RNAP}}{l_{mRNA}}\left(\frac{[Gene]}{km+[Gene]}\right)P
+This can also be used to have equations containing graphical
+content. To align the equation number with the middle of the graphic,
+rather than the bottom, a minipage may be used.
+\begin{equation}
+  \begin{minipage}[c]{0.80\linewidth}
+    \centering
+    As illustrated here, the width of \\
+    the minipage needs to allow some  \\
+    space for the number to fit in to.
+    %\includegraphics{graphic}
+  \end{minipage}
+  \label{eqn:graphic}
 \end{equation}
 
-where $[RNAP]$ is the concentration of RNA polymerase which was determined from literature values based on the number of copies per cell, $v_{RNAP}$ is the elongation rate (nucleotides/hr) of the RNA polymerase, $l_{mRNA}$ is the number of nucleotides in the mRNA for the protein of interest, $[Gene]$ is the gene concentration of the protein of interest, $km$ is the plasmid saturation coefficient, and $P$ is the promoter activity. 
-The promoter activity was formulated following Moon et al. for synthetic circuits by the following:
+\section{Experimental}
 
-\begin{equation}\nonumber
-	P = \frac{K_{1}+K_{2}f_{p70}}{1 + K_{1}+K_{2}f_{p70}}
-\end{equation}
+The usual experimental details should appear here.  This could
+include a table, which can be referenced as Table~\ref{tbl:example}.
+Notice that the caption is positioned at the top of the table.
+\begin{table}
+  \caption{An example table}
+  \label{tbl:example}
+  \begin{tabular}{ll}
+    \hline
+    Header one  & Header two  \\
+    \hline
+    Entry one   & Entry two   \\
+    Entry three & Entry four  \\
+    Entry five  & Entry five  \\
+    Entry seven & Entry eight \\
+    \hline
+  \end{tabular}
+\end{table}
 
-where $K_{1}$ represents the state of RNA polymerase binding, $K_{2}$ is the state of sigma-70 binding along with RNA polymerase, and $f_{p70}$ is the fraction of the transcription factor, sigma-70, bound to the promoter following Hills kinetics. 
+Adding notes to tables can be complicated.  Perhaps the easiest
+method is to generate these using the basic
+\texttt{\textbackslash textsuperscript} and
+\texttt{\textbackslash emph} macros, as illustrated (Table~\ref{tbl:notes}).
+\begin{table}
+  \caption{A table with notes}
+  \label{tbl:notes}
+  \begin{tabular}{ll}
+    \hline
+    Header one                            & Header two \\
+    \hline
+    Entry one\textsuperscript{\emph{a}}   & Entry two  \\
+    Entry three\textsuperscript{\emph{b}} & Entry four \\
+    \hline
+  \end{tabular}
 
-The translation rate was constrained by the following formulation:
+  \textsuperscript{\emph{a}} Some text;
+  \textsuperscript{\emph{b}} Some more text.
+\end{table}
 
- \begin{equation}\nonumber
-	w_{tl} = [Ribo]K_{P}\frac{v_{Ribo}}{l_{protein}}[mRNA_{ss}]
-\end{equation}
+The example file also loads the optional \textsf{mhchem} package, so
+that formulas are easy to input: \texttt{\textbackslash ce\{H2SO4\}}
+gives \ce{H2SO4}.  See the use in the bibliography file (when using
+titles in the references section).
 
-where $[Ribo]$ is the ribosome concentration determined from literature values based on the number of copies per cell, $K_{P}$ is the polysome amplification constant, $v_{Ribo}$ is the elongation rate (amino acids/hr) of the ribosome, $l_{protein}$ is the number of amino acids in the protein of interest, and $[mRNA_{ss}]$ is the mRNA concentration at steady state determined by the transcription rate divided by the degradation rate of mRNA.  
+The use of new commands should be limited to simple things which will
+not interfere with the production process.  For example,
+\texttt{\textbackslash mycommand} has been defined in this example,
+to give italic, mono-spaced text: \mycommand{some text}.
 
-\subsection*{Theoritical carbon yield.}
-The theortical carbon yield of each protein was formulated as:
+\section{Extra information when writing JACS Communications}
 
-\begin{equation}\nonumber
-	Yield = \frac{C_{POI}v_{POI}}{\sum_{i = 1}^{\mathcal{R}}C_{i}v_{i}}
-\end{equation}
+When producing communications for \emph{J.~Am.\ Chem.\ Soc.}, the
+class will automatically lay the text out in the style of the
+journal. This gives a guide to the length of text that can be
+accommodated in such a publication. There are some points to bear in
+mind when preparing a JACS Communication in this way.  The layout
+produced here is a \emph{model} for the published result, and the
+outcome should be taken as a \emph{guide} to the final length. The
+spacing and sizing of graphical content is an area where there is
+some flexibility in the process.  You should not worry about the
+space before and after graphics, which is set to give a guide to the
+published size. This is very dependant on the final published layout.
 
-where $C_{POI}$ and $C_{i}$ denote the carbon number of the protein of interest (POI) and substrate $i$, respectively, $v_{POI}$ and $v_{i}$ denote the flux of the POI and substrate $i$, respectively,
-and $\mathcal{R}$ denotes the number of substrates consumed.
+You should be able to use the same source to produce a JACS
+Communication and a normal article.  For example, this demonstration
+file will work with both \texttt{type=article} and
+\texttt{type=communication}. Sections and any abstract are
+automatically ignored, although you will get warnings to this effect.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% The "Acknowledgement" section can be given in all manuscript
+%% classes.  This should be given within the "acknowledgement"
+%% environment, which will make the correct section or running title.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{acknowledgement}
 
-\subsection*{Global sensitivity analysis.}
-We conducted a global sensitivity analysis, using the variance-based method of Sobol, to estimate which parameters controlled the performance of synthetic circuits \citep{SOBOL_METHOD}.
-We computed the total sensitivity index of each parameter relative to two performance objectives, the peak thrombin time and the area under the thrombin curve (thrombin exposure).
-We established the sampling bounds for each parameter from the minimum and maximum value of that parameter in the parameter set ensemble.
-We used the sampling method of Saltelli \textit{et al.} \citep{Saltelli:2010} to compute a family of $N\left(2d+2\right)$ parameter sets which obeyed our parameter ranges,
-where $N$ was the number of trials, and $d$ was the number of parameters in the model. In our case, $N$ = 10,000 and $d$ = 22, so the total sensitivity indices were computed from
-460,000 model evaluations. The variance-based sensitivity analysis was conducted using the SALib module encoded in the Python programming language \citep{SALIB}.
+Please use ``The authors thank \ldots'' rather than ``The
+authors would like to thank \ldots''.
 
-\clearpage
+The author thanks Mats Dahlgren for version one of \textsf{achemso},
+and Donald Arseneau for the code taken from \textsf{cite} to move
+citations after punctuation. Many users have provided feedback on the
+class, which is reflected in all of the different demonstrations
+shown in this document.
 
-\section*{Acknowledgements}
-This study was supported by an award from the Army Research Office (ARO \#59155-LS).
-\clearpage
+\end{acknowledgement}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% The same is true for Supporting Information, which should use the
+%% suppinfo environment.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{suppinfo}
+
+A listing of the contents of each file supplied as Supporting Information
+should be included. For instructions on what should be included in the
+Supporting Information as well as how to prepare this material for
+publications, refer to the journal's Instructions for Authors.
+
+The following files are available free of charge.
+\begin{itemize}
+  \item Filename: brief description
+  \item Filename: brief description
+\end{itemize}
+
+\end{suppinfo}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% The appropriate \bibliography command should be placed here.
+%% Notice that the class file automatically sets \bibliographystyle
+%% and also names the section correctly.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \bibliography{References_v1}
-
-\clearpage
-
-% Supplemental figures -
-% Set the S-
-\renewcommand\thefigure{S\arabic{figure}}
-\renewcommand\thetable{T\arabic{table}}
-\renewcommand\thepage{S-\arabic{page}}
-\renewcommand\theequation{S\arabic{equation}}
-
-% Reset the counters -
-\setcounter{equation}{0}
-\setcounter{table}{0}
-\setcounter{figure}{0}
-\setcounter{page}{1}
 
 \end{document}
