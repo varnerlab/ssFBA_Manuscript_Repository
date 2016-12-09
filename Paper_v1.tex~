@@ -229,22 +229,7 @@ This leads to slightly similar carbon yields for all the proteins, however, the 
 
 
 \subsection{Sensitivity analysis on CFPS Performance}
-To better understand the effect of uptake and transcription/translation parameters on protein production we performed global sensitivity analysis on productivity and carbon yield for deGFP, a representative protein.
-Productivity was more sensitive to kinetic parameters than uptake fluxes, and the importance of kinetic parameters was fairly constant across the three cases: control, without amino acid synthesis, and without amino acid uptake.
-Glucose uptake was not very important to productivity in the first two cases, but its importance increased when amino acid uptake was removed.
-This makes sense, as amino acid synthesis from glucose is then the only way to power protein synthesis.
-When amino acid synthesis is removed, amino acid uptake becomes more important, as it becomes the only source of amino acids.
-When considering carbon yield, the glucose and oxygen uptake fluxes become much more important while the sensitivity to kinetic parameters decreases slightly.
-This is likely because glucose and oxygen uptake determine the mechanism of energy generation, which is critical to efficient protein production.
-Meanwhile, productivity is determined primarily by the speed of the most downstream steps, transcription and translation.
-Yield is much more sensitive to glucose uptake than productivity is for the case without amino acid uptake.
-This may be because glucose is required for both amino acid synthesis and efficient energy generation, both of which are important for a high yield.
-Oxygen uptake is very important to yield in the control and without synthesis cases, likely due to the importance of oxidative phosphorylation for efficient energy generation.
-We also performed this sensitivity analysis on CAT production, which did not show the same trend in yield across the three cases as the other proteins.
-For CAT, glucose uptake was as important to productivity as the kinetic parameters.
-Also, the increase in amino acid uptake importance to both productivity and yield was much greater.
-Finally, oxygen uptake became the most important factor in yield and maintained this across all three cases.
-Apart from these differences, the general trend of transcription and translation mattering more for productivity and uptake mattering more for yield was still true.
+
 
 
 

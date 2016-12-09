@@ -2,9 +2,20 @@ This is BibTeX, Version 0.99d (TeX Live 2015/dev/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: Paper_v1.aux
 The style file: biochem.bst
+Illegal, another \bibstyle command---line 6 of file Paper_v1.aux
+ : \bibstyle
+ :          {biochem}
+I'm skipping whatever remains of this command
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: acs-Paper_v1.bib
 Database file #2: References_v1.bib
+Warning--entry type for "GLPK" isn't style-file defined
+--line 285 of file References_v1.bib
+Warning--entry type for "SALIB" isn't style-file defined
+--line 313 of file References_v1.bib
+Warning--I didn't find a database entry for "2016_Garamella_etal_TXTL"
+Warning--I didn't find a database entry for "2002_Mahadevan_BiophysJ"
+Warning--I didn't find a database entry for "2002_allen_palsson"
 Warning--I didn't find a database entry for "Abernethy2003"
 Warning--I didn't find a database entry for "Cotton1999"
 Warning--I didn't find a database entry for "Mena2000"
@@ -12,45 +23,57 @@ Warning--I didn't find a database entry for "Johnson1972"
 Warning--I didn't find a database entry for "Arduengo1992"
 Warning--I didn't find a database entry for "Eisenstein2005"
 Warning--I didn't find a database entry for "Arduengo1994"
-You've used 17 entries,
+Too many commas in name 1 of "Moon TS, Lou C, Tamsir A, Stanton BC, Voigt CA" for entry Moon:2012aa
+while executing---line 1672 of file biochem.bst
+Too many commas in name 1 of "Moon TS, Lou C, Tamsir A, Stanton BC, Voigt CA" for entry Moon:2012aa
+while executing---line 1672 of file biochem.bst
+Too many commas in name 1 of "Moon TS, Lou C, Tamsir A, Stanton BC, Voigt CA" for entry Moon:2012aa
+while executing---line 1678 of file biochem.bst
+Too many commas in name 1 of "Moon TS, Lou C, Tamsir A, Stanton BC, Voigt CA" for entry Moon:2012aa
+while executing---line 1678 of file biochem.bst
+Too many commas in name 1 of "Moon TS, Lou C, Tamsir A, Stanton BC, Voigt CA" for entry Moon:2012aa
+while executing---line 1678 of file biochem.bst
+Too many commas in name 1 of "Moon TS, Lou C, Tamsir A, Stanton BC, Voigt CA" for entry Moon:2012aa
+while executing---line 1678 of file biochem.bst
+You've used 24 entries,
             2493 wiz_defined-function locations,
-            867 strings with 10153 characters,
-and the built_in function-call counts, 5641 in all, are:
-= -- 433
-> -- 359
-< -- 8
-+ -- 128
-- -- 111
-* -- 645
-:= -- 757
-add.period$ -- 31
-call.type$ -- 17
+            920 strings with 11476 characters,
+and the built_in function-call counts, 7425 in all, are:
+= -- 584
+> -- 449
+< -- 13
++ -- 161
+- -- 137
+* -- 835
+:= -- 996
+add.period$ -- 44
+call.type$ -- 24
 change.case$ -- 3
 chr.to.int$ -- 2
-cite$ -- 18
-duplicate$ -- 321
-empty$ -- 374
-format.name$ -- 131
-if$ -- 1084
+cite$ -- 26
+duplicate$ -- 420
+empty$ -- 509
+format.name$ -- 167
+if$ -- 1438
 int.to.chr$ -- 0
 int.to.str$ -- 1
 missing$ -- 0
-newline$ -- 118
-num.names$ -- 45
-pop$ -- 28
+newline$ -- 160
+num.names$ -- 63
+pop$ -- 39
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
 skip$ -- 1
 stack$ -- 0
-substring$ -- 261
-swap$ -- 332
-text.length$ -- 32
+substring$ -- 335
+swap$ -- 419
+text.length$ -- 46
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 116
+type$ -- 165
 warning$ -- 0
-while$ -- 59
+while$ -- 79
 width$ -- 0
-write$ -- 225
-(There were 7 warnings)
+write$ -- 308
+(There were 7 error messages)

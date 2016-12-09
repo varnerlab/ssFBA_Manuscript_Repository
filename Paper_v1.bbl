@@ -2,7 +2,7 @@
 \providecommand*\mcitethebibliography{\thebibliography}
 \csname @ifundefined\endcsname{endmcitethebibliography}
   {\let\endmcitethebibliography\endthebibliography}{}
-\begin{mcitethebibliography}{17}
+\begin{mcitethebibliography}{24}
 \providecommand*\natexlab[1]{#1}
 \providecommand*\mciteSetBstSublistMode[1]{}
 \providecommand*\mciteSetBstMaxWidthForm[2]{}
@@ -151,6 +151,61 @@ McCloskey,~D., Palsson,~B.~{\O}., and Feist,~A.~M. (2013) Basic and applied
 Zomorrodi,~A.~R., Suthers,~P.~F., Ranganathan,~S., and Maranas,~C.~D. (2012)
   Mathematical optimization applications in metabolic networks. \emph{Metab
   Eng} \emph{14}, 672--86\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Allen and Palsson(2003)Allen, and Palsson]{Allen:2003aa}
+Allen,~T.~E., and Palsson,~B.~{\O}. (2003) Sequence-based analysis of metabolic
+  demands for protein synthesis in prokaryotes. \emph{J Theor Biol} \emph{220},
+  1--18\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Moon~TS(2012)]{Moon:2012aa}
+Moon~TS,~T. A. S. B. V.~C.,~Lou~C (2012) Genetic programs constructed from
+  layered logic gates in single cells. \emph{Nature} \emph{491}\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Calhoun and Swartz(2005)Calhoun, and
+  Swartz]{2005_calhoun_BiotechnologyProgress}
+Calhoun,~K.~A., and Swartz,~J.~R. (2005) An Economical Method for Cell-Free
+  Protein Synthesis using Glucose and Nucleoside Monophosphates.
+  \emph{Biotechnology Progress} \emph{21}, 1146--53\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[GLP(2016)]{GLPK}
+{GNU Linear Programming Kit, Version 4.52}. 2016;
+  \url{http://www.gnu.org/software/glpk/glpk.html}\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Sobol(2001)]{SOBOL_METHOD}
+Sobol,~I. (2001) Global sensitivity indices for nonlinear mathematical models
+  and their Monte Carlo estimates. \emph{Mathematics and Computers in
+  Simulation} \emph{55}, 271--80\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Saltelli \latin{et~al.}(2010)Saltelli, Annoni, Azzini, Campolongo,
+  Ratto, and Tarantola]{Saltelli:2010}
+Saltelli,~A., Annoni,~P., Azzini,~I., Campolongo,~F., Ratto,~M., and
+  Tarantola,~S. (2010) Variance based sensitivity analysis of model output.
+  Design and estimator for the total sensitivity index. \emph{Computer Physics
+  Communications} \emph{181}, 259--70\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Herman()]{SALIB}
+Herman,~J.~D. http://jdherman.github.io/SALib/\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
