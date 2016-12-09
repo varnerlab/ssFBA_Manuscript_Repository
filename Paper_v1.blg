@@ -35,45 +35,45 @@ Too many commas in name 1 of "Moon TS, Lou C, Tamsir A, Stanton BC, Voigt CA" fo
 while executing---line 1678 of file biochem.bst
 Too many commas in name 1 of "Moon TS, Lou C, Tamsir A, Stanton BC, Voigt CA" for entry Moon:2012aa
 while executing---line 1678 of file biochem.bst
-You've used 24 entries,
+You've used 26 entries,
             2493 wiz_defined-function locations,
-            920 strings with 11476 characters,
-and the built_in function-call counts, 7425 in all, are:
-= -- 584
-> -- 449
+            938 strings with 12052 characters,
+and the built_in function-call counts, 8125 in all, are:
+= -- 639
+> -- 495
 < -- 13
-+ -- 161
-- -- 137
-* -- 835
-:= -- 996
-add.period$ -- 44
-call.type$ -- 24
++ -- 177
+- -- 151
+* -- 917
+:= -- 1091
+add.period$ -- 48
+call.type$ -- 26
 change.case$ -- 3
 chr.to.int$ -- 2
-cite$ -- 26
-duplicate$ -- 420
-empty$ -- 509
-format.name$ -- 167
-if$ -- 1438
+cite$ -- 28
+duplicate$ -- 460
+empty$ -- 555
+format.name$ -- 183
+if$ -- 1572
 int.to.chr$ -- 0
 int.to.str$ -- 1
 missing$ -- 0
-newline$ -- 160
-num.names$ -- 63
-pop$ -- 39
+newline$ -- 172
+num.names$ -- 69
+pop$ -- 43
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
 skip$ -- 1
 stack$ -- 0
-substring$ -- 335
-swap$ -- 419
-text.length$ -- 46
+substring$ -- 367
+swap$ -- 461
+text.length$ -- 50
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 165
+type$ -- 179
 warning$ -- 0
-while$ -- 79
+while$ -- 87
 width$ -- 0
-write$ -- 308
+write$ -- 334
 (There were 7 error messages)

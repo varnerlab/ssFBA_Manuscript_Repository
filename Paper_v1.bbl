@@ -2,7 +2,7 @@
 \providecommand*\mcitethebibliography{\thebibliography}
 \csname @ifundefined\endcsname{endmcitethebibliography}
   {\let\endmcitethebibliography\endthebibliography}{}
-\begin{mcitethebibliography}{24}
+\begin{mcitethebibliography}{26}
 \providecommand*\natexlab[1]{#1}
 \providecommand*\mciteSetBstSublistMode[1]{}
 \providecommand*\mciteSetBstMaxWidthForm[2]{}
@@ -175,6 +175,22 @@ Moon~TS,~T. A. S. B. V.~C.,~Lou~C (2012) Genetic programs constructed from
 Calhoun,~K.~A., and Swartz,~J.~R. (2005) An Economical Method for Cell-Free
   Protein Synthesis using Glucose and Nucleoside Monophosphates.
   \emph{Biotechnology Progress} \emph{21}, 1146--53\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Underwood \latin{et~al.}(2005)Underwood, Swartz, and
+  Puglisi]{2005_underwood_biotech}
+Underwood,~K.~A., Swartz,~J.~R., and Puglisi,~J.~D. (2005) Quantitative
+  polysome analysis identifies limitations in bacterial cell-free protein
+  synthesis. \emph{Biotechnology and Bioengineering} \emph{91}, 425--35\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Li \latin{et~al.}(2014)Li, Gu, Aach, and Church]{2014_li_PlosOne}
+Li,~J., Gu,~L., Aach,~J., and Church,~G.~M. (2014) Improved Cell-Free RNA and
+  Protein Synthesis System. \emph{PLoS ONE} \emph{9}, 1--11\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax

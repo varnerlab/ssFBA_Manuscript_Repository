@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2016.2.21)  9 DEC 2016 16:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2016.2.21)  9 DEC 2016 17:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1053,88 +1053,88 @@ File: ./Figures/Yield_POI.pdf Graphic file (type pdf)
 <use ./Figures/Yield_POI.pdf>
 Package pdftex.def Info: ./Figures/Yield_POI.pdf used on input line 225.
 (pdftex.def)             Requested size: 469.75539pt x 142.92679pt.
- [7] [8 <./Figures/Prod_POI.pdf>] [9 <./Figures/Yield_POI.pdf>] <./Figures/SI_G
-FP.pdf, id=168, 1009.7725pt x 461.725pt>
+ [7]
+<./Figures/SI_GFP.pdf, id=89, 1009.7725pt x 461.725pt>
 File: ./Figures/SI_GFP.pdf Graphic file (type pdf)
 
 <use ./Figures/SI_GFP.pdf>
-Package pdftex.def Info: ./Figures/SI_GFP.pdf used on input line 252.
+Package pdftex.def Info: ./Figures/SI_GFP.pdf used on input line 241.
 (pdftex.def)             Requested size: 469.75539pt x 214.79854pt.
-
-<./Figures/OxPhos_yield.pdf, id=169, 718.685pt x 557.08125pt>
+ [8 <./Figures/Prod_POI.pdf>] [9 <./Figures/Yield_POI.pdf>] [10 <./Figures/SI_G
+FP.pdf>]
+<./Figures/OxPhos_yield.pdf, id=225, 718.685pt x 557.08125pt>
 File: ./Figures/OxPhos_yield.pdf Graphic file (type pdf)
 
 <use ./Figures/OxPhos_yield.pdf>
-Package pdftex.def Info: ./Figures/OxPhos_yield.pdf used on input line 258.
+Package pdftex.def Info: ./Figures/OxPhos_yield.pdf used on input line 268.
 (pdftex.def)             Requested size: 328.82733pt x 254.89192pt.
 
-<./Figures/flux.pdf, id=170, 1479.5275pt x 2238.3625pt>
+<./Figures/flux.pdf, id=226, 1479.5275pt x 2238.3625pt>
 File: ./Figures/flux.pdf Graphic file (type pdf)
 
 <use ./Figures/flux.pdf>
-Package pdftex.def Info: ./Figures/flux.pdf used on input line 264.
+Package pdftex.def Info: ./Figures/flux.pdf used on input line 274.
 (pdftex.def)             Requested size: 375.80574pt x 568.53777pt.
 
-<./Figures/SI_CAT.pdf, id=171, 1008.76875pt x 461.725pt>
+<./Figures/SI_CAT.pdf, id=227, 1008.76875pt x 461.725pt>
 File: ./Figures/SI_CAT.pdf Graphic file (type pdf)
 
 <use ./Figures/SI_CAT.pdf>
-Package pdftex.def Info: ./Figures/SI_CAT.pdf used on input line 271.
+Package pdftex.def Info: ./Figures/SI_CAT.pdf used on input line 281.
 (pdftex.def)             Requested size: 469.75539pt x 215.0099pt.
+ [11 <./Figures/OxPhos_yield.pdf>] [12]
+
+Package natbib Warning: Citation `2002_Mahadevan_BiophysJ' on page 13 undefined
+ on input line 340.
 
 
-Package natbib Warning: Citation `2002_Mahadevan_BiophysJ' on page 10 undefined
- on input line 330.
+Package natbib Warning: Citation `2002_allen_palsson' on page 13 undefined on i
+nput line 343.
 
-[10 <./Figures/SI_GFP.pdf>] [11]
+[13] [14]
 
-Package natbib Warning: Citation `2002_allen_palsson' on page 12 undefined on i
-nput line 333.
-
-[12 <./Figures/OxPhos_yield.pdf>] [13]
-
-Package natbib Warning: Citation `Abernethy2003' on page 14 undefined on input 
-line 387.
+Package natbib Warning: Citation `Abernethy2003' on page 15 undefined on input 
+line 397.
 
 
-Package natbib Warning: Citation `Cotton1999' on page 14 undefined on input lin
-e 388.
+Package natbib Warning: Citation `Cotton1999' on page 15 undefined on input lin
+e 398.
 
 
-Package natbib Warning: Citation `Mena2000' on page 14 undefined on input line 
-389.
+Package natbib Warning: Citation `Mena2000' on page 15 undefined on input line 
+399.
 
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 394.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 404.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-) [14]
+)
 
 Package natbib Warning: Citation `Johnson1972' on page 15 undefined on input li
-ne 400.
+ne 410.
 
 
 LaTeX Warning: Reference `MciteSubReferenceLabel:main:Eisenstein2005' on page 1
-5 undefined on input line 406.
+5 undefined on input line 416.
 
-[15] [16] (./Paper_v1.bbl [17] [18] [19])
+[15] [16] [17] (./Paper_v1.bbl [18] [19] [20])
 
 Package natbib Warning: There were undefined citations.
 
-[20]
-Underfull \vbox (badness 10000) detected at line 544
+[21]
+Underfull \vbox (badness 10000) detected at line 554
  []
 
-[21] [22 <./Figures/flux.pdf>] [23 <./Figures/SI_CAT.pdf>] (./Paper_v1.aux)
+[22] [23 <./Figures/flux.pdf>] [24 <./Figures/SI_CAT.pdf>] (./Paper_v1.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 12932 strings out of 493105
- 225292 string characters out of 6137072
- 278726 words of memory out of 5000000
- 16176 multiletter control sequences out of 15000+600000
+ 12940 strings out of 493105
+ 225534 string characters out of 6137072
+ 277845 words of memory out of 5000000
+ 16184 multiletter control sequences out of 15000+600000
  34521 words of font info for 88 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  60i,14n,94p,10383b,467s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1167,10 +1167,10 @@ ts/type1/public/cm-super/sfti1000.pfb></usr/share/texmf/fonts/type1/public/cm-s
 uper/sfti1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb></
 usr/share/texmf/fonts/type1/public/cm-super/sftt0800.pfb></usr/share/texmf/font
 s/type1/public/cm-super/sftt1200.pfb>
-Output written on Paper_v1.pdf (23 pages, 1190790 bytes).
+Output written on Paper_v1.pdf (24 pages, 1193447 bytes).
 PDF statistics:
- 455 PDF objects out of 1000 (max. 8388607)
- 326 compressed objects within 4 object streams
+ 458 PDF objects out of 1000 (max. 8388607)
+ 328 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
  41 words of extra memory for PDF output out of 10000 (max. 10000000)
 

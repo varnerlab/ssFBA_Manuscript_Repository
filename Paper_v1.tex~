@@ -229,15 +229,40 @@ This leads to slightly similar carbon yields for all the proteins, however, the 
 
 
 \subsection{Sensitivity analysis on CFPS Performance}
-
-
-
-
+To better understand the effect of substrate utilization and transcription/translation parameters on CFPS performance we performed global sensitivity analysis on productivity and carbon yield for deGFP, a representative protein (Fig \ref{fig:SI_GFP}).
+In examining productivity performance (Fig \ref{fig:SI_GFP}A), the significance of transcription/translation parameters were fairly constant across all three cases, with the elongation rate by ribosomes being the most sensitive.
+This shows the rate of translation is instrumental in achieving high productivity, and should be the first step to investigate in order to optimize productivity, prior to examining transcription rates, this is consistent with literature findings.
+Underwood and coworkers have also shown that an increase in ribosome levels does not significantly increase protein yields or rates; however, adding elongation factors increased yields by 23\% at 30 minutes \cite{2005_underwood_biotech}.
+In addition, Li et al. have increased productivity of firefly lucifease by 5-fold in CFPS systems by adding and adjusting factors that affect transcription and translation such as elongation factors, ribosome recyclcing factor, release factors, chaperones, BSA, and tRNAs \cite{2014_li_PlosOne}.
+In examining the substrate utilization, glucose uptake was not very important for productivity in the first two cases, but its significance increased when amino acids was removed from CFPS.
+This makes sense, as amino acid synthesis can only come from glucose and becomes the only way to power protein synthesis.
+On the other hand, when amino acid synthesis is removed, amino acid uptake becomes more important, as it becomes the only source of amino acids.
 \begin{figure}[t!]
 \includegraphics[width=1.00\textwidth]{./Figures/SI_GFP.pdf}
 \caption{Total order sensitivity of deGFP productivity (A) and carbon yield (B) to specific uptake rates and transcription/translation parameters for three cases: control (black), amino acid uptake without synthesis (off white), and amino acid synthesis without uptake (gray). (Error bars represent 95\% CI of the ensemble).}
 \label{fig:SI_GFP}
 \end{figure}
+
+When considering carbon yield performance (Fig \ref{fig:SI_GFP}B), the substrate and oxygen uptake fluxes become much more important while the sensitivity to kinetic parameters decreases slightly.
+This is likely because glucose and oxygen uptake determine the mechanism of energy generation, which is critical to efficient protein production.
+Meanwhile, productivity is determined primarily by the rate of the most downstream steps, transcription and translation.
+Interestingly, in the first two cases, oxygen uptake has a significant effect on carbon yield.
+This is most likely due to the importance of oxidative phosphorylation for efficient energy generation.
+However, in the third case (with no amino acid uptake), oxygen uptake becomes insignificant compared to the other parameters, while glucose uptake becomes the most siginificant.  
+This may be because glucose is required for both amino acid synthesis and efficient energy generation, both of which are important for a high yield.
+Thus, there is a tradeoff between energy generation to power transcription/translation as well as synthesize amino acids which are required to assemble the protein of interest. 
+Across all three cases, substrate utilization (amino acid uptake and glucose) showed to be the next important as these substrates are contributing to the carbon yield of deGFP.
+The transcription/translation parameters had the same trend as in the productivity trend, where the ribosome elongation rate was the most sensitive compared to the transcription/translation parameters and showed significant importance across all parameters. 
+Thus, in investigating CFPS performance of productivity and yield, the ribosome elongation rate seems to be an important parameter to optimize, as been already shown in literature \cite{2005_underwood_biotech, 2014_li_PlosOne}. 
+
+We also performed this sensitivity analysis on CAT production, which did not show the same trend in yield across the three cases as the other proteins.
+For CAT, glucose uptake was as important to productivity as the kinetic parameters.
+Also, the increase in amino acid uptake importance to both productivity and yield was much greater.
+Finally, oxygen uptake became the most important factor in yield and maintained this across all three cases.
+Apart from these differences, the general trend of transcription and translation mattering more for productivity and uptake mattering more for yield was still true.
+
+
+
 
 \begin{figure}[t!]
 \includegraphics[width=0.7\textwidth]{./Figures/OxPhos_yield.pdf}
