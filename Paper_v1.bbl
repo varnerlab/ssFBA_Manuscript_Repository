@@ -202,6 +202,15 @@ Li,~J., Gu,~L., Aach,~J., and Church,~G.~M. (2014) Improved Cell-Free RNA and
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
+\bibitem[Garamella \latin{et~al.}(2016)Garamella, Marshall, Rustad, and
+  Noireaux]{Garamella:2016aa}
+Garamella,~J., Marshall,~R., Rustad,~M., and Noireaux,~V. (2016) The All E.
+  coli TX-TL Toolbox 2.0: A Platform for Cell-Free Synthetic Biology. \emph{ACS
+  Synth Biol} \emph{5}, 344--55\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
 \bibitem[Sobol(2001)]{SOBOL_METHOD}
 Sobol,~I. (2001) Global sensitivity indices for nonlinear mathematical models
   and their Monte Carlo estimates. \emph{Mathematics and Computers in
@@ -225,12 +234,5 @@ Herman,~J.~D. http://jdherman.github.io/SALib/\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
-\EndOfBibitem
-\bibitem[Not()]{Note-1}
-This is a note. The text will be moved the the references section. The title of
-  the section will change to ``Notes and References''.\relax
-\mciteBstWouldAddEndPunctfalse
-\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
-{}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
 \end{mcitethebibliography}
