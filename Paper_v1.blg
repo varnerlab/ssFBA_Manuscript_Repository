@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+This is BibTeX, Version 0.99d (TeX Live 2015)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: Paper_v1.aux
 The style file: biochem.bst
@@ -18,7 +18,7 @@ Too many commas in name 1 of "Moon TS, Lou C, Tamsir A, Stanton BC, Voigt CA" fo
 while executing---line 1688 of file biochem.bst
 Too many commas in name 1 of "Moon TS, Lou C, Tamsir A, Stanton BC, Voigt CA" for entry Moon:2012aa
 while executing---line 1688 of file biochem.bst
-achemso 2016/01/20 v3.10b
+achemso 2015/04/07 v3.10
 Too many commas in name 1 of "Moon TS, Lou C, Tamsir A, Stanton BC, Voigt CA" for entry Moon:2012aa
 while executing---line 1694 of file biochem.bst
 Too many commas in name 1 of "Moon TS, Lou C, Tamsir A, Stanton BC, Voigt CA" for entry Moon:2012aa
@@ -29,7 +29,7 @@ Too many commas in name 1 of "Moon TS, Lou C, Tamsir A, Stanton BC, Voigt CA" fo
 while executing---line 1694 of file biochem.bst
 You've used 26 entries,
             2531 wiz_defined-function locations,
-            930 strings with 11953 characters,
+            930 strings with 11952 characters,
 and the built_in function-call counts, 8466 in all, are:
 = -- 660
 > -- 521
