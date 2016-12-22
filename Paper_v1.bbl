@@ -179,6 +179,15 @@ Calhoun,~K.~A., and Swartz,~J.~R. (2005) An Economical Method for Cell-Free
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
+\bibitem[Garamella \latin{et~al.}(2016)Garamella, Marshall, Rustad, and
+  Noireaux]{Garamella:2016aa}
+Garamella,~J., Marshall,~R., Rustad,~M., and Noireaux,~V. (2016) The All E.
+  coli TX-TL Toolbox 2.0: A Platform for Cell-Free Synthetic Biology. \emph{ACS
+  Synth Biol} \emph{5}, 344--55\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
 \bibitem[Underwood \latin{et~al.}(2005)Underwood, Swartz, and
   Puglisi]{2005_underwood_biotech}
 Underwood,~K.~A., Swartz,~J.~R., and Puglisi,~J.~D. (2005) Quantitative
@@ -198,15 +207,6 @@ Li,~J., Gu,~L., Aach,~J., and Church,~G.~M. (2014) Improved Cell-Free RNA and
 \bibitem[GLP(2016)]{GLPK}
 {GNU Linear Programming Kit, Version 4.52}. 2016;
   \url{http://www.gnu.org/software/glpk/glpk.html}\relax
-\mciteBstWouldAddEndPuncttrue
-\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
-{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
-\EndOfBibitem
-\bibitem[Garamella \latin{et~al.}(2016)Garamella, Marshall, Rustad, and
-  Noireaux]{Garamella:2016aa}
-Garamella,~J., Marshall,~R., Rustad,~M., and Noireaux,~V. (2016) The All E.
-  coli TX-TL Toolbox 2.0: A Platform for Cell-Free Synthetic Biology. \emph{ACS
-  Synth Biol} \emph{5}, 344--55\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax

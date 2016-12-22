@@ -1,11 +1,7 @@
-This is BibTeX, Version 0.99d (TeX Live 2015)
+This is BibTeX, Version 0.99d (TeX Live 2016)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: Paper_v1.aux
 The style file: biochem.bst
-Illegal, another \bibstyle command---line 6 of file Paper_v1.aux
- : \bibstyle
- :          {biochem}
-I'm skipping whatever remains of this command
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: acs-Paper_v1.bib
 Database file #2: References_v1.bib
@@ -13,12 +9,11 @@ Warning--entry type for "GLPK" isn't style-file defined
 --line 285 of file References_v1.bib
 Warning--entry type for "SALIB" isn't style-file defined
 --line 313 of file References_v1.bib
-Warning--I didn't find a database entry for "2016_Garamella_etal_TXTL"
 Too many commas in name 1 of "Moon TS, Lou C, Tamsir A, Stanton BC, Voigt CA" for entry Moon:2012aa
 while executing---line 1688 of file biochem.bst
 Too many commas in name 1 of "Moon TS, Lou C, Tamsir A, Stanton BC, Voigt CA" for entry Moon:2012aa
 while executing---line 1688 of file biochem.bst
-achemso 2015/04/07 v3.10
+achemso 2016/05/10 v3.10c
 Too many commas in name 1 of "Moon TS, Lou C, Tamsir A, Stanton BC, Voigt CA" for entry Moon:2012aa
 while executing---line 1694 of file biochem.bst
 Too many commas in name 1 of "Moon TS, Lou C, Tamsir A, Stanton BC, Voigt CA" for entry Moon:2012aa
@@ -29,7 +24,7 @@ Too many commas in name 1 of "Moon TS, Lou C, Tamsir A, Stanton BC, Voigt CA" fo
 while executing---line 1694 of file biochem.bst
 You've used 26 entries,
             2531 wiz_defined-function locations,
-            930 strings with 11952 characters,
+            928 strings with 11905 characters,
 and the built_in function-call counts, 8466 in all, are:
 = -- 660
 > -- 521
@@ -68,4 +63,4 @@ warning$ -- 0
 while$ -- 91
 width$ -- 0
 write$ -- 339
-(There were 7 error messages)
+(There were 6 error messages)
