@@ -2,7 +2,7 @@
 \providecommand*\mcitethebibliography{\thebibliography}
 \csname @ifundefined\endcsname{endmcitethebibliography}
   {\let\endmcitethebibliography\endthebibliography}{}
-\begin{mcitethebibliography}{26}
+\begin{mcitethebibliography}{29}
 \providecommand*\natexlab[1]{#1}
 \providecommand*\mciteSetBstSublistMode[1]{}
 \providecommand*\mciteSetBstMaxWidthForm[2]{}
@@ -200,6 +200,28 @@ Underwood,~K.~A., Swartz,~J.~R., and Puglisi,~J.~D. (2005) Quantitative
 \bibitem[Li \latin{et~al.}(2014)Li, Gu, Aach, and Church]{2014_li_PlosOne}
 Li,~J., Gu,~L., Aach,~J., and Church,~G.~M. (2014) Improved Cell-Free RNA and
   Protein Synthesis System. \emph{PLoS ONE} \emph{9}, 1--11\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Henry~CS()]{Henry:2007}
+Henry~CS,~H.~V.,~Broadbelt~LJ Thermodynamics-Based Metabolic Flux Analysis.
+  \emph{Biophysical Journal} \emph{92}, 1792--1805\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Hamilton~JJ()]{Hamilton:2013}
+Hamilton~JJ,~R.~J.,~Dwivedi~V Quantitative Assessment of Thermodynamic
+  Constraints on the Solution Space of Genome-Scale Metabolic Models.
+  \emph{Biophysical Journal} \emph{105}, 512--22\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Zamboni~N()]{Zamboni:2009}
+Zamboni~N,~S.~U.,~Fendt~S 13C-based metabolic flux analysis. \emph{Nature
+  Protocols} \emph{4}, 878--92\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax

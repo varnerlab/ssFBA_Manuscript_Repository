@@ -1,13 +1,5 @@
 %% This BibTeX bibliography file was created using BibDesk.
 
-@article{Zamboni:2009,
-	Author = {Zamboni N, Fendt S, Sauer U},
-	Journal = {Nature Protocols},
-	Title = {13C-based metabolic flux analysis},
-	Volume = {4},
-	Pages = {878-92}.
-	Year = {2009}}
-
 @article{Hamilton:2013,
 	Author = {Hamilton JJ, Dwivedi V, Reed JL},
 	Journal = {Biophysical Journal},
@@ -15,7 +7,7 @@
 	Volume = {105},
 	Number = {2},
 	Pages = {512-22}.
-	Year = {2013}}
+	Year = {20013}}
 
 @article{Henry:2007,
 	Author = {Henry CS, Broadbelt LJ, Hatzimanikatis V},
