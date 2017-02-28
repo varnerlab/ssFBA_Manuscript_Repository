@@ -87,12 +87,7 @@ Taken together, sequence specific constraints based modeling offers a novel mean
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Start the main part of the manuscript here.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[t!]
-\includegraphics[width=0.7\textwidth]{./Figures/Yield_sensitivity.pdf}
-\caption{Total order sensitivity of deGFP carbon yield to specific uptake rates and transcription/translation parameters for three cases: amino acid uptake and synthesis (black), amino acid uptake without synthesis (dark grey), and amino acid synthesis without uptake (light gray). Error bars represent 95\% CI of the sensitivity index.}
-\label{fig:SI}
-\end{figure}
-\clearpage
+
 \section{Introduction}
 Cell free systems offer many advantages for the study, manipulation and modeling of metabolism compared to \textit{in vivo} processes.
 Central amongst these advantages is direct access to metabolites and the microbial biosynthetic machinery without the interference of a cell wall.
@@ -480,6 +475,12 @@ The following files are available free of charge.
   \item Carbon Yield Sensitivity Analysis: Global sensitivity analysis on deGFP carbon yield.
 \end{itemize}
 \end{suppinfo}
+ \clearpage
+\begin{figure}[t!]
+\includegraphics[width=0.7\textwidth]{./Figures/Yield_sensitivity.pdf}
+\caption{Total order sensitivity of deGFP carbon yield to specific uptake rates and transcription/translation parameters for three cases: amino acid uptake and synthesis (black), amino acid uptake without synthesis (dark grey), and amino acid synthesis without uptake (light gray). Error bars represent 95\% CI of the sensitivity index.}
+\label{fig:SI}
+\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% The appropriate \bibliography command should be placed here.
