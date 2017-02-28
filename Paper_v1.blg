@@ -1,0 +1,77 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/dev/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: Paper_v1.aux
+The style file: biochem.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: acs-Paper_v1.bib
+Database file #2: References_v1.bib
+I was expecting a `,' or a `}'---line 8 of file References_v1.bib
+ :  pages = {878-92}
+ :                  .
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 17 of file References_v1.bib
+ :  pages = {512-22}
+ :                  .
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 26 of file References_v1.bib
+ :  pages = {1792-1805}
+ :                     .
+I'm skipping whatever remains of this entry
+Warning--entry type for "GLPK" isn't style-file defined
+--line 311 of file References_v1.bib
+Warning--entry type for "SALIB" isn't style-file defined
+--line 339 of file References_v1.bib
+Too many commas in name 1 of "Moon TS, Lou C, Tamsir A, Stanton BC, Voigt CA" for entry Moon:2012aa
+while executing---line 1672 of file biochem.bst
+Too many commas in name 1 of "Moon TS, Lou C, Tamsir A, Stanton BC, Voigt CA" for entry Moon:2012aa
+while executing---line 1672 of file biochem.bst
+Too many commas in name 1 of "Moon TS, Lou C, Tamsir A, Stanton BC, Voigt CA" for entry Moon:2012aa
+while executing---line 1678 of file biochem.bst
+Too many commas in name 1 of "Moon TS, Lou C, Tamsir A, Stanton BC, Voigt CA" for entry Moon:2012aa
+while executing---line 1678 of file biochem.bst
+Too many commas in name 1 of "Moon TS, Lou C, Tamsir A, Stanton BC, Voigt CA" for entry Moon:2012aa
+while executing---line 1678 of file biochem.bst
+Too many commas in name 1 of "Moon TS, Lou C, Tamsir A, Stanton BC, Voigt CA" for entry Moon:2012aa
+while executing---line 1678 of file biochem.bst
+You've used 29 entries,
+            2493 wiz_defined-function locations,
+            942 strings with 12280 characters,
+and the built_in function-call counts, 9179 in all, are:
+= -- 734
+> -- 545
+< -- 16
++ -- 194
+- -- 165
+* -- 1017
+:= -- 1241
+add.period$ -- 55
+call.type$ -- 29
+change.case$ -- 3
+chr.to.int$ -- 2
+cite$ -- 30
+duplicate$ -- 513
+empty$ -- 637
+format.name$ -- 201
+if$ -- 1782
+int.to.chr$ -- 0
+int.to.str$ -- 1
+missing$ -- 0
+newline$ -- 190
+num.names$ -- 81
+pop$ -- 50
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 1
+stack$ -- 0
+substring$ -- 451
+swap$ -- 506
+text.length$ -- 56
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 200
+warning$ -- 0
+while$ -- 103
+width$ -- 0
+write$ -- 375
+(There were 9 error messages)
