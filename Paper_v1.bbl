@@ -2,7 +2,7 @@
 \providecommand*\mcitethebibliography{\thebibliography}
 \csname @ifundefined\endcsname{endmcitethebibliography}
   {\let\endmcitethebibliography\endthebibliography}{}
-\begin{mcitethebibliography}{29}
+\begin{mcitethebibliography}{30}
 \providecommand*\natexlab[1]{#1}
 \providecommand*\mciteSetBstSublistMode[1]{}
 \providecommand*\mciteSetBstMaxWidthForm[2]{}
@@ -229,6 +229,14 @@ Zamboni~N,~S.~U.,~Fendt~S 13C-based metabolic flux analysis. \emph{Nature
 \bibitem[GLP(2016)]{GLPK}
 {GNU Linear Programming Kit, Version 4.52}. 2016;
   \url{http://www.gnu.org/software/glpk/glpk.html}\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Zawada \latin{et~al.}()Zawada, Richter, Huang, Lodes, Shah, and
+  Swartz]{Zawada:2003}
+Zawada,~J., Richter,~B., Huang,~E., Lodes,~E., Shah,~A., and Swartz,~J.~R.
+  \emph{Fermentation Biotechnology}; Chapter 9, pp 142--156\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax

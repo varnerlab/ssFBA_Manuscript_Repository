@@ -1,17 +1,5 @@
 %% This BibTeX bibliography file was created using BibDesk.
 
-@inbook{Zawada:2003,
-author = {Zawada, J. and Richter, B. and Huang, E. and Lodes, E. and Shah, A. and Swartz, J. R.},
-title = {High-Density, Defined Media Culture for the Production of <italic>Escherichia coli</italic> Cell Extracts},
-booktitle = {Fermentation Biotechnology},
-chapter = {9},
-pages = {142-156},
-doi = {10.1021/bk-2003-0862.ch009},
-URL = {http://pubs.acs.org/doi/abs/10.1021/bk-2003-0862.ch009},
-eprint = {http://pubs.acs.org/doi/pdf/10.1021/bk-2003-0862.ch009}
-}
-
-
 @article{Zamboni:2009,
 	Author = {Zamboni N, Fendt S, Sauer U},
 	Journal = {Nature Protocols},
