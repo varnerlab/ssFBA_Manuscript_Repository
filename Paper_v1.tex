@@ -290,8 +290,8 @@ An alternative strategy may be the inhibition of anaerobic processes in cell-fre
 
 To investigate the differences between the three cases, we compared the flux distributions for a representative protein, deGFP, predicted by ssFBA simulations, as well as the case constrained by experimental measurements for CAT (Fig.~\ref{fig:flux}).
 \begin{figure}[t!]
-\includegraphics[width=1.00\textwidth]{./Figures/Flux_all.pdf}
-\caption{Flux profile for glycolysis, pentose phosphate pathway, Entner-Doudoroff pathway, TCA cycle, and oxidative phosphorylation, for four different cases: (A) amino acid uptake and synthesis, (B) amino acid uptake without synthesis, (C) amino acid synthesis without uptake, and (D) CAT flux distribution constrained by experimental measurements. Mean flux across the ensemble, normalized to glucose uptake flux. Thick arrows indicate flux to or from amino acids.}
+\includegraphics[width=1.00\textwidth]{./Figures/Flux.pdf}
+\caption{Flux profile for glycolysis, pentose phosphate pathway, Entner-Doudoroff pathway, TCA cycle, and oxidative phosphorylation, for three different cases: (A) amino acid uptake and synthesis, (B) amino acid uptake without synthesis, and (C) amino acid synthesis without uptake. Mean flux across the ensemble, normalized to glucose uptake flux. Thick arrows indicate flux to or from amino acids.}
 \label{fig:flux}
 \end{figure}
 The first case, which was supplied with amino acids and could synthesize them in the network, relied on a combination of glucose and amino acids to power the system (Fig.~\ref{fig:flux}A).
@@ -313,14 +313,22 @@ Thus, less NADH is available for oxidative phosphorylation.
 %, thus requiring glucose to energize CFPS as well as synthesize amino acids results in a decrease in performance.
 The performance metrics and sensitivity analysis suggest that efficient energy generation via oxygen uptake is essential to higher energy efficiency and carbon yields.
 Thus, removing anaerobic enzymes during the cell-free extract preparation could potentially improve CFPS performance and protein yield.
-The fourth case, constrained by experimental measurements, had a fairly similar flux distribution as the third case.
-Even though the experimental setup was supplied with amino acids, glucose still traveled through all the major pathways, and the same metabolic precursors were still utilized for amino acid biosynthesis.
-Only certain amino acid synthesis reactions were blocked, since during the cell-free extract preparation not all amino acids were supplied.  
-Accumulation of pyruvate, lactate, acetate, and other organic acids can be seen, implying an inefficiency of carbon utilization.
+
+The fourth case, constrained by experimental measurements (Fig. \ref{fig:flux_exp}), had a fairly similar flux distribution as the third case.
+The central carbon organic acids show good agreement with the data (Fig. \ref{fig:flux_exp}B).
+Metabolic fluxes were constrained by experimental measurements (available in Supporting Information) where available for the first hour which constrained the solution space of ssFBA to have a more realistic depiction of the flux distribution.
+Unlike the second case, only certain amino acid synthesis reactions were blocked since during the growth of \emph{E.~coli} not all amino acids were supplied.
+During the cell-free reaction all amino acids were supplied, however glucose still traveled through all the major pathways, and the same metabolic precursors were still utilized for amino acid biosynthesis.
+Accumulation of pyruvate, lactate, acetate, and other organic acids can be seen (Fig. \ref{fig:flux_exp}B), implying an inefficiency of carbon utilization.
 In addition, there is a high flux through the Entner-Douodoroff pathway, but this is likely non-physiological, and simply an artifact of the optimal solution of ssFBA.
 To determine which reactions occur in CFPS, adding thermodynamic feasibility constraints to reactions may result in a better depiction of the intracellular flux distribution \cite{Henry:2007,Hamilton:2013}.
-In this case, it is unclear which substrate (glucose or amino acids) is used to power CFPS and to power protein synthesis and may in fact be a combination of both.
-Thus, it would be interesting to track the carbon flux using C\textsuperscript{13} labeling in CFPS and constrain branch reactions in ssFBA to the resulting measurements, a method that has been shown to represent the flux distribution for \textit{in~vivo} processes well \cite{Zamboni:2009}.
+In this case, it is unclear which substrate (glucose or amino acids) is used to power CFPS and may in fact be a combination of both.
+Thus, it would be interesting to track the carbon flux using C\textsuperscript{13} labeling in CFPS and constrain branch reactions in ssFBA to the resulting measurements, a method that has been shown to represent the flux distribution for \emph{in~vivo} processes well \cite{Zamboni:2009}.
+\begin{figure}[t!]
+\includegraphics[width=1.00\textwidth]{./Figures/ssFBA_exp.pdf}
+\caption{ssFBA simulation of CAT production for an experimentally constrained case. (A) Flux profile for glycolysis, pentose phosphate pathway, Entner-Doudoroff pathway, TCA cycle, and oxidative phosphorylation.  Mean flux across the ensemble, normalized to glucose uptake flux. Thick arrows indicate flux to or from amino acids. (B) Central carbon metabolite measurements versus ssFBA simulations over a one hour time course.}
+\label{fig:flux_exp}
+\end{figure}
 
 Taken together, we developed a sequence specific constraints based modeling approach to evaluate the performance of synthetic circuits in an \emph{E.~coli} CFPS system for a range of different proteins and three different cases.
 We have shown first principle predictions for protein production of deGFP and CAT in agreement with experimental measurements, under two different promoters and two different cell-free extract systems, with few adjustable parameters in the promoter models taken from literature.
