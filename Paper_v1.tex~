@@ -326,7 +326,7 @@ In this case, it is unclear which substrate (glucose or amino acids) is used to 
 Thus, it would be interesting to track the carbon flux using C\textsuperscript{13} labeling in CFPS and constrain branch reactions in ssFBA to the resulting measurements, a method that has been shown to represent the flux distribution for \emph{in~vivo} processes well \cite{Zamboni:2009}.
 \begin{figure}[t!]
 \includegraphics[width=1.00\textwidth]{./Figures/ssFBA_exp.pdf}
-\caption{ssFBA simulation of CAT production for an experimentally constrained case. (A) Flux profile for glycolysis, pentose phosphate pathway, Entner-Doudoroff pathway, TCA cycle, and oxidative phosphorylation.  Mean flux across the ensemble, normalized to glucose uptake flux. Thick arrows indicate flux to or from amino acids. (B) Central carbon metabolite measurements versus ssFBA simulations over one hour time course.}
+\caption{ssFBA simulation of CAT production for an experimentally constrained case. (A) Flux profile for glycolysis, pentose phosphate pathway, Entner-Doudoroff pathway, TCA cycle, and oxidative phosphorylation.  Mean flux across the ensemble, normalized to glucose uptake flux. Thick arrows indicate flux to or from amino acids. (B) Central carbon metabolite measurements versus ssFBA simulations over a one hour time course.}
 \label{fig:flux_exp}
 \end{figure}
 
@@ -339,6 +339,34 @@ The model also suggested that cell-free systems can simultaneously operate aerob
 In conclusion, sequence specific constraints based modeling offers a novel means to \emph{a~priori} estimate the performance of cell-free synthetic circuits.
 
 \section*{Materials and Methods}
+
+\subsection*{Cell-free protein synthesis.}
+The glucose/NMP cell-free protein synthesis reactions were performed at a volume of 15 $\mu$L in 1.5-mL eppendorf tubes and incubated in a humidified incubator. 
+Plasmid pK7CAT was used as the DNA template for chloramphenical acetyl transferase (CAT) expression by placing the \emph{cat} gene between the T7 promoter and the T7 terminator \cite{Kigawa1995}.
+The plasmid was isolated and purified using a Plasmid Maxi Kit (Qiagen, Valencia CA). 
+Cell-free protein synthesis of CAT protein was performed at 37 $^{\circ}$C for 3 h. 
+
+S30 extract was prepared from E. coli strain KC6 (A19 $\delta$tonA $\delta$tnaA $\delta$speA $\delta$endA $\delta$sdaA $\delta$sdaB $\delta$gshA met+). 
+This K12-derivative has several gene deletions to stabilize amino acid concentrations during the cell-free reaction. 
+The KC6 strain was grown to approximately 3 OD595 in a 10-L fermenter (B. Braun, Allentown PA) on defined media with glucose as the carbon source and with the addition of 13 amino acids (alanine, arginine, cysteine, serine, aspartate, glutamate, and glutamine were excluded) \cite{Zawada:2003}. 
+Crude S30 extract was made as previously described \cite{Jewett:2002}.
+
+The standard protein synthesis reaction was conducted according to the PANOxSP protocol with slight modifications from that described previously \cite{BIT:BIT20026}. 
+Unless otherwise noted, all reagents were purchased from Sigma (St. Louis, MO). 
+The initial mixture includes 1.2 mM ATP; 0.85 mM each of GTP, UTP, and CTP; 30 mM phosphoenolpyruvate (Roche, Indianapolis IN); 130 mM potassium glutamate; 10 mM ammonium glutamate; 16 mM magnesium glutamate; 50 mM HEPES-KOH buffer (pH 7.5); 1.5 mM spermidine; 1.0 mM putrescine; 34 $\mu$g/mL folinic acid; 170.6 $\mu$g/mL E. coli tRNA mixture (Roche, Indianapolis IN); 13.3 $\mu$g/mL pK7CAT plasmid; 100 $\mu$g/mL T7 RNA polymerase; 20 unlabeled amino acids at 2 mM each; 5 $\mu$M l-[U-\textsuperscript{14}C]-leucine (Amersham Pharmacia, Uppsala Sweden); 0.33 mM nicotinamide adenine dinucleotide (NAD); 0.26 mM coenzyme A (CoA); 2.7 mM sodium oxalate; and 0.24 volumes of E. coli S30 extract.
+This reaction was modified for the energy source used such that glucose reactions have 30 mM glucose in place of PEP, and glutamate reactions do not have a secondary energy source added since glutamate is already present in high concentrations from the reaction salts. Sodium oxalate was not added since it has a detrimental effect on protein synthesis and ATP concentrations when using glucose or an early glycolytic intermediate as the energy source \cite{BIT:BIT1121}. The HEPES buffer (pKa $\sim$ 7.5) was replaced with Bis-Tris (pKa $\sim$ 6.5). In addition, the magnesium glutamate concentration was reduced to 8 mM for the glucose and glutamate reactions since a lower magnesium optimum is found when using a nonphosphorylated energy source \cite{BIT:BIT20026}. Finally, 10 mM phosphate was added to some reactions as described below in the form of potassium phosphate dibasic adjusted to pH 7.2 with acetic acid.
+
+\subsection*{Measurements of protein product and metabolites.}
+Cell-free reaction samples were quenched at specific timepoints with equal volumes of ice-cold 150 mM sulfuric acid to precipitate proteins. 
+Protein synthesis of CAT was determined from the total amount of \textsuperscript{14}C-leucine-labeled product by trichloroacetic acid precipitation followed by scintillation counting as described previously \cite{2005_calhoun_BiotechnologyProgress}.
+Samples were centrifuged for 10 min at 12,000g and 4$^{\circ}$C. 
+The supernatant was collected for high performance liquid chromatography (HPLC) analysis. 
+HPLC analysis (Agilent 1100 HPLC, Palo Alto CA) was used to separate nucleotides and organic acids, including glucose. Compounds were identified and quantified by comparison to known standards for retention time and UV absorbance (260 nm for nucleotides and 210 nm for organic acids) as described previously \cite{2005_calhoun_BiotechnologyProgress}.  
+Calibration standards were routinely run for improved quantification of compounds. 
+The standard compounds quantified with a refractive index detector included inorganic phosphate, glucose, and acetate. 
+The compounds quantified with the UV detector included pyruvate, malate, succinate, and lactate.
+The stability of the amino acids in the cell extract was determined using a Dionex Amino Acid Analysis (AAA) HPLC System (Sunnyvale, CA) that separates amino acids by gradient anion exchange (AminoPac PA10 column).
+Compounds were identified with pulsed amperometric electrochemical detection and by comparison to known standards. 
 
 \subsection*{Formulation and solution of the model equations.}
 We estimated the theoretical maximum performance of the cell-free protein synthesis system using sequence specific flux balance analysis (ssFBA) \cite{Allen:2003aa}.

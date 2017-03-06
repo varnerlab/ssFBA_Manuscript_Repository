@@ -5,22 +5,26 @@ The style file: biochem.bst
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: acs-Paper_v1.bib
 Database file #2: References_v1.bib
-I was expecting a `,' or a `}'---line 20 of file References_v1.bib
+I was expecting a `,' or a `}'---line 55 of file References_v1.bib
+ :  pages = {391-411}
+ :                   .
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 74 of file References_v1.bib
  :  pages = {878-92}
  :                  .
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 29 of file References_v1.bib
+I was expecting a `,' or a `}'---line 83 of file References_v1.bib
  :  pages = {512-22}
  :                  .
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 38 of file References_v1.bib
+I was expecting a `,' or a `}'---line 92 of file References_v1.bib
  :  pages = {1792-1805}
  :                     .
 I'm skipping whatever remains of this entry
 Warning--entry type for "GLPK" isn't style-file defined
---line 323 of file References_v1.bib
+--line 377 of file References_v1.bib
 Warning--entry type for "SALIB" isn't style-file defined
---line 351 of file References_v1.bib
+--line 405 of file References_v1.bib
 Too many commas in name 1 of "Moon TS, Lou C, Tamsir A, Stanton BC, Voigt CA" for entry Moon:2012aa
 while executing---line 1672 of file biochem.bst
 Too many commas in name 1 of "Moon TS, Lou C, Tamsir A, Stanton BC, Voigt CA" for entry Moon:2012aa
@@ -33,45 +37,45 @@ Too many commas in name 1 of "Moon TS, Lou C, Tamsir A, Stanton BC, Voigt CA" fo
 while executing---line 1678 of file biochem.bst
 Too many commas in name 1 of "Moon TS, Lou C, Tamsir A, Stanton BC, Voigt CA" for entry Moon:2012aa
 while executing---line 1678 of file biochem.bst
-You've used 30 entries,
+You've used 34 entries,
             2493 wiz_defined-function locations,
-            950 strings with 12605 characters,
-and the built_in function-call counts, 9706 in all, are:
-= -- 773
-> -- 583
-< -- 17
-+ -- 207
-- -- 177
-* -- 1066
-:= -- 1308
-add.period$ -- 56
-call.type$ -- 30
+            986 strings with 13584 characters,
+and the built_in function-call counts, 11355 in all, are:
+= -- 909
+> -- 683
+< -- 18
++ -- 241
+- -- 207
+* -- 1262
+:= -- 1526
+add.period$ -- 63
+call.type$ -- 34
 change.case$ -- 3
 chr.to.int$ -- 2
-cite$ -- 31
-duplicate$ -- 544
-empty$ -- 676
-format.name$ -- 214
-if$ -- 1901
+cite$ -- 35
+duplicate$ -- 637
+empty$ -- 791
+format.name$ -- 252
+if$ -- 2234
 int.to.chr$ -- 0
 int.to.str$ -- 1
 missing$ -- 0
-newline$ -- 196
-num.names$ -- 84
-pop$ -- 55
+newline$ -- 220
+num.names$ -- 98
+pop$ -- 63
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 2
+skip$ -- 3
 stack$ -- 0
-substring$ -- 480
-swap$ -- 542
-text.length$ -- 59
+substring$ -- 573
+swap$ -- 638
+text.length$ -- 68
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 204
+type$ -- 229
 warning$ -- 0
-while$ -- 108
+while$ -- 126
 width$ -- 0
-write$ -- 386
-(There were 9 error messages)
+write$ -- 438
+(There were 10 error messages)

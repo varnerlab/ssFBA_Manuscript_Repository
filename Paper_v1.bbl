@@ -2,7 +2,7 @@
 \providecommand*\mcitethebibliography{\thebibliography}
 \csname @ifundefined\endcsname{endmcitethebibliography}
   {\let\endmcitethebibliography\endthebibliography}{}
-\begin{mcitethebibliography}{30}
+\begin{mcitethebibliography}{34}
 \providecommand*\natexlab[1]{#1}
 \providecommand*\mciteSetBstSublistMode[1]{}
 \providecommand*\mciteSetBstMaxWidthForm[2]{}
@@ -211,24 +211,25 @@ Henry~CS,~H.~V.,~Broadbelt~LJ Thermodynamics-Based Metabolic Flux Analysis.
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
-\bibitem[Hamilton~JJ()]{Hamilton:2013}
-Hamilton~JJ,~R.~J.,~Dwivedi~V Quantitative Assessment of Thermodynamic
-  Constraints on the Solution Space of Genome-Scale Metabolic Models.
-  \emph{Biophysical Journal} \emph{105}, 512--22\relax
+\bibitem[Hamilton \latin{et~al.}()Hamilton, Dwivedi, and Reed]{Hamilton:2013}
+Hamilton,~J., Dwivedi,~V., and Reed,~J. Quantitative Assessment of
+  Thermodynamic Constraints on the Solution Space of Genome-Scale Metabolic
+  Models. \emph{Biophysical Journal} \emph{105}, 512--22\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
-\bibitem[Zamboni~N()]{Zamboni:2009}
-Zamboni~N,~S.~U.,~Fendt~S 13C-based metabolic flux analysis. \emph{Nature
-  Protocols} \emph{4}, 878--92\relax
+\bibitem[Zamboni \latin{et~al.}()Zamboni, Fendt, and Sauer]{Zamboni:2009}
+Zamboni,~N., Fendt,~S., and Sauer,~U. 13C-based metabolic flux analysis.
+  \emph{Nature Protocols} \emph{4}, 878--92\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
-\bibitem[GLP(2016)]{GLPK}
-{GNU Linear Programming Kit, Version 4.52}. 2016;
-  \url{http://www.gnu.org/software/glpk/glpk.html}\relax
+\bibitem[Kigawa \latin{et~al.}(1995)Kigawa, Muto, and Yokoyama]{Kigawa1995}
+Kigawa,~T., Muto,~Y., and Yokoyama,~S. (1995) Cell-free synthesis and amino
+  acid-selective stable isotope labeling of proteins for NMR analysis.
+  \emph{Journal of Biomolecular NMR} \emph{6}, 129--134\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
@@ -237,6 +238,37 @@ Zamboni~N,~S.~U.,~Fendt~S 13C-based metabolic flux analysis. \emph{Nature
   Swartz]{Zawada:2003}
 Zawada,~J., Richter,~B., Huang,~E., Lodes,~E., Shah,~A., and Swartz,~J.~R.
   \emph{Fermentation Biotechnology}; Chapter 9, pp 142--156\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Jewett \latin{et~al.}(2002)Jewett, Voloshin, and Swartz]{Jewett:2002}
+Jewett,~M., Voloshin,~A., and Swartz,~J. In \emph{Gene Cloning and Expression
+  Technologies}; Weiner,~M., and Lu,~Q., Eds.; Eaton Publishing: Westborough,
+  MA, 2002; pp 391--411\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Jewett and Swartz(2004)Jewett, and Swartz]{BIT:BIT20026}
+Jewett,~M.~C., and Swartz,~J.~R. (2004) Mimicking the Escherichia coli
+  cytoplasmic environment activates long-lived and efficient cell-free protein
+  synthesis. \emph{Biotechnology and Bioengineering} \emph{86}, 19--26\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Kim and Swartz(2001)Kim, and Swartz]{BIT:BIT1121}
+Kim,~D.-M., and Swartz,~J.~R. (2001) Regeneration of adenosine triphosphate
+  from glycolytic intermediates for cell-free protein synthesis.
+  \emph{Biotechnology and Bioengineering} \emph{74}, 309--316\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[GLP(2016)]{GLPK}
+{GNU Linear Programming Kit, Version 4.52}. 2016;
+  \url{http://www.gnu.org/software/glpk/glpk.html}\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
