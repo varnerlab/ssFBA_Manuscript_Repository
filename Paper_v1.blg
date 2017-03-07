@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2015/dev/Debian)
+This is BibTeX, Version 0.99d (TeX Live 2015)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: Paper_v1.aux
 The style file: biochem.bst
@@ -26,56 +26,57 @@ Warning--entry type for "GLPK" isn't style-file defined
 Warning--entry type for "SALIB" isn't style-file defined
 --line 405 of file References_v1.bib
 Too many commas in name 1 of "Moon TS, Lou C, Tamsir A, Stanton BC, Voigt CA" for entry Moon:2012aa
-while executing---line 1672 of file biochem.bst
+while executing---line 1688 of file biochem.bst
 Too many commas in name 1 of "Moon TS, Lou C, Tamsir A, Stanton BC, Voigt CA" for entry Moon:2012aa
-while executing---line 1672 of file biochem.bst
+while executing---line 1688 of file biochem.bst
+achemso 2015/04/07 v3.10
 Too many commas in name 1 of "Moon TS, Lou C, Tamsir A, Stanton BC, Voigt CA" for entry Moon:2012aa
-while executing---line 1678 of file biochem.bst
+while executing---line 1694 of file biochem.bst
 Too many commas in name 1 of "Moon TS, Lou C, Tamsir A, Stanton BC, Voigt CA" for entry Moon:2012aa
-while executing---line 1678 of file biochem.bst
+while executing---line 1694 of file biochem.bst
 Too many commas in name 1 of "Moon TS, Lou C, Tamsir A, Stanton BC, Voigt CA" for entry Moon:2012aa
-while executing---line 1678 of file biochem.bst
+while executing---line 1694 of file biochem.bst
 Too many commas in name 1 of "Moon TS, Lou C, Tamsir A, Stanton BC, Voigt CA" for entry Moon:2012aa
-while executing---line 1678 of file biochem.bst
-You've used 34 entries,
-            2493 wiz_defined-function locations,
-            986 strings with 13584 characters,
-and the built_in function-call counts, 11355 in all, are:
-= -- 909
-> -- 683
+while executing---line 1694 of file biochem.bst
+You've used 29 entries,
+            2531 wiz_defined-function locations,
+            957 strings with 12417 characters,
+and the built_in function-call counts, 9743 in all, are:
+= -- 780
+> -- 577
 < -- 18
-+ -- 241
-- -- 207
-* -- 1262
-:= -- 1526
-add.period$ -- 63
-call.type$ -- 34
-change.case$ -- 3
++ -- 204
+- -- 175
+* -- 1065
+:= -- 1300
+add.period$ -- 53
+call.type$ -- 29
+change.case$ -- 4
 chr.to.int$ -- 2
-cite$ -- 35
-duplicate$ -- 637
-empty$ -- 791
-format.name$ -- 252
-if$ -- 2234
+cite$ -- 30
+duplicate$ -- 541
+empty$ -- 679
+format.name$ -- 215
+if$ -- 1940
 int.to.chr$ -- 0
 int.to.str$ -- 1
 missing$ -- 0
-newline$ -- 220
-num.names$ -- 98
-pop$ -- 63
+newline$ -- 190
+num.names$ -- 83
+pop$ -- 53
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 3
+skip$ -- 29
 stack$ -- 0
-substring$ -- 573
-swap$ -- 638
-text.length$ -- 68
+substring$ -- 501
+swap$ -- 539
+text.length$ -- 58
 text.prefix$ -- 0
-top$ -- 0
-type$ -- 229
+top$ -- 1
+type$ -- 194
 warning$ -- 0
-while$ -- 126
+while$ -- 108
 width$ -- 0
-write$ -- 438
+write$ -- 373
 (There were 10 error messages)

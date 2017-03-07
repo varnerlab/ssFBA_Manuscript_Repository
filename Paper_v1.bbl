@@ -2,7 +2,7 @@
 \providecommand*\mcitethebibliography{\thebibliography}
 \csname @ifundefined\endcsname{endmcitethebibliography}
   {\let\endmcitethebibliography\endthebibliography}{}
-\begin{mcitethebibliography}{34}
+\begin{mcitethebibliography}{29}
 \providecommand*\natexlab[1]{#1}
 \providecommand*\mciteSetBstSublistMode[1]{}
 \providecommand*\mciteSetBstMaxWidthForm[2]{}
@@ -110,62 +110,10 @@ Feist,~A.~M., Herrg{\aa}rd,~M.~J., Thiele,~I., Reed,~J.~L., and
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
-\bibitem[Ibarra \latin{et~al.}(2002)Ibarra, Edwards, and
-  Palsson]{2002_ibarra_edwards_palsson_Nat}
-Ibarra,~R.~U., Edwards,~J.~S., and Palsson,~B.~{\O}. (2002) Escherichia coli
-  K-12 undergoes adaptive evolution to achieve in silico predicted optimal
-  growth. \emph{Nature} \emph{420}, 186--9\relax
-\mciteBstWouldAddEndPuncttrue
-\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
-{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
-\EndOfBibitem
-\bibitem[Schuetz \latin{et~al.}(2007)Schuetz, Kuepfer, and
-  Sauer]{2007_schuetz_sauer_MolSysBio}
-Schuetz,~R., Kuepfer,~L., and Sauer,~U. (2007) Systematic evaluation of
-  objective functions for predicting intracellular fluxes in Escherichia coli.
-  \emph{Mol Syst Biol} \emph{3}, 119\relax
-\mciteBstWouldAddEndPuncttrue
-\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
-{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
-\EndOfBibitem
-\bibitem[Hyduke \latin{et~al.}(2013)Hyduke, Lewis, and
-  Palsson]{2013_hyduke_lewis_palsson_MolBioSys}
-Hyduke,~D.~R., Lewis,~N.~E., and Palsson,~B.~{\O}. (2013) Analysis of omics
-  data with genome-scale models of metabolism. \emph{Mol Biosyst} \emph{9},
-  167--74\relax
-\mciteBstWouldAddEndPuncttrue
-\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
-{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
-\EndOfBibitem
-\bibitem[McCloskey \latin{et~al.}(2013)McCloskey, Palsson, and
-  Feist]{2013_mccloskey_palsson_feist_MolSysBio}
-McCloskey,~D., Palsson,~B.~{\O}., and Feist,~A.~M. (2013) Basic and applied
-  uses of genome-scale metabolic network reconstructions of Escherichia coli.
-  \emph{Mol Syst Biol} \emph{9}, 661\relax
-\mciteBstWouldAddEndPuncttrue
-\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
-{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
-\EndOfBibitem
-\bibitem[Zomorrodi \latin{et~al.}(2012)Zomorrodi, Suthers, Ranganathan, and
-  Maranas]{2012_zomorrodi_maranas_MetaEng}
-Zomorrodi,~A.~R., Suthers,~P.~F., Ranganathan,~S., and Maranas,~C.~D. (2012)
-  Mathematical optimization applications in metabolic networks. \emph{Metab
-  Eng} \emph{14}, 672--86\relax
-\mciteBstWouldAddEndPuncttrue
-\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
-{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
-\EndOfBibitem
 \bibitem[Allen and Palsson(2003)Allen, and Palsson]{Allen:2003aa}
 Allen,~T.~E., and Palsson,~B.~{\O}. (2003) Sequence-based analysis of metabolic
   demands for protein synthesis in prokaryotes. \emph{J Theor Biol} \emph{220},
   1--18\relax
-\mciteBstWouldAddEndPuncttrue
-\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
-{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
-\EndOfBibitem
-\bibitem[Moon~TS(2012)]{Moon:2012aa}
-Moon~TS,~T. A. S. B. V.~C.,~Lou~C (2012) Genetic programs constructed from
-  layered logic gates in single cells. \emph{Nature} \emph{491}\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
@@ -262,6 +210,13 @@ Jewett,~M.~C., and Swartz,~J.~R. (2004) Mimicking the Escherichia coli
 Kim,~D.-M., and Swartz,~J.~R. (2001) Regeneration of adenosine triphosphate
   from glycolytic intermediates for cell-free protein synthesis.
   \emph{Biotechnology and Bioengineering} \emph{74}, 309--316\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Moon~TS(2012)]{Moon:2012aa}
+Moon~TS,~T. A. S. B. V.~C.,~Lou~C (2012) Genetic programs constructed from
+  layered logic gates in single cells. \emph{Nature} \emph{491}\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
