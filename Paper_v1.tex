@@ -384,81 +384,36 @@ The stability of the amino acids in the cell extract was determined using a Dion
 Compounds were identified with pulsed amperometric electrochemical detection and by comparison to known standards.
 
 \subsection*{Formulation and solution of the model equations.}
-We estimated the theoretical maximum performance of the cell-free protein synthesis system using sequence specific flux balance analysis (ssFBA) \cite{Allen:2003aa}.
-The sequence specific flux balance analysis problem was formulated as a linear program:
+The sequence-specific flux balance analysis problem was formulated as a linear program:
 \begin{equation}
  \begin{multlined}
 	\qquad \qquad \qquad \max_{\boldsymbol{w}}{} \! \left( w_{TL} = \mathbf{\boldsymbol{\theta}}^T \boldsymbol{w} \right) \\
 	\mathrm{Subject \; to:}
 	 \; \; \mathbf{S}\mathbf{w}=\mathbf{0} \\
-\alpha_i \leq w_i \leq \beta_i  \qquad i=1,2,\hdots,\mathcal{R}
+\mathcal{L}_{i} \leq w_i \leq \mathcal{U}_{i}  \qquad i=1,2,\hdots,\mathcal{R}
  \end{multlined}
 \end{equation}
 where $\mathbf{S}$ denotes the stoichiometric matrix, $\mathbf{w}$ denotes the unknown flux vector, $\boldsymbol{\theta}$ denotes the objective selection vector
-and $\alpha_i$ and $\beta_i$ denote the lower and upper bounds on flux $w_{i}$, respectively.
-The stoichiometry of the kinetic model was used for the ssFBA calculations, with the execpetion of the transcription and translation rates.
-The transcription (TX) and translation (TL) stoichiometry was modeled using the template reactions taken from Allen and Palsson \cite{Allen:2003aa}:
+and $\mathcal{L}_{i}$ and $\mathcal{U}_{i}$ denote the lower and upper bounds on flux $w_{i}$, respectively.
+The transcription (TX) and translation (TL) stoichiometry was modeled using the template reactions of Allen and Palsson \cite{Allen:2003aa}:
 \begin{eqnarray*}
-\mathrm{{G}_{\mathcal{P}}}+\mathrm{{R}_{1}} &\longrightarrow& \mathrm{G_{\mathcal{P}}^{*}} \\
-\mathrm{G_{\mathcal{P}}^{*}}+\sum_{\mathrm{k\in\left\{A,C,G,U\right\}}}\eta_{k}\cdot \mathrm{\left\{k\right\}TP} &\overset{\rm TX}{\longrightarrow}& \mathrm{mRNA}+\mathrm{G_{\mathcal{P}}}+\mathrm{R_{1}}+ \mathrm{\sum_{k\in\left\{A,C,G,U\right\}}2\eta_{k}\cdot Pi}\\
-\mathrm{mRNA} &\longrightarrow& \mathrm{\sum_{k\in\left\{A,C,G,U\right\}}\eta_{k}\cdot \left\{k\right\}MP} \\
-\mathrm{mRNA}+\mathrm{R_{2}} &\longrightarrow& \mathrm{R_{2}^{*}} \\
-\mathrm{\alpha_{j}\cdot AA_{j}+\alpha_{j}\cdot tRNA+\alpha_{j}\cdot ATP} &\longrightarrow& \mathrm{\alpha_{j}\cdot AA_{j}-tRNA_{j}+}\\
-&& \mathrm{\qquad \alpha_{j}\cdot AMP+2\alpha_{j}\cdot Pi} \qquad{j=1,2,\hdots,20}\\
-\mathrm{R_{2}^{*}+\sum_{j\in\left\{AA\right\}}\alpha_{j}\cdot \Big(AA_{j}-tRNA_{j}+2\cdot GTP\Big)} &\stackrel{\rm TL}{\longrightarrow}& \mathcal{P}+\mathrm{R_{2}+mRNA}+\\
-&& \mathrm{\quad +\sum_{j\in\left\{AA\right\}}\alpha_{j}\cdot\Big(tRNA+2\cdot GDP+2\cdot Pi\Big)}
+{G}_{\mathcal{P}}+{R}_{T} &\longrightarrow& G_{\mathcal{P}}^{*} \\
+G_{\mathcal{P}}^{*}+\sum_{\mathrm{k\in\left\{A,C,G,U\right\}}}\eta_{k}\cdot \left\{k\right\}TP &\overset{\rm TX}{\longrightarrow}& mRNA+G_{\mathcal{P}}+R_{T}+ \sum_{k\in\left\{A,C,G,U\right\}}2 \eta_{k} \cdot Pi\\
+mRNA &\longrightarrow& \sum_{k\in\left\{A,C,G,U\right\}}\eta_{k}\cdot \left\{k\right\}MP \\
+mRNA+R_{X} &\longrightarrow& R_{X}^{*} \\
+\alpha_{j}\cdot AA_{j}+\alpha_{j}\cdot tRNA+\alpha_{j}\cdot ATP &\longrightarrow& \alpha_{j}\cdot AA_{j}-tRNA_{j}+\\
+&& \qquad \alpha_{j}\cdot AMP+2\alpha_{j}\cdot Pi \qquad{j=1,2,\hdots,20}\\
+R_{X}^{*}+\sum_{j\in\left\{AA\right\}}\alpha_{j}\cdot \Big(AA_{j}-tRNA_{j}+2\cdot GTP\Big) &\stackrel{\rm TL}{\longrightarrow}& \mathcal{P}+R_{X}+mRNA+\\
+&& \quad +\sum_{j\in\left\{AA\right\}}\alpha_{j}\cdot\Big(tRNA+2\cdot GDP+2\cdot Pi\Big)
 \end{eqnarray*}
 where $G_{\mathcal{P}}$ denotes the gene encoding protein product $\mathcal{P}$,
-$\rm R_{1}$ denotes the concentration of RNA polymerase,
-$G_{\mathcal{P}}^{*}$ denotes the gene bounded by the RNA polymerase,
+$R_{T}$ denotes the concentration of RNA polymerase,
+$G_{\mathcal{P}}^{*}$ denotes the gene bounded by the RNA polymerase (open complex),
 $\eta_{i}$ and $ \alpha_{j}$ denote the stoichiometric coefficients for nucleotide and amino acid, respectively,
-$\rm Pi$ denotes inorganic phosphate,
-$\rm R_{2}$ denotes the ribosome concentration,
-$\rm R_{2}^{*}$ denotes bounded ribosome,
-and $AA_{j}$ denotes the $j^{th}$ amino acid.
-
-The transcription rate ($w_{TX}$) was fixed in the ssFBA calculation at:
-\begin{equation}
-	w_{TX} = V_{TX}^{max}\left(\frac{G}{K_{TX}+G}\right)
-\end{equation}
-where $G$ denotes the gene concentration and $K_{TX}$ denotes a transcription saturation coefficient.
-The maximum rate of transcription $V_{TX}^{max}$ was formulated as:
-\begin{equation}
-	V_{TX}^{max} \equiv \left[R_{1}\left(\frac{v_{TX}}{l_{G}}\right)\mathcal{P}\right]
-\end{equation}
-The term $R_{1}$ denotes the RNA polymerase abundance,
-$v_{TX}$ denotes the RNA polymerase elongation rate (nt/h),
-$l_{G}$ denotes the gene length in nucleotides, and the last term $\mathcal{P}$ describes a model of promoter activity.
-In this study, we considered two promoters: T7 and $\sigma_{70}$.
-The promoter function for the T7 promoter, $\mathcal{P}_{T7}$, was given by:
-\begin{equation}
-	P_{T7} = \frac{K_{T7}}{1 + K_{T7}}
-\end{equation}
-where $K_{T7}$ denotes a T7 RNA polymerase binding constant \cite{Moon:2012aa}.
-The $\sigma_{70}$ binding promoter, used for all other proteins, was formulated as:
-\begin{equation}
-	P_{\sigma_{70}} = \frac{K_{1}+K_{2}f_{p70}}{1 + K_{1}+K_{2}f_{p70}}
-\end{equation}
-where $K_{1}$ denotes the state of RNA polymerase binding,
-$K_{2}$ is the state of $\sigma_{70}$ binding along with RNA polymerase, and $f_{p70}$ denotes the fraction of the $\sigma_{70}$ transcription factor bound to the promoter (modeled as a Hill function).
-
-The translation rate ($w_{TL}$) was bounded by:
- \begin{equation}
-	0\leq w_{TL} \leq V_{TL}^{max}\left(\frac{\rm mRNA_{SS}}{K_{TL}+\rm mRNA_{SS}}\right)
-\end{equation}
-where $\rm mRNA_{SS}$ denotes the steady state mRNA abundance and $K_{TL}$ denotes the translation saturation constant.
-The maximum translation rate $V_{TL}^{max}$ was formulated as:
-\begin{equation}
-	V_{TL}^{max} \equiv \left[K_{P} R_{2}\left(\frac{v_{TL}}{l_{P}}\right)\right]
-\end{equation}
-The term $K_{P}$ denotes the polysome amplification constant,
-$v_{TL}$ denotes the ribosome elongation rate (amino acids per hour),
-$l_{P}$ denotes the number of amino acids in the protein of interest,
-and $\rm mRNA_{SS}$ denotes the steady-state mRNA concentration:
-\begin{equation}
-	 mRNA_{SS}\simeq\frac{w_{TX}}{\lambda}
-\end{equation}
-where $\lambda$ denotes the rate constant controlling the mRNA degradation rate.
+$Pi$ denotes inorganic phosphate,
+$R_{X}$ denotes the ribosome concentration,
+$R_{X}^{*}$ denotes bounded ribosome,
+and $AA_{j}$ denotes $j^{th}$ amino acid.
 
 The objective of the sequence specific flux balance calculation was to maximize the rate of protein translation, $w_{TL}$.
 The total glucose uptake rate was bounded by [0,40 mM/h] according to experimental data, while the amino acid uptake rates were bounded by [0,30 mM/h], but did not reach the maximum flux.
@@ -469,12 +424,94 @@ In the second case, all amino acid synthesis reactions were set to 0 mM/hr since
 In the third case, amino acid uptake reactions were set to 0 mM/hr.
 In the experimental constrained case, \textit{E. coli} was grown in the presence of 13 amino acids (alanine, arginine, cysteine, serine, aspartate, glutamate, and glutamine were excluded) \cite{Zawada:2003}, thus the synthesis reactions responsible for those 13 amino acid were set to 0 mM/hr.
 
-\subsection*{Calculation of energy efficiency.}
-Energy efficiency was calculated as the ratio of protein production to glucose consumption, both in terms of equivalent ATP molecules:
-\begin{equation}\label{eqn:energy-efficiency-definition}
-	Efficiency=\frac{\Delta\texttt{POI}\cdot \left(2\left({ATP}_{TX}+\rm {CTP}_{TX}+\rm {GTP}_{TX}+\rm {UTP}_{TX}\right)+\rm2\cdot\rm {ATP}_{TL}+\rm {GTP}_{TL}\right)}{\Delta\texttt{GLC}\cdot\texttt{ATP}_{GLC}}
+
+% We estimated the theoretical maximum performance of the cell-free protein synthesis system using sequence specific flux balance analysis (ssFBA) \cite{Allen:2003aa}.
+% The sequence specific flux balance analysis problem was formulated as a linear program:
+% \begin{equation}
+%  \begin{multlined}
+% 	\qquad \qquad \qquad \max_{\boldsymbol{w}}{} \! \left( w_{TL} = \mathbf{\boldsymbol{\theta}}^T \boldsymbol{w} \right) \\
+% 	\mathrm{Subject \; to:}
+% 	 \; \; \mathbf{S}\mathbf{w}=\mathbf{0} \\
+% \alpha_i \leq w_i \leq \beta_i  \qquad i=1,2,\hdots,\mathcal{R}
+%  \end{multlined}
+% \end{equation}
+% where $\mathbf{S}$ denotes the stoichiometric matrix, $\mathbf{w}$ denotes the unknown flux vector, $\boldsymbol{\theta}$ denotes the objective selection vector
+% and $\alpha_i$ and $\beta_i$ denote the lower and upper bounds on flux $w_{i}$, respectively.
+% The stoichiometry of the kinetic model was used for the ssFBA calculations, with the execpetion of the transcription and translation rates.
+% The transcription (TX) and translation (TL) stoichiometry was modeled using the template reactions taken from Allen and Palsson \cite{Allen:2003aa}:
+% \begin{eqnarray*}
+% \mathrm{{G}_{\mathcal{P}}}+\mathrm{{R}_{1}} &\longrightarrow& \mathrm{G_{\mathcal{P}}^{*}} \\
+% \mathrm{G_{\mathcal{P}}^{*}}+\sum_{\mathrm{k\in\left\{A,C,G,U\right\}}}\eta_{k}\cdot \mathrm{\left\{k\right\}TP} &\overset{\rm TX}{\longrightarrow}& \mathrm{mRNA}+\mathrm{G_{\mathcal{P}}}+\mathrm{R_{T}}+ \mathrm{\sum_{k\in\left\{A,C,G,U\right\}}2\eta_{k}\cdot Pi}\\
+% \mathrm{mRNA} &\longrightarrow& \mathrm{\sum_{k\in\left\{A,C,G,U\right\}}\eta_{k}\cdot \left\{k\right\}MP} \\
+% \mathrm{mRNA}+\mathrm{R_{X}} &\longrightarrow& \mathrm{R_{X}^{*}} \\
+% \mathrm{\alpha_{j}\cdot AA_{j}+\alpha_{j}\cdot tRNA+\alpha_{j}\cdot ATP} &\longrightarrow& \mathrm{\alpha_{j}\cdot AA_{j}-tRNA_{j}+}\\
+% && \mathrm{\qquad \alpha_{j}\cdot AMP+2\alpha_{j}\cdot Pi} \qquad{j=1,2,\hdots,20}\\
+% \mathrm{R_{X}^{*}+\sum_{j\in\left\{AA\right\}}\alpha_{j}\cdot \Big(AA_{j}-tRNA_{j}+2\cdot GTP\Big)} &\stackrel{\rm TL}{\longrightarrow}& \mathcal{P}+\mathrm{R_{X}+mRNA}+\\
+% && \mathrm{\quad +\sum_{j\in\left\{AA\right\}}\alpha_{j}\cdot\Big(tRNA+2\cdot GDP+2\cdot Pi\Big)}
+% \end{eqnarray*}
+% where $G_{\mathcal{P}}$ denotes the gene encoding protein product $\mathcal{P}$,
+% $\rm R_{T}$ denotes the concentration of RNA polymerase,
+% $G_{\mathcal{P}}^{*}$ denotes the gene bounded by the RNA polymerase,
+% $\eta_{i}$ and $ \alpha_{j}$ denote the stoichiometric coefficients for nucleotide and amino acid, respectively,
+% $\rm Pi$ denotes inorganic phosphate,
+% $\rm R_{X}$ denotes the ribosome concentration,
+% $\rm R_{X}^{*}$ denotes bounded ribosome,
+% and $AA_{j}$ denotes the $j^{th}$ amino acid.
+
+The bounds on the transcription rate ($\mathcal{L}_{TX}=w_{TX}=\mathcal{U}_{TX}$) was modeled as:
+\begin{equation}
+	w_{TX} = V_{TX}^{max}\left(\frac{G}{K_{TX}+G}\right)
 \end{equation}
-where $\Delta\texttt{POI}$ denotes the flux of the protein of interest produced, $\rm {ATP}_{TX}$, $\rm {CTP}_{TX}$, $\rm {GTP}_{TX}$, $\rm {UTP}_{TX}$ denote the stoichiometric coefficients of each energy species for the transcription of the protein of interest, $\rm {ATP}_{TL}$, $\rm {GTP}_{TL}$ denote the stoichiometric coefficients of ATP and GTP for the translation of the protein of interest, $\Delta\texttt{GLC}$ denotes the glucose flux, and $\rm {ATP}_{GLC}$ denotes the equivalent ATP number for glucose.
+where $G$ denotes the gene concentration and $K_{TX}$ denotes a transcription saturation coefficient.
+The maximum rate of transcription $V_{TX}^{max}$ was formulated as:
+\begin{equation}
+	V_{TX}^{max} \equiv \left[R_{T}\left(\frac{v_{TX}}{l_{G}}\right)u\left(\kappa\right)\right]
+\end{equation}
+The term $R_{T}$ denotes the RNA polymerase concentration (nM),
+$v_{TX}$ denotes the RNA polymerase elongation rate (nt/h),
+$l_{G}$ denotes the gene length in nucleotides (nt).
+The term $u\left(\kappa\right)$ (dimensionless, $0\leq u\left(\kappa\right)\leq 1$) describes a model of promoter activity, where $\kappa$ denotes promoter specific parameters.
+The forms for the promoter models were taken from Moon $\emph{et~al.}$ \cite{Moon:2012ab}.
+In this study, we considered two promoters: T7 and $\sigma_{70}$.
+The promoter function for the T7 promoter, $u_{T7}$, was given by:
+\begin{equation}
+	u_{T7} = \frac{K_{T7}}{1 + K_{T7}}
+\end{equation}
+where $K_{T7}$ denotes a T7 RNA polymerase binding constant.
+The $\sigma_{70}$ promoter function $u_{\sigma_{70}}$ (which was used for all other proteins) was formulated as:
+\begin{equation}
+	u_{\sigma_{70}} = \frac{K_{1}+K_{2}f_{\sigma_{70}}}{1 + K_{1}+K_{2}f_{\sigma_{70}}}
+\end{equation}
+where $K_{1}$ denotes the weight of RNA polymerase binding alone,
+$K_{2}$ denotes the weight of RNAP-$\sigma_{70}$ bound to the promoter,
+and $f_{p70}$ denotes the fraction of the $\sigma_{70}$ transcription factor bound to RNAP (modeled as a Hill function).
+The values for $K_{T7}, K_{1}$, $K_{2}$ and $f_{\sigma_{70}}$, along with all other promoter parameters, are given in Table ZZ.
+
+The translation rate ($w_{TL}$) was bounded by:
+ \begin{equation}
+	0\leq w_{TL} \leq V_{TL}^{max}\left(\frac{mRNA_{SS}}{K_{TL}+mRNA_{SS}}\right)
+\end{equation}
+where $\rm mRNA_{SS}$ denotes the steady state mRNA abundance and $K_{TL}$ denotes the translation saturation constant.
+The maximum translation rate $V_{TL}^{max}$ was formulated as:
+\begin{equation}
+	V_{TL}^{max} \equiv \left[K_{P} R_{X}\left(\frac{v_{TL}}{l_{P}}\right)\right]
+\end{equation}
+The term $K_{P}$ denotes the polysome amplification constant,
+$v_{TL}$ denotes the ribosome elongation rate (amino acids per hour),
+$l_{P}$ denotes the number of amino acids in the protein of interest,
+and $\rm mRNA_{SS}$ denotes the steady-state mRNA concentration:
+\begin{equation}
+	 mRNA_{SS}\simeq\frac{w_{TX}}{\lambda}
+\end{equation}
+where $\lambda$ denotes the rate constant controlling the mRNA degradation rate.
+All translation parameters are given in Table ZZ.
+
+\subsection*{Calculation of energy efficiency.}
+Energy efficiency ($\mathcal{E}$) was calculated as the ratio of protein production to glucose consumption, both in terms of equivalent ATP molecules:
+\begin{equation}\label{eqn:energy-efficiency-definition}
+	\mathcal{E}=\frac{\Delta\texttt{POI}\cdot \left(2\left(\rm {ATP}_{TX}+\rm {CTP}_{TX}+\rm {GTP}_{TX}+\rm {UTP}_{TX}\right)+\rm2\cdot\rm {ATP}_{TL}+\rm {GTP}_{TL}\right)}{\Delta\texttt{GLC}\cdot\texttt{ATP}_{GLC}}
+\end{equation}
+where $\Delta\texttt{POI}=w_{TX}$ denotes the translation rate for the protein of interest, $\rm {ATP}_{TX}$, $\rm {CTP}_{TX}$, $\rm {GTP}_{TX}$, $\rm {UTP}_{TX}$ denote the stoichiometric coefficients of each energy species for the transcription of the protein of interest, $\rm {ATP}_{TL}$, $\rm {GTP}_{TL}$ denote the stoichiometric coefficients of ATP and GTP for the translation of the protein of interest, $\Delta\texttt{GLC}=w_{GLC}$ denotes the glucose flux, and $\rm {ATP}_{GLC}$ denotes the equivalent ATP number for glucose.
 The energy species stoichiometric coefficients are available in the Supporting Information.
 
 \subsection*{Calculation of the carbon yield.}
@@ -487,12 +524,16 @@ $\Delta m_{i}$ denotes the amount of the $i^{th}$ reactant consumed (not allowed
 
 
 \subsection*{Quantification of uncertainty.}
-An ensemble of 100 sets of flux distributions was calculated for each of the three different cases: control (with amino acid synthesis and uptake), amino acid uptake without synthesis, and amino acid synthesis without uptake.
-The ensemble was calculated by randomly sampling the maximum specific glucose uptake rate from within a range of 0 to 30 mM/h, determined from experimental data and randomly sampling RNA polymerase levels, ribosome levels, and elongation rates in a physiological range determined from literature.
-RNA polymerase levels were sampled between 60 and 80 nM, ribosome levels between 7 and 16 \textmu M, the RNA polymerase elongation rate between 20 and 30 nt/sec, and the ribosome elongation rate between 1.5 and 3 aa/sec \cite{2005_underwood_biotech, Garamella:2016aa}.
+Experimental factors taken from literature, for example macromolecular concentrations or elongation rates, have uncertainty associated with their values.
+To quantify the influence of this uncertainty on model performance, we randomly sampled the expected physiological ranges for these parameters as determined from literature.
+An ensemble of N = 100 flux distributions was calculated for the three different cases we considered:
+control (with amino acid synthesis and uptake), amino acid uptake without synthesis, and amino acid synthesis without uptake.
+The flux ensemble was calculated by randomly sampling the maximum glucose consumption rate within a range of 0 to 30 mM/h, (determined from experimental data)
+and randomly sampling RNA polymerase levels, ribosome levels, and elongation rates in a physiological range determined from literature.
+RNA polymerase levels were sampled between 60 and 80 nM, ribosome levels between 7 and 16 \textmu M, the RNA polymerase elongation rate between 20 and 30 nt/sec, and the ribosome elongation rate between 1.5 and 3 aa/s \cite{2005_underwood_biotech, Garamella:2016aa}.
 
 \subsection*{Global sensitivity analysis.}
-We conducted a global sensitivity analysis using the variance-based method of Sobol to estimate which parameters controlled the performance of synthetic circuits \citep{SOBOL_METHOD}.
+We conducted a global sensitivity analysis using the variance-based method of Sobol to estimate which parameters controlled the performance of the cell free protein synthesis reaction \citep{SOBOL_METHOD}.
 We computed the total sensitivity index of each parameter relative to three performance objectives: productivity of the protein of interest, energy efficiency and carbon yield.
 We established the sampling bounds for each parameter from literature.
 We used the sampling method of Saltelli \textit{et al.} \citep{Saltelli:2010} to compute a family of $N\left(2d+2\right)$ parameter sets which obeyed our parameter ranges,

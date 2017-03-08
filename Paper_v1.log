@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  7 MAR 2017 17:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  8 MAR 2017 08:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1400,23 +1400,39 @@ File: ./Figures/Flux.pdf Graphic file (type pdf)
 <use ./Figures/Flux.pdf>
 Package pdftex.def Info: ./Figures/Flux.pdf used on input line 306.
 (pdftex.def)             Requested size: 469.75539pt x 335.73448pt.
- [14 <./Figures/Yield_Ox.pdf>] [15 <./Figures/Flux.pdf>] <./Figures/ssFBA_exp.p
-df, id=324, 842.14626pt x 652.4375pt>
+ [14 <./Figures/Yield_Ox.pdf>] [15 <./Figures/Flux.pdf>]
+
+Package natbib Warning: Citation `Henry:2007' on page 16 undefined on input lin
+e 337.
+
+
+Package natbib Warning: Citation `Hamilton:2013' on page 16 undefined on input 
+line 337.
+
+
+Package natbib Warning: Citation `Zamboni:2009' on page 16 undefined on input l
+ine 339.
+
+<./Figures/ssFBA_exp.pdf, id=324, 842.14626pt x 652.4375pt>
 File: ./Figures/ssFBA_exp.pdf Graphic file (type pdf)
 
 <use ./Figures/ssFBA_exp.pdf>
 Package pdftex.def Info: ./Figures/ssFBA_exp.pdf used on input line 341.
 (pdftex.def)             Requested size: 469.75539pt x 363.93889pt.
- [16] [17 <./Figures/ssFBA_exp.pdf>] [18] [19
+ [16] [17 <./Figures/ssFBA_exp.pdf>] [18]
 
-]
-[20]
-Overfull \hbox (10.36137pt too wide) in alignment at lines 401--410
+Package natbib Warning: Citation `Jewett:2002' on page 19 undefined on input li
+ne 367.
+
+[19
+
+] [20]
+Overfull \hbox (21.68555pt too wide) in alignment at lines 399--408
  [][][] []
  []
 
 [21] [22] [23]
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 475.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 512.
 
  (/usr/local/texlive/2015/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -1427,42 +1443,45 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             See the microtype manual for details.
 
 [24]
-LaTeX Font Info:    Try loading font information for TS1+ppl on input line 492.
+LaTeX Font Info:    Try loading font information for TS1+ppl on input line 533.
 
  (/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/ts1ppl.fd
 File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
 ) [25]
-[26] [27] (./Paper_v1.bbl [28
+[26] (./Paper_v1.bbl [27
 
-] [29] [30]) [31] (./Paper_v1.aux) ) 
+] [28])
+
+Package natbib Warning: There were undefined citations.
+
+[29] (./Paper_v1.aux) ) 
 Here is how much of TeX's memory you used:
- 18325 strings out of 493089
- 327050 string characters out of 6134842
+ 18324 strings out of 493089
+ 326964 string characters out of 6134842
  408045 words of memory out of 5000000
- 21173 multiletter control sequences out of 15000+600000
- 95961 words of font info for 363 fonts, out of 8000000 for 9000
+ 21169 multiletter control sequences out of 15000+600000
+ 97904 words of font info for 367 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  60i,14n,94p,10408b,439s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2015/texmf-dist/fonts/e
-nc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/
-8r.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex1
-0.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.
-pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.p
-fb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/mathpazo/fplmbi.pfb><
-/usr/local/texlive/2015/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/
-local/texlive/2015/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/loca
-l/texlive/2015/texmf-dist/fonts/type1/public/lm/lmss10.pfb></usr/local/texlive/
-2015/texmf-dist/fonts/type1/public/lm/lmss12.pfb></usr/local/texlive/2015/texmf
--dist/fonts/type1/public/lm/lmssbx10.pfb></usr/local/texlive/2015/texmf-dist/fo
-nts/type1/public/lm/lmtt12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/
-urw/palatino/uplb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/pal
-atino/uplbi8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/palatino/
-uplr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/palatino/uplri8a
-.pfb>
-Output written on Paper_v1.pdf (31 pages, 1044668 bytes).
+{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/lm/l
+m-ec.enc}{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/
+local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/l
+ocal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loc
+al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loca
+l/texlive/2015/texmf-dist/fonts/type1/public/mathpazo/fplmbi.pfb></usr/local/te
+xlive/2015/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/local/texlive
+/2015/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/local/texlive/201
+5/texmf-dist/fonts/type1/public/lm/lmss10.pfb></usr/local/texlive/2015/texmf-di
+st/fonts/type1/public/lm/lmss12.pfb></usr/local/texlive/2015/texmf-dist/fonts/t
+ype1/public/lm/lmssbx10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/pub
+lic/lm/lmtt12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/palatino/
+uplb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/palatino/uplbi8a
+.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></
+usr/local/texlive/2015/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on Paper_v1.pdf (29 pages, 1045226 bytes).
 PDF statistics:
- 458 PDF objects out of 1000 (max. 8388607)
- 324 compressed objects within 4 object streams
+ 451 PDF objects out of 1000 (max. 8388607)
+ 319 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
- 58921 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 59945 words of extra memory for PDF output out of 61914 (max. 10000000)
 
