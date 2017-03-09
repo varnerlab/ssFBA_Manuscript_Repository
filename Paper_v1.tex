@@ -77,7 +77,7 @@ In this study, we used sequence specific constraints based modeling to evaluate 
 A core \emph{E.~coli} metabolic model, consisting of glycolysis, pentose phosphate pathway, amino acid biosynthesis and degradation and energy metabolism, was then augmented with sequence specific descriptions of genetic circuits which included mechanistic models of promoter function, transcription and translation.
 Thus, unlike other synthetic biology modeling efforts, sequence specific constraints based modeling explicitly couples the transcription and translation of circuit components with the availability of metabolic resources.
 Model parameters for transcription and translation were taken from literature, allowing a first principles prediction of circuit performance.
-We tested this approach by first simulating T7 induced chloramphenicol acetyltransferase production and $\sigma_{70}$-induced deGFP expression; we then expanded these studies for a range of different proteins.
+We tested this approach by first simulating T7 induced chloramphenicol acetyltransferase production and P70a-induced deGFP expression; we then expanded these studies for a range of different proteins.
 First principles predictions of circuit performance were consistent with measurements for a variety of cases.
 Further, global sensitivity analysis identified the key metabolic processes that controlled circuit performance in terms of productivity, energy efficiency, and carbon yield.
 A sufficient energy supply with oxidative phosphorylation is instrumental for high energy efficiency and carbon yields; in addition, the translation rate could be optimized for higher productivity.
@@ -113,9 +113,9 @@ A core \emph{E.~coli} cell-free metabolic model was developed from literature \c
 This model, which described glycolysis, pentose phosphate pathway, amino acid biosynthesis and degradation and energy metabolism, was then augmented with
 sequence specific descriptions of promoter function, transcription and translation processes.
 Thus, sequence specific constraints based modeling explicitly coupled transcription and translation with the availability of metabolic resources.
-We tested this approach by simulating the production of two model proteins, and then investigated the productivity and carbon yield for eight different proteins.
-From this, higher carbon number proteins typically had lower productivity rates and carbon yields than that of the lower carbon number proteins.
-Further, global sensitivity analysis identified the key metabolic processes that controlled circuit performance, showing oxidative phosphorylation as instrumental for maintaining a high carbon yield and the translation rate for productivity.
+We tested this approach by simulating the production of two model proteins, and then investigated the productivity, energy efficiency, and carbon yield for eight different proteins.
+From this, higher carbon number proteins typically had lower productivity rates, energy efficiency, and carbon yields than that of the lower carbon number proteins.
+Further, global sensitivity analysis identified the key metabolic processes that controlled circuit performance, showing oxidative phosphorylation as instrumental for maintaining a high energy efficiency and carbon yield and the translation rate for productivity.
 Taken together, sequence specific constraints based modeling offers a novel means to \emph{a~priori} estimate the performance of cell-free synthetic circuits.
 
 \clearpage
@@ -132,20 +132,20 @@ Taken together, sequence specific constraints based modeling offers a novel mean
 % We first validated the ssFBA approach by comparing simulated and measured concentrations of two proteins from two
 
 \subsection{Model derivation and validation}
-The cell free stoichiometric network was constructed by removing growth associated reactions from the \textit{i}AF1260 reconstruction of K-12 MG1655 \textit{E.~coli} \cite{Feist:2007aa}.
+The cell-free stoichiometric network was constructed by removing growth associated reactions from the \textit{i}AF1260 reconstruction of K-12 MG1655 \textit{E.~coli} \cite{Feist:2007aa}.
 We then added the transcription and translation template reactions of Allen and Palsson for the specific proteins of interest \cite{Allen:2003aa}.
-A schematic of the metabolic network, which consisted of 272 reactions and 145 species, is shown in Fig.~\ref{fig:network}A.
-Using this network, in combination with detailed promoter models, and literature values for cell free culture parameters (Table ZZ),
+A schematic of the metabolic network, which consisted of 270 reactions and 145 species, is shown in Fig.~\ref{fig:network}A.
+Using this network, in combination with detailed promoter models, and literature values for cell-free culture parameters (Table ~\ref{tbl:parameters}),
 we simulated the sequence specific production of two model proteins, chloramphenicol acetyltransferase (CAT) and dual emission green fluorescent protein (deGFP) using
-different cell-free \textit{E.~coli} extracts. The cell free metabolic network, model parameters, model code,
+different cell-free \textit{E.~coli} extracts. The cell-free metabolic network, model parameters, model code,
 and each protein sequence are available in the supplemental materials.
 
-Cell free simulations predicted CAT and deGFP production for the duration of the CFPS batch reactions (Fig. ~\ref{fig:network}B and C).
+Cell-free simulations predicted CAT and deGFP production for the duration of the CFPS batch reactions (Fig. ~\ref{fig:network}B and C).
 Chloramphenicol acetyltransferase (CAT), was produced under a T7 promoter in a glucose/NMP cell-free system \cite{2005_calhoun_BiotechnologyProgress} for 1 hour using glucose as a carbon and energy source (Fig.~\ref{fig:network}B).
-With the exception of the first 10-15 min, the cell free prediction of CAT abundance was consistent with the measured values.
-On the other hand, deGFP was produced under a P70 promoter in TXTL 2.0 \textit{E.~coli} extract for 8 hours using maltose as a carbon and energy source (Fig.~\ref{fig:network}C).
-The cell free simulation captured the overall trend of deGFP abundance, but was not able to capture saturation at the end of the CFPS culture.
-Uncertainty in experimental factors such as the concentration of RNA polymerase, and ribosomes,
+With the exception of the first 10-15 min, the cell-free prediction of CAT abundance was consistent with the measured values.
+On the other hand, deGFP was produced under a P70a promoter in TXTL 2.0 \textit{E.~coli} extract for 8 hours using maltose as a carbon and energy source (Fig.~\ref{fig:network}C).
+The cell-free simulation captured the overall trend of deGFP abundance, but was not able to capture saturation at the end of the CFPS culture.
+Uncertainty in experimental factors such as the concentration of RNA polymerase, ribosomes,
 transcription and translation elongation rates and the upper bounds for oxygen and glucose consumption rates did not alter the qualitative performance of the model.
 Thus, the metabolic network and molecular description of transcription and translation were consistent with experimental measurements.
 
@@ -159,21 +159,21 @@ However, the ensemble and the mean of the ensemble captured the overall saturati
 \caption{Sequence specific flux balance analysis. A. Core metabolic network with glycolysis, pentose phoshate pathway, TCA cycle, Entner-Doudoroff pathway. Thick gray arrows indicate withdrawal of precursors for amino acid synthesis. B. CAT production under a T7 promoter in CFPS \textit{E.~coli} extract for 1 h under glucose consumption. Error bars denote the standard deviation of experimental measurements. C. deGFP production under a P70 promoter in TXTL 2.0 \textit{E.~coli} extract for 8 h under maltose consumption. Error bars denote a 10\% coefficient of variation. D. Predicted deGFP concentration at different plasmid concentrations versus measurements of deGFP synthesized in TXTL 2.0. 95\% CI (blue region) over the ensemble of 100 sets, mean of the ensemble (black line), and experimental measurements (dots).}
 \label{fig:network}
 \end{figure}
-These results validated our mathematical framework to model CFPS systems and predict the production of two proteins with no adjustable parameters.
+These results validated our mathematical framework to model CFPS systems and predict the production of two proteins with very few adjustable parameters.
 It also showed that the sequence specific reactions were sufficient to predict the production of two different proteins under different promoters and cell-free systems.
 Since the model accurately predicted protein production, we used our mathematical framework to understand the performance limits of CFPS.
 
 \subsection{Analysis of CFPS performance}
 Our next goal was to examine the performance of CFPS for eight different proteins under three different cases.
-Each of the proteins was produced under a P70 promoter, except for CAT which was produced under a T7 promoter.
+Each of the proteins was produced under a P70a promoter, except for CAT which was produced under a T7 promoter.
 In all cases, CFPS was supplied with glucose.
 In the first case, CFPS was supplied with amino acids, and the system was allowed to synthesize amino acids (AA uptake and synthesis).
 In the second case, CFPS was supplied with amino acids, but the amino acid synthesis reactions were turned off (AA uptake w/o synthesis).
 These amino acid synthesis reactions were blocked since during the cell-free extract preparation the cells are often supplied with amino acids; thus, the enzymes responsible for amino acid synthesis would not be present.
 In the third case, CFPS was not supplied with amino acids, but the system could synthesize them (AA synthesis w/o uptake).
 Eight different proteins, ranging in size, were selected to evaluate CFPS performance: bone morphogenetic protein 10 (BMP10), chloramphenicol acetyltransferase (CAT), caspase 9 (CASP9), dual emission green fluorescent protein (deGFP), prothrombin (FII), coagulation factor X (FX), fibroblast growth factor 21 (FGF21), and single chain variable fragment R4 (scFvR4).
-We used ssFBA to estimate the productivity for each of these proteins for each case (Fig.~\ref{fig:Prod}).
-An additional case was considered for CAT, since a comprehensive dataset is available \cite{2005_calhoun_BiotechnologyProgress}; in this case, fluxes were constrained to experimental measurements where avaliable, with the exception of CAT production which was determined by the transcription/translation parameters.
+We used ssFBA to estimate the productivity, energy efficiency, and carbon yield for each of these proteins for each case.
+An additional case was considered for CAT, since a comprehensive dataset is available (Supporting Information); in this case, fluxes were constrained to experimental measurements where avaliable, with the exception of CAT production which was determined by the transcription/translation parameters.
 
 \subsubsection{Productivity}
 We evaluated CFPS productivity for all eight proteins and for each case.
@@ -188,7 +188,7 @@ The proteins with the highest productivity had the lowest carbon number, whereas
 This inverse trend was due to the fact that larger proteins require more amino acids and substrates to assemble them, resulting in lower productivity given the same resources.
 A single trendline for all cases shows the expected productivity in CFPS depending on the carbon number of the protein of interest (available in the Supporting Information).
 CAT was an outlier for the trendline, even though it was in the same order of magnitude as the trendline.
-The difference in the T7 and  $\sigma_{70}$ promoters did not alter the qualitative productivity performance of CAT.
+The difference in the T7 and  P70a promoters did not alter the qualitative productivity performance of CAT.
 The higher productivity of CAT compared to all other proteins was most likely due to the lower transcription requirement of cytidine triphosphate which allowed a higher flux for translation.
 % a further study on the nucleotide and amino acid requirements of each protein and its effect on CFPS performance should be investigated.
 \begin{figure}[t!]
@@ -368,8 +368,8 @@ Crude S30 extract was made as previously described \cite{Jewett:2002}.
 
 The standard protein synthesis reaction was conducted according to the PANOxSP protocol with slight modifications from that described previously \cite{BIT:BIT20026}.
 Unless otherwise noted, all reagents were purchased from Sigma (St. Louis, MO).
-The initial mixture includes 1.2 mM ATP; 0.85 mM each of GTP, UTP, and CTP; 30 mM phosphoenolpyruvate (Roche, Indianapolis IN); 130 mM potassium glutamate; 10 mM ammonium glutamate; 16 mM magnesium glutamate; 50 mM HEPES-KOH buffer (pH 7.5); 1.5 mM spermidine; 1.0 mM putrescine; 34 $\mu$g/mL folinic acid; 170.6 $\mu$g/mL E. coli tRNA mixture (Roche, Indianapolis IN); 13.3 $\mu$g/mL pK7CAT plasmid; 100 $\mu$g/mL T7 RNA polymerase; 20 unlabeled amino acids at 2 mM each; 5 $\mu$M l-[U-\textsuperscript{14}C]-leucine (Amersham Pharmacia, Uppsala Sweden); 0.33 mM nicotinamide adenine dinucleotide (NAD); 0.26 mM coenzyme A (CoA); 2.7 mM sodium oxalate; and 0.24 volumes of E. coli S30 extract.
-This reaction was modified for the energy source used such that glucose reactions have 30 mM glucose in place of PEP, and glutamate reactions do not have a secondary energy source added since glutamate is already present in high concentrations from the reaction salts. Sodium oxalate was not added since it has a detrimental effect on protein synthesis and ATP concentrations when using glucose or an early glycolytic intermediate as the energy source \cite{BIT:BIT1121}. The HEPES buffer (pKa $\sim$ 7.5) was replaced with Bis-Tris (pKa $\sim$ 6.5). In addition, the magnesium glutamate concentration was reduced to 8 mM for the glucose and glutamate reactions since a lower magnesium optimum is found when using a nonphosphorylated energy source \cite{BIT:BIT20026}. Finally, 10 mM phosphate was added to some reactions as described below in the form of potassium phosphate dibasic adjusted to pH 7.2 with acetic acid.
+The initial mixture includes 1.2 mM ATP; 0.85 mM each of GTP, UTP, and CTP; 30 mM phosphoenolpyruvate (Roche, Indianapolis IN); 130 mM potassium glutamate; 10 mM ammonium glutamate; 16 mM magnesium glutamate; 50 mM HEPES-KOH buffer (pH 7.5); 1.5 mM spermidine; 1.0 mM putrescine; 34 $\mu$g/mL folinic acid; 170.6 $\mu$g/mL E. coli tRNA mixture (Roche, Indianapolis IN); 13.3 $\mu$g/mL pK7CAT plasmid; 100 $\mu$g/mL T7 RNA polymerase; 20 unlabeled amino acids at 2-3 mM each; 5 $\mu$M l-[U-\textsuperscript{14}C]-leucine (Amersham Pharmacia, Uppsala Sweden); 0.33 mM nicotinamide adenine dinucleotide (NAD); 0.26 mM coenzyme A (CoA); 2.7 mM sodium oxalate; and 0.24 volumes of E. coli S30 extract.
+This reaction was modified for the energy source used such that glucose reactions have 30-40 mM glucose in place of PEP, and glutamate reactions do not have a secondary energy source added since glutamate is already present in high concentrations from the reaction salts. Sodium oxalate was not added since it has a detrimental effect on protein synthesis and ATP concentrations when using glucose or an early glycolytic intermediate as the energy source \cite{BIT:BIT1121}. The HEPES buffer (pKa $\sim$ 7.5) was replaced with Bis-Tris (pKa $\sim$ 6.5). In addition, the magnesium glutamate concentration was reduced to 8 mM for the glucose and glutamate reactions since a lower magnesium optimum is found when using a nonphosphorylated energy source \cite{BIT:BIT20026}. Finally, 10 mM phosphate was added to some reactions as described below in the form of potassium phosphate dibasic adjusted to pH 7.2 with acetic acid.
 
 \subsection*{Measurements of protein product and metabolites.}
 Cell-free reaction samples were quenched at specific timepoints with equal volumes of ice-cold 150 mM sulfuric acid to precipitate proteins.
@@ -472,20 +472,24 @@ $v_{TX}$ denotes the RNA polymerase elongation rate (nt/h),
 $l_{G}$ denotes the gene length in nucleotides (nt).
 The term $u\left(\kappa\right)$ (dimensionless, $0\leq u\left(\kappa\right)\leq 1$) describes a model of promoter activity, where $\kappa$ denotes promoter specific parameters.
 The forms for the promoter models were taken from Moon $\emph{et~al.}$ \cite{Moon:2012ab}.
-In this study, we considered two promoters: T7 and $\sigma_{70}$.
+In this study, we considered two promoters: T7 and P70a.
 The promoter function for the T7 promoter, $u_{T7}$, was given by:
 \begin{equation}
 	u_{T7} = \frac{K_{T7}}{1 + K_{T7}}
 \end{equation}
 where $K_{T7}$ denotes a T7 RNA polymerase binding constant.
-The $\sigma_{70}$ promoter function $u_{\sigma_{70}}$ (which was used for all other proteins) was formulated as:
+The P70a promoter function $u_P70a$ (which was used for all other proteins) was formulated as:
 \begin{equation}
-	u_{\sigma_{70}} = \frac{K_{1}+K_{2}f_{\sigma_{70}}}{1 + K_{1}+K_{2}f_{\sigma_{70}}}
+	u_{P70a} = \frac{K_{1}+K_{2}f_{\sigma_{70}}}{1 + K_{1}+K_{2}f_{\sigma_{70}}}
 \end{equation}
 where $K_{1}$ denotes the weight of RNA polymerase binding alone,
 $K_{2}$ denotes the weight of RNAP-$\sigma_{70}$ bound to the promoter,
-and $f_{p70}$ denotes the fraction of the $\sigma_{70}$ transcription factor bound to RNAP (modeled as a Hill function).
-The values for $K_{T7}, K_{1}$, $K_{2}$ and $f_{\sigma_{70}}$, along with all other promoter parameters, are given in Table ZZ.
+and $f_{p70}$ denotes the fraction of the $\sigma_{70}$ transcription factor bound to RNAP, modeled as a Hill function: 
+\begin{equation}
+	f_{\sigma_{70}} = \frac{\sigma_{70}^{n}}{K_{D}^{n} + \sigma_{70}^{n}}
+\end{equation}
+where $\sigma_{70}$ denotes the sigma-factor 70 ($\sigma_{70}$) concentration, $K_{D}$ denotes the dissociation constant, and $n$ denotes the hill coefficient.
+The values for all promoter parameters are given in Table ~\ref{tbl:parameters}.
 
 The translation rate ($w_{TL}$) was bounded by:
  \begin{equation}
@@ -504,23 +508,54 @@ and $\rm mRNA_{SS}$ denotes the steady-state mRNA concentration:
 	 mRNA_{SS}\simeq\frac{w_{TX}}{\lambda}
 \end{equation}
 where $\lambda$ denotes the rate constant controlling the mRNA degradation rate.
-All translation parameters are given in Table ZZ.
+All translation parameters are given in Table \ref{tbl:parameters}.
+
+\begin{table}[!]
+\centering
+    \caption{Parameters for sequence specific flux balance analysis}
+    \renewcommand{\arraystretch}{1}
+    \begin{tabular}{lcccc} \toprule
+        \textbf{Description} & \textbf{Parameter} & \textbf{Value} & \textbf{Units} & \textbf{Reference} \\ \toprule
+        RNA polymerase concentration & $R_{T}$ & 75 & nM & \cite{Garamella:2016aa} \\
+        Transcription rate & $v_{TX}$ & 25 & nt/sec & \cite{Garamella:2016aa} \\
+        Ribsome concentration & $R_{X}$ & 1.6 & $\mu$M & \cite{Garamella:2016aa, 2005_underwood_biotech} \\
+        Translation rate & $v_{TL}$ & 2 & AA/sec & \cite{Garamella:2016aa, 2005_underwood_biotech} \\
+        Transcription saturation coefficient & $K_{TX}$ & 3.5 & nM & estimated \\
+        Translation saturation coefficient & $K_{TL}$ & 0.045 & mM & estimated \\
+        Polysome amplification constant & $K_{P}$ & 10 & constant & estimated \\
+        mRNA degradation rate & $\lambda$ & 5.2 & hr\textsuperscript{-1} & \cite{Garamella:2016aa} \\
+        T7 promoter & $K_{T7}$ & 10 & constant & estimated \\
+        P70a promoter & $K_{1}$ & 0.014 & constant & estimated \\
+        P70a promoter & $K_{2}$ & 10 & constant & estimated \\
+        $\sigma_{70}$ concentration & $\sigma_{70}$ & 35 & nM & \cite{Garamella:2016aa} \\
+        $\sigma_{70}$ dissociation constant & $K_{D}$ & 130 & nM & estimated \\
+	$\sigma_{70}$ hill coefficient & n & 1 & constant & estimated \\
+	Gene concentration & $G$ & 5 & nM &  \cite{Garamella:2016aa} \\
+        Gene length of CAT & $l_{G}$ & 683 & nt & \cite{Kigawa1995} \\
+        Gene length of deGFP & $l_{G}$ & 660 & nt & \cite{Garamella:2016aa} \\
+        Protein length of CAT & $l_{P}$ & 229 & AA & \cite{Kigawa1995} \\
+        Protein length of deGFP & $l_{P}$ & 219 & AA & \cite{Garamella:2016aa} \\ \bottomrule
+    \end{tabular}
+\label{tbl:parameters}
+\end{table}
+
+\clearpage
 
 \subsection*{Calculation of energy efficiency.}
 Energy efficiency ($\mathcal{E}$) was calculated as the ratio of protein production to glucose consumption, both in terms of equivalent ATP molecules:
 \begin{equation}\label{eqn:energy-efficiency-definition}
-	\mathcal{E}=\frac{\Delta\texttt{POI}\cdot \left(2\left(\rm {ATP}_{TX}+\rm {CTP}_{TX}+\rm {GTP}_{TX}+\rm {UTP}_{TX}\right)+\rm2\cdot\rm {ATP}_{TL}+\rm {GTP}_{TL}\right)}{\Delta\texttt{GLC}\cdot\texttt{ATP}_{GLC}}
+	\mathcal{E}=\frac{\texttt{q}_{POI}\cdot \left(2\left(\rm {ATP}_{TX}+\rm {CTP}_{TX}+\rm {GTP}_{TX}+\rm {UTP}_{TX}\right)+\rm2\cdot\rm {ATP}_{TL}+\rm {GTP}_{TL}\right)}{\texttt{q}_{GLC}\cdot\texttt{ATP}_{GLC}}
 \end{equation}
-where $\Delta\texttt{POI}=w_{TX}$ denotes the translation rate for the protein of interest, $\rm {ATP}_{TX}$, $\rm {CTP}_{TX}$, $\rm {GTP}_{TX}$, $\rm {UTP}_{TX}$ denote the stoichiometric coefficients of each energy species for the transcription of the protein of interest, $\rm {ATP}_{TL}$, $\rm {GTP}_{TL}$ denote the stoichiometric coefficients of ATP and GTP for the translation of the protein of interest, $\Delta\texttt{GLC}=w_{GLC}$ denotes the glucose flux, and $\rm {ATP}_{GLC}$ denotes the equivalent ATP number for glucose.
+where $\texttt{q}_{POI}=w_{TX}$ denotes the production rate for the protein of interest, $\rm {ATP}_{TX}$, $\rm {CTP}_{TX}$, $\rm {GTP}_{TX}$, $\rm {UTP}_{TX}$ denote the stoichiometric coefficients of each energy species for the transcription of the protein of interest, $\rm {ATP}_{TL}$, $\rm {GTP}_{TL}$ denote the stoichiometric coefficients of ATP and GTP for the translation of the protein of interest, $\texttt{q}_{GLC}=w_{GLC}$ denotes the glucose uptake rate, and $\rm {ATP}_{GLC}$ denotes the equivalent ATP number for glucose.
 The energy species stoichiometric coefficients are available in the Supporting Information.
 
 \subsection*{Calculation of the carbon yield.}
 The carbon yield ($Y_{C}^{POI}$) was calculated as the ratio of carbon produced as the protein of interest divided by the carbon consumed as reactants (glucose and amino acids):
 \begin{equation}\label{eqn:yield-definition}
-	Y_{C}^{POI}=\frac{\Delta\texttt{POI}\cdot C_{POI}}{\displaystyle\sum_{i=1}^{\mathcal{R}}\max(\Delta m_{i},0)\cdot C_{m_i}}
+	Y_{C}^{POI}=\frac{\texttt{q}_{POI}\cdot C_{POI}}{\displaystyle\sum_{i=1}^{\mathcal{R}} \texttt{q}_{m_{i}}\cdot C_{m_i}}
 \end{equation}
-where $\Delta\texttt{POI}$ denotes the flux of the protein of interest produced, $C_{POI}$ denotes carbon number of the protein of interest, $\mathcal{R}$ denotes the number of reactants,
-$\Delta m_{i}$ denotes the amount of the $i^{th}$ reactant consumed (not allowed to be negative), and $C_{m_i}$ denotes the carbon number of the $i^{th}$ reactant.
+where $\texttt{q}_{POI}$ denotes the flux of the protein of interest produced, $C_{POI}$ denotes carbon number of the protein of interest, $\mathcal{R}$ denotes the number of reactants,
+$\texttt{q}_{m_{i}}$ denotes the uptake flux of the $i^{th}$ reactant, and $C_{m_i}$ denotes the carbon number of the $i^{th}$ reactant.
 
 
 \subsection*{Quantification of uncertainty.}
@@ -530,10 +565,10 @@ An ensemble of N = 100 flux distributions was calculated for the three different
 control (with amino acid synthesis and uptake), amino acid uptake without synthesis, and amino acid synthesis without uptake.
 The flux ensemble was calculated by randomly sampling the maximum glucose consumption rate within a range of 0 to 30 mM/h, (determined from experimental data)
 and randomly sampling RNA polymerase levels, ribosome levels, and elongation rates in a physiological range determined from literature.
-RNA polymerase levels were sampled between 60 and 80 nM, ribosome levels between 7 and 16 \textmu M, the RNA polymerase elongation rate between 20 and 30 nt/sec, and the ribosome elongation rate between 1.5 and 3 aa/s \cite{2005_underwood_biotech, Garamella:2016aa}.
+RNA polymerase levels were sampled between 60 and 80 nM, ribosome levels between 12 and 18 \textmu M, the RNA polymerase elongation rate between 20 and 30 nt/sec, and the ribosome elongation rate between 1.5 and 3 aa/s \cite{2005_underwood_biotech, Garamella:2016aa}.
 
 \subsection*{Global sensitivity analysis.}
-We conducted a global sensitivity analysis using the variance-based method of Sobol to estimate which parameters controlled the performance of the cell free protein synthesis reaction \citep{SOBOL_METHOD}.
+We conducted a global sensitivity analysis using the variance-based method of Sobol to estimate which parameters controlled the performance of the cell-free protein synthesis reaction \citep{SOBOL_METHOD}.
 We computed the total sensitivity index of each parameter relative to three performance objectives: productivity of the protein of interest, energy efficiency and carbon yield.
 We established the sampling bounds for each parameter from literature.
 We used the sampling method of Saltelli \textit{et al.} \citep{Saltelli:2010} to compute a family of $N\left(2d+2\right)$ parameter sets which obeyed our parameter ranges,
@@ -565,8 +600,9 @@ shown in this document.
 The following files are available free of charge.
 \begin{itemize}
   \item Protein Sequences: DNA and protein sequences of each protein of interest.
-  \item Supporting Information: Performance trendlines as a function of carbon number and transcription/translation stoichiometric coefficients of energy species.
+  \item Supporting Information: Performance trendlines as a function of carbon number, transcription/translation stoichiometric coefficients of energy species, and experimental measurements of CAT production.
   \item Carbon Yield Sensitivity Analysis: Global sensitivity analysis on deGFP carbon yield.
+  \item Metabolites and reactions of the cell-free stoichiometric network.
 \end{itemize}
 \end{suppinfo}
 

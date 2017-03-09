@@ -2,7 +2,7 @@
 \providecommand*\mcitethebibliography{\thebibliography}
 \csname @ifundefined\endcsname{endmcitethebibliography}
   {\let\endmcitethebibliography\endthebibliography}{}
-\begin{mcitethebibliography}{25}
+\begin{mcitethebibliography}{29}
 \providecommand*\natexlab[1]{#1}
 \providecommand*\mciteSetBstSublistMode[1]{}
 \providecommand*\mciteSetBstMaxWidthForm[2]{}
@@ -152,6 +152,31 @@ Li,~J., Gu,~L., Aach,~J., and Church,~G.~M. (2014) Improved Cell-Free RNA and
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
+\bibitem[Henry \latin{et~al.}(2006)Henry, Broadbelt, and
+  Hatzimanikatis]{Henry:2007}
+Henry,~C.~S., Broadbelt,~L.~J., and Hatzimanikatis,~V. (2006)
+  Thermodynamics-Based Metabolic Flux Analysis. \emph{Biophysical Journal}
+  \emph{92}, 192--1805\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Hamilton \latin{et~al.}(2013)Hamilton, Dwivedi, and
+  Reed]{Hamilton:2013}
+Hamilton,~J.~J., Dwivedi,~V., and Reed,~J.~L. (2013) Quantitative Assessment of
+  Thermodynamic Constraints on the Solution Space of Genome-Scale Metabolic
+  Models. \emph{Biophysical Journal} \emph{105}, 512--522\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Zamboni \latin{et~al.}(2009)Zamboni, Fendt, and Sauer]{Zamboni:2009}
+Zamboni,~N., Fendt,~S.-M., and Sauer,~U. (2009) \textsuperscript{13}C-based
+  metabolic flux analysis. \emph{Nature Protocols} \emph{4}, 878--92\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
 \bibitem[Kigawa \latin{et~al.}(1995)Kigawa, Muto, and Yokoyama]{Kigawa1995}
 Kigawa,~T., Muto,~Y., and Yokoyama,~S. (1995) Cell-free synthesis and amino
   acid-selective stable isotope labeling of proteins for NMR analysis.
@@ -164,6 +189,14 @@ Kigawa,~T., Muto,~Y., and Yokoyama,~S. (1995) Cell-free synthesis and amino
   Swartz]{Zawada:2003}
 Zawada,~J., Richter,~B., Huang,~E., Lodes,~E., Shah,~A., and Swartz,~J.~R.
   \emph{Fermentation Biotechnology}; Chapter 9, pp 142--156\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Jewett \latin{et~al.}(2002)Jewett, Voloshin, and Swartz]{Jewett:2002}
+Jewett,~M., Voloshin,~A., and Swartz,~J. In \emph{Gene cloning and expression
+  technologies}; Weiner,~M., and Lu,~Q., Eds.; Eaton Publishing: Westborough,
+  MA, 2002; pp 391--411\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax

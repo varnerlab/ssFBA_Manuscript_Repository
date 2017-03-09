@@ -1,88 +1,124 @@
 %% This BibTeX bibliography file was created using BibDesk.
+%% http://bibdesk.sourceforge.net/
 
-@article{Kigawa1995,
-	author={Kigawa, Takanori and Muto, Yutaka and Yokoyama, Shigeyuki},
-	title={Cell-free synthesis and amino acid-selective stable isotope labeling of proteins for NMR analysis},
-	journal={Journal of Biomolecular NMR},
-	year={1995},
-	volume={6},
-	number={2},
-	pages={129--134},
-	abstract={For the application of multidimensional NMR spectroscopy to larger proteins, it would be useful to perform selective labeling of one of the 20 amino acids. For some amino acids, however, amino acid metabolism drastically reduces the efficiency and selectivity of labeling in in vivo expression systems. In the present study, a cell-free protein synthesis system was optimized, so that highly efficient and selective stable isotope labeling of proteins can be achieved in the absence of amino acid metabolism. The productivity of the E. coli cell-free coupled transcription-translation system was first improved, by about fivefold, by using the T7 RNA polymerase for transcription and also by improving the translation conditions. Thus, about 0.1 mg protein per 1 ml reaction mixture was synthesized. Then, this improved cell-free system was used for Asp- or Ser-selective 15N-labeling of the human c-Ha-Ras protein. With a 15 ml cell-free reaction, using less than 1 mg of 15N-labeled amino acid, 1 mg of the Ras protein was obtained. 1H-15N HSQC experiments confirmed that the Ras protein was efficiently labeled with high selectivity. These results indicate that this cell-free protein synthesis system is useful for NMR studies.},
-	issn={1573-5001},
-	doi={10.1007/BF00211776},
-	url={http://dx.doi.org/10.1007/BF00211776}
-	}
+%% Created for Jeffrey Varner at 2017-03-08 07:41:49 -0500 
 
-@article {BIT:BIT20026,
-	author = {Jewett, Michael C. and Swartz, James R.},
-	title = {Mimicking the Escherichia coli cytoplasmic environment activates long-lived and efficient cell-free protein synthesis},
-	journal = {Biotechnology and Bioengineering},
-	volume = {86},
-	number = {1},
-	publisher = {Wiley Subscription Services, Inc., A Wiley Company},
-	issn = {1097-0290},
-	url = {http://dx.doi.org/10.1002/bit.20026},
-	doi = {10.1002/bit.20026},
-	pages = {19-26},
-	keywords = {cell-free protein synthesis, pyruvate, cytoplasmic mimicry, phosphate and pH homeostasis, polyamines, combined transcription–translation},
-	year = {2004}
-}
 
-@inbook{Jewett:2002,
-	author = {Jewett, M.C. and Voloshin, A. and Swartz, J.R.},
-	Title = {Prokaryotic systems for in vitro expression},
-	booktitle = {Gene Cloning and Expression Technologies},
-	editor = {Weiner, M. and Lu, Q.},
-	publisher = {Eaton Publishing},
-	address = {Westborough, MA},
-	year = {2002},
-	pages = {391-411}.
-	}
-
-@inbook{Zawada:2003,
-	author = {Zawada, J. and Richter, B. and Huang, E. and Lodes, E. and Shah, A. and Swartz, J. R.},
-	Title = {High-Density, Defined Media Culture for the Production of \textit{Escherichia coli} Cell Extracts},
-	booktitle = {Fermentation Biotechnology},
-	chapter = {9},
-	pages = {142-156},
-	doi = {10.1021/bk-2003-0862.ch009},
-	URL = {http://pubs.acs.org/doi/abs/10.1021/bk-2003-0862.ch009},
-	eprint = {http://pubs.acs.org/doi/pdf/10.1021/bk-2003-0862.ch009}
-	}
-
-@article{Zamboni:2009,
-	Author = {Zamboni, N. and Fendt, S. and Sauer, U.},
-	Journal = {Nature Protocols},
-	Title = {13C-based metabolic flux analysis},
-	Volume = {4},
-	Pages = {878-92}.
-	Year = {2009}}
-
-@article{Hamilton:2013,
-	Author = {Hamilton, J.J. and Dwivedi, V. and Reed, J.L.},
-	Journal = {Biophysical Journal},
-	Title = {Quantitative Assessment of Thermodynamic Constraints on the Solution Space of Genome-Scale Metabolic Models},
-	Volume = {105},
-	Number = {2},
-	Pages = {512-22}.
-	Year = {2013}}
+%% Saved with string encoding Unicode (UTF-8) 
 
 @article{Henry:2007,
-	Author = {Henry CS, Broadbelt LJ, Hatzimanikatis V},
+	Author = {Henry, Christopher S and Broadbelt, Linda J and Hatzimanikatis, Vassily},
 	Journal = {Biophysical Journal},
+	Journal-Full = {Biophysical Journal},
+	Month = {Mar},
+	Number = {5},
+	Pages = {192-1805},
 	Title = {Thermodynamics-Based Metabolic Flux Analysis},
 	Volume = {92},
-	Number = {5},
-	Pages = {1792-1805}.
-	Year = {2007}}
+	Year = {2006}}
 
-@article{Moon:2012aa,
-	Author = {Moon TS, Lou C, Tamsir A, Stanton BC, Voigt CA},
+@article{Hamilton:2013,
+	Author = {Hamilton, Joshua J and Dwivedi, Vivek and Reed, Jennifer L},
+	Journal = {Biophysical Journal},
+	Journal-Full = {Biophysical Journal},
+	Month = {Jul},
+	Number = {2},
+	Pages = {512-522},
+	Title = {Quantitative Assessment of Thermodynamic Constraints on the Solution Space of Genome-Scale Metabolic Models},
+	Volume = {105},
+	Year = {2013}}
+
+@article{Zamboni:2009,
+	Author = {Zamboni, Nicola and Fendt, Sarah-Maria and Sauer, Uwe},
+	Journal = {Nature Protocols},
+	Month = {May},
+	Pages = {878-92},
+	Title = {\textsuperscript{13}C-based metabolic flux analysis},
+	Volume = {4},
+	Year = {2009}}
+
+@article{Zamboni:2009,
+	Author = {Zamboni, Nicola and Fendt, Sarah-Maria and Sauer, Uwe},
+	Journal = {Nature Protocols},
+	Month = {May},
+	Pages = {878-92},
+	Title = {\textsuperscript{13}C-based metabolic flux analysis},
+	Volume = {4},
+	Year = {2009}}
+
+@article{Moon:2012ab,
+	Abstract = {Genetic programs function to integrate environmental sensors, implement signal processing algorithms and control expression dynamics. These programs consist of integrated genetic circuits that individually implement operations ranging from digital logic to dynamic circuits, and they have been used in various cellular engineering applications, including the implementation of process control in metabolic networks and the coordination of spatial differentiation in artificial tissues. A key limitation is that the circuits are based on biochemical interactions occurring in the confined volume of the cell, so the size of programs has been limited to a few circuits. Here we apply part mining and directed evolution to build a set of transcriptional AND gates in Escherichia coli. Each AND gate integrates two promoter inputs and controls one promoter output. This allows the gates to be layered by having the output promoter of an upstream circuit serve as the input promoter for a downstream circuit. Each gate consists of a transcription factor that requires a second chaperone protein to activate the output promoter. Multiple activator-chaperone pairs are identified from type III secretion pathways in different strains of bacteria. Directed evolution is applied to increase the dynamic range and orthogonality of the circuits. These gates are connected in different permutations to form programs, the largest of which is a 4-input AND gate that consists of 3 circuits that integrate 4 inducible systems, thus requiring 11 regulatory proteins. Measuring the performance of individual gates is sufficient to capture the behaviour of the complete program. Errors in the output due to delays (faults), a common problem for layered circuits, are not observed. This work demonstrates the successful layering of orthogonal logic gates, a design strategy that could enable the construction of large, integrated circuits in single cells.},
+	Author = {Moon, Tae Seok and Lou, Chunbo and Tamsir, Alvin and Stanton, Brynne C and Voigt, Christopher A},
+	Date-Added = {2017-03-08 12:41:40 +0000},
+	Date-Modified = {2017-03-08 12:41:40 +0000},
 	Journal = {Nature},
+	Journal-Full = {Nature},
+	Mesh = {Amino Acid Sequence; DNA-Binding Proteins; Directed Molecular Evolution; Escherichia coli; Gene Expression Regulation, Bacterial; Genomic Islands; Logic; Models, Genetic; Molecular Chaperones; Molecular Sequence Data; Promoter Regions, Genetic; Pseudomonas; Salmonella; Shigella; Single-Cell Analysis; Synthetic Biology; Transcription Factors; Transcription, Genetic},
+	Month = {Nov},
+	Number = {7423},
+	Pages = {249-53},
+	Pmc = {PMC3904217},
+	Pmid = {23041931},
+	Pst = {ppublish},
 	Title = {Genetic programs constructed from layered logic gates in single cells},
 	Volume = {491},
 	Year = {2012}}
+
+@article{BIT:BIT1121,
+	Author = {Kim, Dong-Myung and Swartz, James R.},
+	Doi = {10.1002/bit.1121},
+	Issn = {1097-0290},
+	Journal = {Biotechnology and Bioengineering},
+	Keywords = {cell-free protein synthesis, chloramphenicol acetyltransferase, phosphoenol pyruvate, pyruvate, acetylphosphate, inorganic phosphate, glycolysis, glucose-6-phosphate},
+	Number = {4},
+	Pages = {309--316},
+	Publisher = {John Wiley & Sons, Inc.},
+	Title = {Regeneration of adenosine triphosphate from glycolytic intermediates for cell-free protein synthesis},
+	Url = {http://dx.doi.org/10.1002/bit.1121},
+	Volume = {74},
+	Year = {2001},
+	Bdsk-Url-1 = {http://dx.doi.org/10.1002/bit.1121}}
+
+@article{Kigawa1995,
+	Abstract = {For the application of multidimensional NMR spectroscopy to larger proteins, it would be useful to perform selective labeling of one of the 20 amino acids. For some amino acids, however, amino acid metabolism drastically reduces the efficiency and selectivity of labeling in in vivo expression systems. In the present study, a cell-free protein synthesis system was optimized, so that highly efficient and selective stable isotope labeling of proteins can be achieved in the absence of amino acid metabolism. The productivity of the E. coli cell-free coupled transcription-translation system was first improved, by about fivefold, by using the T7 RNA polymerase for transcription and also by improving the translation conditions. Thus, about 0.1 mg protein per 1 ml reaction mixture was synthesized. Then, this improved cell-free system was used for Asp- or Ser-selective 15N-labeling of the human c-Ha-Ras protein. With a 15 ml cell-free reaction, using less than 1 mg of 15N-labeled amino acid, 1 mg of the Ras protein was obtained. 1H-15N HSQC experiments confirmed that the Ras protein was efficiently labeled with high selectivity. These results indicate that this cell-free protein synthesis system is useful for NMR studies.},
+	Author = {Kigawa, Takanori and Muto, Yutaka and Yokoyama, Shigeyuki},
+	Doi = {10.1007/BF00211776},
+	Issn = {1573-5001},
+	Journal = {Journal of Biomolecular NMR},
+	Number = {2},
+	Pages = {129--134},
+	Title = {Cell-free synthesis and amino acid-selective stable isotope labeling of proteins for NMR analysis},
+	Url = {http://dx.doi.org/10.1007/BF00211776},
+	Volume = {6},
+	Year = {1995},
+	Bdsk-Url-1 = {http://dx.doi.org/10.1007/BF00211776}}
+
+@article{BIT:BIT20026,
+	Author = {Jewett, Michael C. and Swartz, James R.},
+	Doi = {10.1002/bit.20026},
+	Issn = {1097-0290},
+	Journal = {Biotechnology and Bioengineering},
+	Keywords = {cell-free protein synthesis, pyruvate, cytoplasmic mimicry, phosphate and pH homeostasis, polyamines, combined transcription--translation},
+	Number = {1},
+	Pages = {19-26},
+	Publisher = {Wiley Subscription Services, Inc., A Wiley Company},
+	Title = {Mimicking the Escherichia coli cytoplasmic environment activates long-lived and efficient cell-free protein synthesis},
+	Url = {http://dx.doi.org/10.1002/bit.20026},
+	Volume = {86},
+	Year = {2004},
+	Bdsk-Url-1 = {http://dx.doi.org/10.1002/bit.20026}}
+
+@inbook{Zawada:2003,
+	Author = {Zawada, J. and Richter, B. and Huang, E. and Lodes, E. and Shah, A. and Swartz, J. R.},
+	Booktitle = {Fermentation Biotechnology},
+	Chapter = {9},
+	Doi = {10.1021/bk-2003-0862.ch009},
+	Eprint = {http://pubs.acs.org/doi/pdf/10.1021/bk-2003-0862.ch009},
+	Pages = {142-156},
+	Title = {High-Density, Defined Media Culture for the Production of \textit{Escherichia coli} Cell Extracts},
+	Url = {http://pubs.acs.org/doi/abs/10.1021/bk-2003-0862.ch009},
+	Bdsk-Url-1 = {http://pubs.acs.org/doi/abs/10.1021/bk-2003-0862.ch009},
+	Bdsk-Url-2 = {http://dx.doi.org/10.1021/bk-2003-0862.ch009}}
 
 @article{swartz_nature2001,
 	Author = {Swartz, James},

@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2015)
+This is BibTeX, Version 0.99d (TeX Live 2015/dev/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: Paper_v1.aux
 The style file: biochem.bst
@@ -6,53 +6,48 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: acs-Paper_v1.bib
 Database file #2: References_v1.bib
 Warning--entry type for "GLPK" isn't style-file defined
---line 360 of file References_v1.bib
+--line 400 of file References_v1.bib
 Warning--entry type for "SALIB" isn't style-file defined
---line 388 of file References_v1.bib
-Warning--I didn't find a database entry for "Henry:2007"
-Warning--I didn't find a database entry for "Hamilton:2013"
-Warning--I didn't find a database entry for "Zamboni:2009"
-Warning--I didn't find a database entry for "Jewett:2002"
-achemso 2015/04/07 v3.10
-You've used 25 entries,
-            2531 wiz_defined-function locations,
-            938 strings with 11915 characters,
-and the built_in function-call counts, 8525 in all, are:
-= -- 671
-> -- 525
-< -- 15
-+ -- 186
-- -- 161
-* -- 953
-:= -- 1136
-add.period$ -- 46
-call.type$ -- 25
-change.case$ -- 4
+--line 428 of file References_v1.bib
+You've used 29 entries,
+            2493 wiz_defined-function locations,
+            956 strings with 12522 characters,
+and the built_in function-call counts, 10031 in all, are:
+= -- 800
+> -- 613
+< -- 16
++ -- 216
+- -- 187
+* -- 1125
+:= -- 1342
+add.period$ -- 53
+call.type$ -- 29
+change.case$ -- 3
 chr.to.int$ -- 2
-cite$ -- 26
-duplicate$ -- 475
-empty$ -- 576
-format.name$ -- 197
-if$ -- 1676
+cite$ -- 30
+duplicate$ -- 561
+empty$ -- 692
+format.name$ -- 227
+if$ -- 1973
 int.to.chr$ -- 0
 int.to.str$ -- 1
 missing$ -- 0
-newline$ -- 166
-num.names$ -- 69
-pop$ -- 43
+newline$ -- 190
+num.names$ -- 83
+pop$ -- 53
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 24
+skip$ -- 3
 stack$ -- 0
-substring$ -- 425
-swap$ -- 486
-text.length$ -- 49
+substring$ -- 520
+swap$ -- 572
+text.length$ -- 58
 text.prefix$ -- 0
-top$ -- 1
-type$ -- 169
+top$ -- 0
+type$ -- 194
 warning$ -- 0
-while$ -- 92
+while$ -- 110
 width$ -- 0
-write$ -- 325
-(There were 6 warnings)
+write$ -- 377
+(There were 2 warnings)
