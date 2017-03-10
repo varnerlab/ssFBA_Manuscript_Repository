@@ -176,12 +176,12 @@ We used ssFBA to estimate the productivity, energy efficiency, and carbon yield 
 An additional case was considered for CAT, since a comprehensive dataset is available (Supporting Information); in this case, fluxes were constrained to experimental measurements where avaliable, with the exception of CAT production which was determined by the transcription/translation parameters.
 
 \subsubsection{Productivity}
-We evaluated CFPS productivity for all eight proteins and for each case.
+The mean productivity was inversely proportional to the protein size and varied between 1 and 12 $\mu$M/h for the proteins sampled (Fig.~\ref{fig:Prod}).
 All cases had very similar performance for each protein and were within a standard deviation of each other (Fig.~\ref{fig:Prod}A).
 %with the second case (without amino acid synthesis) having a slightly higher productivity for most proteins.
 The model framework is setup to optimize for the production of each protein and is constrained by the translation rate.
 This shows the system had sufficient substrates and metabolic precursors to power CFPS and synthesize each protein of interest with the same productivity, regardless of the case.
-However, each protein had a different level of productivity.
+However, each individual protein had a different level of productivity.
 For instance, BMP10 had a productivity of about 2.5 $\mu$M/h whereas CAT had a productivity of about 12 $\mu$M/h.
 To examine this further, the mean productivity was plotted against the carbon number of each protein (Fig.~\ref{fig:Prod}B).
 The proteins with the highest productivity had the lowest carbon number, whereas proteins with low productivity had higher carbon numbers.
@@ -190,27 +190,29 @@ A single trendline for all cases shows the expected productivity in CFPS dependi
 CAT was an outlier for the trendline, even though it was in the same order of magnitude as the trendline.
 The difference in the T7 and  P70a promoters did not alter the qualitative productivity performance of CAT.
 The higher productivity of CAT compared to all other proteins was most likely due to the lower transcription requirement of cytidine triphosphate which allowed a higher flux for translation.
-% a further study on the nucleotide and amino acid requirements of each protein and its effect on CFPS performance should be investigated.
+A further study on the nucleotide and amino acid requirements of each protein and its effect on CFPS performance should be investigated.
 \begin{figure}[t!]
 \centering
 \includegraphics[width=1.00\textwidth]{./Figures/Productivity.pdf}
 \caption{CFPS productivity of eight proteins for four cases. Amino acid uptake and synthesis (black), AA uptake without synthesis (dark grey), AA synthesis without uptake (light grey), and constrained by experimental measurements, for CAT only (white). A. Productivity across the ensemble (error bars represent 95\% CI). B. Mean productivity versus carbon number. Single trendline (dotted line) calculated across all cases (R\textsuperscript{2} = 0.99). Asterisk: protein excluded from trendline; dagger: constrained by experimental measurements and excluded from trendline.}
 \label{fig:Prod}
 \end{figure}
-The drop in productivity in the third case is due to the fact that glucose is the only substrate supplied and must be used to provide the necessary energy requirements for transcription and translation, as well as synthesize each amino acid required for the production of the protein of interest.
+%The drop in productivity in the third case is due to the fact that glucose is the only substrate supplied and must be used to provide the necessary energy requirements for transcription and translation, as well as synthesize each amino acid required for the production of the protein of interest.
 
 \subsubsection{Energy efficiency}
-Following the same outline as in examining the productivity, we calculated the energy efficiency of production for each protein (Fig.~\ref{fig:Energy}A).
-The first two cases, where amino acids were supplied in the media, had comparable performance including having the highest energy efficiencies.
-The third case (with no amino acid uptake) had the lowest energy efficiency; this was because glucose had to be utilized to synthesize the amino acids necessary for protein synthesis, in addition to being available for energy generation.
+The energy efficiency of protein production remained relatively high for when amino acids were supplied in the media, however energy efficiency dropped below 30\% when amino acids were not available (Fig.~\ref{fig:Energy}).
+Following the same outline as in examining the productivity, we calculated the energy efficiency of production for each protein.
+When amino acids were supplied in the media (first two cases), there was a comparable performance in having the highest energy efficiency, despite the network's ability to synthesis amino acids.
+When amino acids were removed from the media, protein production resulted in a low energy efficiency; below 30\% depending on the protein. 
+This was because glucose had to be utilized to synthesize the amino acids necessary for protein synthesis, in addition to being available for energy generation.
 We next investigated the effect of protein carbon number on energy efficiency (Fig.~\ref{fig:Energy}B).
 The same inverse trend was observed as for productivity, except that it was linear.
-The proteins with the lowest carbon number had the highest energy efficiency and the higher carbon number proteins had a lower energy efficiency for the first two cases.
+The proteins with the lowest carbon number had the highest energy efficiency and the higher carbon number proteins had a lower energy efficiency for when amino acids were available in the media (first two cases).
 Proteins with a high carbon number have a higher transcription and translation cost then smaller proteins, leading to a lower energy efficiency of protein synthesis.
 The first two cases had the same trendline whereas for the third case there was a significant drop in energy efficiency which required its own trendline (available in the Supporting Information).
-Interestingly, in the third case each protein had a similar energy efficiency of about 25\% regardless of carbon number.
+Interestingly, without supplemented amino acids (third case) each protein had a similar energy efficiency of about 25\% regardless of carbon number.
 In this case, the energy burden of synthesizing each amino acid required for the assembly of the protein kept the energy efficiency saturated at a relatively low level.
-However, the experimentally constrained case of CAT production showed even a lower energy efficiency of 3.9 $\pm$ 1.5\% compared to the theoretical maximum of 72 $\pm$ 7.1\%.
+However, the experimentally constrained case of CAT production showed even a lower energy efficiency of 3.3 $\pm$ 1.4\% compared to the theoretical maximum of 72 $\pm$ 7.1\%.
 This shows CFPS systems have a lot of room for improvement: first, the experimental setup still produced certain amino acids; these reactions could be turned off.
 Second, the system had a high accumulation of metabolic byproducts, specifically organic acids, which is a result of inefficient energy utilization.
 
@@ -224,7 +226,7 @@ Second, the system had a high accumulation of metabolic byproducts, specifically
 
 
 \subsubsection{Yield}
-The mean carbon yield was inversely proportional to protein size and varied between 40-55\% for the proteins sampled (Fig.~\ref{fig:Yield}).
+The mean carbon yield was inversely proportional to protein size and varied between 40-57\% for the proteins sampled (Fig.~\ref{fig:Yield}).
 The same trends followed, where the cases with amino acids supplied in the media showed the highest carbon yield.
 The third case (with no amino acid uptake) had the lowest yields; this is most likely because glucose is utilized to synthesize the necessary amino acids for each protein as well as power the system.
 %To determine the carbon contribution from each substrate (glucose and amino acids) we examined the carbon flux going toward the production of deGFP for all three cases (Table \ref{tbl:yield_breakdown}).
@@ -237,9 +239,9 @@ In this case, glucose was used to synthesize amino acids and provide the energy 
 In the experimentally constrained case, CAT was produced with a carbon yield of 6\% compared to the theoretical maximum of 57\%.
 This decrease in carbon yield suggests inefficiencies in CFPS that can potentially be improved.
 ssFBA assumes a psuedo steady state; thus, intermediate metabolites cannot accumulate within the cell-free extract.
-In addition, ssFBA is solved by setting protein production as the objective function.
-Therefore, carbon flux will travel through the network to optimize the flux through the protein synthesis reaction.
-In examining the experimental dataset, there is a high accumulation of organic acids, especially acetate.
+In addition, ssFBA is solved by setting protein production as the objective function to maximize.
+Therefore, carbon flux will travel through the network to optimize the maximum flux through the protein synthesis reaction.
+In examining the experimental dataset, there is a high accumulation of organic acids, especially acetate, pyruvate and lactate.
 The experimental performance could be improved by diverting this carbon toward the protein of interest by knockouts during the cell-free extract preparation.
 \begin{figure}[t!]
 \centering
@@ -248,13 +250,14 @@ The experimental performance could be improved by diverting this carbon toward t
 \label{fig:Yield}
 \end{figure}
 Next we investigated the effect of the carbon number of each protein on the carbon yield (Fig.~\ref{fig:Yield}B).
-The same inverse qualitative trend was observed as for productivity.
+The same inverse qualitative trend was observed as for energy efficiency.
 The proteins with the lowest carbon number had the highest yield and the higher carbon number proteins had a lower carbon yield within each case.
-A single trendline was formulated for the first two cases since they had similar performance, while another trendline was formulated for the third cases (available in Supporting Information).
+A single trendline was formulated for the cases where amino acids were supplied in the media (first two cases) since they had similar performance, while another trendline was formulated for when amino acids were not available (available in Supporting Information).
 As the protein size increased, the carbon yield decreased, suggesting that large proteins may be less feasible for cell-free production.
 Thus, we examined the parameters that had the most significant effect on cell-free productivity, energy efficiency, and carbon yield in order to optimize CFPS performance.
 
 \subsection{Sensitivity analysis}
+The translation rate had the highest effect on protein productivity, whereas oxygen followed by substrate uptake had the highest effect on energy efficiency and carbon yield (Fig.~\ref{fig:SI}).
 To better understand the effect of substrate utilization and the transcription/translation parameters on CFPS performance we performed global sensitivity analysis on the productivity and energy efficiency for deGFP, a representative protein (Fig.~\ref{fig:SI}), as well as on the carbon yield (available in Supporting Information).
 In examining productivity performance (Fig.~\ref{fig:SI}A), the significance of transcription/translation parameters was fairly constant across all three cases, with the rate of translation by ribosomes being the most significant.
 As expected, this showed that the translation rate was instrumental for productivity, and should be the first step investigated during optimization, prior to examining transcription parameters.
@@ -264,7 +267,7 @@ In examining substrate utilization, glucose uptake was not seen to be very impor
 This makes sense, as amino acid synthesis from glucose became the only way to power protein synthesis in that case.
 In addition, oxygen uptake had more significance in the third case than in the first two cases, since in that case oxygen was required to synthesize amino acids and power the system.
 Also, oxygen determined how effectively glucose was utilized; therefore, if glucose uptake rate effects productivity, then oxygen could be expected to have a similar effect.
-On the other hand, amino acid uptake showed significance for the first two cases, and was even higher for the second case (without AA synthesis), as it was the only source of amino acids.
+On the other hand, amino acid uptake showed significance for the cases where amino acids were available, and was even higher for the second case (without AA synthesis), as it was the only source of amino acids.
 \begin{figure}[t!]
 \includegraphics[width=1.00\textwidth]{./Figures/Sensitivity.pdf}
 \caption{Total order sensitivity of deGFP productivity (A) and energy efficiency (B) to specific uptake rates and transcription/translation parameters for three cases: amino acid uptake and synthesis (black), amino acid uptake without synthesis (dark grey), and amino acid synthesis without uptake (light gray). Error bars represent a 95\% CI on the sensitivity index.}
@@ -274,21 +277,21 @@ On the other hand, amino acid uptake showed significance for the first two cases
 When considering energy efficiency performance (Fig.~\ref{fig:SI}B), the oxygen uptake rates were the most important for all three cases while the sensitivity to transcription/translation parameters decreased slightly.
 The transcription/translation parameters had the same trend as for productivity, where the translation rate was the most sensitive compared to the other transcription/translation parameters and showed significance across all cases.
 Thus, in investigating CFPS performance in terms of productivity and energy efficiency, the translation rate was an important parameter to optimize, as has already been shown in literature \cite{2005_underwood_biotech, 2014_li_PlosOne}.
-Oxygen uptake showed significant importance for energy efficiency, since it was responsible for oxidative phosphorylation, the most efficieny pathway for energy generation.
+Oxygen uptake showed significant importance for energy efficiency, since it was responsible for oxidative phosphorylation, the most efficient pathway for energy generation.
 Meanwhile, productivity was determined primarily by the rate of the most downstream steps, transcription and translation.
-Across all three cases, substrate utilization (amino acid uptake and glucose) was shown to be the next most important as these substrates contributed to the carbon yield of deGFP.
-In the first two cases where amino acids were supplied, amino acid uptake was significant, as without it energy was used to synthesize amino acids.
-Glucose uptake was only seen to be significant in the third case, since it was the only source of carbon for protein synthesis and energy generation.
+Across all three cases, substrate utilization (amino acid uptake and glucose) was shown to be the next most important as these substrates contributed to the energy efficiency and carbon yield of deGFP.
+In the first two cases where amino acids were supplied, amino acid uptake was significant, as without it, energy was required to synthesize amino acids for the protein of interest.
+Glucose uptake was only seen to be significant when amino acids were not available in the media (third case), since it was the only source of carbon for protein synthesis and energy generation.
 %This resulted in a tradeoff between energy generation to power transcription/translation and amino acid synthesis required to assemble the protein of interest.
 Jewett and coworkers have reported that oxidative phosphorylation still operated in cell-free systems, and that yield decreased from 1.5-fold to 4-fold when oxidative phosphorylation reactions were knocked out in pyruvate-powered CFPS \cite{Jewett:2008aa}.
 We also investigated the sensitivity of carbon yield to network fluxes; it followed the same trends as the energy efficiency sensitivity analysis.
 It is unknown how active oxidative phosphorylation is compared to in \textit{in~vivo} systems.
 To investigate this further we compared deGFP carbon yield to oxidative phosphorylation flux (Fig.~\ref{fig:oxphos_yield}).
 Interestingly, oxidative phosphorylation has a strong effect on the carbon yield in all cases.
-The first two cases follow the same trend, ranging from a carbon yield of 20\% to 55\%, depending on the oxidative phosphorylation activity.
-The third case, followed the same trend; however, its carbon yield ranged from about 10\% to 55\%.
-The third case was expected to have a lower carbon yield for the same oxidative phosphorylation flux compared to the first two cases, since carbon must be utilized for energy generation and amino acid synthesis.
-In all three cases, whenever the carbon yield was below its theoretical maximum, there was an accumulation of acetate and lactate, resulting in the lower carbon yield.
+The first two cases where amino acids are supplied followed the same trend: ranging from a carbon yield of 20\% to 55\%, depending on the oxidative phosphorylation activity.
+Once amino acids were removed from the media the carbon yield dropped to about 10\%, but still reached the same maximum of 55\% with higher oxidative phosphorylation flux.
+When amino acids are not avialable in the media, a lower carbon yield was expected for the same oxidative phosphorylation flux, since carbon must be utilized for energy generation and amino acid synthesis.
+In all cases, whenever the carbon yield was below its theoretical maximum, there was an accumulation of acetate and lactate, resulting in the lower carbon yield.
 The experimental dataset exhibits a mixture of acetate and lactate accumulation during CAT synthesis, which shows that CFPS is not operating in a fully aerobic state.
 It is unclear how active oxidative phosphorylation is in CFPS, since the reactions rely on electron transport from membrane vesicles.
 The addition of phosphate showed an increase in CAT yield; however, it is unclear whether the addition of phosphate enhances oxidative phosphorylation, inhibits phosphatase reactions, or both \cite{Jewett:2008aa}.
@@ -301,7 +304,7 @@ An alternative strategy may be the inhibition of anaerobic processes in cell-fre
 \label{fig:oxphos_yield}
 \end{figure}
 
-To investigate the differences between the three cases, we compared the flux distributions for a representative protein, deGFP, predicted by ssFBA simulations, as well as the case constrained by experimental measurements for CAT (Fig.~\ref{fig:flux}).
+To investigate the differences between the three cases, we compared the flux distributions for a representative protein, deGFP, predicted by ssFBA simulations (Fig.~\ref{fig:flux}).
 \begin{figure}[t!]
 \includegraphics[width=1.00\textwidth]{./Figures/Flux.pdf}
 \caption{Flux profile for glycolysis, pentose phosphate pathway, Entner-Doudoroff pathway, TCA cycle, and oxidative phosphorylation, for three different cases: (A) amino acid uptake and synthesis, (B) amino acid uptake without synthesis, and (C) amino acid synthesis without uptake. Mean flux across the ensemble, normalized to glucose uptake flux. Thick arrows indicate flux to or from amino acids.}
@@ -314,9 +317,10 @@ Thus, ssFBA found that the combined utilization of glucose and amino acids to en
 In the second case, where amino acid synthesis was removed from the network, glucose was solely utilized to provide the necessary energy requirements via glycolysis which generated enough NADH for oxidative phosphorylation.
 Ubiquinone was generated via \textit{nuo} to power oxidative phosphorylation, instead of relying on the TCA cycle.
 Once the energy requirements for transcription and translation were met, amino acids were taken from the media to assemble the protein of interest.
-The first two cases had similar performance in terms of productivity, energy efficiency and carbon yield for all proteins.
+These first two cases where amino acids were available had similar performance with a correlation of 0.99 between their flux distributions and were comparable in terms of productivity, energy efficiency and carbon yield for all proteins.
 This is most likely due to the efficient utilization of carbon to energize CFPS without the burden of amino acid biosynthesis.
-In the third case, where amino acids must be synthesized, there is drop in all performance metrics (productivity, energy efficiency, and carbon yield) compared to the first two cases.
+In the third case, where amino acids must be synthesized, there is drop in the performance metrics of energy efficiency and carbon yield compared to the cases where amino acids are avialble.
+The flux distribution had a correlation fo 0.95 when compared to both cases where amino acids were avaialbe. 
 %Glucose passes through all the major pathways: glycolysis, pentose phosphate pathway and the TCA cycle.
 %First, glucose must be converted into all the necessary amino acids for the assembly of the protein of interest.
 %Second, it must provide the necessary energy requirements for transcription and translation.
@@ -327,12 +331,14 @@ Thus, less NADH is available for oxidative phosphorylation.
 The performance metrics and sensitivity analysis suggest that efficient energy generation via oxygen uptake is essential to higher energy efficiency and carbon yields.
 Thus, removing anaerobic enzymes during the cell-free extract preparation could potentially improve CFPS performance and protein yield.
 
-The fourth case, constrained by experimental measurements (Fig. \ref{fig:flux_exp}), had a fairly similar flux distribution as the third case.
-The central carbon organic acids show good agreement with the data (Fig. \ref{fig:flux_exp}B).
+The fourth case, constrained by experimental measurements (Fig. \ref{fig:flux_exp}), had the highest correlation of 0.66 with the flux distribution from the case supplied with no amino acids and a correlation of 0.6 with the cases supplied with amino acids.
+This shows the case constrained by experimental measurements has some differences in the flux distribution compared to the optimum solutions which may provide some insight to improve CFPS performance. 
 Metabolic fluxes were constrained by experimental measurements (available in Supporting Information) where available for the first hour which constrained the solution space of ssFBA to have a more realistic depiction of the flux distribution.
-Unlike the second case, only certain amino acid synthesis reactions were blocked since during the growth of \emph{E.~coli} not all amino acids were supplied.
+The central carbon organic acids show good agreement with the data (Fig. \ref{fig:flux_exp}B).
+Only certain amino acid synthesis reactions were blocked since during the growth of \emph{E.~coli} not all amino acids were supplied (see Materials and Methods).
 During the cell-free reaction all amino acids were supplied, however glucose still traveled through all the major pathways, and the same metabolic precursors were still utilized for amino acid biosynthesis.
-Accumulation of pyruvate, lactate, acetate, and other organic acids can be seen (Fig. \ref{fig:flux_exp}B), implying an inefficiency of carbon utilization.
+The optimum solutions only produced the required amount of amino acids necessary, however in examining the measurements there is an accumulation of alanine and glutamine which may explain some of the differences in the correlations of the flux distributions.
+Accumulation of pyruvate, lactate, acetate, and other organic acids can be seen (Fig. \ref{fig:flux_exp}B) and shows an inefficiency of carbon utilization.
 In addition, there is a high flux through the Entner-Douodoroff pathway, but this is likely non-physiological, and simply an artifact of the optimal solution of ssFBA.
 To determine which reactions occur in CFPS, adding thermodynamic feasibility constraints to reactions may result in a better depiction of the intracellular flux distribution \cite{Henry:2007,Hamilton:2013}.
 In this case, it is unclear which substrate (glucose or amino acids) is used to power CFPS and may in fact be a combination of both.
