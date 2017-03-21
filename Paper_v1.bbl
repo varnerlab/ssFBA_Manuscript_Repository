@@ -2,7 +2,7 @@
 \providecommand*\mcitethebibliography{\thebibliography}
 \csname @ifundefined\endcsname{endmcitethebibliography}
   {\let\endmcitethebibliography\endthebibliography}{}
-\begin{mcitethebibliography}{29}
+\begin{mcitethebibliography}{32}
 \providecommand*\natexlab[1]{#1}
 \providecommand*\mciteSetBstSublistMode[1]{}
 \providecommand*\mciteSetBstMaxWidthForm[2]{}
@@ -148,6 +148,33 @@ Underwood,~K.~A., Swartz,~J.~R., and Puglisi,~J.~D. (2005) Quantitative
 \bibitem[Li \latin{et~al.}(2014)Li, Gu, Aach, and Church]{2014_li_PlosOne}
 Li,~J., Gu,~L., Aach,~J., and Church,~G.~M. (2014) Improved Cell-Free RNA and
   Protein Synthesis System. \emph{PLoS ONE} \emph{9}, 1--11\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Lee \latin{et~al.}(2000)Lee, Phalakornkule, Domach, and
+  Grossmann]{LEE2000711}
+Lee,~S., Phalakornkule,~C., Domach,~M.~M., and Grossmann,~I.~E. (2000)
+  Recursive MILP model for finding all the alternate optima in LP models for
+  metabolic networks. \emph{Computers \& Chemical Engineering} \emph{24}, 711
+  -- 716\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Mahadevan and Schilling(2003)Mahadevan, and
+  Schilling]{Mahadevan2003264}
+Mahadevan,~R., and Schilling,~C. (2003) The effects of alternate optimal
+  solutions in constraint-based genome-scale metabolic models. \emph{Metabolic
+  Engineering} \emph{5}, 264 -- 276\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Schuetz \latin{et~al.}(2007)Schuetz, Kuepfer, and Sauer]{Schuetz119}
+Schuetz,~R., Kuepfer,~L., and Sauer,~U. (2007) Systematic evaluation of
+  objective functions for predicting intracellular fluxes in Escherichia coli.
+  \emph{Molecular Systems Biology} \emph{3}\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
