@@ -326,20 +326,32 @@ The performance metrics and sensitivity analysis suggest that efficient energy g
 The case constrained by experimental measurements (Fig. \ref{fig:flux_exp}), had the highest correlation of 0.66 with the flux distribution from the case supplied with no amino acids and a correlation of 0.52 with the cases supplied with amino acids.
 Thus there are some differences in the flux distribution compared to the optimum solutions which may provide some insight to improve CFPS performance. 
 Metabolic fluxes were constrained by experimental measurements (available in Supporting Information) where available for the first hour which constrained the solution space of ssFBA to have a more realistic depiction of the flux distribution.
-The central carbon organic acids showed good agreement with the data (Fig. \ref{fig:flux_exp}B).
+The central carbon organic acids showed good agreement with the data (Fig.~\ref{fig:flux_exp}B).
 Only certain amino acid synthesis reactions were blocked since during the growth of \emph{E.~coli} not all amino acids were supplied (see Materials and Methods).
 During the cell-free reaction all amino acids were supplied, however glucose still traveled through all the major pathways, and the same metabolic precursors were still utilized for amino acid biosynthesis.
 In this case, it is unclear which substrate (glucose or amino acids) is used to power CFPS and may in fact be a combination of both.
 The optimum solutions only produced the required amount of amino acids necessary, however in examining the measurements there is an accumulation of alanine and glutamine which may explain some of the differences in the correlations of the flux distributions.
-Accumulation of pyruvate, lactate, acetate, and other organic acids can be seen (Fig. \ref{fig:flux_exp}B) and shows an inefficiency of carbon utilization.
-In addition, there is a high flux through the Entner-Douodoroff pathway, but this is likely non-physiological, and simply an artifact of the optimal solution of ssFBA.
-Flux balance analysis has been shown to have multiple alternative optimal solutions with flux variablitiy analysis and mixed-integer linear programming resulting in a poor depiction of the physiological flux distribution \cite{LEE2000711, Mahadevan2003264, Schuetz119}.  
-To determine which reactions occur in CFPS, adding thermodynamic feasibility constraints to reactions may result in a better depiction of the flux distribution \cite{Henry:2007,Hamilton:2013}.
-It would also be interesting to track the carbon flux using C\textsuperscript{13} labeling in CFPS and constrain branch reactions in ssFBA to the resulting measurements, a method that has been shown to represent the flux distribution for \emph{in~vivo} processes well \cite{Zamboni:2009}.
+Accumulation of pyruvate, lactate, acetate, and other organic acids can be seen (Fig.~\ref{fig:flux_exp}B) and shows an inefficiency of carbon utilization.
 \begin{figure}[t!]
 \includegraphics[width=1.00\textwidth]{./Figures/Exp_flux.pdf}
 \caption{ssFBA simulation of CAT production for an experimentally constrained case. (A) Flux profile for glycolysis, pentose phosphate pathway, Entner-Doudoroff pathway, TCA cycle, and oxidative phosphorylation.  Mean flux across the ensemble, normalized to glucose uptake flux. Thick arrows indicate flux to or from amino acids. (B) Central carbon metabolite measurements versus ssFBA simulations over a one hour time course.}
 \label{fig:flux_exp}
+\end{figure}
+
+Despite the constraints by experimental measurements, it is difficult to calculate the physiological flux distribution of metabolism (Fig.~\ref{fig:norm}) 
+For example, there is a high flux through the Entner-Douodoroff pathway, but this is likely non-physiological, and simply an artifact of the optimal solution of ssFBA.
+A knockout of the Entner-Doudoroff pathway has no effect on the norm productivity of CAT compared to no knockouts (Fig.~\ref{fig:norm}A).
+In addition, pairwise knockouts of Entner-Doudoroff and most subgroups in the network result in the same optimal solution of CAT productivity.
+However, there is a difference in the flux distribution with these knockouts (Fig.~\ref{fig:norm}B), ssFBA will reroute the flux to optimize the objective function.
+Interestingly, a single group knockout of glycolysis/gluconoeogenesis, glutamate/glutamine biosynthesis, alanine/aspartate/asparagine biosynthesis was detrimental to CAT productivity.
+Flux balance analysis has been shown to have multiple alternative optimal solutions with flux variablitiy analysis and mixed-integer linear programming resulting in a poor depiction of the physiological flux distribution \cite{LEE2000711, Mahadevan2003264, Schuetz119}. 
+In our case, ssFBA reached the same optimal solution of CAT productivity for 73\% of the pairwise group knockouts. 
+To determine which reactions occur in CFPS, adding thermodynamic feasibility constraints to reactions may result in a better depiction of the flux distribution \cite{Henry:2007,Hamilton:2013}.
+It would also be interesting to track the carbon flux using C\textsuperscript{13} labeling in CFPS and constrain branch reactions in ssFBA to the resulting measurements, a method that has been shown to represent the flux distribution for \emph{in~vivo} processes well \cite{Zamboni:2009}.
+\begin{figure}[t!]
+\includegraphics[width=1.0\textwidth]{./Figures/Norm.pdf}
+\caption{The norm effect of pairwise knockouts of subgroups in the cell-free network (A) CAT productivity norm compared to no knockouts in the experimentally constrained case. (B) Flux distribution norm compared to no knockouts in the experimentally constrained case.}
+\label{fig:norm}
 \end{figure}
 
 Taken together, we developed a sequence specific constraints based modeling approach to evaluate the performance of synthetic circuits in an \emph{E.~coli} CFPS system for a range of different proteins and three different cases.
@@ -360,7 +372,7 @@ Plasmid pK7CAT was used as the DNA template for chloramphenical acetyl transfera
 The plasmid was isolated and purified using a Plasmid Maxi Kit (Qiagen, Valencia CA).
 Cell-free protein synthesis of CAT protein was performed at 37 $^{\circ}$C for 3 h.
 
-S30 extract was prepared from E. coli strain KC6 (A19 $\delta$tonA $\delta$tnaA $\delta$speA $\delta$endA $\delta$sdaA $\delta$sdaB $\delta$gshA met+).
+S30 extract was prepared from E. coli strain KC6 (A19 $\Delta$tonA $\Delta$tnaA $\Delta$speA $\Delta$endA $\Delta$sdaA $\Delta$sdaB $\Delta$gshA met+).
 This K12-derivative has several gene deletions to stabilize amino acid concentrations during the cell-free reaction.
 The KC6 strain was grown to approximately 3 OD595 in a 10-L fermenter (B. Braun, Allentown PA) on defined media with glucose as the carbon source and with the addition of 13 amino acids (alanine, arginine, cysteine, serine, aspartate, glutamate, and glutamine were excluded) \cite{Zawada:2003}.
 Crude S30 extract was made as previously described \cite{Jewett:2002}.
