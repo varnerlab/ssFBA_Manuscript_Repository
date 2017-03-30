@@ -204,14 +204,6 @@ Zamboni,~N., Fendt,~S.-M., and Sauer,~U. (2009) \textsuperscript{13}C-based
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
-\bibitem[Kigawa \latin{et~al.}(1995)Kigawa, Muto, and Yokoyama]{Kigawa1995}
-Kigawa,~T., Muto,~Y., and Yokoyama,~S. (1995) Cell-free synthesis and amino
-  acid-selective stable isotope labeling of proteins for NMR analysis.
-  \emph{Journal of Biomolecular NMR} \emph{6}, 129--134\relax
-\mciteBstWouldAddEndPuncttrue
-\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
-{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
-\EndOfBibitem
 \bibitem[Zawada \latin{et~al.}()Zawada, Richter, Huang, Lodes, Shah, and
   Swartz]{Zawada:2003}
 Zawada,~J., Richter,~B., Huang,~E., Lodes,~E., Shah,~A., and Swartz,~J.~R.
@@ -224,6 +216,14 @@ Zawada,~J., Richter,~B., Huang,~E., Lodes,~E., Shah,~A., and Swartz,~J.~R.
 Jewett,~M., Voloshin,~A., and Swartz,~J. In \emph{Gene cloning and expression
   technologies}; Weiner,~M., and Lu,~Q., Eds.; Eaton Publishing: Westborough,
   MA, 2002; pp 391--411\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Kigawa \latin{et~al.}(1995)Kigawa, Muto, and Yokoyama]{Kigawa1995}
+Kigawa,~T., Muto,~Y., and Yokoyama,~S. (1995) Cell-free synthesis and amino
+  acid-selective stable isotope labeling of proteins for NMR analysis.
+  \emph{Journal of Biomolecular NMR} \emph{6}, 129--134\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
