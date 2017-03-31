@@ -100,7 +100,7 @@ This allows us to interrogate the chemical environment while the biosynthetic ma
 Cell-free protein synthesis (CFPS) systems are arguably the most prominent examples of cell-free systems used today \cite{Jewett:2008aa}.
 However, CFPS is not new; CFPS in crude \textit{E.~coli} extracts has been used since the 1960s to explore fundamental biological mechanisms \cite{MATTHAEI:1961aa,NIRENBERG:1961aa}.
 Today, cell-free systems are used in a variety of applications ranging from therapeutic protein production \cite{Lu:2014aa} to synthetic biology \cite{Hodgman:2012aa}.
-However, if CFPS is to become a mainstream technology for applications such as point of care manufacturing, we must first understand the performance limits of these systems.
+However, if CFPS is to become a mainstream technology for applications such as point of care manufacturing \cite{Pardee2016248}, we must first understand the performance limits and cost of these systems \cite{Jewett:2008aa}.
 One tool to address this question is mathematical modeling.
 
 % Interestingly, many of the challenges confronting \textit{in~vivo} genome scale kinetic modeling can potentially be overcome in a cell-free system.
@@ -111,7 +111,15 @@ One tool to address this question is mathematical modeling.
 % Recent advances in constraints based modeling have overcome the early shortcomings of the platform, including capturing metabolic regulation and control \cite{2013_hyduke_lewis_palsson_MolBioSys}. Thus, modern constraints based approaches are extremely useful for the discovery of metabolic engineering strategies and represent the state of the art in metabolic modeling \cite{2013_mccloskey_palsson_feist_MolSysBio, 2012_zomorrodi_maranas_MetaEng}.
 
 Stoichiometric reconstructions of microbial metabolism, popularized by flux balance analysis (FBA), have become standard tools to interrogate metabolism \cite{2012_lewis_palsson_NatRevMicrobio}.
+Constraints based methods such as FBA, metabolic flux analysis (MFA) \cite{WIECHERT2001195}, and network decomposition approaches such as elementary modes \cite{Schuster:2000aa} or extreme pathways \cite{Schilling:2000aa} model intracellular metabolism using biochemical stoichiometry and other constraints such as thermodynamical feasibility \cite{Henry:2007,Hamilton:2013} under pseudo steady state conditions. 
+These constraints based approaches have predicted productivity \cite{Varma01101994, BTPR:BTPR2132}, yield \cite{Varma01101994}, mutant behavior \cite{Edwards2000}, and growth phenotypes \cite{Brien693} of arbitrary complexity, including genome scale networks, using linear programming\cite{Covert:2004aa}.  
 Since the first genome scale stoichiometric model of \textit{E.~coli} \cite{2000_edwards_palsson_PNAS}, stoichiometric reconstructions of hundreds of organisms, including industrially important prokaryotes such as \textit{E.~coli} \cite{Feist:2007aa} or \textit{B. subtilis} \cite{Oh:2007aa}, are now available \cite{2009_feist_palsson_NatRevMicrobio}.
+Stoichiometric reconstructions have been expanded to include metabolism integrated with detailed gene expression (ME-Model) \cite{Allen:2003aa, Brien693}, and protein structures (GEM-PRO) \cite{Zhang1544,Chang1220} which has increased the scope of simulating genetic and environmental perturbations.
+%However, FBA has been shown to have alternative solutions that lead to the same desired optimal phenotype using flux variability analysis \cite{Mahadevan2003264} or mixed-integer linear programming based algorithms \cite{LEE2000711}. 
+Constraints based methods are great tools to estimate the performance of metabolic networks with none to very few parameters. 
+However, constraints based methods are typically used to model \textit{in~vivo} processes and have not been applied to cell-free metabolism.
+
+
 In this study, we used sequence specific constraints based modeling to evaluate the performance of \emph{E.~coli} cell-free protein synthesis (CFPS).
 A core \emph{E.~coli} cell-free metabolic model was developed from literature \cite{Feist:2007aa}.
 This model, which described glycolysis, pentose phosphate pathway, amino acid biosynthesis and degradation and energy metabolism, was then augmented with
@@ -182,19 +190,22 @@ An additional case was considered for CAT, since a comprehensive dataset is avai
 \begin{figure}[t!]
 \centering
 \includegraphics[width=1.00\textwidth]{./figs/Fig-2-Performance-Analysis.pdf}
-\caption{CFPS productivity of eight proteins for four cases. Amino acid uptake and synthesis (black), AA uptake without synthesis (dark grey), AA synthesis without uptake (light grey), and constrained by experimental measurements, for CAT only (white). A. Productivity across the ensemble (error bars represent 95\% CI). B. Mean productivity versus carbon number. Single trendline (dotted line) calculated across all cases (y = 6015004x\textsuperscript{-1.9}; R\textsuperscript{2} = 0.99). Asterisk: protein excluded from trendline; dagger: constrained by experimental measurements and excluded from trendline.}
-\label{fig:Prod}
+\caption{CFPS performance of eight proteins for four cases. Amino acid uptake and synthesis (black), AA uptake without synthesis (dark grey), AA synthesis without uptake (light grey), and constrained by experimental measurements, for CAT only (white). A. Productivity. B. Mean productivity versus carbon number. Single trendline (dotted line) calculated across all cases (y = 6.02$\cdot$10\textsuperscript{6}x\textsuperscript{-1.9}; R\textsuperscript{2} = 0.99). 
+C. Energy efficiency. D. Mean energy efficiency versus carbon number. Trendline for cases with amino acids (black dotted line; y = -1.65$\cdot$10\textsuperscript{-2}x+90.95; R\textsuperscript{2} = 0.91) and trendline for without amino acids (grey dotted line; y = -3.18$\cdot$10\textsuperscript{-3}x+33.48; R\textsuperscript{2} = 0.78).
+E. Carbon yield. F. Mean carbon yield versus carbon number. Trendline for cases with amino acids (black dotted line; y = -8.03$\cdot$10\textsuperscript{-3}x+63.83; R\textsuperscript{2} = 0.95) and trendline for without amino acids (grey dotted line; y = -6.98$\cdot$10\textsuperscript{-3}x+58.86; R\textsuperscript{2} = 0.90).
+Error bars: 95\% CI; asterisk: protein excluded from trendline; dagger: constrained by experimental measurements and excluded from trendline.}
+\label{fig:Prof}
 \end{figure}
 
 \subsubsection{Productivity}
-The mean productivity was inversely proportional to the protein size and varied between 1 and 12 $\mu$M/h for the proteins sampled (Fig.~\ref{fig:Prod}).
-All cases had very similar performance for each protein and were within a standard deviation of each other (Fig.~\ref{fig:Prod}A).
+The mean productivity was inversely proportional to the protein size and varied between 1 and 12 $\mu$M/h for the proteins sampled (Fig.~\ref{fig:Prof}A-B).
+All cases had very similar performance for each protein and were within a standard deviation of each other (Fig.~\ref{fig:Prof}A).
 %with the second case (without amino acid synthesis) having a slightly higher productivity for most proteins.
 The model framework is setup to optimize for the production of each protein and is constrained by the translation rate.
 This shows the system had sufficient substrates and metabolic precursors to power CFPS and synthesize each protein of interest with the same productivity, regardless of the case.
 However, each individual protein had a different level of productivity.
 For instance, BMP10 had a productivity of about 2.5 $\mu$M/h whereas CAT had a productivity of about 12 $\mu$M/h.
-To examine this further, the mean productivity was plotted against the carbon number of each protein (Fig.~\ref{fig:Prod}B).
+To examine this further, the mean productivity was plotted against the carbon number of each protein (Fig.~\ref{fig:Prof}B).
 The proteins with the highest productivity had the lowest carbon number, whereas proteins with low productivity had higher carbon numbers.
 This inverse trend was due to the fact that larger proteins require more amino acids and substrates to assemble them, resulting in lower productivity given the same resources.
 A single trendline for all cases shows the expected productivity in CFPS depending on the carbon number of the protein of interest (available in the Supporting Information).
@@ -207,12 +218,12 @@ Taken together, a single trendline showed good agreement (R\textsuperscript{2} =
 
 
 \subsubsection{Energy efficiency}
-The energy efficiency of protein production remained relatively high for when amino acids were supplied in the media, however energy efficiency dropped below 32\% when amino acids were not available (Fig.~\ref{fig:Energy}).
+The energy efficiency of protein production remained relatively high for when amino acids were supplied in the media, however energy efficiency dropped below 32\% when amino acids were not available (Fig.~\ref{fig:Prof}C-D).
 Following the same outline as in examining the productivity, we calculated the energy efficiency of production for each protein.
 When amino acids were supplied in the media (first two cases), there was a comparable performance in having the highest energy efficiency, despite the network's ability to synthesis amino acids.
 For the case when amino acids were removed from the media, protein production resulted in a low energy efficiency; below 32\% depending on the protein.
 This was because glucose had to be utilized to synthesize the amino acids necessary for protein synthesis and meet the necessary energy demands of CFPS.
-We next investigated the effect of protein carbon number on energy efficiency (Fig.~\ref{fig:Energy}B).
+We next investigated the effect of protein carbon number on energy efficiency (Fig.~\ref{fig:Prof}D).
 The same inverse trend was observed as for productivity, except that it was linear.
 %The proteins with the lowest carbon number had the highest energy efficiency and the higher carbon number proteins had a lower energy efficiency for when amino acids were available in the media (first two cases).
 Proteins with a high carbon number had a lower energy efficiency since they have a higher transcription and translation cost then smaller proteins.
@@ -233,7 +244,7 @@ Second, the system had a high accumulation of metabolic byproducts, specifically
 
 
 \subsubsection{Yield}
-The mean carbon yield was inversely proportional to protein size and varied between 40-57\% for the proteins sampled (Fig.~\ref{fig:Yield}).
+The mean carbon yield was inversely proportional to protein size and varied between 40-57\% for the proteins sampled (Fig.~\ref{fig:Prof}E-F).
 The same inverse qualitative trend was observed as for energy efficiency.
 %The cases supplemented with amino acids in the media showed the highest carbon yield.
 There was a drop in carbon yield by about 7\% once amino acids were not available; this is most likely because glucose was utilized to synthesize the necessary amino acids for each protein as well as power the system.
@@ -259,7 +270,7 @@ The experimental performance could be improved by diverting this carbon toward t
 % \end{figure}
 %Next we investigated the effect of the carbon number of each protein on the carbon yield (Fig.~\ref{fig:Yield}B).
 %The proteins with the lowest carbon number had the highest yield and the higher carbon number proteins had a lower carbon yield within each case.
-A single trendline was formulated for the cases where amino acids were supplied in the media since they had similar performance, while another trendline was formulated for when amino acids were not available (Fig.~\ref{fig:Yield}B).
+A single trendline was formulated for the cases where amino acids were supplied in the media since they had similar performance, while another trendline was formulated for when amino acids were not available (Fig.~\ref{fig:Yield}F).
 The trendlines showed good predictability for estimating carbon yield for a certain range of potein size (R\textsuperscript{2} = 0.95 with amino acids and R\textsuperscript{2} = 0.90 without amino acids), regardless of the type of promoters used.
 However, as the protein size increased, the carbon yield decreased, suggesting that larger proteins may be less feasible for cell-free production.
 Thus, we examined the parameters that had the most significant effect on cell-free productivity, energy efficiency, and carbon yield in order to optimize CFPS performance.
@@ -347,11 +358,13 @@ Accumulation of pyruvate, lactate, acetate, and other organic acids can be seen 
 Despite the constraints by experimental measurements, it is difficult to calculate the physiological flux distribution of metabolism (Fig.~\ref{fig:norm})
 For example, there is a high flux through the Entner-Douodoroff pathway, but this is likely non-physiological, and simply an artifact of the optimal solution of ssFBA.
 A knockout of the Entner-Doudoroff pathway has no effect on the norm productivity of CAT compared to no knockouts (Fig.~\ref{fig:norm}A).
-In addition, pairwise knockouts of Entner-Doudoroff and most subgroups in the network result in the same optimal solution of CAT productivity.
-However, there is a difference in the flux distribution with these knockouts (Fig.~\ref{fig:norm}B), ssFBA will reroute the flux to optimize the objective function.
-Interestingly, a single group knockout of glycolysis/gluconoeogenesis, glutamate/glutamine biosynthesis, alanine/aspartate/asparagine biosynthesis was detrimental to CAT productivity.
+In addition, pairwise knockouts of Entner-Doudoroff and other subgroups (i.e. pentose phosphate pathway, cofactors, folate metabolism, etc.) in the network result in the same optimal solution of CAT productivity.
+However, there is a difference in the flux distribution with these knockouts (Fig.~\ref{fig:norm}B); ssFBA will reroute the flux to optimize the objective function.
+Interestingly, there are crucial subgroups that are detrimental to CAT productivity. 
+For example, a single group knockout of glycolysis/gluconoeogenesis or oxidative phosphorylation leads to no CAT production. 
+There were also cases of group knockouts that had no effect on productivity or its flux distribution such as isoleucine, leucine, and valine biosynthesis knocked out with histidine biosynthesis. 
 Flux balance analysis has been shown to have multiple alternative optimal solutions with flux variablitiy analysis and mixed-integer linear programming resulting in a poor depiction of the physiological flux distribution \cite{LEE2000711, Mahadevan2003264, Schuetz119}.
-In our case, ssFBA reached the same optimal solution of CAT productivity for 73\% of the pairwise group knockouts.
+In our case, ssFBA reached the same optimal solution of CAT productivity for 39.9\% of the pairwise group knockouts, but had a different flux distribution than compared to no knockouts.
 To determine which reactions occur in CFPS, adding thermodynamic feasibility constraints to reactions may result in a better depiction of the flux distribution \cite{Henry:2007,Hamilton:2013}.
 It would also be interesting to track the carbon flux using C\textsuperscript{13} labeling in CFPS and constrain branch reactions in ssFBA to the resulting measurements, a method that has been shown to represent the flux distribution for \emph{in~vivo} processes well \cite{Zamboni:2009}.
 \begin{figure}[t!]

@@ -2,7 +2,7 @@
 \providecommand*\mcitethebibliography{\thebibliography}
 \csname @ifundefined\endcsname{endmcitethebibliography}
   {\let\endmcitethebibliography\endthebibliography}{}
-\begin{mcitethebibliography}{32}
+\begin{mcitethebibliography}{43}
 \providecommand*\natexlab[1]{#1}
 \providecommand*\mciteSetBstSublistMode[1]{}
 \providecommand*\mciteSetBstMaxWidthForm[2]{}
@@ -62,11 +62,111 @@ Hodgman,~C.~E., and Jewett,~M.~C. (2012) Cell-free synthetic biology: thinking
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
+\bibitem[Pardee \latin{et~al.}(2016)Pardee, Slomovic, Nguyen, Lee, Donghia,
+  Burrill, Ferrante, McSorley, Furuta, Vernet, Lewandowski, Boddy, Joshi, and
+  Collins]{Pardee2016248}
+Pardee,~K., Slomovic,~S., Nguyen,~P., Lee,~J., Donghia,~N., Burrill,~D.,
+  Ferrante,~T., McSorley,~F., Furuta,~Y., Vernet,~A., Lewandowski,~M.,
+  Boddy,~C., Joshi,~N., and Collins,~J. (2016) Portable, On-Demand Biomolecular
+  Manufacturing. \emph{Cell} \emph{167}, 248 -- 259.e12\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
 \bibitem[Lewis \latin{et~al.}(2012)Lewis, Nagarajan, and
   Palsson]{2012_lewis_palsson_NatRevMicrobio}
 Lewis,~N.~E., Nagarajan,~H., and Palsson,~B.~{\O}. (2012) Constraining the
   metabolic genotype-phenotype relationship using a phylogeny of in silico
   methods. \emph{Nat Rev Microbiol} \emph{10}, 291--305\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Wiechert(2001)]{WIECHERT2001195}
+Wiechert,~W. (2001) 13C Metabolic Flux Analysis. \emph{Metabolic Engineering}
+  \emph{3}, 195 -- 206\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Schuster \latin{et~al.}(2000)Schuster, Fell, and
+  Dandekar]{Schuster:2000aa}
+Schuster,~S., Fell,~D.~A., and Dandekar,~T. (2000) A general definition of
+  metabolic pathways useful for systematic organization and analysis of complex
+  metabolic networks. \emph{Nat Biotechnol} \emph{18}, 326--32\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Schilling \latin{et~al.}(2000)Schilling, Letscher, and
+  Palsson]{Schilling:2000aa}
+Schilling,~C.~H., Letscher,~D., and Palsson,~B.~O. (2000) Theory for the
+  systemic definition of metabolic pathways and their use in interpreting
+  metabolic function from a pathway-oriented perspective. \emph{J Theor Biol}
+  \emph{203}, 229--48\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Henry \latin{et~al.}(2006)Henry, Broadbelt, and
+  Hatzimanikatis]{Henry:2007}
+Henry,~C.~S., Broadbelt,~L.~J., and Hatzimanikatis,~V. (2006)
+  Thermodynamics-Based Metabolic Flux Analysis. \emph{Biophysical Journal}
+  \emph{92}, 192--1805\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Hamilton \latin{et~al.}(2013)Hamilton, Dwivedi, and
+  Reed]{Hamilton:2013}
+Hamilton,~J.~J., Dwivedi,~V., and Reed,~J.~L. (2013) Quantitative Assessment of
+  Thermodynamic Constraints on the Solution Space of Genome-Scale Metabolic
+  Models. \emph{Biophysical Journal} \emph{105}, 512--522\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Varma and Palsson(1994)Varma, and Palsson]{Varma01101994}
+Varma,~A., and Palsson,~B.~O. (1994) Stoichiometric flux balance models
+  quantitatively predict growth and metabolic by-product secretion in wild-type
+  Escherichia coli W3110. \emph{Applied and Environmental Microbiology}
+  \emph{60}, 3724--3731\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Sánchez \latin{et~al.}(2015)Sánchez, Quintero, and
+  Ochoa]{BTPR:BTPR2132}
+Sánchez,~C., Quintero,~J.~C., and Ochoa,~S. (2015) Flux balance analysis in
+  the production of clavulanic acid by Streptomyces clavuligerus.
+  \emph{Biotechnology Progress} \emph{31}, 1226--1236\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Edwards and Palsson(2000)Edwards, and Palsson]{Edwards2000}
+Edwards,~J.~S., and Palsson,~B.~O. (2000) Metabolic flux balance analysis and
+  the in silico analysis of Escherichia coli K-12 gene deletions. \emph{BMC
+  Bioinformatics} \emph{1}, 1\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[O{\textquoteright}Brien \latin{et~al.}(2013)O{\textquoteright}Brien,
+  Lerman, Chang, Hyduke, and Palsson]{Brien693}
+O{\textquoteright}Brien,~E.~J., Lerman,~J.~A., Chang,~R.~L., Hyduke,~D.~R., and
+  Palsson,~B.~{\O}. (2013) Genome-scale models of metabolism and gene
+  expression extend and refine growth phenotype prediction. \emph{Molecular
+  Systems Biology} \emph{9}\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Covert \latin{et~al.}(2004)Covert, Knight, Reed, Herrg{\aa}rd, and
+  Palsson]{Covert:2004aa}
+Covert,~M.~W., Knight,~E.~M., Reed,~J.~L., Herrg{\aa}rd,~M.~J., and
+  Palsson,~B.~{\O}. (2004) Integrating high-throughput and computational data
+  elucidates bacterial networks. \emph{Nature} \emph{429}, 92--6\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
@@ -114,6 +214,27 @@ Feist,~A.~M., Herrg{\aa}rd,~M.~J., Thiele,~I., Reed,~J.~L., and
 Allen,~T.~E., and Palsson,~B.~{\O}. (2003) Sequence-based analysis of metabolic
   demands for protein synthesis in prokaryotes. \emph{J Theor Biol} \emph{220},
   1--18\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Zhang \latin{et~al.}(2009)Zhang, Thiele, Weekes, Li, Jaroszewski,
+  Ginalski, Deacon, Wooley, Lesley, Wilson, Palsson, Osterman, and
+  Godzik]{Zhang1544}
+Zhang,~Y., Thiele,~I., Weekes,~D., Li,~Z., Jaroszewski,~L., Ginalski,~K.,
+  Deacon,~A.~M., Wooley,~J., Lesley,~S.~A., Wilson,~I.~A., Palsson,~B.,
+  Osterman,~A., and Godzik,~A. (2009) Three-Dimensional Structural View of the
+  Central Metabolic Network of Thermotoga maritima. \emph{Science} \emph{325},
+  1544--1549\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Chang \latin{et~al.}(2013)Chang, Andrews, Kim, Li, Godzik, and
+  Palsson]{Chang1220}
+Chang,~R.~L., Andrews,~K., Kim,~D., Li,~Z., Godzik,~A., and Palsson,~B.~O.
+  (2013) Structural Systems Biology Evaluation of Metabolic Thermotolerance in
+  Escherichia coli. \emph{Science} \emph{340}, 1220--1223\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
@@ -175,24 +296,6 @@ Mahadevan,~R., and Schilling,~C. (2003) The effects of alternate optimal
 Schuetz,~R., Kuepfer,~L., and Sauer,~U. (2007) Systematic evaluation of
   objective functions for predicting intracellular fluxes in Escherichia coli.
   \emph{Molecular Systems Biology} \emph{3}\relax
-\mciteBstWouldAddEndPuncttrue
-\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
-{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
-\EndOfBibitem
-\bibitem[Henry \latin{et~al.}(2006)Henry, Broadbelt, and
-  Hatzimanikatis]{Henry:2007}
-Henry,~C.~S., Broadbelt,~L.~J., and Hatzimanikatis,~V. (2006)
-  Thermodynamics-Based Metabolic Flux Analysis. \emph{Biophysical Journal}
-  \emph{92}, 192--1805\relax
-\mciteBstWouldAddEndPuncttrue
-\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
-{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
-\EndOfBibitem
-\bibitem[Hamilton \latin{et~al.}(2013)Hamilton, Dwivedi, and
-  Reed]{Hamilton:2013}
-Hamilton,~J.~J., Dwivedi,~V., and Reed,~J.~L. (2013) Quantitative Assessment of
-  Thermodynamic Constraints on the Solution Space of Genome-Scale Metabolic
-  Models. \emph{Biophysical Journal} \emph{105}, 512--522\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
