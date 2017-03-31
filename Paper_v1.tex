@@ -383,13 +383,13 @@ between the T7 promoter and the T7 terminator \cite{Kigawa1995}.
 The plasmid was isolated and purified using a Plasmid Maxi Kit (Qiagen, Valencia CA).
 Cell-free CAT synthesis was performed at 37 $^{\circ}$C.
 
-The protein synthesis reaction was conducted according to the PANOxSP protocol with slight modifications from that described previously \cite{BIT:BIT20026}.
+The protein synthesis reaction was conducted using the PANOxSP protocol with slight modifications from that described previously \cite{BIT:BIT20026}.
 Unless otherwise noted, all reagents were purchased from Sigma (St. Louis, MO).
 The initial mixture included 1.2 mM ATP; 0.85 mM each of GTP, UTP, and CTP; 30 mM phosphoenolpyruvate (Roche, Indianapolis IN); 130 mM potassium glutamate; 10 mM ammonium glutamate; 16 mM magnesium glutamate; 50 mM HEPES-KOH buffer (pH 7.5); 1.5 mM spermidine; 1.0 mM putrescine; 34 $\mu$g/mL folinic acid; 170.6 $\mu$g/mL \textit{E.~coli} tRNA mixture (Roche, Indianapolis IN); 13.3 $\mu$g/mL pK7CAT plasmid; 100 $\mu$g/mL T7 RNA polymerase; 20 unlabeled amino acids at 2-3 mM each; 5 $\mu$M l-[U-\textsuperscript{14}C]-leucine (Amersham Pharmacia, Uppsala Sweden); 0.33 mM nicotinamide adenine dinucleotide (NAD); 0.26 mM coenzyme A (CoA); 2.7 mM sodium oxalate; and 0.24 volumes of \textit{E.~coli} S30 extract.
 This reaction was modified for the energy source used such that glucose reactions have 30-40 mM glucose in place of PEP.
 Sodium oxalate was not added since it has a detrimental effect on protein synthesis and ATP concentrations when using glucose or other early glycolytic intermediate energy sources \cite{BIT:BIT1121}. The HEPES buffer (pKa $\sim$ 7.5) was replaced with Bis-Tris (pKa $\sim$ 6.5). In addition, the magnesium glutamate concentration was reduced to 8 mM for the glucose reaction since a lower magnesium optimum was found when using a nonphosphorylated energy source \cite{BIT:BIT20026}. Finally, 10 mM phosphate was added in the form of potassium phosphate dibasic adjusted to pH 7.2 with acetic acid.
 
-\subsection*{Measurements of protein product and metabolites.}
+\subsection*{Protein product and metabolite measurements.}
 Cell-free reaction samples were quenched at specific timepoints with equal volumes of ice-cold 150 mM sulfuric acid to precipitate proteins.
 Protein synthesis of CAT was determined from the total amount of \textsuperscript{14}C-leucine-labeled product by trichloroacetic acid precipitation followed by scintillation counting as described previously \cite{2005_calhoun_BiotechnologyProgress}.
 Samples were centrifuged for 10 min at 12,000g and 4$^{\circ}$C.
@@ -410,9 +410,9 @@ The sequence-specific flux balance analysis problem was formulated as a linear p
 \mathcal{L}_{i} \leq w_i \leq \mathcal{U}_{i}  \qquad i=1,2,\hdots,\mathcal{R}
  \end{multlined}
 \end{equation}
-where $\mathbf{S}$ denotes the stoichiometric matrix, $\mathbf{w}$ denotes the unknown flux vector, $\boldsymbol{\theta}$ denotes the objective selection vector
+where $\mathbf{S}$ denotes the stoichiometric matrix, $\mathbf{w}$ denotes the unknown flux vector, $\boldsymbol{\theta}$ denotes the objective cost vector
 and $\mathcal{L}_{i}$ and $\mathcal{U}_{i}$ denote the lower and upper bounds on flux $w_{i}$, respectively.
-The transcription (T) and translation (X) stoichiometry was modeled based on the template reactions of Allen and Palsson \cite{Allen:2003aa}:
+The transcription (T) and translation (X) stoichiometry was modeled based upon the template reactions of Allen and Palsson \cite{Allen:2003aa}:
 
 \begin{table}[!]
 \centering
@@ -547,7 +547,7 @@ The steady-state mRNA abundance $\rm mRNA^{*}$ was estimated as:
 \begin{equation}
 	 mRNA^{*}\simeq\frac{w_{T}}{\lambda}
 \end{equation}
-where $\lambda$ denotes the rate constant controlling the mRNA degradation rate.
+where $\lambda$ denotes the rate constant controlling the mRNA degradation rate (hr$^{-1}$).
 All translation parameters are given in Table \ref{tbl:parameters}.
 
 \begin{table}[!]
@@ -563,14 +563,14 @@ All translation parameters are given in Table \ref{tbl:parameters}.
         Transcription elongation rate & $\dot{v}_{TX}$ & 25 & nt/sec & \cite{Garamella:2016aa} \\
         Translation elongation rate & $\dot{v}_{TL}$ & 2 & aa/sec & \cite{Garamella:2016aa, 2005_underwood_biotech} \\
         Transcription saturation coefficient & $K_{TX}$ & 3.5 & nM & estimated \\
-        Translation saturation coefficient & $K_{TL}$ & 0.045 & mM & estimated \\
+        Translation saturation coefficient & $K_{TL}$ & 45.0 & $\mu$M & estimated \\
         Polysome amplification constant & $K_{P}$ & 10 & constant & estimated \\
         mRNA degradation rate & $\lambda$ & 5.2 & hr\textsuperscript{-1} & \cite{Garamella:2016aa} \\
 
         & & & & \\
         T7 promoter & $K_{T7}$ & 10 & constant & estimated \\
-        P70a promoter & $K_{1}$ & 0.014 & constant & estimated \\
-        P70a promoter & $K_{2}$ & 10 & constant & estimated \\
+        Weight RNA polymerase binding alone P70a & $K_{1}$ & 0.014 & constant & estimated \\
+        Weight bound RNAP-$\sigma_{70}$ P70a & $K_{2}$ & 10 & constant & estimated \\
         $\sigma_{70}$ concentration & $\sigma_{70}$ & 35 & nM & \cite{Garamella:2016aa} \\
         $\sigma_{70}$ dissociation constant & $K_{D}$ & 130 & nM & estimated \\
 	      $\sigma_{70}$ hill coefficient & n & 1 & constant & estimated \\
