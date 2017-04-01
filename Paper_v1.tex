@@ -101,7 +101,7 @@ Cell-free protein synthesis (CFPS) systems are arguably the most prominent examp
 However, CFPS is not new; CFPS in crude \textit{E.~coli} extracts has been used since the 1960s to explore fundamental biological mechanisms \cite{MATTHAEI:1961aa,NIRENBERG:1961aa}.
 Today, cell-free systems are used in a variety of applications ranging from therapeutic protein production \cite{Lu:2014aa} to synthetic biology \cite{Hodgman:2012aa}.
 However, if CFPS is to become a mainstream technology for applications such as point of care manufacturing \cite{Pardee2016248}, we must first understand the performance limits and cost of these systems \cite{Jewett:2008aa}.
-One tool to address this question is mathematical modeling.
+One tool to address these questions is mathematical modeling.
 
 % Interestingly, many of the challenges confronting \textit{in~vivo} genome scale kinetic modeling can potentially be overcome in a cell-free system.
 % For example, there is no complex transcriptional regulation to consider, transient metabolic measurements are easier to obtain, and we no longer have to consider cell growth.
@@ -110,17 +110,18 @@ One tool to address this question is mathematical modeling.
 % Traditionally, stoichiometric models have also neglected explicit descriptions of metabolic regulation and control mechanisms, instead opting to describe the choice of pathways by prescribing an objective function on metabolism. Interestingly, similar to early cybernetic models, the most common metabolic objective function has been the optimization of biomass formation \cite{2002_ibarra_edwards_palsson_Nat}, although other metabolic objectives have also been estimated \cite{2007_schuetz_sauer_MolSysBio}.
 % Recent advances in constraints based modeling have overcome the early shortcomings of the platform, including capturing metabolic regulation and control \cite{2013_hyduke_lewis_palsson_MolBioSys}. Thus, modern constraints based approaches are extremely useful for the discovery of metabolic engineering strategies and represent the state of the art in metabolic modeling \cite{2013_mccloskey_palsson_feist_MolSysBio, 2012_zomorrodi_maranas_MetaEng}.
 
-Stoichiometric reconstructions of microbial metabolism, popularized by flux balance analysis (FBA), have become standard tools to interrogate metabolism \cite{2012_lewis_palsson_NatRevMicrobio}.
-Constraints based methods such as FBA, metabolic flux analysis (MFA) \cite{WIECHERT2001195}, and network decomposition approaches such as elementary modes \cite{Schuster:2000aa} or extreme pathways \cite{Schilling:2000aa} model intracellular metabolism using biochemical stoichiometry and other constraints such as thermodynamical feasibility \cite{Henry:2007,Hamilton:2013} under pseudo steady state conditions. 
-These constraints based approaches have predicted productivity \cite{Varma01101994, BTPR:BTPR2132}, yield \cite{Varma01101994}, mutant behavior \cite{Edwards2000}, and growth phenotypes \cite{Brien693} of arbitrary complexity, including genome scale networks, using linear programming\cite{Covert:2004aa}.  
+Stoichiometric reconstructions of microbial metabolism, popularized by constraint based approaches such as flux balance analysis (FBA), have become standard tools to interrogate metabolism \cite{2012_lewis_palsson_NatRevMicrobio}.
+Constraint based methods such as FBA, metabolic flux analysis (MFA) \cite{WIECHERT2001195}, and network decomposition approaches such as elementary modes \cite{Schuster:2000aa} or extreme pathways \cite{Schilling:2000aa} model intracellular metabolism using biochemical stoichiometry and other constraints such as thermodynamical feasibility \cite{Henry:2007,Hamilton:2013} under pseudo steady state conditions.
+Constraint based approaches have predicted productivity \cite{Varma01101994, BTPR:BTPR2132}, yield \cite{Varma01101994}, mutant behavior \cite{Edwards2000}, and growth phenotypes \cite{Brien693} for biochemical networks of arbitrary complexity, including genome scale networks, using linear programming \cite{Covert:2004aa}.
 Since the first genome scale stoichiometric model of \textit{E.~coli} \cite{2000_edwards_palsson_PNAS}, stoichiometric reconstructions of hundreds of organisms, including industrially important prokaryotes such as \textit{E.~coli} \cite{Feist:2007aa} or \textit{B. subtilis} \cite{Oh:2007aa}, are now available \cite{2009_feist_palsson_NatRevMicrobio}.
-Stoichiometric reconstructions have been expanded to include metabolism integrated with detailed gene expression (ME-Model) \cite{Allen:2003aa, Brien693}, and protein structures (GEM-PRO) \cite{Zhang1544,Chang1220} which has increased the scope of simulating genetic and environmental perturbations.
-%However, FBA has been shown to have alternative solutions that lead to the same desired optimal phenotype using flux variability analysis \cite{Mahadevan2003264} or mixed-integer linear programming based algorithms \cite{LEE2000711}. 
-Constraints based methods are great tools to estimate the performance of metabolic networks with none to very few parameters. 
-However, constraints based methods are typically used to model \textit{in~vivo} processes and have not been applied to cell-free metabolism.
+Stoichiometric reconstructions have been expanded to include the integration of with detailed descriptions of gene expression (ME-Model) \cite{Allen:2003aa, Brien693},
+and protein structures (GEM-PRO) \cite{Zhang1544,Chang1220}.
+These expansion have greatly expanded the scope of questions these models can explore.
+%However, FBA has been shown to have alternative solutions that lead to the same desired optimal phenotype using flux variability analysis \cite{Mahadevan2003264} or mixed-integer linear programming based algorithms \cite{LEE2000711}.
+Constraint based methods are powerful tools to estimate the performance of metabolic networks with very few adjustable parameters.
+However, constraint based methods are typically used to model \textit{in~vivo} processes, and have not yet been applied to cell-free metabolism.
 
-
-In this study, we used sequence specific constraints based modeling to evaluate the performance of \emph{E.~coli} cell-free protein synthesis (CFPS).
+In this study, we used sequence specific constraint based modeling to evaluate the performance of \emph{E.~coli} cell-free protein synthesis (CFPS).
 A core \emph{E.~coli} cell-free metabolic model was developed from literature \cite{Feist:2007aa}.
 This model, which described glycolysis, pentose phosphate pathway, amino acid biosynthesis and degradation and energy metabolism, was then augmented with
 sequence specific descriptions of promoter function, transcription and translation processes.
@@ -144,22 +145,29 @@ Taken together, sequence specific constraints based modeling offers a novel mean
 % We first validated the ssFBA approach by comparing simulated and measured concentrations of two proteins from two
 
 \subsection{Model derivation and validation}
-The cell-free stoichiometric network was constructed by removing growth associated reactions from the \textit{i}AF1260 reconstruction of K-12 MG1655 \textit{E.~coli} \cite{Feist:2007aa}.
+The cell-free stoichiometric network was constructed by removing growth associated reactions from the \textit{i}AF1260 reconstruction of K-12 MG1655 \textit{E.~coli} \cite{Feist:2007aa},
+and adding deletions associated with the specific cell free system (see materials and methods).
 We then added the transcription and translation template reactions of Allen and Palsson for the specific proteins of interest \cite{Allen:2003aa}.
 A schematic of the metabolic network, which consisted of 264 reactions and 146 species, is shown in Fig.~\ref{fig:network}A.
-Using this network, in combination with detailed promoter models, and literature values for cell-free culture parameters (Table ~\ref{tbl:parameters}),
+The network described the major carbon and energy pathways, as well as amino acid biosynthesis and degradation pathways.
+Using this network, in combination with effective promoter models taken from Moon et al. [REF], and literature values for cell-free culture parameters (Table ~\ref{tbl:parameters}),
 we simulated the sequence specific production of two model proteins, chloramphenicol acetyltransferase (CAT) and dual emission green fluorescent protein (deGFP) using
-different cell-free \textit{E.~coli} extracts. The cell-free metabolic network, model parameters, model code,
-and each protein sequence are available in the supplemental materials.
+different \textit{E.~coli} cell-free extracts.
+The cell free metabolic network, along with all model code and parameters, can be downloaded under an MIT software license from the Varnerlab GitHub site [REF].
 
-Cell-free simulations predicted CAT and deGFP production for the duration of the CFPS batch reactions (Fig. ~\ref{fig:network}B and C).
-Chloramphenicol acetyltransferase (CAT), was produced under a T7 promoter in a glucose/NMP cell-free system \cite{2005_calhoun_BiotechnologyProgress} for 1 hour using glucose as a carbon and energy source (Fig.~\ref{fig:network}B).
-With the exception of the first 10-15 min, the cell-free prediction of CAT abundance was consistent with the measured values.
+Cell free simulations of the time evolution of CAT and deGFP production were consistent with experimental measurements (Fig. ~\ref{fig:network}B and C).
+Chloramphenicol acetyltransferase (CAT), was produced under a T7 promoter in a glucose/NMP cell-free system \cite{2005_calhoun_BiotechnologyProgress}
+for 1 hour using glucose as a carbon and energy source (Fig.~\ref{fig:network}B).
+With the exception of the first 10-15 min, the cell-free prediction of CAT abundance was consistent with the measured values (Correlation?).
 On the other hand, deGFP was produced under a P70a promoter in TXTL 2.0 \textit{E.~coli} extract for 8 hours using maltose as a carbon and energy source (Fig.~\ref{fig:network}C).
-The cell-free simulation captured the overall trend of deGFP abundance, but was not able to capture saturation at the end of the CFPS culture.
+The cell-free simulation captured the overall trend of deGFP abundance, but failed to capture saturation at the end of the CFPS culture (Correlation?).
 Uncertainty in experimental factors such as the concentration of RNA polymerase, ribosomes,
-transcription and translation elongation rates and the upper bounds for oxygen and glucose consumption rates did not alter the qualitative performance of the model.
-Thus, the metabolic network and molecular description of transcription and translation were consistent with experimental measurements.
+transcription and translation elongation rates or the upper bounds for oxygen and glucose consumption rates (modeled as being normally distributed around the parameter values shown in Table ~\ref{tbl:parameters})
+did not qualitatively alter the performance of the model (blue region, 95\% confidence estimate).
+Together, these simulations suggested the description of transcription and translation, and its integration with metabolism encoded in the cell free metabolic model, were consistent with experimental measurements.
+However, these simulations were conducted at a single plasmid concentration.
+Thus, it was unclear if the model could capture cell free protein synthesis for a range of plasmid concentrations.
+
 \begin{figure}[t!]
 \centering
 \includegraphics[width=1.00\textwidth]{./figs/Fig-1-Network-Validation-Simulations.pdf}
@@ -167,30 +175,34 @@ Thus, the metabolic network and molecular description of transcription and trans
 \label{fig:network}
 \end{figure}
 
-Next, we predicted deGFP production as a function of plasmid concentration (Fig.~\ref{fig:network}D).
-Concentration of deGFP at each plasmid concentration was calculated by multiplying the flux of deGFP synthesis by the active time of production, approximately 8 hours in TXTL 2.0 \cite{Garamella:2016aa}.
-The mean of the ensemble shows a good prediction against the measured deGFP levels, even though it under predicted deGFP concentration at the saturating point of 5 nM of plasmid concentration.
-However, the ensemble and the mean of the ensemble captured the overall saturating dynamics of deGFP production as a function of plasmid concentration.
+Cell free simulations of the deGFP titer for a range of plasmid concentrations were consistent with experimental measurements (Fig.~\ref{fig:network}D).
+The cell free deGFP titer at each plasmid concentration was calculated by multiplying the flux of deGFP synthesis by the active time of production, approximately 8 hours in TXTL 2.0 \cite{Garamella:2016aa}.
+The mean of the ensemble (calculated by sampling the uncertainty in the model parameters) captured the saturation of deGFP production as a function of plasmid concentration.
+However, while the mean and 95\% confidence estimate of the ensemble was consistent with measured deGFP levels, the model under predicted the deGFP titer at the saturating point of 5 nM of plasmid concentration.
 These results validated our mathematical framework to model CFPS systems and predict the production of two proteins with very few adjustable parameters.
 It also showed that the sequence specific reactions were sufficient to predict the production of two different proteins under different promoters and cell-free systems.
 Since the model accurately predicted protein production, we used our mathematical framework to understand the performance limits of CFPS.
 
+%These amino acid synthesis reactions were blocked since during the cell-free extract preparation the cells are often supplied with amino acids; thus, the enzymes responsible for amino acid synthesis would not be present.
+% We used ssFBA to estimate the productivity, energy efficiency, and carbon yield for each of these proteins for each case.
+
 \subsection{Analysis of CFPS performance}
-Our next goal was to examine the performance of CFPS for eight different proteins under three different cases.
-Each of the proteins was produced under a P70a promoter, except for CAT which was produced under a T7 promoter.
-In all cases, CFPS was supplied with glucose.
-In the first case, CFPS was supplied with amino acids, and the system was allowed to synthesize amino acids (AA uptake and synthesis).
-In the second case, CFPS was supplied with amino acids, but the amino acid synthesis reactions were turned off (AA uptake w/o synthesis).
-These amino acid synthesis reactions were blocked since during the cell-free extract preparation the cells are often supplied with amino acids; thus, the enzymes responsible for amino acid synthesis would not be present.
-In the third case, CFPS was not supplied with amino acids, but the system could synthesize them (AA synthesis w/o uptake).
-Eight different proteins, ranging in size, were selected to evaluate CFPS performance: bone morphogenetic protein 10 (BMP10), chloramphenicol acetyltransferase (CAT), caspase 9 (CASP9), dual emission green fluorescent protein (deGFP), prothrombin (FII), coagulation factor X (FX), fibroblast growth factor 21 (FGF21), and single chain variable fragment R4 (scFvR4).
-We used ssFBA to estimate the productivity, energy efficiency, and carbon yield for each of these proteins for each case.
-An additional case was considered for CAT, since a comprehensive dataset is available (Supporting Information); in this case, fluxes were constrained to experimental measurements where avaliable, with the exception of CAT production which was determined by the transcription/translation parameters.
+To better understand the performance of CFPS reactions, we predicted the productivity, energy efficiency and carbon yield for the cell free production of eight model proteins with and without amino acid supplementation (Fig. \ref{fig:Prof}).
+The expression of each of these proteins was under a P70a promoter, with the exception of CAT which we assumed was expressed using a T7 promoter.
+In all cases, CFPS was supplied with glucose, however, we also considered different scenarios for amino acid supplementation.
+First, the CFPS reaction was supplied with amino acids, and the system was also allowed to synthesize amino acids from glucose (AA uptake and synthesis).
+Next, the CFPS reaction was supplied with both glucose and amino acids, but \textit{de~novo} amino acid biosynthesis was not allowed (AA uptake w/o synthesis).
+This scenario was consistent with common cell free extract preparation protocols which often involve amino acid supplementation; thus, we would expect the enzymes responsible for amino acid biosynthesis to be largely absent from the CFPS reaction.
+Lastly, the system was not supplemented with amino acids, and was forced to synthesize them \textit{de~novo} from glucose (AA synthesis w/o uptake).
+Eight proteins, ranging in size, were selected to evaluate CFPS performance: bone morphogenetic protein 10 (BMP10),
+chloramphenicol acetyltransferase (CAT), caspase 9 (CASP9), dual emission green fluorescent protein (deGFP),
+prothrombin (FII), coagulation factor X (FX), fibroblast growth factor 21 (FGF21), and single chain variable fragment R4 (scFvR4).
+An additional case was considered for CAT, where central metabolic fluxes were constrained by experimental metabolic measurements (see supplemental materials).
 
 \begin{figure}[t!]
 \centering
 \includegraphics[width=1.00\textwidth]{./figs/Fig-2-Performance-Analysis.pdf}
-\caption{CFPS performance of eight proteins for four cases. Amino acid uptake and synthesis (black), AA uptake without synthesis (dark grey), AA synthesis without uptake (light grey), and constrained by experimental measurements, for CAT only (white). A. Productivity. B. Mean productivity versus carbon number. Single trendline (dotted line) calculated across all cases (y = 6.02$\cdot$10\textsuperscript{6}x\textsuperscript{-1.9}; R\textsuperscript{2} = 0.99). 
+\caption{CFPS performance of eight proteins for four cases. Amino acid uptake and synthesis (black), AA uptake without synthesis (dark grey), AA synthesis without uptake (light grey), and constrained by experimental measurements, for CAT only (white). A. Productivity. B. Mean productivity versus carbon number. Single trendline (dotted line) calculated across all cases (y = 6.02$\cdot$10\textsuperscript{6}x\textsuperscript{-1.9}; R\textsuperscript{2} = 0.99).
 C. Energy efficiency. D. Mean energy efficiency versus carbon number. Trendline for cases with amino acids (black dotted line; y = -1.65$\cdot$10\textsuperscript{-2}x+90.95; R\textsuperscript{2} = 0.91) and trendline for without amino acids (grey dotted line; y = -3.18$\cdot$10\textsuperscript{-3}x+33.48; R\textsuperscript{2} = 0.78).
 E. Carbon yield. F. Mean carbon yield versus carbon number. Trendline for cases with amino acids (black dotted line; y = -8.03$\cdot$10\textsuperscript{-3}x+63.83; R\textsuperscript{2} = 0.95) and trendline for without amino acids (grey dotted line; y = -6.98$\cdot$10\textsuperscript{-3}x+58.86; R\textsuperscript{2} = 0.90).
 Error bars: 95\% CI; asterisk: protein excluded from trendline; dagger: constrained by experimental measurements and excluded from trendline.}
@@ -198,7 +210,7 @@ Error bars: 95\% CI; asterisk: protein excluded from trendline; dagger: constrai
 \end{figure}
 
 \subsubsection{Productivity}
-The mean productivity was inversely proportional to the protein size and varied between 1 and 12 $\mu$M/h for the proteins sampled (Fig.~\ref{fig:Prof}A-B).
+The theoretical maximum mean productivity was inversely proportional to the protein size and varied between 1 and 12 $\mu$M/h for the proteins sampled (Fig.~\ref{fig:Prof}A-B).
 All cases had very similar performance for each protein and were within a standard deviation of each other (Fig.~\ref{fig:Prof}A).
 %with the second case (without amino acid synthesis) having a slightly higher productivity for most proteins.
 The model framework is setup to optimize for the production of each protein and is constrained by the translation rate.
@@ -242,19 +254,19 @@ Second, the system had a high accumulation of metabolic byproducts, specifically
 % \label{fig:Energy}
 % \end{figure}
 
+%To determine the carbon contribution from each substrate (glucose and amino acids) we examined the carbon flux going toward the production of deGFP for all three cases (Table \ref{tbl:yield_breakdown}).
+%The cases supplemented with amino acids in the media showed the highest carbon yield.
+%Finally, for the third case (without amino acids supplemented), the carbon yield was reduced to 51.1 $\pm$ 1.8\% for CAT, and the system used about twice the amount of glucose as in the first two cases.
+%In this case, glucose was used to synthesize amino acids and provide the energy necessary to power transcription and translation; this trend was seen across all proteins.
 
 \subsubsection{Yield}
-The mean carbon yield was inversely proportional to protein size and varied between 40-57\% for the proteins sampled (Fig.~\ref{fig:Prof}E-F).
+The theoretical maximum mean carbon yield was inversely proportional to protein size and varied between 40-57\% for the proteins sampled (Fig.~\ref{fig:Prof}E-F).
 The same inverse qualitative trend was observed as for energy efficiency.
-%The cases supplemented with amino acids in the media showed the highest carbon yield.
 There was a drop in carbon yield by about 7\% once amino acids were not available; this is most likely because glucose was utilized to synthesize the necessary amino acids for each protein as well as power the system.
-%To determine the carbon contribution from each substrate (glucose and amino acids) we examined the carbon flux going toward the production of deGFP for all three cases (Table \ref{tbl:yield_breakdown}).
 For the first case, the system relied on a mixture of glucose and some amino acids for each protein with a carbon yield of 58.2 $\pm$ 2.3\% for CAT.
 Once amino acid synthesis reactions were blocked in the network (second case), the carbon yield dropped to 57.1 $\pm$ 2.2\% for CAT.
 Only the necessary amount of amino acids was used for the production of the protein of interest; thus, it may be hypothesized that all the glucose was used to power CFPS and did not contribute to the carbon yield.
 In that case, the carbon yield without glucose contribution would be 100\%.
-%Finally, for the third case (without amino acids supplemented), the carbon yield was reduced to 51.1 $\pm$ 1.8\% for CAT, and the system used about twice the amount of glucose as in the first two cases.
-%In this case, glucose was used to synthesize amino acids and provide the energy necessary to power transcription and translation; this trend was seen across all proteins.
 In the experimentally constrained case, CAT was produced with a carbon yield of 6.2\% compared to the theoretical maximum of 58.2\%.
 This decrease in carbon yield suggests inefficiencies in CFPS that can potentially be improved.
 ssFBA assumes a psuedo steady state; thus, intermediate metabolites cannot accumulate within the cell-free extract.
@@ -270,14 +282,14 @@ The experimental performance could be improved by diverting this carbon toward t
 % \end{figure}
 %Next we investigated the effect of the carbon number of each protein on the carbon yield (Fig.~\ref{fig:Yield}B).
 %The proteins with the lowest carbon number had the highest yield and the higher carbon number proteins had a lower carbon yield within each case.
-A single trendline was formulated for the cases where amino acids were supplied in the media since they had similar performance, while another trendline was formulated for when amino acids were not available (Fig.~\ref{fig:Yield}F).
-The trendlines showed good predictability for estimating carbon yield for a certain range of potein size (R\textsuperscript{2} = 0.95 with amino acids and R\textsuperscript{2} = 0.90 without amino acids), regardless of the type of promoters used.
+A single trendline was formulated for the cases where amino acids were supplied in the media since they had similar performance, while another trendline was formulated for when amino acids were not available (Fig.~\ref{fig:Prof}F).
+The trendlines showed good predictability for estimating carbon yield for a certain range of protein size (R\textsuperscript{2} = 0.95 with amino acids and R\textsuperscript{2} = 0.90 without amino acids), regardless of the type of promoters used.
 However, as the protein size increased, the carbon yield decreased, suggesting that larger proteins may be less feasible for cell-free production.
-Thus, we examined the parameters that had the most significant effect on cell-free productivity, energy efficiency, and carbon yield in order to optimize CFPS performance.
+% Thus, we examined the parameters that had the most significant effect on cell-free productivity, energy efficiency, and carbon yield in order to optimize CFPS performance.
 
 \subsection{Sensitivity analysis}
-The translation rate had the highest effect on protein productivity, whereas oxygen followed by substrate uptake had the highest effect on energy efficiency and carbon yield (Fig.~\ref{fig:SI}).
-To better understand the effect of substrate utilization and the transcription/translation parameters on CFPS performance we performed global sensitivity analysis on the productivity and energy efficiency for CAT, a representative protein (Fig.~\ref{fig:SI}), as well as on the carbon yield which followed the same trend of significance as energy efficiency (available in Supporting Information).
+To better understand the effect of substrate utilization and the transcription/translation parameters on CFPS performance, we performed global sensitivity analysis on the productivity, energy efficiency and carbon yield for CAT, a representative protein (Fig.~\ref{fig:SI}).
+The translation rate had the highest effect on protein productivity, whereas oxygen followed by substrate uptake had the highest effect on energy efficiency and carbon yield.
 In examining productivity performance (Fig.~\ref{fig:SI}A), the significance of transcription/translation parameters was fairly constant across all three cases, with the rate of translation being the most significant.
 As expected, this showed that the translation rate was instrumental for productivity, and should be the first step investigated during optimization, prior to examining transcription parameters.
 Underwood and coworkers have also shown that an increase in ribosome levels did not significantly increase protein yields or rates; however, adding elongation factors increased yields by 23\% at 30 minutes \cite{2005_underwood_biotech}.
@@ -360,9 +372,9 @@ For example, there is a high flux through the Entner-Douodoroff pathway, but thi
 A knockout of the Entner-Doudoroff pathway has no effect on the norm productivity of CAT compared to no knockouts (Fig.~\ref{fig:norm}A).
 In addition, pairwise knockouts of Entner-Doudoroff and other subgroups (i.e. pentose phosphate pathway, cofactors, folate metabolism, etc.) in the network result in the same optimal solution of CAT productivity.
 However, there is a difference in the flux distribution with these knockouts (Fig.~\ref{fig:norm}B); ssFBA will reroute the flux to optimize the objective function.
-Interestingly, there are crucial subgroups that are detrimental to CAT productivity. 
-For example, a single group knockout of glycolysis/gluconoeogenesis or oxidative phosphorylation leads to no CAT production. 
-There were also cases of group knockouts that had no effect on productivity or its flux distribution such as isoleucine, leucine, and valine biosynthesis knocked out with histidine biosynthesis. 
+Interestingly, there are crucial subgroups that are detrimental to CAT productivity.
+For example, a single group knockout of glycolysis/gluconoeogenesis or oxidative phosphorylation leads to no CAT production.
+There were also cases of group knockouts that had no effect on productivity or its flux distribution such as isoleucine, leucine, and valine biosynthesis knocked out with histidine biosynthesis.
 Flux balance analysis has been shown to have multiple alternative optimal solutions with flux variablitiy analysis and mixed-integer linear programming resulting in a poor depiction of the physiological flux distribution \cite{LEE2000711, Mahadevan2003264, Schuetz119}.
 In our case, ssFBA reached the same optimal solution of CAT productivity for 39.9\% of the pairwise group knockouts, but had a different flux distribution than compared to no knockouts.
 To determine which reactions occur in CFPS, adding thermodynamic feasibility constraints to reactions may result in a better depiction of the flux distribution \cite{Henry:2007,Hamilton:2013}.
