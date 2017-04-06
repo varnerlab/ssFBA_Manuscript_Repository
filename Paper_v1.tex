@@ -210,14 +210,14 @@ Error bars: 95\% CI; asterisk: protein excluded from trendline; dagger: constrai
 \end{figure}
 
 \subsubsection{Productivity}
-The theoretical maximum mean productivity was inversely proportional to the protein size and varied between 1 and 12 $\mu$M/h for the proteins sampled (Fig.~\ref{fig:Prof}A-B). The theoretical maximum productivity was within a standard deviation with and without
+The theoretical maximum mean productivity was inversely proportional to the protein length ($l_{P}$) and varied between 1 and 12 $\mu$M/h for the proteins sampled (Fig.~\ref{fig:Prof}A-B). The theoretical maximum productivity was within a standard deviation with and without
 amino acid supplementation for each protein, but varied significantly between proteins.
 This suggested the cell free reaction had sufficient metabolic precursors to power CFPS and synthesize each protein of interest with similar productivities.
 However, the theoretical productivity was inversely proportional to protein size;
 for instance, BMP10 (XX aa) had a productivity of about 2.5 $\mu$M/h whereas CAT (ZZ aa) had a productivity of about 12 $\mu$M/h.
 To examine this further, the mean productivity was plotted against the carbon number of each protein (Fig.~\ref{fig:Prof}B).
-The productivity and protein size were related by the power-law relationship $\alpha\times(L)^{\beta}$, where $\alpha = 6.0\times 10^{6}$ and $\beta=-1.9$.
-Interestingly, CAT did not obey the trendline; the relatively high productivity of CAT was due to its T7 promoter.
+The productivity and protein size were related by the power-law relationship $\alpha\times(l_{P})^{\beta}$, where $\alpha = 6.0\times 10^{6}$ and $\beta=-1.9$.
+Interestingly, CAT did not obey the power-law relationship; the relatively high productivity of CAT was due to its T7 promoter.
 CAT expressed under a P70a promoter followed the power-law correlation with a productivity of approximately 8.8 $\mu$M/h.
 Taken together, the maximum productivity of a cell free reaction was found to be inversely proportional to protein size,
 following a power-law relationship for proteins expressed under a P70a promoter.
@@ -287,27 +287,28 @@ However, as the protein size increased, the carbon yield decreased, suggesting t
 
 \subsection{Sensitivity analysis}
 To better understand the effect of substrate utilization and the transcription/translation parameters on CFPS performance, we performed global sensitivity analysis on the productivity, energy efficiency and carbon yield for the CAT protein (Fig.~\ref{fig:SI}).
-The translation rate had the highest effect on protein productivity, whereas oxygen followed by substrate uptake had the highest effect on energy efficiency and carbon yield.
-In examining productivity performance (Fig.~\ref{fig:SI}A), the significance of transcription/translation parameters was fairly constant across all three cases, with the rate of translation being the most significant.
-As expected, this showed that the translation rate was instrumental for productivity, and should be the first step investigated during optimization, prior to examining transcription parameters.
-Underwood and coworkers have also shown that an increase in ribosome levels did not significantly increase protein yields or rates; however, adding elongation factors increased yields by 23\% at 30 minutes \cite{2005_underwood_biotech}.
-In addition, Li et al. have increased productivity of firefly luciferase by 5-fold in CFPS systems by adjusting factors that affect transcription and translation such as elongation factors, ribosome recycling factor, release factors, chaperones, BSA, and tRNAs \cite{2014_li_PlosOne}.
-In examining substrate utilization, glucose uptake was not seen to be very important for productivity in the cases with amino acid supplementation, but its significance increased when amino acids were not available.
-This makes sense, as amino acid synthesis from glucose became the only way to power protein synthesis.
-On the other hand, amino acid uptake only showed significance for the case where amino acids synthesis reactions were blocked, as it was the only source of amino acids for CAT synthesis.
+Surprisingly, RNAP and ribosome abundance had only a modest effect;
+the translation elongation rate had the largest effect on protein productivity.
+On the other hand, oxygen followed by glucose consumption had the largest influence on the energy efficiency and carbon yield, respectively.
+The significance of transcription/translation parameters was robust to amino acid supplementation, with the translation rate being the most sensitive across all cases (Fig.~\ref{fig:SI}A).
+This suggested that the translation elongation rate, and not transcriptional parameters, controlled productivity.
+Underwood and coworkers showed that an increase in ribosome levels did not significantly increase protein yields or rates; however, adding elongation factors increased yields by 23\% at 30 minutes \cite{2005_underwood_biotech}.
+In addition, Li et al. increased the productivity of firefly luciferase production by 5-fold by adjusting factors that affect transcription and translation such as elongation factors, ribosome recycling factor, release factors, chaperones, BSA, and tRNAs \cite{2014_li_PlosOne}.
+In examining substrate utilization, glucose consumption was not important for productivity in the presence of amino acid supplementation.
+However, its importance increased significantly when amino acids were not available.
+On the other hand, amino acid consumption was only sensitive when amino acids synthesis reactions were blocked, as it was the only source of amino acids for CAT synthesis.
 \begin{figure}[t!]
 \includegraphics[width=1.00\textwidth]{./figs/Fig-3-Sensitivity-Analysis.pdf}
 \caption{Total order sensitivity of deGFP productivity (A) and energy efficiency (B) to specific uptake rates and transcription/translation parameters for three cases: amino acid uptake and synthesis (black), amino acid uptake without synthesis (dark grey), and amino acid synthesis without uptake (light gray). Error bars represent a 95\% CI on the sensitivity index.}
 \label{fig:SI}
 \end{figure}
 
-When considering energy efficiency performance (Fig.~\ref{fig:SI}B), the oxygen uptake rates were the most important for all cases while the sensitivity of the transcription/translation parameters decreased.
+The oxygen consumption rate was the most important factor controlling the energy efficiency of cell free protein synthesis (Fig.~\ref{fig:SI}B).
 The transcription/translation parameters had the same trend as for productivity, where the translation rate was the most sensitive compared to the other transcription/translation parameters and showed significance across all cases.
 Oxygen uptake was the most significant for energy efficiency, since it was responsible for oxidative phosphorylation, the most efficient pathway for energy generation.
 Across all cases, substrate utilization (amino acid uptake and glucose) was shown to be the next most important as these substrates contributed to the energy efficiency of CAT synthesis.
 In cases where amino acids were supplied, amino acid uptake was significant, as without it, energy was required to synthesize amino acids for the protein of interest.
 Glucose uptake was only important when amino acids were not available, since it was the only source of carbon for protein synthesis and energy generation.
-%This resulted in a tradeoff between energy generation to power transcription/translation and amino acid synthesis required to assemble the protein of interest.
 Jewett and coworkers have reported that oxidative phosphorylation still operated in cell-free systems, and that yield decreased from 1.5-fold to 4-fold when oxidative phosphorylation reactions were knocked out in pyruvate-powered CFPS \cite{Jewett:2008aa}.
 It is unknown how active oxidative phosphorylation is compared to in \textit{in~vivo} systems.
 To investigate this further we compared CAT carbon yield to oxidative phosphorylation flux (Fig.~\ref{fig:oxphos_yield}).
