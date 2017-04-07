@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  7 APR 2017 06:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  7 APR 2017 07:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1401,7 +1401,7 @@ t>
 File: ./figs/Fig-6-FluxDistribition-Experimental.pdf Graphic file (type pdf)
  <use ./figs/Fig-6-FluxDistribition-Experimental.pdf>
 Package pdftex.def Info: ./figs/Fig-6-FluxDistribition-Experimental.pdf used on
- input line 375.
+ input line 376.
 (pdftex.def)             Requested size: 469.75539pt x 358.90352pt.
  [16]
 <./figs/Fig-7-FluxDistribition-Analysis.pdf, id=337, 794.97pt x 385.44pt>
@@ -1409,7 +1409,7 @@ File: ./figs/Fig-7-FluxDistribition-Analysis.pdf Graphic file (type pdf)
 
 <use ./figs/Fig-7-FluxDistribition-Analysis.pdf>
 Package pdftex.def Info: ./figs/Fig-7-FluxDistribition-Analysis.pdf used on inp
-ut line 397.
+ut line 401.
 (pdftex.def)             Requested size: 469.75539pt x 227.76639pt.
  [17 <./figs/Fig-6-FluxDistribition-Experimental.pdf>] [18] [19 <./figs/Fig-7-F
 luxDistribition-Analysis.pdf>]
@@ -1418,20 +1418,20 @@ luxDistribition-Analysis.pdf>]
 ] [21]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!htbp') on input line 456.
+               Default added (so using `!htbp') on input line 460.
 
 [22] [23] [24]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!htbp') on input line 578.
+               Default added (so using `!htbp') on input line 582.
 
 
-Overfull \hbox (13.81667pt too wide) in paragraph at lines 582--611
+Overfull \hbox (13.81667pt too wide) in paragraph at lines 586--615
  [][] 
  []
 
 [25]
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 618.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 622.
 
  (/usr/local/texlive/2015/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -1440,7 +1440,7 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Try loading font information for TS1+ppl on input line 639.
+LaTeX Font Info:    Try loading font information for TS1+ppl on input line 643.
 
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/ts1ppl.fd
@@ -1460,7 +1460,7 @@ Here is how much of TeX's memory you used:
  328894 string characters out of 6134842
  413747 words of memory out of 5000000
  21223 multiletter control sequences out of 15000+600000
- 97248 words of font info for 360 fonts, out of 8000000 for 9000
+ 97252 words of font info for 360 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  60i,16n,94p,10408b,485s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/
@@ -1479,7 +1479,7 @@ pe1/public/lm/lmss10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public
 e/2015/texmf-dist/fonts/type1/urw/palatino/uplbi8a.pfb></usr/local/texlive/2015
 /texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2015/texmf-
 dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on Paper_v1.pdf (33 pages, 1276176 bytes).
+Output written on Paper_v1.pdf (33 pages, 1276235 bytes).
 PDF statistics:
  502 PDF objects out of 1000 (max. 8388607)
  362 compressed objects within 4 object streams
