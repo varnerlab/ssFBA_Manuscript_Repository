@@ -2,7 +2,7 @@
 \providecommand*\mcitethebibliography{\thebibliography}
 \csname @ifundefined\endcsname{endmcitethebibliography}
   {\let\endmcitethebibliography\endthebibliography}{}
-\begin{mcitethebibliography}{43}
+\begin{mcitethebibliography}{44}
 \providecommand*\natexlab[1]{#1}
 \providecommand*\mciteSetBstSublistMode[1]{}
 \providecommand*\mciteSetBstMaxWidthForm[2]{}
@@ -239,6 +239,15 @@ Chang,~R.~L., Andrews,~K., Kim,~D., Li,~Z., Godzik,~A., and Palsson,~B.~O.
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
+\bibitem[Moon \latin{et~al.}(2012)Moon, Lou, Tamsir, Stanton, and
+  Voigt]{Moon:2012ab}
+Moon,~T.~S., Lou,~C., Tamsir,~A., Stanton,~B.~C., and Voigt,~C.~A. (2012)
+  Genetic programs constructed from layered logic gates in single cells.
+  \emph{Nature} \emph{491}, 249--53\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
 \bibitem[Calhoun and Swartz(2005)Calhoun, and
   Swartz]{2005_calhoun_BiotechnologyProgress}
 Calhoun,~K.~A., and Swartz,~J.~R. (2005) An Economical Method for Cell-Free
@@ -354,11 +363,9 @@ Kim,~D.-M., and Swartz,~J.~R. (2001) Regeneration of adenosine triphosphate
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
-\bibitem[Moon \latin{et~al.}(2012)Moon, Lou, Tamsir, Stanton, and
-  Voigt]{Moon:2012ab}
-Moon,~T.~S., Lou,~C., Tamsir,~A., Stanton,~B.~C., and Voigt,~C.~A. (2012)
-  Genetic programs constructed from layered logic gates in single cells.
-  \emph{Nature} \emph{491}, 249--53\relax
+\bibitem[Mauri and Klumpp(2014)Mauri, and Klumpp]{Mauri2014}
+Mauri,~M., and Klumpp,~S. (2014) A Model for Sigma Factor Competition in
+  Bacterial Cells. \emph{PLOS Computational Biology} \emph{10}, 1--16\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax

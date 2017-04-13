@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2015)
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: Paper_v1.aux
 The style file: biochem.bst
@@ -6,49 +6,49 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: acs-Paper_v1.bib
 Database file #2: References_v1.bib
 Warning--entry type for "GLPK" isn't style-file defined
---line 604 of file References_v1.bib
+--line 619 of file References_v1.bib
 Warning--entry type for "SALIB" isn't style-file defined
---line 632 of file References_v1.bib
-achemso 2015/04/07 v3.10
-You've used 43 entries,
+--line 647 of file References_v1.bib
+achemso 2016/01/20 v3.10b
+You've used 44 entries,
             2531 wiz_defined-function locations,
-            1074 strings with 16600 characters,
-and the built_in function-call counts, 15787 in all, are:
-= -- 1221
-> -- 1037
-< -- 20
-+ -- 362
-- -- 319
-* -- 1787
-:= -- 2116
-add.period$ -- 81
-call.type$ -- 43
+            1082 strings with 16807 characters,
+and the built_in function-call counts, 16086 in all, are:
+= -- 1247
+> -- 1051
+< -- 21
++ -- 367
+- -- 323
+* -- 1823
+:= -- 2155
+add.period$ -- 83
+call.type$ -- 44
 change.case$ -- 4
 chr.to.int$ -- 2
-cite$ -- 44
-duplicate$ -- 873
-empty$ -- 1034
-format.name$ -- 379
-if$ -- 3099
+cite$ -- 45
+duplicate$ -- 890
+empty$ -- 1056
+format.name$ -- 386
+if$ -- 3158
 int.to.chr$ -- 0
 int.to.str$ -- 1
 missing$ -- 0
-newline$ -- 274
-num.names$ -- 125
-pop$ -- 78
+newline$ -- 280
+num.names$ -- 128
+pop$ -- 79
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 43
+skip$ -- 44
 stack$ -- 0
-substring$ -- 816
-swap$ -- 931
-text.length$ -- 86
+substring$ -- 829
+swap$ -- 946
+text.length$ -- 88
 text.prefix$ -- 0
 top$ -- 1
-type$ -- 292
+type$ -- 299
 warning$ -- 0
-while$ -- 161
+while$ -- 165
 width$ -- 0
-write$ -- 557
+write$ -- 570
 (There were 2 warnings)
