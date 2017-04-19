@@ -117,7 +117,6 @@ Since the first genome scale stoichiometric model of \textit{E.~coli} \cite{2000
 Stoichiometric reconstructions have been expanded to include the integration of metabolism with detailed descriptions of gene expression (ME-Model) \cite{Allen:2003aa, Brien693},
 and protein structures (GEM-PRO) \cite{Zhang1544,Chang1220}.
 These expansions have greatly increased the scope of questions these models can explore.
-%However, FBA has been shown to have alternative solutions that lead to the same desired optimal phenotype using flux variability analysis \cite{Mahadevan2003264} or mixed-integer linear programming based algorithms \cite{LEE2000711}.
 Constraint based methods are powerful tools to estimate the performance of metabolic networks with very few adjustable parameters.
 However, constraint based methods are typically used to model \textit{in~vivo} processes, and have not yet been applied to cell-free metabolism.
 
@@ -153,7 +152,7 @@ The network described the major carbon and energy pathways, as well as amino aci
 Using this network, in combination with effective promoter models taken from Moon et al. \cite{Moon:2012ab}, and literature values for cell-free culture parameters (Table ~\ref{tbl:parameters}),
 we simulated the sequence specific production of two model proteins, chloramphenicol acetyltransferase (CAT) and dual emission green fluorescent protein (deGFP) using
 different \textit{E.~coli} cell-free extracts.
-The cell-free metabolic network, along with all model code and parameters, can be downloaded under an MIT software license from the Varnerlab GitHub site [TODO:REF].
+The cell-free metabolic network, along with all model code and parameters, can be downloaded under an MIT software license from the Varnerlab website \cite{varnerlab}.
 
 Cell-free simulations of the time evolution of CAT and deGFP production were consistent with experimental measurements (Fig. ~\ref{fig:network}B and C).
 Chloramphenicol acetyltransferase (CAT), was produced under a T7 promoter in a glucose/NMP cell-free system \cite{2005_calhoun_BiotechnologyProgress}
@@ -219,10 +218,10 @@ To examine the influence of protein length further, the mean optimal productivit
 The optimal productivity and protein length were related by the power-law relationship $\alpha\times(C_{POI})^{\beta}$, where $\alpha = 6.02\times 10^{6}$ $\mu$M/(h$\cdot$carbon number) and $\beta=-1.93$.
 Interestingly, CAT did not obey the power-law relationship; the relatively high productivity of CAT was due to its T7 promoter.
 The higher demand on transcription by the T7 promoter led to a higher mRNA steady state level resulting in a higher productivity.
-Thus, we also calculated the theoretical productivity correlation given maximum promoter activity using all eight proteins which resulted with $\alpha = 1.39\times 10^{7}$ $\mu$M/(h$\cdot$carbon number) and $\beta=-1.99$.    
-However, CAT expressed under a P70a promoter followed the power-law correlation with a productivity of approximately 8.2 $\pm$ 2.2 $\mu$M/h (predicted to be 7.2 $\mu$M/h by the optimal productivity correlation). 
+Thus, we also calculated the theoretical productivity correlation given maximum promoter activity using all eight proteins which resulted with $\alpha = 1.39\times 10^{7}$ $\mu$M/(h$\cdot$carbon number) and $\beta=-1.99$.
+However, CAT expressed under a P70a promoter followed the power-law correlation with a productivity of approximately 8.2 $\pm$ 2.2 $\mu$M/h (predicted to be 7.2 $\mu$M/h by the optimal productivity correlation).
 In addition, we predicted the productivity of MBP to be 4.6 $\mu$M/h whereas the power-law relationship predicted a productivity of 5.0 $\mu$M/h.
-This difference in prediction resulted in less than 8\% error in estimating the productivity of an \emph{a~priori} protein in CFPS.  
+This difference in prediction resulted in less than 8\% error in estimating the productivity of an \emph{a~priori} protein in CFPS.
 Taken together, the maximum optimal productivity of a cell-free reaction was found to be inversely proportional to protein size,
 following a power-law relationship for proteins expressed under a P70a promoter.
 
@@ -242,12 +241,12 @@ The same inverse trend was observed as for productivity for the effect of protei
 The relationship between the optimal energy efficiency and carbon number was linear; $m_{Y}\times(C_{POI})+b_{Y}$ where $m_{Y} =  -1.65\times10^{-2}$ energy efficiency (\%)/carbon number with supplementation, and $m_{Y} = -3.18\times10^{-3}$ energy efficiency (\%)/carbon number without. The y-intercept $b_{Y} = 90.96$ energy efficiency (\%) with supplementation, and $b_{Y} = 33.48$ energy efficiency (\%) without.
 %The proteins with the lowest carbon number had the highest energy efficiency and the higher carbon number proteins had a lower energy efficiency for when amino acids were available in the media (first two cases).
 Proteins with a high carbon number had a lower energy efficiency since they have a higher transcription and translation cost then smaller proteins.
-MBP showed good agreement with the formulated relationship between energy efficiency and carbon number for each case. 
-The estimated MBP energy efficiency had a maximum error of 7.1\% for the case where amino acid biosynthesis reactions were blocked and an error of 0.2\% for both remaining cases.  
+MBP showed good agreement with the formulated relationship between energy efficiency and carbon number for each case.
+The estimated MBP energy efficiency had a maximum error of 7.1\% for the case where amino acid biosynthesis reactions were blocked and an error of 0.2\% for both remaining cases.
 The cases supplemented with amino acids had the same trendline whereas when amino acids were not available there was a significant drop in energy efficiency.
 Interestingly, without supplemented amino acids (third case) each protein had a similar energy efficiency ranging between 24-32\% regardless of carbon number.
 In this case, the energy burden of synthesizing each amino acid required for the assembly of the protein kept the energy efficiency saturated at a relatively low level.
-However, the experimentally constrained case of CAT production showed even a lower energy efficiency of 3.6 $\pm$ 1.1\% compared to the theoretical maximum of 77.3 $\pm$ 7.3\%. 
+However, the experimentally constrained case of CAT production showed even a lower energy efficiency of 3.6 $\pm$ 1.1\% compared to the theoretical maximum of 77.3 $\pm$ 7.3\%.
 This shows CFPS systems are not fully optimized and could be improved: first, the experimental measurements showed accumulation of certain amino acids; this carbon could potentially be diverted towards a protein of interest.
 Second, the system had a high accumulation of metabolic byproducts, specifically organic acids, which is a result of inefficient energy utilization.
 
@@ -273,8 +272,8 @@ The linear carbon yield models showed good predictability for estimating the opt
 and $R^{2} = 0.90$ without supplementation), irrespective of the promoter used to control protein expression.
 MBP also showed good agreement for its predicted carbon yield with the formulated relationship with an error of 3.2-4.2\% with amino acid supplementation and 4.4\% error without supplementation.
 The effective yield models were approximately parallel, with a drop in carbon yield of approximately 7\% without amino acids.
-%In this case, there is a higher uptake of glucose and an increase in CO\textsubscript{2} production by 37-40\% and acetate production by 4-14\%. 
-In this case, there was a higher uptake of glucose and an increase of CO\textsubscript{2} production in the carbon yield by 7\%. 
+%In this case, there is a higher uptake of glucose and an increase in CO\textsubscript{2} production by 37-40\% and acetate production by 4-14\%.
+In this case, there was a higher uptake of glucose and an increase of CO\textsubscript{2} production in the carbon yield by 7\%.
 Only the necessary amount of amino acids were used for the production of the protein of interest; thus, it may be hypothesized that all the glucose was used to power CFPS and did not contribute to the carbon yield.
 The carbon yield without the glucose contribution would be 100\%.
 However, in the experimentally constrained case, CAT was produced with a carbon yield of 6.2\% compared to the theoretical maximum of 58\%.
@@ -339,7 +338,7 @@ The experimental dataset also exhibited a mixture of acetate and lactate accumul
 operating with optimal oxidative phosphorylation activity.
 Oxidative phosphorylation is a membrane associated process, however CFPS has no cell membrane.
 Jewett et al. hypothesized that membrane vesicles present in the CFPS reaction carry out oxidative phosphorylation \cite{Jewett:2008aa}.
-In addition, they were able to enhance the production yields of CAT by 33\% when the reaction was augmented with 10mM phosphate. 
+In addition, they were able to enhance the production yields of CAT by 33\% when the reaction was augmented with 10mM phosphate.
 However, it is unclear why the additional phosphate increased the CAT yield, but Jewett et al. believe it either enhances oxidative phosphorylation activity or inhibits phosphatase reactions.
 Taken together, the number, size, protein loading and lifetime of these vesicles remains an open area of study.
 Thus, we expect CFPS will have suboptimal oxidative phosphorylation capacity and remains an important area to optimize for improved CFPS performance.
@@ -365,10 +364,10 @@ while glutamate was converted to alpha-ketoglutarate which traveled to oxaloacet
 On the other hand, in the presence of amino acid supplementation, but without \textit{de~novo} amino acid biosynthesis, there was no TCA cycle flux.
 In this case, ATP was produced by a combination of substrate level and oxidative phosphorylation, where
 ubiquinone was regenerated via \textit{nuo} activity, without relying on succinate dehydrogenase in the TCA cycle (Fig.~\ref{fig:flux}B).
-These first two cases where amino acids were available had similar performance, and their respective metabolic flux distributions had a 99\% correlation for all proteins. 
+These first two cases where amino acids were available had similar performance, and their respective metabolic flux distributions had a 99\% correlation for all proteins.
 In the absence of amino acid supplementation (where all amino acids were synthesized \textit{de~novo} from glucose),
 the energy efficiency and carbon yield decreased; in this case the TCA cycle was largely complete and there was diversion of metabolic flux into the Entner-Doudoroff pathway to produce NADPH (Fig.~\ref{fig:flux}C).
-However, each of these three cases represent the theoretical optimum under different conditions; in order to more accurately describe system performance, we constrained the feasible solution space with experimental measurements. 
+However, each of these three cases represent the theoretical optimum under different conditions; in order to more accurately describe system performance, we constrained the feasible solution space with experimental measurements.
 
 
 % to both cases where amino acids were avaialbe.
@@ -395,28 +394,35 @@ Accumulation of pyruvate, lactate, acetate, and other organic acids can be seen 
 
 
 \subsubsection{Potential Alternative Metabolic Optima}
-One of the interesting features of constraint based approaches is the ability to compute alternative optimal solutions.
-These solutions have the same objective value, e.g., the productivity but different underlying metabolic flux distributions.
-Despite the constraints by experimental measurements, it is difficult to calculate the physiological flux distribution of metabolism (Fig.~\ref{fig:norm})
-For example, there is a high flux through the Entner-Douodoroff pathway, but this may be an artifact of the optimal solution.
-A knockout of the Entner-Doudoroff pathway has no effect on the norm productivity of CAT compared to no knockouts (Fig.~\ref{fig:norm}A).
-In addition, pairwise knockouts of Entner-Doudoroff and other subgroups (i.e. pentose phosphate pathway, cofactors, folate metabolism, etc.) in the network result in the same optimal solution of CAT productivity.
-However, there is a difference in the flux distribution with these knockouts (Fig.~\ref{fig:norm}B);
-the flux balance approach will reroute the flux to optimize the objective function.
-Interestingly, there are crucial subgroups that are detrimental to CAT productivity.
-For example, a single group knockout of glycolysis/gluconoeogenesis or oxidative phosphorylation leads to no CAT production.
-There were also cases of group knockouts that had no effect on productivity or its flux distribution such as isoleucine, leucine, and valine biosynthesis knocked out with histidine biosynthesis.
-Flux balance analysis has been shown to have multiple alternative optimal solutions with flux variablitiy analysis and mixed-integer linear programming resulting in a poor depiction of the physiological flux distribution \cite{LEE2000711, Mahadevan2003264, Schuetz119}.
-In our case, the constraint based simulation reached the same optimal solution of CAT productivity for 40\% of the pairwise group knockouts, but had a different flux distribution than compared to no knockouts.
-To determine which reactions occur in CFPS, adding thermodynamic feasibility constraints to reactions may result in a better depiction of the flux distribution \cite{Henry:2007,Hamilton:2013}.
-It would also be interesting to track the carbon flux using C\textsuperscript{13} labeling in CFPS to better constrain the flux distribution.
-However, while C\textsuperscript{13} labeling techniques are well established for \emph{in~vivo} processes \cite{Zamboni:2009},
-they are an active area of research for cell-free systems.
+Constraint based approaches can be used to compute alternative optimal solutions.
+These solutions have the same objective value, e.g., productivity, but different underlying metabolic flux distributions.
+Several techniques have been developed to estimate alternative optima, e.g., flux variability analysis \cite{Mahadevan2003264,Schuetz119} or mixed-integer approaches \cite{LEE2000711}.
+In this study, we used reaction group flux variability analysis to estimate potential alternative optimal solutions for CAT production constrained by experimental measurements (Fig.~\ref{fig:norm}).
+There were crucial pathways required for CAT production; for example, removal of the glycolysis/gluconoeogenesis or oxidative phosphorylation pathways resulted in no CAT production.
+Likewise, there were also group knockouts that had no effect on productivity or the metabolic flux distribution, such as removal of isoleucine, leucine, and valine biosynthesis combined with histidine biosynthesis.
+Globally, the constraint based simulation reached the same optimal CAT productivity for 40\% of the pairwise group knockouts, but had a different flux distribution when compared to the absence of knockouts.
+For example, one of the features of the predicted optimal metabolic flux distribution was a high flux through the Entner-Douodoroff (ED) pathway.
+Removal of the ED pathway had no effect on the CAT productivity compared to the absence of knockouts (Fig.~\ref{fig:norm}A).
+Pairwise knockouts of the ED pathway and other subgroups (i.e. pentose phosphate pathway, cofactors, folate metabolism, etc.) also resulted in the same optimal CAT productivity.
+However, there was a difference in the flux distribution with these knockouts (Fig.~\ref{fig:norm}B); thus, alternative optimal metabolic flux distributions exist for CAT production, despite experimental constraints.
+Ultimately, to determine the metabolic flux distribution occurring in CFPS, we need to add additional constraints to the flux estimation calculation.
+For example, thermodynamic feasibility constraints may result in a better depiction of the flux distribution \cite{Henry:2007,Hamilton:2013},
+and $^{13}$C labeling in CFPS could provide significant insight.
+However, while $^{13}$C labeling techniques are well established for \emph{in~vivo} processes \cite{Zamboni:2009},
+application of these techniques to CFPS remains an active area of research.
 \begin{figure}[t!]
 \includegraphics[width=1.0\textwidth]{./figs/Fig-7-FluxDistribution-Analysis.pdf}
 \caption{The norm effect of pairwise knockouts of subgroups in the cell-free network (A) CAT productivity norm compared to no knockouts in the experimentally constrained case. (B) Flux distribution norm compared to no knockouts in the experimentally constrained case.}
 \label{fig:norm}
 \end{figure}
+
+% Despite the constraints by experimental measurements, it is difficult to calculate the physiological flux distribution of metabolism (Fig.~\ref{fig:norm})
+% For example, there is a high flux through the Entner-Douodoroff pathway, but this may be an artifact of the optimal solution.
+% Flux balance analysis has been shown to have multiple alternative optimal solutions with flux variablitiy analysis and mixed-integer linear programming resulting in a poor depiction of the physiological flux distribution \cite{LEE2000711, Mahadevan2003264, Schuetz119}.
+
+
+
+
 
 
 \subsubsection{Summary and conclusions}
@@ -428,7 +434,7 @@ Furthermore, global sensitivity analysis identified oxygen uptake as being instr
 The translation rate was identified as the rate limiting step for productivity.
 The model also suggested that cell-free systems can simultaneously operate aerobically and anaerobically, which can lead to inefficient production and should be addressed to optimize energy efficiency and carbon yield.
 In addition, our modeling approach could be expanded with a more detailed description of gene expression that has been utilized in a \emph{E. coli} genome scale model \cite{Brien693}.
-We would also like to expand our model to include post translation modifications that proteins would require for proper folding and functionality. 
+We would also like to expand our model to include post translation modifications that proteins would require for proper folding and functionality.
 In conclusion, sequence specific constraint based modeling offers a novel means to \emph{a~priori} estimate the performance of cell-free synthetic circuits.
 
 \clearpage
@@ -547,9 +553,9 @@ In the experimental constrained case, \textit{E. coli} was grown in the presence
 
 The bounds on the transcription rate ($\mathcal{L}_{T}=w_{T}=\mathcal{U}_{T}$) were modeled as:
 \begin{equation}
-	w_{T} = V_{T}^{max}\left(\frac{G}{K_{T}+G}\right)
+	w_{T} = V_{T}^{max}\left(\frac{G_{\mathcal{P}}}{K_{T}+G_{\mathcal{P}}}\right)
 \end{equation}
-where $G$ denotes the gene concentration and $K_{T}$ denotes a transcription saturation coefficient.
+where $G_{\mathcal{P}}$ denotes the gene concentration of the protein of interest, and $K_{T}$ denotes a transcription saturation coefficient.
 The maximum transcription rate $V_{T}^{max}$ was formulated as:
 \begin{equation}
 	V_{T}^{max} \equiv \left[R_{T}\left(\frac{\dot{v}_{T}}{l_{G}}\right)u\left(\kappa\right)\right]
@@ -608,10 +614,10 @@ All translation parameters are given in Table \ref{tbl:parameters}.
         Ribosome concentration & $R_{X}$ & 1.6 & $\mu$M & \cite{Garamella:2016aa, 2005_underwood_biotech} \\
 
         & & & & \\
-        Transcription elongation rate & $\dot{v}_{TX}$ & 25 & nt/sec & \cite{Garamella:2016aa} \\
-        Translation elongation rate & $\dot{v}_{TL}$ & 2 & aa/sec & \cite{Garamella:2016aa, 2005_underwood_biotech} \\
-        Transcription saturation coefficient & $K_{TX}$ & 3.5 & nM & estimated \\
-        Translation saturation coefficient & $K_{TL}$ & 45.0 & $\mu$M & estimated \\
+        Transcription elongation rate & $\dot{v}_{T}$ & 25 & nt/sec & \cite{Garamella:2016aa} \\
+        Translation elongation rate & $\dot{v}_{X}$ & 2 & aa/sec & \cite{Garamella:2016aa, 2005_underwood_biotech} \\
+        Transcription saturation coefficient & $K_{T}$ & 3.5 & nM & estimated \\
+        Translation saturation coefficient & $K_{X}$ & 45.0 & $\mu$M & estimated \\
         Polysome amplification constant & $K_{P}$ & 10 & constant & estimated \\
         mRNA degradation rate & $\lambda$ & 5.2 & hr\textsuperscript{-1} & \cite{Garamella:2016aa} \\
 
@@ -621,14 +627,15 @@ All translation parameters are given in Table \ref{tbl:parameters}.
         Weight bound RNAP-$\sigma_{70}$ P70a & $K_{2}$ & 10 & constant & estimated \\
         $\sigma_{70}$ concentration & $\sigma_{70}$ & 35 & nM & \cite{Garamella:2016aa} \\
         $\sigma_{70}$ dissociation constant & $K_{D}$ & 130 & nM & \cite{Mauri2014} \\
-	$\sigma_{70}$ hill coefficient & n & 1 & constant & \cite{Mauri2014} \\
+	      $\sigma_{70}$ hill coefficient & n & 1 & constant & \cite{Mauri2014} \\
+        Gene concentration & $G_{\mathcal{P}}$ & 5 & nM &  \cite{Garamella:2016aa} \\ \bottomrule
 
-        & & & & \\
-	      Gene concentration & $G$ & 5 & nM &  \cite{Garamella:2016aa} \\
-        Gene length of CAT & $l_{G}$ & 683 & nt & \cite{Kigawa1995} \\
-        Gene length of deGFP & $l_{G}$ & 660 & nt & \cite{Garamella:2016aa} \\
-        Protein length of CAT & $l_{P}$ & 229 & aa & \cite{Kigawa1995} \\
-        Protein length of deGFP & $l_{P}$ & 219 & aa & \cite{Garamella:2016aa} \\ \bottomrule
+        % & & & & \\
+	      %
+        % Gene length of CAT & $l_{G}$ & 683 & nt & \cite{Kigawa1995} \\
+        % Gene length of deGFP & $l_{G}$ & 660 & nt & \cite{Garamella:2016aa} \\
+        % Protein length of CAT & $l_{P}$ & 229 & aa & \cite{Kigawa1995} \\
+        % Protein length of deGFP & $l_{P}$ & 219 & aa & \cite{Garamella:2016aa} \\
     \end{tabular}
 \label{tbl:parameters}
 \end{table}
@@ -659,7 +666,8 @@ An ensemble of N = 100 flux distributions was calculated for the three different
 control (with amino acid synthesis and uptake), amino acid uptake without synthesis, and amino acid synthesis without uptake.
 The flux ensemble was calculated by randomly sampling the maximum glucose consumption rate within a range of 0 to 30 mM/h, (determined from experimental data)
 and randomly sampling RNA polymerase levels, ribosome levels, and elongation rates in a physiological range determined from literature.
-RNA polymerase levels were sampled between 60 and 80 nM, ribosome levels between 12 and 18 \textmu M, the RNA polymerase elongation rate between 20 and 30 nt/sec, and the ribosome elongation rate between 1.5 and 3 aa/s \cite{2005_underwood_biotech, Garamella:2016aa}.
+RNA polymerase levels were sampled between 60 and 80 nM, ribosome levels between 12 and 18 \textmu M, the RNA polymerase elongation rate between 20 and 30 nt/sec, and the ribosome elongation rate between 1.5 and 3 aa/s
+\cite{2005_underwood_biotech, Garamella:2016aa}.
 
 \subsection*{Global sensitivity analysis.}
 We conducted a global sensitivity analysis using the variance-based method of Sobol to estimate which parameters controlled the performance of the cell-free protein synthesis reaction \citep{SOBOL_METHOD}.
@@ -668,11 +676,14 @@ We established the sampling bounds for each parameter from literature.
 We used the sampling method of Saltelli \textit{et al.} \citep{Saltelli:2010} to compute a family of $N\left(2d+2\right)$ parameter sets which obeyed our parameter ranges,
 where $N$ was a parameter proportional to the desired number of model evaluations and $d$ was the number of parameters in the model. In our case, $N$ = 1000 and $d$ = 7, so the total sensitivity indices were computed from 16,000 model evaluations. The variance-based sensitivity analysis was conducted using the SALib module encoded in the Python programming language \citep{SALIB}.
 
-\subsection*{Pairwise group knockouts.}
-Pairwise and single group knockouts were simulated by setting the flux bounds for the all the reactions in a group to zero.
+\subsection*{Identification of potential alternative optimal metabolic flux solutions.}
+We identified potential alternative optimal metabolic flux distributions by performing single and pairwise reaction group knockout simulations [TODO:REF].
+Reaction group knockouts were simulated by setting the flux bounds for all the reactions involved in a group to zero.
 We grouped reactions in the cell-free network into 19 subgroups (available in Supporting Information).
-We computed the norm of the productivity of CAT for each pairwise knockout compared to the productivity of CAT with no knockouts.
-We also computed the norm of the flux distribution for each pairwise knockout compared to the flux distribution with no knockouts.
+We computed the difference ($l^{2}$-norm) for CAT productivity in the presence and absence of pairwise reaction knockouts.
+Simultaneously, we computed the difference in the flux distribution ($l^{2}$-norm) for each pairwise reaction knockout compared to the flux distribution with no knockouts.
+Those solutions with the same or similar productivity but large changes in the metabolic flux distribution represent alternative optimal soluations.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% The "Acknowledgement" section can be given in all manuscript
 %% classes.  This should be given within the "acknowledgement"
@@ -680,14 +691,7 @@ We also computed the norm of the flux distribution for each pairwise knockout co
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{acknowledgement}
 
-Please use ``The authors thank \ldots'' rather than ``The
-authors would like to thank \ldots''.
-
-The author thanks Mats Dahlgren for version one of \textsf{achemso},
-and Donald Arseneau for the code taken from \textsf{cite} to move
-citations after punctuation. Many users have provided feedback on the
-class, which is reflected in all of the different demonstrations
-shown in this document.
+This study was supported by an award from the US Army and Systems Biology of Trauma Induced Coagulopathy (W911NF-10-1-0376) to J.V. for the support of M.V.
 
 \end{acknowledgement}
 
