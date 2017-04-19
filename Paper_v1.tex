@@ -218,11 +218,12 @@ Moreover, productivity was a non-linear function of protein length; for instance
 To examine the influence of protein length further, the mean optimal productivity was plotted against the carbon number of each protein (Fig.~\ref{fig:Prof}B).
 The optimal productivity and protein length were related by the power-law relationship $\alpha\times(C_{POI})^{\beta}$, where $\alpha = 6.02\times 10^{6}$ $\mu$M/(h$\cdot$carbon number) and $\beta=-1.93$.
 Interestingly, CAT did not obey the power-law relationship; the relatively high productivity of CAT was due to its T7 promoter.
-The higher transcription rate of the T7 promoter led to a [XX\%\ higher mRNA steady state level, resulting in a higher productivity.
+The higher transcription rate of the T7 promoter led to a 34\% higher mRNA steady state level, resulting in a higher productivity.
 Thus, we also calculated the theoretical productivity correlation given maximum promoter activity using all eight proteins which resulted with $\alpha = 1.39\times 10^{7}$ $\mu$M/(h$\cdot$carbon number) and $\beta=-1.99$.
 However, CAT expressed under a P70a promoter followed the power-law correlation with a productivity of approximately 8.2 $\pm$ 2.2 $\mu$M/h (predicted to be 7.2 $\mu$M/h by the optimal productivity correlation).
-In addition, we predicted the productivity of MBP to be 4.6 $\mu$M/h whereas the power-law relationship predicted a productivity of 5.0 $\mu$M/h.
-This difference in prediction resulted in less than 8\% error in estimating the productivity of an \emph{a~priori} protein in CFPS.
+Different promoters have been shown to have different strengths which have effected the productivity of proteins in CFPS \cite{Moon:2012ab,Garamella:2016aa}; this is consistent with our results for CAT productivity on a T7 and P70a promoter.  
+In addition, to evaluate the accuracy  of our productivity P70a model, we predicted the productivity of MBP to be 4.6 $\mu$M/h whereas the power-law relationship predicted a productivity of 5.0 $\mu$M/h.
+This difference in prediction was less than 8\% error in estimating the productivity of an \emph{a~priori} protein in CFPS.
 Taken together, the maximum optimal productivity of a cell-free reaction was found to be inversely proportional to protein size,
 following a power-law relationship for proteins expressed under a P70a promoter.
 
@@ -237,16 +238,17 @@ However, the dependence of energy efficiency on carbon number was less pronounce
 The relationship between the optimal energy efficiency and carbon number was linear; $m_{Y}\times(C_{POI})+b_{Y}$ where $m_{Y} =  -1.65\times10^{-2}$ energy efficiency (\%)/carbon number with supplementation,
 and $m_{Y} = -3.18\times10^{-3}$ energy efficiency (\%)/carbon number without supplementation.
 The y-intercept $b_{Y} = 90.96$ energy efficiency (\%) with supplementation, and $b_{Y} = 33.48$ energy efficiency (\%) without.
-Proteins with a high carbon number had a lower energy efficiency since they have a higher transcription and translation costs compared with smaller proteins.
+Proteins with a high carbon number had a lower energy efficiency since they have higher transcription and translation costs compared with smaller proteins.
 However, this effect was less pronounced in the absence of supplementation, where the optimal energy efficiency was a weaker function of the protein carbon number.
 MBP showed good agreement with the formulated relationship between energy efficiency and carbon number for each case.
 The estimated MBP energy efficiency had a maximum error of 7.1\% for the case where amino acid biosynthesis reactions were blocked and an error of 0.2\% for both remaining cases.
 The cases supplemented with amino acids had the same trendline whereas when amino acids were not available there was a significant drop in energy efficiency.
-Interestingly, without supplemented amino acids (third case) each protein had a similar energy efficiency ranging between 24-32\% regardless of carbon number.
-In this case, the energy burden of synthesizing each amino acid required for the assembly of the protein kept the energy efficiency saturated at a relatively low level.
+Interestingly, without supplemented amino acids each protein had a similar energy efficiency ranging between 24-32\% regardless of carbon number.
+In this case, the glucose uptake relatively doubles (64\% increase for CAT) compared to cases supplemented with amino acids, meanwhile the productivity stays relatively the same for each protein (Fig.~\ref{fig:Prof}D).
+Therefore the energy burden (i.e. higher glucose uptake) for synthesizing each amino acid and powering CFPS has kept the energy efficiency saturated at a relatively low level, regardless of the protein.
 However, the experimentally constrained case of CAT production showed even a lower energy efficiency of 3.6 $\pm$ 1.1\% compared to the theoretical maximum of 77.3 $\pm$ 7.3\%.
 This shows CFPS systems are not fully optimized and could be improved: first, the experimental measurements showed accumulation of certain amino acids; this carbon could potentially be diverted towards a protein of interest.
-Second, the system had a high accumulation of metabolic byproducts, specifically organic acids, which is a result of inefficient energy utilization.
+Second, the system had a high accumulation of metabolic byproducts, specifically organic acids, which was a result of inefficient energy utilization.
 
 % With amino acid supplementation, there was a comparable energy efficiency, despite the network's ability to synthesis amino acids.
 % For the case when amino acids were removed from the media, protein production resulted in a low energy efficiency; below 32\% depending on the protein.
@@ -411,6 +413,8 @@ For example, one of the features of the predicted optimal metabolic flux distrib
 Removal of the ED pathway had no effect on the CAT productivity compared to the absence of knockouts (Fig.~\ref{fig:norm}A).
 Pairwise knockouts of the ED pathway and other subgroups (i.e. pentose phosphate pathway, cofactors, folate metabolism, etc.) also resulted in the same optimal CAT productivity.
 However, there was a difference in the flux distribution with these knockouts (Fig.~\ref{fig:norm}B); thus, alternative optimal metabolic flux distributions exist for CAT production, despite experimental constraints.
+In addition, knockouts of amino acid biosynthesis reactions had no effect on the productivity with the exception of ALA, ASP, ASN and GLU, GLN biosynthesis reactions, since amino acids were supplemented in the media. 
+ssFBA rerouted the metabolic flux to have the same productivity but an alterantive flux distribution (alternative optima), as can be seen for a pairwise knockout of GLY, SER biosynthesis with HIS biosynthesis (Fig.~\ref{fig:norm}B).  
 Ultimately, to determine the metabolic flux distribution occurring in CFPS, we need to add additional constraints to the flux estimation calculation.
 For example, thermodynamic feasibility constraints may result in a better depiction of the flux distribution \cite{Henry:2007,Hamilton:2013},
 and $^{13}$C labeling in CFPS could provide significant insight.
@@ -431,9 +435,10 @@ application of these techniques to CFPS remains an active area of research.
 
 
 
-\subsubsection{Summary and conclusions}
+\subsection{Summary and conclusions}
 In this study, we developed a sequence specific constraint based modeling approach to predict the performance of cell-free protein synthesis reactions for a range of proteins. We showed first principle predictions for protein production of deGFP and CAT which were in agreement with experimental measurements, under two different promoters and two different cell-free extract systems.
 We are currently working on expanding our library of promoters that can provide good estimates of performance for different proteins.
+Different promoter will help design \emph{de~novo} circuits for optimal functionality and performance. 
 This modeling approach suggested correlations for productivity, energy efficiency and carbon yield as a function of the size of the protein.
 Maltose binding protein showed good agreement with these performance metrics with the established model correlations.
 Furthermore, global sensitivity analysis identified oxygen uptake as being instrumental for maintaining a high energy efficiency and carbon yield.
