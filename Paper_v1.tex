@@ -684,7 +684,7 @@ We established the sampling bounds for each parameter from literature.
 We used the sampling method of Saltelli \textit{et al.} \citep{Saltelli:2010} to compute a family of $N\left(2d+2\right)$ parameter sets which obeyed our parameter ranges,
 where $N$ was a parameter proportional to the desired number of model evaluations and $d$ was the number of parameters in the model. In our case, $N$ = 1000 and $d$ = 7, so the total sensitivity indices were computed from 16,000 model evaluations. The variance-based sensitivity analysis was conducted using the SALib module encoded in the Python programming language \citep{SALIB}.
 
-\subsection*{Identification of potential alternative optimal metabolic flux solutions.}
+\subsection*{Potential alternative optimal metabolic flux solutions.}
 We identified potential alternative optimal metabolic flux distributions by performing single and pairwise reaction group knockout simulations [TODO:REF].
 Reaction group knockouts were simulated by setting the flux bounds for all the reactions involved in a group to zero.
 We grouped reactions in the cell-free network into 19 subgroups (available in Supporting Information).
