@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+This is BibTeX, Version 0.99d (TeX Live 2015)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: Paper_v1.aux
 The style file: biochem.bst
@@ -11,10 +11,10 @@ Warning--entry type for "GLPK" isn't style-file defined
 --line 623 of file References_v1.bib
 Warning--entry type for "SALIB" isn't style-file defined
 --line 651 of file References_v1.bib
-achemso 2016/01/20 v3.10b
+achemso 2015/04/07 v3.10
 You've used 45 entries,
             2531 wiz_defined-function locations,
-            1085 strings with 16857 characters,
+            1085 strings with 16856 characters,
 and the built_in function-call counts, 16225 in all, are:
 = -- 1257
 > -- 1059

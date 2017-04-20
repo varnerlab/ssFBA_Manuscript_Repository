@@ -221,7 +221,7 @@ Interestingly, CAT did not obey the power-law relationship; the relatively high 
 The higher transcription rate of the T7 promoter led to a 34\% higher mRNA steady state level, resulting in a higher productivity.
 Thus, we also calculated the theoretical productivity correlation given maximum promoter activity using all eight proteins which resulted with $\alpha = 1.39\times 10^{7}$ $\mu$M/(h$\cdot$carbon number) and $\beta=-1.99$.
 However, CAT expressed under a P70a promoter followed the power-law correlation with a productivity of approximately 8.2 $\pm$ 2.2 $\mu$M/h (predicted to be 7.2 $\mu$M/h by the optimal productivity correlation).
-Different promoters have been shown to have different strengths which have effected the productivity of proteins in CFPS \cite{Moon:2012ab,Garamella:2016aa}; this is consistent with our results for CAT productivity on a T7 and P70a promoter.  
+Different promoters have been shown to have different strengths which have effected the productivity of proteins in CFPS \cite{Moon:2012ab,Garamella:2016aa}; this is consistent with our results for CAT productivity on a T7 and P70a promoter.
 In addition, to evaluate the accuracy  of our productivity P70a model, we predicted the productivity of MBP to be 4.6 $\mu$M/h whereas the power-law relationship predicted a productivity of 5.0 $\mu$M/h.
 This difference in prediction was less than 8\% error in estimating the productivity of an \emph{a~priori} protein in CFPS.
 Taken together, the maximum optimal productivity of a cell-free reaction was found to be inversely proportional to protein size,
@@ -413,8 +413,8 @@ For example, one of the features of the predicted optimal metabolic flux distrib
 Removal of the ED pathway had no effect on the CAT productivity compared to the absence of knockouts (Fig.~\ref{fig:norm}A).
 Pairwise knockouts of the ED pathway and other subgroups (i.e. pentose phosphate pathway, cofactors, folate metabolism, etc.) also resulted in the same optimal CAT productivity.
 However, there was a difference in the flux distribution with these knockouts (Fig.~\ref{fig:norm}B); thus, alternative optimal metabolic flux distributions exist for CAT production, despite experimental constraints.
-In addition, knockouts of amino acid biosynthesis reactions had no effect on the productivity with the exception of ALA, ASP, ASN and GLU, GLN biosynthesis reactions, since amino acids were supplemented in the media. 
-ssFBA rerouted the metabolic flux to have the same productivity but an alterantive flux distribution (alternative optima), as can be seen for a pairwise knockout of GLY, SER biosynthesis with HIS biosynthesis (Fig.~\ref{fig:norm}B).  
+In addition, knockouts of amino acid biosynthesis reactions had no effect on the productivity with the exception of ALA, ASP, ASN and GLU, GLN biosynthesis reactions, since amino acids were supplemented in the media.
+ssFBA rerouted the metabolic flux to have the same productivity but an alterantive flux distribution (alternative optima), as can be seen for a pairwise knockout of GLY, SER biosynthesis with HIS biosynthesis (Fig.~\ref{fig:norm}B).
 Ultimately, to determine the metabolic flux distribution occurring in CFPS, we need to add additional constraints to the flux estimation calculation.
 For example, thermodynamic feasibility constraints may result in a better depiction of the flux distribution \cite{Henry:2007,Hamilton:2013},
 and $^{13}$C labeling in CFPS could provide significant insight.
@@ -431,14 +431,10 @@ application of these techniques to CFPS remains an active area of research.
 % Flux balance analysis has been shown to have multiple alternative optimal solutions with flux variablitiy analysis and mixed-integer linear programming resulting in a poor depiction of the physiological flux distribution \cite{LEE2000711, Mahadevan2003264, Schuetz119}.
 
 
-
-
-
-
 \subsection{Summary and conclusions}
 In this study, we developed a sequence specific constraint based modeling approach to predict the performance of cell-free protein synthesis reactions for a range of proteins. We showed first principle predictions for protein production of deGFP and CAT which were in agreement with experimental measurements, under two different promoters and two different cell-free extract systems.
 We are currently working on expanding our library of promoters that can provide good estimates of performance for different proteins.
-Different promoter will help design \emph{de~novo} circuits for optimal functionality and performance. 
+Different promoter will help design \emph{de~novo} circuits for optimal functionality and performance.
 This modeling approach suggested correlations for productivity, energy efficiency and carbon yield as a function of the size of the protein.
 Maltose binding protein showed good agreement with these performance metrics with the established model correlations.
 Furthermore, global sensitivity analysis identified oxygen uptake as being instrumental for maintaining a high energy efficiency and carbon yield.
@@ -654,17 +650,18 @@ All translation parameters are given in Table \ref{tbl:parameters}.
 \clearpage
 
 \subsection*{Calculation of energy efficiency.}
-Energy efficiency ($\mathcal{E}$) was calculated as the ratio of protein production to glucose consumption, both in terms of equivalent ATP molecules:
+Energy efficiency ($\mathcal{E}$) was calculated as the ratio of protein production to glucose consumption, written in terms of equivalent ATP molecules:
 \begin{equation}\label{eqn:energy-efficiency-definition}
-	\mathcal{E}=\frac{\texttt{q}_{POI}\cdot \left(2\left(\rm {ATP}_{TX}+\rm {CTP}_{TX}+\rm {GTP}_{TX}+\rm {UTP}_{TX}\right)+\rm2\cdot\rm {ATP}_{TL}+\rm {GTP}_{TL}\right)}{\texttt{q}_{GLC}\cdot\texttt{ATP}_{GLC}}
+	\mathcal{E}\equiv\Bigl(\frac{\texttt{q}_{POI}}{\texttt{q}_{GLC}\cdot\texttt{ATP}_{GLC}}\Bigr)\cdot \Bigl(2\times\left(\rm {ATP}_{T}+\rm {CTP}_{T}+\rm {GTP}_{T}+\rm {UTP}_{T}\right)+\rm2\cdot\rm {ATP}_{X}+\rm {GTP}_{X}\Bigl)
 \end{equation}
-where $\texttt{q}_{POI}=w_{TX}$ denotes the production rate for the protein of interest, $\rm {ATP}_{TX}$, $\rm {CTP}_{TX}$, $\rm {GTP}_{TX}$, $\rm {UTP}_{TX}$ denote the stoichiometric coefficients of each energy species for the transcription of the protein of interest, $\rm {ATP}_{TL}$, $\rm {GTP}_{TL}$ denote the stoichiometric coefficients of ATP and GTP for the translation of the protein of interest, $\texttt{q}_{GLC}=w_{GLC}$ denotes the glucose uptake rate, and $\rm {ATP}_{GLC}$ denotes the equivalent ATP number for glucose.
+where $\texttt{q}_{POI}=w_{X}$ denotes the production rate for the protein of interest, $\rm {ATP}_{X}$, $\rm {CTP}_{X}$, $\rm {GTP}_{X}$, $\rm {UTP}_{X}$ denote the stoichiometric coefficients of each energy species for the transcription of the protein of interest, $\rm {ATP}_{X}$, $\rm {GTP}_{X}$ denote the stoichiometric coefficients of ATP and GTP for the translation of the protein of interest, $\texttt{q}_{GLC}=w_{GLC}$ denotes the glucose uptake rate,
+and $\texttt{ATP}_{GLC}$ denotes the equivalent ATP number for glucose.
 The energy species stoichiometric coefficients are available in the Supporting Information.
 
 \subsection*{Calculation of the carbon yield.}
 The carbon yield ($Y_{C}^{POI}$) was calculated as the ratio of carbon produced as the protein of interest divided by the carbon consumed as reactants (glucose and amino acids):
 \begin{equation}\label{eqn:yield-definition}
-	Y_{C}^{POI}=\frac{\texttt{q}_{POI}\cdot C_{POI}}{\displaystyle\sum_{i=1}^{\mathcal{R}} \texttt{q}_{m_{i}}\cdot C_{m_i}}
+	Y_{C}^{POI}\equiv\frac{\texttt{q}_{POI}\cdot C_{POI}}{\displaystyle\sum_{i=1}^{\mathcal{R}} \texttt{q}_{m_{i}}\cdot C_{m_i}}
 \end{equation}
 where $\texttt{q}_{POI}$ denotes the flux of the protein of interest produced, $C_{POI}$ denotes carbon number of the protein of interest, $\mathcal{R}$ denotes the number of reactants,
 $\texttt{q}_{m_{i}}$ denotes the uptake flux of the $i^{th}$ reactant, and $C_{m_i}$ denotes the carbon number of the $i^{th}$ reactant.
