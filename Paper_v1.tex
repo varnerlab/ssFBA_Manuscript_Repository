@@ -402,13 +402,12 @@ Accumulation of pyruvate, lactate, acetate, and other organic acids can be seen 
 
 
 \subsubsection{Potential Alternative Metabolic Optima}
-Constraint based approaches can be used to compute alternative optimal solutions.
-These solutions have the same objective value, e.g., productivity, but different underlying metabolic flux distributions.
-Several techniques have been developed to estimate alternative optima, e.g., flux variability analysis \cite{Mahadevan2003264,Schuetz119} or mixed-integer approaches \cite{LEE2000711}.
-In this study, we used reaction group flux variability analysis to estimate potential alternative optimal solutions for CAT production constrained by experimental measurements (Fig.~\ref{fig:norm}).
-There were crucial pathways required for CAT production; for example, removal of the glycolysis/gluconoeogenesis or oxidative phosphorylation pathways resulted in no CAT production.
-Likewise, there were also group knockouts that had no effect on productivity or the metabolic flux distribution, such as removal of isoleucine, leucine, and valine biosynthesis combined with histidine biosynthesis.
-Globally, the constraint based simulation reached the same optimal CAT productivity for 40\% of the pairwise group knockouts, but had a different flux distribution when compared to the absence of knockouts.
+Alternative optimal solutions have the same objective value, e.g., productivity, but different metabolic flux distributions.
+Several techniques, e.g., flux variability analysis (FVA) \cite{Mahadevan2003264,Schuetz119} or mixed-integer approaches \cite{LEE2000711} can estimate alternative optima.
+In this study, we used flux variability analysis to estimate potential alternative optimal solutions for CAT production constrained by experimental measurements (Fig.~\ref{fig:norm}).
+FVA identified pathways required for CAT production; for example, deletion of the glycolysis/gluconoeogenesis or oxidative phosphorylation pathways resulted in no CAT production.
+Likewise, there were pathway knockouts that had no effect on productivity or the metabolic flux distribution, such as removal of isoleucine, leucine, histidine and valine biosynthesis.
+Globally, the constraint based simulation reached the same optimal CAT productivity for 40\% of the pairwise knockouts, but had different flux distributions compared with the absence of knockouts.
 For example, one of the features of the predicted optimal metabolic flux distribution was a high flux through the Entner-Douodoroff (ED) pathway.
 Removal of the ED pathway had no effect on the CAT productivity compared to the absence of knockouts (Fig.~\ref{fig:norm}A).
 Pairwise knockouts of the ED pathway and other subgroups (i.e. pentose phosphate pathway, cofactors, folate metabolism, etc.) also resulted in the same optimal CAT productivity.
