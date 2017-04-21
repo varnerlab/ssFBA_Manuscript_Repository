@@ -205,7 +205,7 @@ Finally, we considered maltose binding protein (MBP) as a first principle predic
 \includegraphics[width=1.00\textwidth]{./figs/Fig-2-Performance.pdf}
 %\includegraphics[width=1.00\textwidth]{./figs/Fig-2-Performance-Predicted.pdf}
 \caption{CFPS performance of eight proteins for four cases. Amino acid uptake and synthesis (black), AA uptake without synthesis (dark grey), AA synthesis without uptake (light grey), and constrained by experimental measurements, for CAT only (white). A. Productivity. B. Mean productivity versus carbon number. Single trendline (black dotted line) calculated across all cases (R\textsuperscript{2} = 0.99) and maximum productivity trendline (grey dotted line; R\textsuperscript{2} = 0.99) .
-C. Energy efficiency. D. Mean energy efficiency versus carbon number. Trendline for cases with amino acids (black dotted line; R\textsuperscript{2} = 0.91) and trendline for without amino acids (grey dotted line; R\textsuperscript{2} = 0.78).
+C. Energy efficiency. D. Mean energy efficiency versus carbon number. Trendline for cases with amino acids (black dotted line) and trendline for without amino acids (grey dotted line; R\textsuperscript{2} = 0.65).
 E. Carbon yield. F. Mean carbon yield versus carbon number. Trendline for cases with amino acids (black dotted line; R\textsuperscript{2} = 0.95) and trendline for without amino acids (grey dotted line; R\textsuperscript{2} = 0.90).
 Error bars: 95\% CI; asterisk: protein excluded from trendline; dagger: constrained by experimental measurements and excluded from trendline; triangles: first principle prediction and excluded from formulating trendline.}
 \label{fig:Prof}
@@ -214,7 +214,7 @@ Error bars: 95\% CI; asterisk: protein excluded from trendline; dagger: constrai
 \subsubsection{Productivity}
 The theoretical maximum productivity for proteins expressed using a P70a promoter ($\mu$M/h) was inversely proportional to the carbon number ($C_{POI}$) and varied between 1 and 12 $\mu$M/h for the proteins sampled (Fig.~\ref{fig:Prof}A-B).
 The theoretical maximum productivity was within a standard deviation with and without amino acid supplementation for each protein, but varied significantly between proteins.
-Moreover, productivity was a non-linear function of protein length; for instance, BMP10 (424 aa) had a optimal productivity of approximately 2.5 $\mu$M/h whereas CAT (219 aa) had an optimal productivity of approximately 12 $\mu$M/h.
+Moreover, productivity was a non-linear function of protein length; for instance, BMP10 (424 aa) had a optimal productivity of approximately 2.5 $\mu$M/h whereas deGFP (229 aa) had an optimal productivity of approximately 8.4 $\mu$M/h.
 To examine the influence of protein length further, the mean optimal productivity was plotted against the carbon number of each protein (Fig.~\ref{fig:Prof}B).
 The optimal productivity and protein length were related by the power-law relationship $\alpha\times(C_{POI})^{\beta}$, where $\alpha = 6.02\times 10^{6}$ $\mu$M/(h$\cdot$carbon number) and $\beta=-1.93$.
 Interestingly, CAT did not obey the power-law relationship; the relatively high productivity of CAT was due to its T7 promoter.
@@ -233,21 +233,23 @@ following a power-law relationship for proteins expressed under a P70a promoter.
 
 
 \subsubsection{Energy efficiency}
-The energy efficiency of protein synthesis was linearly related to protein carbon number, both with and without amino acid supplementation (Fig.~\ref{fig:Prof}C-D).
-However, the dependence of energy efficiency on carbon number was less pronounced in the absence of amino acid supplementation.
-The relationship between the optimal energy efficiency and carbon number was linear; $m_{Y}\times(C_{POI})+b_{Y}$ where $m_{Y} =  -1.65\times10^{-2}$ energy efficiency (\%)/carbon number with supplementation,
-and $m_{Y} = -3.18\times10^{-3}$ energy efficiency (\%)/carbon number without supplementation.
-The y-intercept $b_{Y} = 90.96$ energy efficiency (\%) with supplementation, and $b_{Y} = 33.48$ energy efficiency (\%) without.
-Proteins with a high carbon number had a lower energy efficiency since they have higher transcription and translation costs compared with smaller proteins.
-However, this effect was less pronounced in the absence of supplementation, where the optimal energy efficiency was a weaker function of the protein carbon number.
+%The energy efficiency of protein synthesis was linearly related to protein carbon number, both with and without amino acid supplementation (Fig.~\ref{fig:Prof}C-D).
+Energy efficiency of protein synthesis with amino acid supplentation was largely independently related to protein carbon number, both with and without amino acid supplementation (Fig.~\ref{fig:Prof}C-D).
+However, the dependence of energy efficiency on carbon number was more pronounced in the absence of amino acid supplementation.
+The relationship between the optimal energy efficiency and carbon number had little dependence; $m_{Y}\times(C_{POI})+b_{Y}$ where $m_{Y} =  -4.01\times10^{-4}$ energy efficiency (\%)/carbon number with supplementation,
+and $m_{Y} = 3.03\times10^{-3}$ energy efficiency (\%)/carbon number without supplementation.
+The y-intercept $b_{Y} = 86.20$ energy efficiency (\%) with supplementation, and $b_{Y} = 67.40$ energy efficiency (\%) without.
+In the presence of amino acid supplementation, energy was utilized to power CFPS instead of synthesizing amino acids, thus a constant level of energy efficiency was observed regardless of the protein size.
+In the absence of supplementation there was a drop in energy efficiency, ranging from 68-75.8\%.
+In this case, the glucose uptake relatively doubles (64\% increase for CAT) compared to cases supplemented with amino acids, meanwhile the productivity stayed relatively the same for each protein (Fig.~\ref{fig:Prof}D).
+Therefore, the energy burden (i.e. higher glucose uptake) for synthesizing each amino acid and powering CFPS had lowered the energy efficiency.
+Interestingly, without amino acid supplementation, proteins with a high carbon number had a slightly higher energy efficiency, however, this linear trend was mostly independent of protein size with R\textsuperscript{2} = 0.65.
+%However, this effect was less pronounced in the absence of supplementation, where the optimal energy efficiency was a weaker function of the protein carbon number.
 MBP showed good agreement with the formulated relationship between energy efficiency and carbon number for each case.
-The estimated MBP energy efficiency had a maximum error of 7.1\% for the case where amino acid biosynthesis reactions were blocked and an error of 0.2\% for both remaining cases.
+The estimated MBP energy efficiency had a maximum error of 5\% for without amino acid supplementation and an error of 1-2.7\% for both remaining cases.
 The cases supplemented with amino acids had the same trendline whereas when amino acids were not available there was a significant drop in energy efficiency.
-Interestingly, without supplemented amino acids each protein had a similar energy efficiency ranging between 24-32\% regardless of carbon number.
-In this case, the glucose uptake relatively doubles (64\% increase for CAT) compared to cases supplemented with amino acids, meanwhile the productivity stays relatively the same for each protein (Fig.~\ref{fig:Prof}D).
-Therefore the energy burden (i.e. higher glucose uptake) for synthesizing each amino acid and powering CFPS has kept the energy efficiency saturated at a relatively low level, regardless of the protein.
-However, the experimentally constrained case of CAT production showed even a lower energy efficiency of 3.6 $\pm$ 1.1\% compared to the theoretical maximum of 77.3 $\pm$ 7.3\%.
-This shows CFPS systems are not fully optimized and could be improved: first, the experimental measurements showed accumulation of certain amino acids; this carbon could potentially be diverted towards a protein of interest.
+The experimentally constrained case of CAT production showed even a lower energy efficiency of 13.3 $\pm$ 4.7\% compared to the theoretical maximum of 84.2 $\pm$ 0.1\%.
+This showed CFPS systems are not fully optimized and could be improved: first, the experimental measurements showed accumulation of certain amino acids; this carbon could potentially be diverted towards a protein of interest.
 Second, the system had a high accumulation of metabolic byproducts, specifically organic acids, which was a result of inefficient energy utilization.
 
 % With amino acid supplementation, there was a comparable energy efficiency, despite the network's ability to synthesis amino acids.
@@ -650,11 +652,16 @@ All translation parameters are given in Table \ref{tbl:parameters}.
 
 \subsection*{Calculation of energy efficiency.}
 Energy efficiency ($\mathcal{E}$) was calculated as the ratio of protein production to glucose consumption, written in terms of equivalent ATP molecules:
+%\begin{equation}\label{eqn:energy-efficiency-definition}
+%	\mathcal{E}\equiv\Bigl(\frac{\texttt{q}_{POI}}{\texttt{q}_{GLC}\cdot\texttt{ATP}_{GLC}}\Bigr)\cdot \Bigl(2\times\left(\rm {ATP}_{T}+\rm {CTP}_{T}+\rm {GTP}_{T}+\rm {UTP}_{T}\right)+\rm2\cdot\rm {ATP}_{X}+\rm {GTP}_{X}\Bigl)
+%\end{equation}
+
 \begin{equation}\label{eqn:energy-efficiency-definition}
-	\mathcal{E}\equiv\Bigl(\frac{\texttt{q}_{POI}}{\texttt{q}_{GLC}\cdot\texttt{ATP}_{GLC}}\Bigr)\cdot \Bigl(2\times\left(\rm {ATP}_{T}+\rm {CTP}_{T}+\rm {GTP}_{T}+\rm {UTP}_{T}\right)+\rm2\cdot\rm {ATP}_{X}+\rm {GTP}_{X}\Bigl)
+	\mathcal{E}\equiv\frac{w_{X}\left(2\cdot\rm {ATP}_{X}+\rm {GTP}_{X}\right)+w_{T}\left(2\times\left(\rm {ATP}_{T}+\rm {CTP}_{T}+\rm {GTP}_{T}+\rm {UTP}_{T}\right) \right)}{\texttt{q}_{GLC}\cdot\texttt{ATP}_{GLC}}
 \end{equation}
-where $\texttt{q}_{POI}=w_{X}$ denotes the production rate for the protein of interest, $\rm {ATP}_{X}$, $\rm {CTP}_{X}$, $\rm {GTP}_{X}$, $\rm {UTP}_{X}$ denote the stoichiometric coefficients of each energy species for the transcription of the protein of interest, $\rm {ATP}_{X}$, $\rm {GTP}_{X}$ denote the stoichiometric coefficients of ATP and GTP for the translation of the protein of interest, $\texttt{q}_{GLC}=w_{GLC}$ denotes the glucose uptake rate,
-and $\texttt{ATP}_{GLC}$ denotes the equivalent ATP number for glucose.
+
+where $\rm {ATP}_{T}$, $\rm {CTP}_{T}$, $\rm {GTP}_{T}$, $\rm {UTP}_{T}$ denote the stoichiometric coefficients of each energy species for the transcription of the protein of interest, $\rm {ATP}_{X}$, $\rm {GTP}_{X}$ denote the stoichiometric coefficients of ATP and GTP for the translation of the protein of interest, $\texttt{q}_{GLC}=w_{GLC}$ denotes the glucose uptake rate,
+and $\texttt{ATP}_{GLC}$ denotes the equivalent ATP number for glucose produced.
 The energy species stoichiometric coefficients are available in the Supporting Information.
 
 \subsection*{Calculation of the carbon yield.}
