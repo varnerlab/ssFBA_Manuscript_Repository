@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  21 APR 2017 17:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  21 APR 2017 20:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1145,11 +1145,7 @@ Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/t1enc.def
 File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
-)) (./Paper_v1.aux
-
-LaTeX Warning: Label `tbl:parameters' multiply defined.
-
-)
+)) (./Paper_v1.aux)
 \openout1 = `Paper_v1.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 69.
@@ -1166,7 +1162,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 69.
 LaTeX Font Info:    ... okay on input line 69.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 69.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 69.
- (/usr/local/texlive/2015/texmf-dist/tex/latex/base/ts1cmr.fd
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 69.
@@ -1348,89 +1344,11 @@ LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <14.4> not available
 
 [5
 
-]
-<./figs/Fig-1-Network-Validation-Simulations.pdf, id=26, 538.01pt x 587.19376pt
->
-File: ./figs/Fig-1-Network-Validation-Simulations.pdf Graphic file (type pdf)
- <use ./figs/Fig-1-Network-Validation-Simulations.pdf>
-Package pdftex.def Info: ./figs/Fig-1-Network-Validation-Simulations.pdf used o
-n input line 173.
-(pdftex.def)             Requested size: 469.75539pt x 512.70018pt.
-LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <10> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 174.
- [6]
+] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15] [16] [17] [18
 
-LaTeX Warning: Text page 7 contains only floats.
-
-[7 <./figs/Fig-1-Network-Validation-Simulations.pdf>]
-<./figs/Fig-2-Performance.pdf, id=69, 1004.75375pt x 977.6525pt>
-File: ./figs/Fig-2-Performance.pdf Graphic file (type pdf)
-
-<use ./figs/Fig-2-Performance.pdf>
-Package pdftex.def Info: ./figs/Fig-2-Performance.pdf used on input line 207.
-(pdftex.def)             Requested size: 469.75539pt x 457.08006pt.
- [8] [9] [10] [11]
-<./figs/Fig-3-Sensitivity-Analysis.pdf, id=84, 1007.765pt x 422.57875pt>
-File: ./figs/Fig-3-Sensitivity-Analysis.pdf Graphic file (type pdf)
-
-<use ./figs/Fig-3-Sensitivity-Analysis.pdf>
-Package pdftex.def Info: ./figs/Fig-3-Sensitivity-Analysis.pdf used on input li
-ne 345.
-(pdftex.def)             Requested size: 469.75539pt x 196.98068pt.
- [12] [13]
-<./figs/Fig-4-OxyPhox-versus-Carbon-Yield.pdf, id=92, 509.905pt x 393.47pt>
-File: ./figs/Fig-4-OxyPhox-versus-Carbon-Yield.pdf Graphic file (type pdf)
-
-<use ./figs/Fig-4-OxyPhox-versus-Carbon-Yield.pdf>
-Package pdftex.def Info: ./figs/Fig-4-OxyPhox-versus-Carbon-Yield.pdf used on i
-nput line 380.
-(pdftex.def)             Requested size: 328.82733pt x 253.75317pt.
-
-<./figs/Fig-5-FluxDistribition-Optimal.pdf, id=93, 790.955pt x 572.1375pt>
-File: ./figs/Fig-5-FluxDistribition-Optimal.pdf Graphic file (type pdf)
-
-<use ./figs/Fig-5-FluxDistribition-Optimal.pdf>
-Package pdftex.def Info: ./figs/Fig-5-FluxDistribition-Optimal.pdf used on inpu
-t line 389.
-(pdftex.def)             Requested size: 469.75539pt x 339.80183pt.
-
-<./figs/Fig-6-FluxDistribition-Experimental.pdf, id=94, 680.5425pt x 519.9425pt
->
-File: ./figs/Fig-6-FluxDistribition-Experimental.pdf Graphic file (type pdf)
- <use ./figs/Fig-6-FluxDistribition-Experimental.pdf>
-Package pdftex.def Info: ./figs/Fig-6-FluxDistribition-Experimental.pdf used on
- input line 423.
-(pdftex.def)             Requested size: 469.75539pt x 358.90352pt.
- [14]
-<./figs/Fig-7-FluxDistribution-Analysis.pdf, id=98, 794.97pt x 385.44pt>
-File: ./figs/Fig-7-FluxDistribution-Analysis.pdf Graphic file (type pdf)
-
-<use ./figs/Fig-7-FluxDistribution-Analysis.pdf>
-Package pdftex.def Info: ./figs/Fig-7-FluxDistribution-Analysis.pdf used on inp
-ut line 448.
-(pdftex.def)             Requested size: 469.75539pt x 227.76639pt.
- [15] [16] [17] [18 <./figs/Fig-2-Performance.pdf>] [19 <./figs/Fig-3-Sensitivi
-ty-Analysis.pdf> <./figs/Fig-4-OxyPhox-versus-Carbon-Yield.pdf>] [20 <./figs/Fi
-g-5-FluxDistribition-Optimal.pdf>] [21 <./figs/Fig-6-FluxDistribition-Experimen
-tal.pdf>] [22 <./figs/Fig-7-FluxDistribution-Analysis.pdf>] [23
-
-] [24]
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!htbp') on input line 516.
-
-[25] [26] [27]
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!htbp') on input line 638.
-
-
-Overfull \hbox (13.81667pt too wide) in paragraph at lines 642--672
- [][] 
- []
-
-[28]
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 683.
+] [19] [20]
+[21]
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 576.
 
  (/usr/local/texlive/2015/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -1439,52 +1357,126 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Try loading font information for TS1+ppl on input line 706.
+ [22]
+LaTeX Font Info:    Try loading font information for TS1+ppl on input line 598.
 
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/ts1ppl.fd
 File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
-) [29
+) [23] [24]
+[25]
+LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <10> not available
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 658.
+ [26
 
-] [30]
-[31] [32] (./Paper_v1.bbl [33
+]
+Overfull \hbox (13.81667pt too wide) in paragraph at lines 680--710
+ [][] 
+ []
 
-] [34] [35] [36]) [37] (./Paper_v1.aux)
+[27
 
-LaTeX Warning: There were multiply-defined labels.
+]
+<./figs/Fig-1-Network-Validation-Simulations.pdf, id=103, 538.01pt x 587.19376p
+t>
+File: ./figs/Fig-1-Network-Validation-Simulations.pdf Graphic file (type pdf)
+ <use ./figs/Fig-1-Network-Validation-Simulations.pdf>
+Package pdftex.def Info: ./figs/Fig-1-Network-Validation-Simulations.pdf used o
+n input line 716.
+(pdftex.def)             Requested size: 469.75539pt x 512.70018pt.
 
- ) 
+
+LaTeX Warning: Text page 28 contains only floats.
+
+[28
+
+ <./figs/Fig-1-Network-Validation-Simulations.pdf>]
+<./figs/Fig-2-Performance.pdf, id=142, 1004.75375pt x 977.6525pt>
+File: ./figs/Fig-2-Performance.pdf Graphic file (type pdf)
+
+<use ./figs/Fig-2-Performance.pdf>
+Package pdftex.def Info: ./figs/Fig-2-Performance.pdf used on input line 725.
+(pdftex.def)             Requested size: 469.75539pt x 457.08006pt.
+ [29 <./figs/Fig-2-Performance.pdf>]
+<./figs/Fig-5-FluxDistribition-Optimal.pdf, id=332, 790.955pt x 572.1375pt>
+File: ./figs/Fig-5-FluxDistribition-Optimal.pdf Graphic file (type pdf)
+
+<use ./figs/Fig-5-FluxDistribition-Optimal.pdf>
+Package pdftex.def Info: ./figs/Fig-5-FluxDistribition-Optimal.pdf used on inpu
+t line 747.
+(pdftex.def)             Requested size: 469.75539pt x 339.80183pt.
+ [30 <./figs/Fig-5-FluxDistribition-Optimal.pdf>]
+<./figs/Fig-4-OxyPhox-versus-Carbon-Yield.pdf, id=376, 509.905pt x 393.47pt>
+File: ./figs/Fig-4-OxyPhox-versus-Carbon-Yield.pdf Graphic file (type pdf)
+
+<use ./figs/Fig-4-OxyPhox-versus-Carbon-Yield.pdf>
+Package pdftex.def Info: ./figs/Fig-4-OxyPhox-versus-Carbon-Yield.pdf used on i
+nput line 755.
+(pdftex.def)             Requested size: 328.82733pt x 253.75317pt.
+ [31 <./figs/Fig-4-OxyPhox-versus-Carbon-Yield.pdf>]
+<./figs/Fig-3-Sensitivity-Analysis.pdf, id=399, 1007.765pt x 422.57875pt>
+File: ./figs/Fig-3-Sensitivity-Analysis.pdf Graphic file (type pdf)
+
+<use ./figs/Fig-3-Sensitivity-Analysis.pdf>
+Package pdftex.def Info: ./figs/Fig-3-Sensitivity-Analysis.pdf used on input li
+ne 763.
+(pdftex.def)             Requested size: 469.75539pt x 196.98068pt.
+ [32 <./figs/Fig-3-Sensitivity-Analysis.pdf>]
+<./figs/Fig-6-FluxDistribition-Experimental.pdf, id=432, 680.5425pt x 519.9425p
+t>
+File: ./figs/Fig-6-FluxDistribition-Experimental.pdf Graphic file (type pdf)
+ <use ./figs/Fig-6-FluxDistribition-Experimental.pdf>
+Package pdftex.def Info: ./figs/Fig-6-FluxDistribition-Experimental.pdf used on
+ input line 775.
+(pdftex.def)             Requested size: 469.75539pt x 358.90352pt.
+ [33 <./figs/Fig-6-FluxDistribition-Experimental.pdf>]
+<./figs/Fig-7-FluxDistribution-Analysis.pdf, id=469, 794.97pt x 385.44pt>
+File: ./figs/Fig-7-FluxDistribution-Analysis.pdf Graphic file (type pdf)
+
+<use ./figs/Fig-7-FluxDistribution-Analysis.pdf>
+Package pdftex.def Info: ./figs/Fig-7-FluxDistribution-Analysis.pdf used on inp
+ut line 786.
+(pdftex.def)             Requested size: 469.75539pt x 227.76639pt.
+ [34 <./figs/Fig-7-FluxDistribution-Analysis.pdf>] (./Paper_v1.bbl [35
+
+
+
+
+
+
+
+] [36] [37] [38]) [39] (./Paper_v1.aux) ) 
 Here is how much of TeX's memory you used:
- 18406 strings out of 493089
- 329188 string characters out of 6134842
- 419096 words of memory out of 5000000
- 21230 multiletter control sequences out of 15000+600000
- 99170 words of font info for 376 fonts, out of 8000000 for 9000
+ 18418 strings out of 493089
+ 329374 string characters out of 6134842
+ 417178 words of memory out of 5000000
+ 21237 multiletter control sequences out of 15000+600000
+ 102107 words of font info for 384 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,16n,94p,10408b,493s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/
-texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2015/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2015/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2015/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2015/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2015/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2015/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/texmf-dist/f
-onts/type1/public/mathpazo/fplmbi.pfb></usr/local/texlive/2015/texmf-dist/fonts
-/type1/public/mathpazo/fplmr.pfb></usr/local/texlive/2015/texmf-dist/fonts/type
-1/public/mathpazo/fplmri.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/pu
-blic/lm/lmss10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lm
-ss12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmssbo10.pfb
-></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb></usr/l
-ocal/texlive/2015/texmf-dist/fonts/type1/public/lm/lmtt12.pfb></usr/local/texli
-ve/2015/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2015
-/texmf-dist/fonts/type1/urw/palatino/uplbi8a.pfb></usr/local/texlive/2015/texmf
--dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2015/texmf-dist/f
-onts/type1/urw/palatino/uplri8a.pfb>
-Output written on Paper_v1.pdf (37 pages, 1286397 bytes).
+ 60i,15n,94p,10408b,493s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2015/texmf-dist/fo
+nts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/
+base/8r.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmex10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mmi10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+mi7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr1
+0.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.p
+fb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pf
+b></usr/local/texlive/2015/texmf-dist/fonts/type1/public/mathpazo/fplmbi.pfb></
+usr/local/texlive/2015/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/l
+ocal/texlive/2015/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/local
+/texlive/2015/texmf-dist/fonts/type1/public/lm/lmss10.pfb></usr/local/texlive/2
+015/texmf-dist/fonts/type1/public/lm/lmss12.pfb></usr/local/texlive/2015/texmf-
+dist/fonts/type1/public/lm/lmssbo10.pfb></usr/local/texlive/2015/texmf-dist/fon
+ts/type1/public/lm/lmssbx10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1
+/public/lm/lmtt12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/palat
+ino/uplb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/palatino/upl
+bi8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/palatino/uplr8a.pf
+b></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on Paper_v1.pdf (39 pages, 1289477 bytes).
 PDF statistics:
- 564 PDF objects out of 1000 (max. 8388607)
- 415 compressed objects within 5 object streams
+ 570 PDF objects out of 1000 (max. 8388607)
+ 419 compressed objects within 5 object streams
  0 named destinations out of 1000 (max. 500000)
- 57892 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 59428 words of extra memory for PDF output out of 61914 (max. 10000000)
 

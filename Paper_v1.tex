@@ -168,13 +168,6 @@ Together, these simulations suggested the description of transcription and trans
 However, these simulations were conducted at a single plasmid concentration of 5 nM.
 Thus, it was unclear if the model could capture cell-free protein synthesis for a range of plasmid concentrations.
 
-\begin{figure}[t!]
-\centering
-\includegraphics[width=1.00\textwidth]{./figs/Fig-1-Network-Validation-Simulations.pdf}
-\caption{Sequence specific flux balance analysis. A. Core metabolic network with glycolysis, pentose phoshate pathway, TCA cycle, Entner-Doudoroff pathway. Thick gray arrows indicate withdrawal of precursors for amino acid synthesis. B. CAT production under a T7 promoter in CFPS \textit{E.~coli} extract for 1 h under glucose consumption. Error bars denote the standard deviation of experimental measurements. C. deGFP production under a P70 promoter in TXTL 2.0 \textit{E.~coli} extract for 8 h under maltose consumption. Error bars denote a 10\% coefficient of variation. D. Predicted deGFP concentration at different plasmid concentrations versus measurements of deGFP synthesized in TXTL 2.0. 95\% CI (blue region) over the ensemble of 100 sets, mean of the ensemble (black line), and experimental measurements (dots).}
-\label{fig:network}
-\end{figure}
-
 Cell-free simulations of the deGFP titer for a range of plasmid concentrations were consistent with experimental measurements (Fig.~\ref{fig:network}D).
 The cell-free deGFP titer at each plasmid concentration was calculated by multiplying the flux of deGFP synthesis by the active time of production, approximately 8 hours in TXTL 2.0 \cite{Garamella:2016aa}.
 The mean of the ensemble (calculated by sampling the uncertainty in the model parameters) captured the saturation of deGFP production as a function of plasmid concentration  (R\textsuperscript{2} = 0.97).
@@ -202,26 +195,6 @@ An additional case was considered for CAT, where central metabolic fluxes were c
 Using these model proteins, we developed effective correlation models that predicted the productivity, energy efficiency and carbon yield given the carbon number of the model protein.
 Finally, we independently validated the effective correlations with a protein not in our original data set, maltose binding protein (MBP).
 
-\begin{figure}[t!]
-\centering
-\includegraphics[width=1.00\textwidth]{./figs/Fig-2-Performance.pdf}
-%\includegraphics[width=1.00\textwidth]{./figs/Fig-2-Performance-Predicted.pdf}
-\caption{The CFPS performance for eight model proteins with and without amino acid supplementation.
-A. Mean CFPS productivity for a panel of model proteins with and without amino acid supplementation.
-B. Mean CFPS productivity versus carbon number for a panel of model proteins with and without amino acid supplementation.
-Trendline (black dotted line) was calculated across all cases for a P70a promoter (R\textsuperscript{2} = 0.99) and maximum productivity trendline assumed $u\left(\kappa\right)$ = 1 (grey dotted line; R\textsuperscript{2} = 0.99).
-C. Mean CFPS energy efficiency for a panel of model proteins with and without amino acid supplementation.
-D. Mean CFPS energy efficiency versus carbon number for a panel of model proteins with and without amino acid supplementation.
-Trendline for cases with amino acids (black dotted line) and trendline for without amino acids (grey dotted line; R\textsuperscript{2} = 0.65).
-E. Mean CFPS carbon yield for a panel of model proteins with and without amino acid supplementation.
-F. Mean CFPS carbon yield versus carbon number.
-Trendline for cases with amino acids (black dotted line; R\textsuperscript{2} = 0.95) and trendline for without amino acids (grey dotted line; R\textsuperscript{2} = 0.90).
-Error bars: 95\% CI calculated by sampling;
-asterisk: protein excluded from trendline;
-dagger: constrained by experimental measurements and excluded from trendline;
-triangles: first principle prediction and excluded from formulating trendline.}
-\label{fig:Prof}
-\end{figure}
 
 %Amino acid uptake and synthesis (black), AA uptake without synthesis (dark grey), AA synthesis without uptake (light grey), and constrained by experimental measurements, for CAT only (white).
 
@@ -270,9 +243,22 @@ Surprisingly, without amino acid supplementation, proteins with a higher carbon 
 however, this linear trend was mostly independent of protein size (R\textsuperscript{2} = 0.65).
 MBP showed good agreement with the linear efficiency model with and without amino acid supplementation.
 The estimated MBP energy efficiency had a maximum error of 5\% without supplementation, and an error of 1\% - 3\% in the presence of amino acid.
-The experimentally constrained case of CAT production showed even a lower energy efficiency of 13.3 $\pm$ 4.7\% compared to the theoretical maximum of 84.2 $\pm$ 0.1\%.
-This suggested CFPS was not energy optimized and could be improved: first, the experimental measurements showed accumulation of certain amino acids; second,
-there was significant accumulation of organic acids, suggesting inefficient energy utilization.
+
+Experimentally constrained CAT simulations showed suboptimal energy efficiency (Fig.~\ref{fig:Prof}D, dagger).
+CAT production was simulated using the constraint based model in combination with experimental measurements of glucose consumption, organic and amino acid consumption and production rates (Fig. ~\ref{fig:network}B).
+The experimentally constrained energy efficiency was 13.3 $\pm$ 5.0\% compared to the theoretical maximum of approximately 84 $\pm$ 0.1\%, however, the
+CAT productivity was similar between the simulated and measured systems.
+This suggested CFPS was not energy optimized.
+There were two factors responsible for the difference between the optimal and experimental system,
+the glucose consumption rate and the ATP yield per glucose.
+The glucose consumption rate was approximately 30 mM/h in the experimental system (even in the presence of amino acids).
+However, the constraint based simulation suggested the optimal glucose consumption rate was significantly less than the observed rate, approximately 2 - 4 mM/h.
+In the constraint based simulation, the CFPS reaction produced only acetate as a by-product, but in the experimental system acetate, lactate, pyruvate, succinate and malate accumulated during the first hour of production.
+Thus, the constraint based simulation was more carbon efficient.
+Next, the energy produced per unit glucose was different between the optimal and experimental constrained system.
+In the optimal simulation, 12 ATPs were produced per glucose (the theoretical maximum for this network was 21),
+while the experimentally constrained simulation produced only 4 ATPs per glucose.
+[TODO JV: Think more about this].
 
 
 % With amino acid supplementation, there was a comparable energy efficiency, despite the network's ability to synthesis amino acids.
@@ -341,11 +327,6 @@ In addition, Li et al. increased the productivity of firefly luciferase producti
 In examining substrate utilization, glucose consumption was not important for productivity in the presence of amino acid supplementation.
 However, its importance increased significantly when amino acids were not available.
 On the other hand, amino acid consumption was only sensitive when amino acids synthesis reactions were blocked, as it was the only source of amino acids for CAT synthesis.
-\begin{figure}[t!]
-\includegraphics[width=1.00\textwidth]{./figs/Fig-3-Sensitivity-Analysis.pdf}
-\caption{Total order sensitivity of deGFP productivity (A) and energy efficiency (B) to specific uptake rates and transcription/translation parameters for three cases: amino acid uptake and synthesis (black), amino acid uptake without synthesis (dark grey), and amino acid synthesis without uptake (light gray). Error bars represent a 95\% CI on the sensitivity index.}
-\label{fig:SI}
-\end{figure}
 
 % The transcription/translation parameters had the same trend as for productivity, where the translation rate was the most sensitive compared to the other transcription/translation parameters and showed significance across all cases.
 
@@ -376,20 +357,9 @@ However, it is unclear why the additional phosphate increased the CAT yield, but
 Taken together, the number, size, protein loading and lifetime of these vesicles remains an open area of study.
 Thus, we expect CFPS will have suboptimal oxidative phosphorylation capacity and remains an important area to optimize for improved CFPS performance.
 
-\begin{figure}[t!]
-\includegraphics[width=0.7\textwidth]{./figs/Fig-4-OxyPhox-versus-Carbon-Yield.pdf}
-\caption{The deGFP carbon yield versus oxidative phosphorylation flux, across an ensemble of 1000 flux balance solutions, for amino acid uptake and synthesis (black), amino acid uptake without synthesis (dark grey), and amino acid synthesis without uptake (light gray).}
-\label{fig:oxphos_yield}
-\end{figure}
-
 \subsection{Optimal Metabolic Flux Distribution}
 Amino acid supplementation altered the optimal metabolic flux distribution predicted for CAT production (Fig.~\ref{fig:flux}).
 To investigate the influence of amino acid supplementation, we compared the simulated metabolic flux distributions for CAT production with and without external amino acids.
-\begin{figure}[t!]
-\includegraphics[width=1.00\textwidth]{./figs/Fig-5-FluxDistribition-Optimal.pdf}
-\caption{Flux profile for glycolysis, pentose phosphate pathway, Entner-Doudoroff pathway, TCA cycle, and oxidative phosphorylation, for three different cases: (A) amino acid uptake and synthesis, (B) amino acid uptake without synthesis, and (C) amino acid synthesis without uptake. Mean flux across the ensemble, normalized to glucose uptake flux. Thick arrows indicate flux to or from amino acids.}
-\label{fig:flux}
-\end{figure}
 In the presence of amino acid supplementation, and \textit{de~novo} amino acid synthesis, there was an incomplete TCA cycle, where a combination
 of glucose and amino acids powered protein expression (Fig.~\ref{fig:flux}A).
 Glucose was consumed to produce acetyl-coenzyme A, and associated by-products,
@@ -419,11 +389,6 @@ During the cell-free reaction all amino acids were supplied, however glucose sti
 In this case, it is unclear which substrate (glucose or amino acids) is used to power CFPS and may in fact be a combination of both.
 The optimum solutions only produced the required amount of amino acids necessary, however in examining the measurements there is an accumulation of alanine and glutamine which may explain some of the differences in the correlations of the flux distributions.
 Accumulation of pyruvate, lactate, acetate, and other organic acids can be seen (Fig.~\ref{fig:flux_exp}B) and is an inefficiency of carbon utilization.
-\begin{figure}[t!]
-\includegraphics[width=1.00\textwidth]{./figs/Fig-6-FluxDistribition-Experimental.pdf}
-\caption{Constraint based simulation of CAT production for an experimentally constrained case. (A) Flux profile for glycolysis, pentose phosphate pathway, Entner-Doudoroff pathway, TCA cycle, and oxidative phosphorylation.  Mean flux across the ensemble, normalized to glucose uptake flux. Thick arrows indicate flux to or from amino acids. (B) Central carbon metabolite measurements versus simulations over a one hour time course.}
-\label{fig:flux_exp}
-\end{figure}
 
 
 \subsubsection{Potential Alternative Metabolic Optima}
@@ -444,11 +409,7 @@ For example, thermodynamic feasibility constraints may result in a better depict
 and $^{13}$C labeling in CFPS could provide significant insight.
 However, while $^{13}$C labeling techniques are well established for \emph{in~vivo} processes \cite{Zamboni:2009},
 application of these techniques to CFPS remains an active area of research.
-\begin{figure}[t!]
-\includegraphics[width=1.0\textwidth]{./figs/Fig-7-FluxDistribution-Analysis.pdf}
-\caption{The norm effect of pairwise knockouts of subgroups in the cell-free network (A) CAT productivity norm compared to no knockouts in the experimentally constrained case. (B) Flux distribution norm compared to no knockouts in the experimentally constrained case.}
-\label{fig:norm}
-\end{figure}
+
 
 % Despite the constraints by experimental measurements, it is difficult to calculate the physiological flux distribution of metabolism (Fig.~\ref{fig:norm})
 % For example, there is a high flux through the Entner-Douodoroff pathway, but this may be an artifact of the optimal solution.
@@ -512,33 +473,7 @@ The sequence-specific flux balance analysis problem was formulated as a linear p
 \end{equation}
 where $\mathbf{S}$ denotes the stoichiometric matrix, $\mathbf{w}$ denotes the unknown flux vector, $\boldsymbol{\theta}$ denotes the objective cost vector
 and $\mathcal{L}_{i}$ and $\mathcal{U}_{i}$ denote the lower and upper bounds on flux $w_{i}$, respectively.
-The transcription (T) and translation (X) stoichiometry was modeled based upon the template reactions of Allen and Palsson \cite{Allen:2003aa}:
-\begin{table}[!]
-\centering
-    \caption{Transcription and translation template reactions for protein production.}
-    \renewcommand{\arraystretch}{1.2}
-    \resizebox{\textwidth}{!}{\begin{tabular}{llcl} \toprule
-        \textbf{Description} & \multicolumn{3}{l}{\textbf{Template reaction}} \\ \toprule
-        Transcription initiation & $G_\mathcal{P}+R_{T}$ & $\longrightarrow$& $G_{\mathcal{P}}^{*}$ \\
-        Transcription ($w_{T}$) & $G_{\mathcal{P}}^{*}+\quad\displaystyle\sum_{\mathclap{k\in\left\{A,C,G,U\right\}}}\eta_{k}\cdot \left(\left\{k\right\}TP + H_{2}O\right)$ & $\longrightarrow$& $mRNA+G_{\mathcal{P}}+R_{T}+\displaystyle\sum_{\mathclap{k\in\left\{A,C,G,U\right\}}} \eta_{k} \cdot PPi$ \\
-        mRNA degradation &  $mRNA$ &$\longrightarrow$& \quad $\displaystyle\sum_{\mathclap{k\in\left\{A,C,G,U\right\}}}\eta_{k}\cdot \left\{k\right\}MP$ \\
-	Translation initiation & $mRNA+R_{X}$ &$\longrightarrow$& $R_{X}^{*}$ \\
-        tRNA charging & $\alpha_{j}\cdot \Big(AA_{j}+tRNA+ATP+H_{2}O\Big)$ &$\longrightarrow$& $\alpha_{j}\cdot \Big(AA_{j}\text{-}tRNA_{j} +AMP+PPi\Big)$ \\
- 	&&& $\qquad \qquad \qquad \qquad \quad  {j=1,2,\hdots,20}$\\
-        Translation ($w_{X}$) &  $R_{X}^{*}+\displaystyle\sum_{\mathclap{j\in\left\{AA\right\}}}\alpha_{j}\cdot \Big(AA_{j}\text{-} tRNA_{j}+2GTP+2H_{2}O\Big)$ &$\longrightarrow$& $\mathcal{P}+R_{X}+mRNA$\\
-&&& $\quad +\displaystyle\sum_{\mathclap{j\in\left\{AA\right\}}}\alpha_{j}\cdot\Big(tRNA+2GDP+2Pi\Big)$ \\ \bottomrule
-    \end{tabular}}
-\label{tbl:parameters}
-\end{table}
-where $G_{\mathcal{P}}$ denotes the gene encoding protein product $\mathcal{P}$,
-$R_{T}$ denotes the concentration of RNA polymerase,
-$G_{\mathcal{P}}^{*}$ denotes the gene bounded by the RNA polymerase (open complex),
-$\eta_{i}$ and $ \alpha_{j}$ denote the stoichiometric coefficients for nucleotide and amino acid, respectively,
-$Pi$ denotes inorganic phosphate,
-$R_{X}$ denotes the ribosome concentration,
-$R_{X}^{*}$ denotes bound ribosome,
-and $AA_{j}$ denotes $j^{th}$ amino acid.
-
+The transcription (T) and translation (X) stoichiometry was modeled based upon the template reactions of Allen and Palsson \cite{Allen:2003aa} (Table \ref{tbl:template-reactions}).
 The objective of the sequence specific flux balance calculation was to maximize the rate of protein translation, $w_{X}$.
 The total glucose uptake rate was bounded by [0,40 mM/h] according to experimental data, while the amino acid uptake rates were bounded by [0,30 mM/h], but did not reach the maximum flux.
 Gene and protein sequences were taken from literature and are available in the Supporting Information.
@@ -635,54 +570,11 @@ The steady-state mRNA abundance $\rm mRNA^{*}$ was estimated as:
 where $\lambda$ denotes the rate constant controlling the mRNA degradation rate (hr$^{-1}$).
 All translation parameters are given in Table \ref{tbl:parameters}.
 
-\begin{table}[!]
-\centering
-    \caption{Parameters for sequence specific flux balance analysis}
-    \renewcommand{\arraystretch}{1}
-    \begin{tabular}{lcccc} \toprule
-        \textbf{Description} & \textbf{Parameter} & \textbf{Value} & \textbf{Units} & \textbf{Reference} \\ \toprule
-        RNA polymerase concentration & $R_{T}$ & 75 & nM & \cite{Garamella:2016aa} \\
-        Ribosome concentration & $R_{X}$ & 1.6 & $\mu$M & \cite{Garamella:2016aa, 2005_underwood_biotech} \\
-
-        & & & & \\
-        Transcription elongation rate & $\dot{v}_{T}$ & 25 & nt/sec & \cite{Garamella:2016aa} \\
-        Translation elongation rate & $\dot{v}_{X}$ & 2 & aa/sec & \cite{Garamella:2016aa, 2005_underwood_biotech} \\
-        Transcription saturation coefficient & $K_{T}$ & 3.5 & nM & estimated \\
-        Translation saturation coefficient & $K_{X}$ & 45.0 & $\mu$M & estimated \\
-        Polysome amplification constant & $K_{P}$ & 10 & constant & estimated \\
-        mRNA degradation rate & $\lambda$ & 5.2 & hr\textsuperscript{-1} & \cite{Garamella:2016aa} \\
-
-        & & & & \\
-        T7 promoter & $K_{T7}$ & 10 & constant & estimated \\
-        Weight RNA polymerase binding alone P70a & $K_{1}$ & 0.014 & constant & estimated \\
-        Weight bound RNAP-$\sigma_{70}$ P70a & $K_{2}$ & 10 & constant & estimated \\
-        $\sigma_{70}$ concentration & $\sigma_{70}$ & 35 & nM & \cite{Garamella:2016aa} \\
-        $\sigma_{70}$ dissociation constant & $K_{D}$ & 130 & nM & \cite{Mauri2014} \\
-	      $\sigma_{70}$ hill coefficient & n & 1 & constant & \cite{Mauri2014} \\
-        Gene concentration & $G_{\mathcal{P}}$ & 5 & nM &  \cite{Garamella:2016aa} \\ \bottomrule
-
-        % & & & & \\
-	      %
-        % Gene length of CAT & $l_{G}$ & 683 & nt & \cite{Kigawa1995} \\
-        % Gene length of deGFP & $l_{G}$ & 660 & nt & \cite{Garamella:2016aa} \\
-        % Protein length of CAT & $l_{P}$ & 229 & aa & \cite{Kigawa1995} \\
-        % Protein length of deGFP & $l_{P}$ & 219 & aa & \cite{Garamella:2016aa} \\
-    \end{tabular}
-\label{tbl:parameters}
-\end{table}
-
-\clearpage
-
 \subsection*{Calculation of energy efficiency.}
 Energy efficiency ($\mathcal{E}$) was calculated as the ratio of protein production to glucose consumption, written in terms of equivalent ATP molecules:
-%\begin{equation}\label{eqn:energy-efficiency-definition}
-%	\mathcal{E}\equiv\Bigl(\frac{\texttt{q}_{POI}}{\texttt{q}_{GLC}\cdot\texttt{ATP}_{GLC}}\Bigr)\cdot \Bigl(2\times\left(\rm {ATP}_{T}+\rm {CTP}_{T}+\rm {GTP}_{T}+\rm {UTP}_{T}\right)+\rm2\cdot\rm {ATP}_{X}+\rm {GTP}_{X}\Bigl)
-%\end{equation}
-
 \begin{equation}\label{eqn:energy-efficiency-definition}
 	\mathcal{E}\equiv\frac{w_{X}\left(2\cdot\rm {ATP}_{X}+\rm {GTP}_{X}\right)+w_{T}\left(2\times\left(\rm {ATP}_{T}+\rm {CTP}_{T}+\rm {GTP}_{T}+\rm {UTP}_{T}\right) \right)}{\texttt{q}_{GLC}\cdot\texttt{ATP}_{GLC}}
 \end{equation}
-
 where $\rm {ATP}_{T}$, $\rm {CTP}_{T}$, $\rm {GTP}_{T}$, $\rm {UTP}_{T}$ denote the stoichiometric coefficients of each energy species for the transcription of the protein of interest, $\rm {ATP}_{X}$, $\rm {GTP}_{X}$ denote the stoichiometric coefficients of ATP and GTP for the translation of the protein of interest, $\texttt{q}_{GLC}=w_{GLC}$ denotes the glucose uptake rate,
 and $\texttt{ATP}_{GLC}$ denotes the equivalent ATP number for glucose produced.
 The energy species stoichiometric coefficients are available in the Supporting Information.
@@ -753,6 +645,153 @@ The following files are available free of charge.
 %% Notice that the class file automatically sets \bibliographystyle
 %% and also names the section correctly.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{table}
+\centering
+    \caption{Transcription and translation template reactions for protein production. The symbol $G_{\mathcal{P}}$ denotes the gene encoding protein product $\mathcal{P}$,
+    $R_{T}$ denotes the concentration of RNA polymerase,
+    $G_{\mathcal{P}}^{*}$ denotes the gene bounded by the RNA polymerase (open complex),
+    $\eta_{i}$ and $ \alpha_{j}$ denote the stoichiometric coefficients for nucleotide and amino acid, respectively,
+    $Pi$ denotes inorganic phosphate,
+    $R_{X}$ denotes the ribosome concentration,
+    $R_{X}^{*}$ denotes bound ribosome,
+    and $AA_{j}$ denotes $j^{th}$ amino acid.}
+    \renewcommand{\arraystretch}{1.2}
+    \resizebox{\textwidth}{!}{\begin{tabular}{llcl} \toprule
+        \textbf{Description} & \multicolumn{3}{l}{\textbf{Template reaction}} \\ \toprule
+        Transcription initiation & $G_\mathcal{P}+R_{T}$ & $\longrightarrow$& $G_{\mathcal{P}}^{*}$ \\
+        Transcription ($w_{T}$) & $G_{\mathcal{P}}^{*}+\quad\displaystyle\sum_{\mathclap{k\in\left\{A,C,G,U\right\}}}\eta_{k}\cdot \left(\left\{k\right\}TP + H_{2}O\right)$ & $\longrightarrow$& $mRNA+G_{\mathcal{P}}+R_{T}+\displaystyle\sum_{\mathclap{k\in\left\{A,C,G,U\right\}}} \eta_{k} \cdot PPi$ \\
+        mRNA degradation &  $mRNA$ &$\longrightarrow$& \quad $\displaystyle\sum_{\mathclap{k\in\left\{A,C,G,U\right\}}}\eta_{k}\cdot \left\{k\right\}MP$ \\
+	Translation initiation & $mRNA+R_{X}$ &$\longrightarrow$& $R_{X}^{*}$ \\
+        tRNA charging & $\alpha_{j}\cdot \Big(AA_{j}+tRNA+ATP+H_{2}O\Big)$ &$\longrightarrow$& $\alpha_{j}\cdot \Big(AA_{j}\text{-}tRNA_{j} +AMP+PPi\Big)$ \\
+ 	&&& $\qquad \qquad \qquad \qquad \quad  {j=1,2,\hdots,20}$\\
+        Translation ($w_{X}$) &  $R_{X}^{*}+\displaystyle\sum_{\mathclap{j\in\left\{AA\right\}}}\alpha_{j}\cdot \Big(AA_{j}\text{-} tRNA_{j}+2GTP+2H_{2}O\Big)$ &$\longrightarrow$& $\mathcal{P}+R_{X}+mRNA$\\
+&&& $\quad +\displaystyle\sum_{\mathclap{j\in\left\{AA\right\}}}\alpha_{j}\cdot\Big(tRNA+2GDP+2Pi\Big)$ \\ \bottomrule
+    \end{tabular}}
+\label{tbl:template-reactions}
+\end{table}
+
+\clearpage
+
+\begin{table}
+\centering
+    \caption{Parameters for sequence specific flux balance analysis}
+    \renewcommand{\arraystretch}{1}
+    \begin{tabular}{lcccc} \toprule
+        \textbf{Description} & \textbf{Parameter} & \textbf{Value} & \textbf{Units} & \textbf{Reference} \\ \toprule
+        RNA polymerase concentration & $R_{T}$ & 75 & nM & \cite{Garamella:2016aa} \\
+        Ribosome concentration & $R_{X}$ & 1.6 & $\mu$M & \cite{Garamella:2016aa, 2005_underwood_biotech} \\
+
+        & & & & \\
+        Transcription elongation rate & $\dot{v}_{T}$ & 25 & nt/sec & \cite{Garamella:2016aa} \\
+        Translation elongation rate & $\dot{v}_{X}$ & 2 & aa/sec & \cite{Garamella:2016aa, 2005_underwood_biotech} \\
+        Transcription saturation coefficient & $K_{T}$ & 3.5 & nM & estimated \\
+        Translation saturation coefficient & $K_{X}$ & 45.0 & $\mu$M & estimated \\
+        Polysome amplification constant & $K_{P}$ & 10 & constant & estimated \\
+        mRNA degradation rate & $\lambda$ & 5.2 & hr\textsuperscript{-1} & \cite{Garamella:2016aa} \\
+
+        & & & & \\
+        T7 promoter & $K_{T7}$ & 10 & constant & estimated \\
+        Weight RNA polymerase binding alone P70a & $K_{1}$ & 0.014 & constant & estimated \\
+        Weight bound RNAP-$\sigma_{70}$ P70a & $K_{2}$ & 10 & constant & estimated \\
+        $\sigma_{70}$ concentration & $\sigma_{70}$ & 35 & nM & \cite{Garamella:2016aa} \\
+        $\sigma_{70}$ dissociation constant & $K_{D}$ & 130 & nM & \cite{Mauri:2014aa} \\
+	      $\sigma_{70}$ hill coefficient & n & 1 & constant & \cite{Mauri:2014aa} \\
+        Gene concentration & $G_{\mathcal{P}}$ & 5 & nM &  \cite{Garamella:2016aa} \\ \bottomrule
+
+        % & & & & \\
+	      %
+        % Gene length of CAT & $l_{G}$ & 683 & nt & \cite{Kigawa1995} \\
+        % Gene length of deGFP & $l_{G}$ & 660 & nt & \cite{Garamella:2016aa} \\
+        % Protein length of CAT & $l_{P}$ & 229 & aa & \cite{Kigawa1995} \\
+        % Protein length of deGFP & $l_{P}$ & 219 & aa & \cite{Garamella:2016aa} \\
+    \end{tabular}
+\label{tbl:parameters}
+\end{table}
+
+\clearpage
+
+\begin{figure}[t!]
+\centering
+\includegraphics[width=1.00\textwidth]{./figs/Fig-1-Network-Validation-Simulations.pdf}
+\caption{Sequence specific flux balance analysis. A. Core metabolic network with glycolysis, pentose phoshate pathway, TCA cycle, Entner-Doudoroff pathway. Thick gray arrows indicate withdrawal of precursors for amino acid synthesis. B. CAT production under a T7 promoter in CFPS \textit{E.~coli} extract for 1 h under glucose consumption. Error bars denote the standard deviation of experimental measurements. C. deGFP production under a P70 promoter in TXTL 2.0 \textit{E.~coli} extract for 8 h under maltose consumption. Error bars denote a 10\% coefficient of variation. D. Predicted deGFP concentration at different plasmid concentrations versus measurements of deGFP synthesized in TXTL 2.0. 95\% CI (blue region) over the ensemble of 100 sets, mean of the ensemble (black line), and experimental measurements (dots).}
+\label{fig:network}
+\end{figure}
+
+\clearpage
+
+\begin{figure}[t!]
+\centering
+\includegraphics[width=1.00\textwidth]{./figs/Fig-2-Performance.pdf}
+%\includegraphics[width=1.00\textwidth]{./figs/Fig-2-Performance-Predicted.pdf}
+\caption{The CFPS performance for eight model proteins with and without amino acid supplementation.
+A. Mean CFPS productivity for a panel of model proteins with and without amino acid supplementation.
+B. Mean CFPS productivity versus carbon number for a panel of model proteins with and without amino acid supplementation.
+Trendline (black dotted line) was calculated across all cases for a P70a promoter (R\textsuperscript{2} = 0.99) and maximum productivity trendline assumed $u\left(\kappa\right)$ = 1 (grey dotted line; R\textsuperscript{2} = 0.99).
+C. Mean CFPS energy efficiency for a panel of model proteins with and without amino acid supplementation.
+D. Mean CFPS energy efficiency versus carbon number for a panel of model proteins with and without amino acid supplementation.
+Trendline for cases with amino acids (black dotted line) and trendline for without amino acids (grey dotted line; R\textsuperscript{2} = 0.65).
+E. Mean CFPS carbon yield for a panel of model proteins with and without amino acid supplementation.
+F. Mean CFPS carbon yield versus carbon number.
+Trendline for cases with amino acids (black dotted line; R\textsuperscript{2} = 0.95) and trendline for without amino acids (grey dotted line; R\textsuperscript{2} = 0.90).
+Error bars: 95\% CI calculated by sampling;
+asterisk: protein excluded from trendline;
+dagger: constrained by experimental measurements and excluded from trendline;
+triangles: first principle prediction and excluded from formulating trendline.}
+\label{fig:Prof}
+\end{figure}
+
+\clearpage
+
+\begin{figure}[t!]
+\includegraphics[width=1.00\textwidth]{./figs/Fig-5-FluxDistribition-Optimal.pdf}
+\caption{Flux profile for glycolysis, pentose phosphate pathway, Entner-Doudoroff pathway, TCA cycle, and oxidative phosphorylation, for three different cases: (A) amino acid uptake and synthesis, (B) amino acid uptake without synthesis, and (C) amino acid synthesis without uptake. Mean flux across the ensemble, normalized to glucose uptake flux. Thick arrows indicate flux to or from amino acids.}
+\label{fig:flux}
+\end{figure}
+
+\clearpage
+
+\begin{figure}[t!]
+\includegraphics[width=0.7\textwidth]{./figs/Fig-4-OxyPhox-versus-Carbon-Yield.pdf}
+\caption{The deGFP carbon yield versus oxidative phosphorylation flux, across an ensemble of 1000 flux balance solutions, for amino acid uptake and synthesis (black), amino acid uptake without synthesis (dark grey), and amino acid synthesis without uptake (light gray).}
+\label{fig:oxphos_yield}
+\end{figure}
+
+\clearpage
+
+\begin{figure}[t!]
+\includegraphics[width=1.00\textwidth]{./figs/Fig-3-Sensitivity-Analysis.pdf}
+\caption{Total order sensitivity analysis of CFPS.
+A. Total order sensitivity of the optimal CAT productivity with respect to metabolic and transcription/translation parameters.
+B. Total order sensitivity of the optimal CAT energy efficiency.
+Metabolic and transcription/translation parameters were varied for amino acid supplementation and synthesis (black), amino acid supplementation without synthesis (dark grey) and amino acid synthesis without supplementation (light gray).
+Error bars represent a 95\% CI on the total-oder sensitivity index.}
+\label{fig:SI}
+\end{figure}
+
+\clearpage
+
+\begin{figure}[t!]
+\includegraphics[width=1.00\textwidth]{./figs/Fig-6-FluxDistribition-Experimental.pdf}
+\caption{Constraint based simulation of CAT production for an experimentally constrained case.
+(A) Flux profile for glycolysis, pentose phosphate pathway, Entner-Doudoroff pathway, TCA cycle, and oxidative phosphorylation.
+Mean flux across the ensemble, normalized to glucose uptake flux. Thick arrows indicate flux to or from amino acids.
+(B) Central carbon metabolite measurements versus simulations over a one hour time course.}
+\label{fig:flux_exp}
+\end{figure}
+
+\clearpage
+
+\begin{figure}[t!]
+\includegraphics[width=1.0\textwidth]{./figs/Fig-7-FluxDistribution-Analysis.pdf}
+\caption{The norm effect of pairwise knockouts of subgroups in the cell-free network.
+(A) CAT productivity norm compared to no knockouts in the experimentally constrained case.
+(B) Flux distribution norm compared to no knockouts in the experimentally constrained case.}
+\label{fig:norm}
+\end{figure}
+
+\clearpage
+
 \bibliography{References_v1}
 
 \end{document}

@@ -369,13 +369,6 @@ Kim,~D.-M., and Swartz,~J.~R. (2001) Regeneration of adenosine triphosphate
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
-\bibitem[Mauri and Klumpp(2014)Mauri, and Klumpp]{Mauri2014}
-Mauri,~M., and Klumpp,~S. (2014) A Model for Sigma Factor Competition in
-  Bacterial Cells. \emph{PLOS Computational Biology} \emph{10}, 1--16\relax
-\mciteBstWouldAddEndPuncttrue
-\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
-{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
-\EndOfBibitem
 \bibitem[Sobol(2001)]{SOBOL_METHOD}
 Sobol,~I. (2001) Global sensitivity indices for nonlinear mathematical models
   and their Monte Carlo estimates. \emph{Mathematics and Computers in
@@ -396,6 +389,13 @@ Saltelli,~A., Annoni,~P., Azzini,~I., Campolongo,~F., Ratto,~M., and
 \EndOfBibitem
 \bibitem[Herman()]{SALIB}
 Herman,~J.~D. http://jdherman.github.io/SALib/\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Mauri and Klumpp(2014)Mauri, and Klumpp]{Mauri:2014aa}
+Mauri,~M., and Klumpp,~S. (2014) A model for sigma factor competition in
+  bacterial cells. \emph{PLoS Comput Biol} \emph{10}, e1003845\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
