@@ -299,12 +299,20 @@ In the absence of amino acids, glucose consumption increased, with the change in
 largely accounted for by increased CO\textsubscript{2} production with supplementation.
 
 The carbon yield for experimentally constrained CAT production was 6.2\% compared to the theoretical maximum of 58\% (Fig.~\ref{fig:Prof}F, dagger).
-This decrease in carbon yield suggests inefficiencies in CFPS that can potentially be improved.
-Constraint based calculations assume a metabolic pseudo steady state; thus, intermediate metabolites cannot accumulate within the cell-free extract.
-In addition, the flux balance analysis calculation is solved by maximizing the flux through the protein production reaction.
-Therefore, carbon flux will travel through the network to optimize the maximum flux through the protein synthesis reaction.
-In examining the experimental dataset, there is a high accumulation of organic acids, especially acetate, pyruvate and lactate.
-The experimental performance could be improved by diverting this carbon toward the protein of interest by knockouts during the cell-free extract preparation.
+Given that the CAT productivity was similar between the simulated and measured systems, differences in
+the glucose consumption rate and byproduct accumulation were likely responsible for the difference between the optimal and experimental systems.
+The translation rate has been identified as the rate-limiting step for cell-free protein synthesis \cite{2005_underwood_biotech,2014_li_PlosOne}, thus increased glucose consumption only hindered the carbon yield of CAT.
+The experimental system was not as energy efficient as the optimal system which resulted in the increased glucose consumption. 
+Since CAT productivity could not be improved, the increased carbon consumption accumulated in byproducts such as pyruvate, acetate, lactate, succinate and malate. 
+The accumulation of acetate and lactate also indicated that oxidative phosphorylation activity was limited.
+Thus to improve carbon yield for CFPS, energy efficiency should be improved to lower the glucose consumption rate, or the translation rate should be improved for increased protein productivity.  
+%%%%%%%%%%%%%%%%%%%%
+However, it may also be hypothesized that only the amino acids supplied contribute to the carbon yield of the protein of interest, while glucose is used to energize CFPS. 
+In this case, the carbon yield for the optimal and experimental systems was approximately 100\%.
+Therefore, the energy efficiency of CFPS is left to be improved. 
+%%%%%%%%%%%%%%%%%%%%%
+
+
 
 % \begin{figure}[t!]
 % \centering
@@ -320,20 +328,21 @@ The experimental performance could be improved by diverting this carbon toward t
 
 
 \subsection{Global sensitivity analysis}
-To better understand the effect of substrate utilization and the transcription/translation parameters on CFPS performance, we performed global sensitivity analysis on the productivity, energy efficiency and carbon yield for the CAT protein (Fig.~\ref{fig:SI} and Fig. XX?).
+To better understand the effect of substrate utilization and the transcription/translation parameters on CFPS performance, we performed global sensitivity analysis on the productivity, energy efficiency and carbon yield for the CAT protein (Fig.~\ref{fig:SI} and Fig. 1 in supporting information).
 Surprisingly, RNAP and ribosome abundance had only a modest effect;
 the translation elongation rate had the largest effect on protein productivity.
 On the other hand, oxygen followed by substrate consumption had the largest influence on the energy efficiency and carbon yield, respectively.
 The significance of transcription/translation parameters was robust to amino acid supplementation, with the translation rate being the most sensitive across all cases (Fig.~\ref{fig:SI}A).
 This suggested that the translation elongation rate, and not transcriptional parameters, controlled productivity.
-Underwood and coworkers showed that an increase in ribosome levels did not significantly increase protein yields or rates; however, adding elongation factors increased protein synthesis rates by 33\% and yields by 23\% at 30 minutes \cite{2005_underwood_biotech}.
-In addition, Li et al. increased the productivity of firefly luciferase production in PURE CFPS by 5-fold by adjusting factors that affect transcription and translation such as elongation factors, ribosome recycling factor, release factors, chaperones, BSA, and tRNAs \cite{2014_li_PlosOne}.
+Underwood and coworkers showed that an increase in ribosome levels did not significantly increase protein yields or rates; however, adding elongation factors increased protein synthesis rates by 27\% \cite{2005_underwood_biotech}.
+In addition, Li et al. increased the productivity by 5-fold of firefly luciferase in PURE CFPS by first improving the rate-limiting step, translation, followed by transcription by adjusting elongation factors, ribosome recycling factor, release factors, chaperones, BSA, and tRNAs \cite{2014_li_PlosOne}.
+%In addition, Li et al. increased the productivity of firefly luciferase production in PURE CFPS by 5-fold by adjusting factors that first affected translation and then transcription such as elongation factors, ribosome recycling factor, release factors, chaperones, BSA, and tRNAs \cite{2014_li_PlosOne}.
 In examining substrate utilization, glucose consumption was not important for productivity in the presence of amino acid supplementation.
 However, its importance increased significantly when amino acids were not available.
-On the other hand, amino acid consumption was only sensitive when amino acids synthesis reactions were blocked, as it was the only source of amino acids for CAT synthesis.The oxygen consumption rate was the most important factor controlling the energy efficiency of cell-free protein synthesis (Fig.~\ref{fig:SI}B).
+On the other hand, amino acid consumption was only sensitive when amino acids synthesis reactions were blocked, as it was the only source of amino acids for CAT synthesis. The oxygen consumption rate was the most important factor controlling the energy efficiency of cell-free protein synthesis (Fig.~\ref{fig:SI}B).
 In the model, we assumed that ATP could be produced by both substrate level and oxidative phosphorylation.
 Jewett and coworkers reported that oxidative phosphorylation still operated in cell-free systems, and that the protein
-yield decreased from 1.5-fold to 4-fold when oxidative phosphorylation reactions were inhibited in pyruvate-powered CFPS \cite{Jewett:2008aa}.
+titer decreased from 1.5-fold to 4-fold when oxidative phosphorylation reactions were inhibited in pyruvate-powered CFPS \cite{Jewett:2008aa}.
 However, it is unknown how active oxidative phosphorylation is for a glucose powered cell-free system.
 Moreover, the connection between oxidative phosphorylation activity and other performance metrics, such as the carbon yield, is also unclear.
 
@@ -341,7 +350,6 @@ Moreover, the connection between oxidative phosphorylation activity and other pe
 % In addition to the oxygen consumption, amino acid utilization was also sensitive.
 % On the other hand, glucose consumption was only sensitive in the absence of amino acid supplementation,
 % since glucose acted as the sole source of carbon and energy for protein synthesis.
-
 
 
 To investigate the connection between carbon yield and oxidative phosphorylation further,
@@ -388,13 +396,17 @@ To more accurately describe system performance, we constrained the feasible solu
 and estimated the optimal CAT flux distribution.
 
 The experimentally constrained optimal flux distribution had a 52\% similarity with the theoretically optimal flux distribution (Fig. \ref{fig:flux_exp}).
-Metabolic fluxes were constrained by experimental measurements of glucose, amino and organic acid consumption and production rates for the first hour of the reaction  (supporting information). The low similarity suggested several differences between the solutions which could be exploited to improve CFPS performance.
+Metabolic fluxes were constrained by experimental measurements of glucose, amino and organic acid consumption and production rates for the first hour of the reaction (supporting information). The low similarity suggested several differences between the solutions which could be exploited to improve CFPS performance.
+The largest discrepency was in oxidative phosphorylation reactions, where the experimental system relied heavily on \textit{cyd} rather than \textit{cyo} which was less efficient for energy generation.
+In addition, the \textit{pnt}1 reaction, which interconverts NADPH to NADH, was active in the experimental system and not in the optimal systems; this suggests CFPS may be limited by NADH.
+The next largest discrepency was in folate, purine and pyrimidine metabolism which were inactive in the optimum systems followed by amino acid biosynthesis. 
+The experimentally constrained system had a high flux for alanine and glutamine biosynthesis which accumulated in the media, whereas in the optimum cases there was no accumulation of amino acids. 
 The central carbon organic acids showed good agreement with the data with a coefficient of determination of R\textsuperscript{2}=0.92 (Fig.~\ref{fig:flux_exp}B).
 Only certain amino acid synthesis reactions were blocked, since during the growth of \emph{E.~coli} not all amino acids were supplied (see Materials and Methods).
 During the cell-free reaction all amino acids were supplied, however glucose still traveled through all the major pathways, and the same metabolic precursors were still utilized for amino acid biosynthesis.
 In this case, it is unclear which substrate (glucose or amino acids) is used to power CFPS and may in fact be a combination of both.
-The optimum solutions only produced the required amount of amino acids necessary, however in examining the measurements there is an accumulation of alanine and glutamine which may explain some of the differences in the correlations of the flux distributions.
-Accumulation of pyruvate, lactate, acetate, and other organic acids can be seen (Fig.~\ref{fig:flux_exp}B) and is an inefficiency of carbon utilization.
+The optimum solutions only produced the required amount of amino acids necessary; however, in examining the measurements there was an accumulation of alanine and glutamine which may explain some of the differences in the correlations of the flux distributions.
+Accumulation of pyruvate, lactate, acetate, and other organic acids can be seen (Fig.~\ref{fig:flux_exp}B) and may contribute to the inefficiency of carbon utilization.
 
 % in the flux distribution compared to the optimum solutions
 % The case constrained by experimental measurements  had the highest correlation of 0.66 with the flux distribution from the case supplied with no amino acids and a correlation of 0.52 with the cases supplied with amino acids.
@@ -584,7 +596,7 @@ Energy efficiency ($\mathcal{E}$) was calculated as the ratio of protein product
 	\mathcal{E}\equiv\frac{w_{X}\left(2\cdot\rm {ATP}_{X}+\rm {GTP}_{X}\right)+w_{T}\left(2\times\left(\rm {ATP}_{T}+\rm {CTP}_{T}+\rm {GTP}_{T}+\rm {UTP}_{T}\right) \right)}{\texttt{q}_{GLC}\cdot\texttt{ATP}_{GLC}}
 \end{equation}
 where $\rm {ATP}_{T}$, $\rm {CTP}_{T}$, $\rm {GTP}_{T}$, $\rm {UTP}_{T}$ denote the stoichiometric coefficients of each energy species for the transcription of the protein of interest, $\rm {ATP}_{X}$, $\rm {GTP}_{X}$ denote the stoichiometric coefficients of ATP and GTP for the translation of the protein of interest, $\texttt{q}_{GLC}=w_{GLC}$ denotes the glucose uptake rate,
-and $\texttt{ATP}_{GLC}$ denotes the equivalent ATP number for glucose produced.
+and $\texttt{ATP}_{GLC}$ denotes the equivalent ATP number produced per glucose.
 The energy species stoichiometric coefficients are available in the Supporting Information.
 
 \subsection*{Calculation of the carbon yield.}
