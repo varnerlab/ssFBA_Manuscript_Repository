@@ -257,7 +257,7 @@ In the optimal simulation, 12 ATPs were produced per glucose (the theoretical ma
 while the experimentally constrained simulation produced only 4 ATPs per glucose.
 Thus, approximately 120 - 160 mM ATP/hr was produced in the experimental system, in contrast to 12 - 84 mM ATP/hr for the optimal simulations.
 We know from measurements that ATP did not accumulate in the experimental system, rather it was consumed by a variety of pathways that were not active
-in the optimal simulation. This suggested that CFPS retained a growth like operational memory that led to over consumption of glucose, and the over production of ATP.  
+in the optimal simulation. This suggested that CFPS retained a growth like operational memory that led to over consumption of glucose, and the over production of ATP.
 
 
 % With amino acid supplementation, there was a comparable energy efficiency, despite the network's ability to synthesis amino acids.
@@ -283,18 +283,22 @@ in the optimal simulation. This suggested that CFPS retained a growth like opera
 % W, the system relied on a mixture of glucose and some amino acids for each protein with a carbon yield of 58.2 $\pm$ 2.3\% for CAT.
 % Once amino acid synthesis reactions were blocked in the network (second case), the carbon yield dropped to 57.1 $\pm$ 2.2\% for CAT.
 
+% If only the necessary amount of amino acids were used for the production of the protein of interest; thus, it may be hypothesized that all the glucose was used to power CFPS and did not contribute to the carbon yield.
+% The carbon yield without the glucose contribution would be 100\%.
+
 \subsubsection{Carbon Yield}
 The theoretical maximum carbon yield was inversely proportional to protein length and varied between 40\% to 64\% for the proteins sampled (Fig.~\ref{fig:Prof}E-F).
 The relationship between the optimal carbon yield and carbon number was linear; $m_{Y}\times(C_{POI})+b_{Y}$ where $m_{Y} =  -8.03\times10^{-3}$ carbon yield (\%)/carbon number with supplementation, and $m_{Y} = -6.98\times10^{-3}$ carbon yield (\%)/carbon number  without supplementation.
 The y-intercept $b_{Y} = 63.83$ carbon yield (\%) with supplementation, and $b_{Y} = 58.86$ carbon yield (\%) without supplementation.
 The linear yield models showed good predictability for estimating the optimal carbon yield for a range of carbon numbers ($R^{2} = 0.95$ with amino acids
 and $R^{2} = 0.90$ without supplementation), irrespective of the promoter used to control protein expression.
-The MBP prediction also showed good agreement with the constraint based model, with an error between 3\% to 4\% with and without amino acid supplementation.
+The MBP prediction also showed good agreement with the constraint based model, with a prediction error between 3\% to 4\% with and without amino acid supplementation.
 The effective yield models were approximately parallel, with a drop in carbon yield of approximately 7\% without amino acids.
-In the absence of amino acids, glucose consumption increased, with the change in the carbon yield being largely accounted for by increased CO\textsubscript{2} production.
-If only the necessary amount of amino acids were used for the production of the protein of interest; thus, it may be hypothesized that all the glucose was used to power CFPS and did not contribute to the carbon yield.
-The carbon yield without the glucose contribution would be 100\%.
-However, in the experimentally constrained case, CAT was produced with a carbon yield of 6.2\% compared to the theoretical maximum of 58\%.
+The difference between the cases was associated with glucose consumption.
+In the absence of amino acids, glucose consumption increased, with the change in the carbon yield being
+largely accounted for by increased CO\textsubscript{2} production with supplementation.
+
+The carbon yield for experimentally constrained CAT production was 6.2\% compared to the theoretical maximum of 58\% (Fig.~\ref{fig:Prof}F, dagger).
 This decrease in carbon yield suggests inefficiencies in CFPS that can potentially be improved.
 Constraint based calculations assume a metabolic pseudo steady state; thus, intermediate metabolites cannot accumulate within the cell-free extract.
 In addition, the flux balance analysis calculation is solved by maximizing the flux through the protein production reaction.
@@ -314,8 +318,9 @@ The experimental performance could be improved by diverting this carbon toward t
 
 % Thus, we examined the parameters that had the most significant effect on cell-free productivity, energy efficiency, and carbon yield in order to optimize CFPS performance.
 
+
 \subsection{Global sensitivity analysis}
-To better understand the effect of substrate utilization and the transcription/translation parameters on CFPS performance, we performed global sensitivity analysis on the productivity, energy efficiency and carbon yield for the CAT protein (Fig.~\ref{fig:SI}).
+To better understand the effect of substrate utilization and the transcription/translation parameters on CFPS performance, we performed global sensitivity analysis on the productivity, energy efficiency and carbon yield for the CAT protein (Fig.~\ref{fig:SI} and Fig. XX?).
 Surprisingly, RNAP and ribosome abundance had only a modest effect;
 the translation elongation rate had the largest effect on protein productivity.
 On the other hand, oxygen followed by substrate consumption had the largest influence on the energy efficiency and carbon yield, respectively.
@@ -325,36 +330,45 @@ Underwood and coworkers showed that an increase in ribosome levels did not signi
 In addition, Li et al. increased the productivity of firefly luciferase production in PURE CFPS by 5-fold by adjusting factors that affect transcription and translation such as elongation factors, ribosome recycling factor, release factors, chaperones, BSA, and tRNAs \cite{2014_li_PlosOne}.
 In examining substrate utilization, glucose consumption was not important for productivity in the presence of amino acid supplementation.
 However, its importance increased significantly when amino acids were not available.
-On the other hand, amino acid consumption was only sensitive when amino acids synthesis reactions were blocked, as it was the only source of amino acids for CAT synthesis.
-
-% The transcription/translation parameters had the same trend as for productivity, where the translation rate was the most sensitive compared to the other transcription/translation parameters and showed significance across all cases.
-
-The oxygen consumption rate was the most important factor controlling the energy efficiency of cell-free protein synthesis (Fig.~\ref{fig:SI}B).
-In addition to the oxygen consumption, amino acid utilization was also sensitive.
-On the other hand, glucose consumption was only sensitive in the absence of amino acid supplementation,
-since glucose acted as the sole source of carbon and energy for protein synthesis.
+On the other hand, amino acid consumption was only sensitive when amino acids synthesis reactions were blocked, as it was the only source of amino acids for CAT synthesis.The oxygen consumption rate was the most important factor controlling the energy efficiency of cell-free protein synthesis (Fig.~\ref{fig:SI}B).
 In the model, we assumed that ATP could be produced by both substrate level and oxidative phosphorylation.
 Jewett and coworkers reported that oxidative phosphorylation still operated in cell-free systems, and that the protein
 yield decreased from 1.5-fold to 4-fold when oxidative phosphorylation reactions were inhibited in pyruvate-powered CFPS \cite{Jewett:2008aa}.
 However, it is unknown how active oxidative phosphorylation is for a glucose powered cell-free system.
 Moreover, the connection between oxidative phosphorylation activity and other performance metrics, such as the carbon yield, is also unclear.
 
+% The transcription/translation parameters had the same trend as for productivity, where the translation rate was the most sensitive compared to the other transcription/translation parameters and showed significance across all cases.
+% In addition to the oxygen consumption, amino acid utilization was also sensitive.
+% On the other hand, glucose consumption was only sensitive in the absence of amino acid supplementation,
+% since glucose acted as the sole source of carbon and energy for protein synthesis.
+
+
+
 To investigate the connection between carbon yield and oxidative phosphorylation further,
-we calculated the CAT carbon yield as a function of the oxidative phosphorylation flux (Fig.~\ref{fig:oxphos_yield}).
+we calculated the optimal CAT carbon yield as a function of the oxidative phosphorylation flux (Fig.~\ref{fig:oxphos_yield}).
 Oxidative phosphorylation had a strong effect on the carbon yield, both with and without amino acid supplementation.
 In the presence of amino acid supplementation, the carbon yield ranged from 20\% to approximately 60\%,
 depending upon the oxidative phosphorylation flux.
 However, without amino acid supplementation, the carbon yield dropped to approximately 10\%, and reached a maximum of 50\%.
 In the absence of supplementation, a lower carbon yield was expected for the same oxidative phosphorylation flux, as glucose was utilized for both energy generation and amino acid biosynthesis.
 In all cases, whenever the carbon yield was below its theoretical maximum, there was an accumulation of both acetate and lactate.
-The experimental dataset also exhibited a mixture of acetate and lactate accumulation during CAT synthesis, which suggested the CFPS reaction was not
+The experimental dataset exhibited a mixture of acetate and lactate accumulation during CAT synthesis, which suggested the CFPS reaction was not
 operating with optimal oxidative phosphorylation activity.
 Oxidative phosphorylation is a membrane associated process, however CFPS has no cell membrane.
 Jewett et al. hypothesized that membrane vesicles present in the CFPS reaction carry out oxidative phosphorylation \cite{Jewett:2008aa}.
 In addition, they were able to enhance the production yields of CAT by 33\% when the reaction was augmented with 10mM phosphate.
-However, it is unclear why the additional phosphate increased the CAT yield, but Jewett et al. believe it either enhances oxidative phosphorylation activity or inhibits phosphatase reactions.
-Taken together, the number, size, protein loading and lifetime of these vesicles remains an open area of study.
+However, it is unclear why the additional phosphate increased the CAT yield.
+Jewett et al. believe it either enhanced oxidative phosphorylation activity or inhibited phosphatase reactions.
+The number, size, protein loading and lifetime of these vesicles remains an open area of study.
 Thus, we expect CFPS will have suboptimal oxidative phosphorylation capacity and remains an important area to optimize for improved CFPS performance.
+
+
+
+% to both cases where amino acids were avaialbe.
+% This drop in performance is due to the burden of synthesizing amino acids, which require NADPH.
+% This leads to the relatively high flux in the first step of the pentose phosphate pathway to generate NADPH, thus, less NADH is available for oxidative phosphorylation.
+% The performance metrics and sensitivity analysis suggest that efficient energy generation via oxygen uptake is essential to higher energy efficiency and carbon yields.
+% %Thus, removing anaerobic enzymes during the cell-free extract preparation could potentially improve CFPS performance and protein yield.
 
 \subsection{Optimal Metabolic Flux Distribution}
 Amino acid supplementation altered the optimal metabolic flux distribution predicted for CAT production (Fig.~\ref{fig:flux}).
@@ -369,19 +383,12 @@ ubiquinone was regenerated via \textit{nuo} activity, without relying on succina
 These first two cases where amino acids were available had similar performance, and their respective metabolic flux distributions had a 99\% correlation for all proteins.
 In the absence of amino acid supplementation (where all amino acids were synthesized \textit{de~novo} from glucose),
 the energy efficiency and carbon yield decreased; in this case the TCA cycle was largely complete and there was diversion of metabolic flux into the Entner-Doudoroff pathway to produce NADPH (Fig.~\ref{fig:flux}C).
-However, each of these three cases represent the theoretical optimum under different conditions; in order to more accurately describe system performance, we constrained the feasible solution space with experimental measurements.
+However, these simulations represent the theoretical optimum under different conditions.
+To more accurately describe system performance, we constrained the feasible solution space with experimental measurements
+and estimated the optimal CAT flux distribution.
 
-
-% to both cases where amino acids were avaialbe.
-% This drop in performance is due to the burden of synthesizing amino acids, which require NADPH.
-% This leads to the relatively high flux in the first step of the pentose phosphate pathway to generate NADPH, thus, less NADH is available for oxidative phosphorylation.
-% The performance metrics and sensitivity analysis suggest that efficient energy generation via oxygen uptake is essential to higher energy efficiency and carbon yields.
-% %Thus, removing anaerobic enzymes during the cell-free extract preparation could potentially improve CFPS performance and protein yield.
-
-The case constrained by experimental measurements (Fig. \ref{fig:flux_exp}) had the highest correlation of 0.66 with the flux distribution from the case supplied with no amino acids and a correlation of 0.52 with the cases supplied with amino acids.
-Thus there are some differences in the flux distribution compared to the optimum solutions which may provide some insight to improve CFPS performance.
-Metabolic fluxes were constrained by experimental measurements (available in Supporting Information) where available for the first hour
-which constrained the feasible solution space.
+The experimentally constrained optimal flux distribution had a 52\% similarity with the theoretically optimal flux distribution (Fig. \ref{fig:flux_exp}).
+Metabolic fluxes were constrained by experimental measurements of glucose, amino and organic acid consumption and production rates for the first hour of the reaction  (supporting information). The low similarity suggested several differences between the solutions which could be exploited to improve CFPS performance.
 The central carbon organic acids showed good agreement with the data with a coefficient of determination of R\textsuperscript{2}=0.92 (Fig.~\ref{fig:flux_exp}B).
 Only certain amino acid synthesis reactions were blocked, since during the growth of \emph{E.~coli} not all amino acids were supplied (see Materials and Methods).
 During the cell-free reaction all amino acids were supplied, however glucose still traveled through all the major pathways, and the same metabolic precursors were still utilized for amino acid biosynthesis.
@@ -389,8 +396,11 @@ In this case, it is unclear which substrate (glucose or amino acids) is used to 
 The optimum solutions only produced the required amount of amino acids necessary, however in examining the measurements there is an accumulation of alanine and glutamine which may explain some of the differences in the correlations of the flux distributions.
 Accumulation of pyruvate, lactate, acetate, and other organic acids can be seen (Fig.~\ref{fig:flux_exp}B) and is an inefficiency of carbon utilization.
 
+% in the flux distribution compared to the optimum solutions
+% The case constrained by experimental measurements  had the highest correlation of 0.66 with the flux distribution from the case supplied with no amino acids and a correlation of 0.52 with the cases supplied with amino acids.
 
 \subsubsection{Potential Alternative Metabolic Optima}
+Optimal flux distributions predicted using constraint based approaches may not always be unique.
 Alternative optimal solutions have the same objective value, e.g., productivity, but different metabolic flux distributions.
 Several techniques, e.g., flux variability analysis (FVA) \cite{Mahadevan2003264,Schuetz119} or mixed-integer approaches \cite{LEE2000711} can estimate alternative optima.
 In this study, we used flux variability analysis to estimate potential alternative optimal solutions for CAT production constrained by experimental measurements (Fig.~\ref{fig:norm}).
@@ -401,8 +411,7 @@ For example, one of the features of the predicted optimal metabolic flux distrib
 Removal of the ED pathway had no effect on the CAT productivity compared to the absence of knockouts (Fig.~\ref{fig:norm}A).
 Pairwise knockouts of the ED pathway and other subgroups (i.e. pentose phosphate pathway, cofactors, folate metabolism, etc.) also resulted in the same optimal CAT productivity.
 However, there was a difference in the flux distribution with these knockouts (Fig.~\ref{fig:norm}B); thus, alternative optimal metabolic flux distributions exist for CAT production, despite experimental constraints.
-In addition, knockouts of amino acid biosynthesis reactions had no effect on the productivity with the exception of ALA, ASP, ASN and GLU, GLN biosynthesis reactions, since amino acids were supplemented in the media.
-ssFBA rerouted the metabolic flux to have the same productivity but an alterantive flux distribution (alternative optima), as can be seen for a pairwise knockout of GLY, SER biosynthesis with HIS biosynthesis (Fig.~\ref{fig:norm}B).
+In addition, knockouts of amino acid biosynthesis reactions had no effect on the productivity with the exception of alanine, aspartate, asparagine, glutamate and glutamine biosynthesis reactions, since amino acids were available in the media.
 Ultimately, to determine the metabolic flux distribution occurring in CFPS, we need to add additional constraints to the flux estimation calculation.
 For example, thermodynamic feasibility constraints may result in a better depiction of the flux distribution \cite{Henry:2007,Hamilton:2013},
 and $^{13}$C labeling in CFPS could provide significant insight.
@@ -743,6 +752,18 @@ triangles: first principle prediction and excluded from formulating trendline.}
 \clearpage
 
 \begin{figure}[t!]
+\includegraphics[width=1.00\textwidth]{./figs/Fig-3-Sensitivity-Analysis.pdf}
+\caption{Total order sensitivity analysis of CFPS.
+A. Total order sensitivity of the optimal CAT productivity with respect to metabolic and transcription/translation parameters.
+B. Total order sensitivity of the optimal CAT energy efficiency.
+Metabolic and transcription/translation parameters were varied for amino acid supplementation and synthesis (black), amino acid supplementation without synthesis (dark grey) and amino acid synthesis without supplementation (light gray).
+Error bars represent a 95\% CI on the total-oder sensitivity index.}
+\label{fig:SI}
+\end{figure}
+
+\clearpage
+
+\begin{figure}[t!]
 \includegraphics[width=1.00\textwidth]{./figs/Fig-5-FluxDistribition-Optimal.pdf}
 \caption{Flux profile for glycolysis, pentose phosphate pathway, Entner-Doudoroff pathway, TCA cycle, and oxidative phosphorylation, for three different cases: (A) amino acid uptake and synthesis, (B) amino acid uptake without synthesis, and (C) amino acid synthesis without uptake. Mean flux across the ensemble, normalized to glucose uptake flux. Thick arrows indicate flux to or from amino acids.}
 \label{fig:flux}
@@ -756,17 +777,6 @@ triangles: first principle prediction and excluded from formulating trendline.}
 \label{fig:oxphos_yield}
 \end{figure}
 
-\clearpage
-
-\begin{figure}[t!]
-\includegraphics[width=1.00\textwidth]{./figs/Fig-3-Sensitivity-Analysis.pdf}
-\caption{Total order sensitivity analysis of CFPS.
-A. Total order sensitivity of the optimal CAT productivity with respect to metabolic and transcription/translation parameters.
-B. Total order sensitivity of the optimal CAT energy efficiency.
-Metabolic and transcription/translation parameters were varied for amino acid supplementation and synthesis (black), amino acid supplementation without synthesis (dark grey) and amino acid synthesis without supplementation (light gray).
-Error bars represent a 95\% CI on the total-oder sensitivity index.}
-\label{fig:SI}
-\end{figure}
 
 \clearpage
 
