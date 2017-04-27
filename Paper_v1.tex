@@ -209,7 +209,7 @@ The higher transcription rate of the T7 promoter led to a 34\% higher mRNA stead
 However, CAT expressed under a P70a promoter followed the P70a power-law correlation with a productivity of approximately 8.2 $\pm$ 2.2 $\mu$M/h (predicted to be 7.2 $\mu$M/h by the optimal productivity correlation).
 
 We independently validated the productivity correlation by calculating the optimal productivity of MBP using the full model and the effective correlation model (Fig.~\ref{fig:Prof}B).
-The prediction error was less than 8\% for an \emph{a~priori} prediction of CFPS productivity.
+The prediction error was less than 8\% for an \emph{a~priori} prediction of CFPS productivity using the effective correlation.
 Thus, the effective productivity correlation could be used as a parameter free method to estimate optimal productivity for cell free protein production using a P70a promoter.
 For CFPS using other promoters, a similar correlation model could be developed.
 For example, maximal transcription occurs when the promoter model coefficient $u\left(\kappa\right)$ = 1;
@@ -246,19 +246,18 @@ The estimated MBP energy efficiency had a maximum error of 5\% without supplemen
 
 Experimentally constrained CAT simulations showed suboptimal energy efficiency (Fig.~\ref{fig:Prof}D, dagger).
 CAT production was simulated using the constraint based model in combination with experimental measurements of glucose consumption, organic and amino acid consumption and production rates (Fig. ~\ref{fig:network}B).
-The experimentally constrained energy efficiency was 13.3 $\pm$ 5.0\% compared to the theoretical maximum of approximately 84 $\pm$ 0.1\%, however, the
-CAT productivity was similar between the simulated and measured systems.
-This suggested CFPS was not energy optimized.
-There were two factors responsible for the difference between the optimal and experimental system,
-the glucose consumption rate and the ATP yield per glucose.
-The glucose consumption rate was approximately 30 mM/h in the experimental system (even in the presence of amino acids).
-However, the constraint based simulation suggested the optimal glucose consumption rate was significantly less than the observed rate, approximately 2 - 4 mM/h.
-In the constraint based simulation, the CFPS reaction produced only acetate as a by-product, but in the experimental system acetate, lactate, pyruvate, succinate and malate accumulated during the first hour of production.
-Thus, the constraint based simulation was more carbon efficient.
+The experimentally constrained energy efficiency was 13.3 $\pm$ 5.0\% compared to the theoretical maximum of approximately 84 $\pm$ 0.1\%.
+Given that the CAT productivity was similar between the simulated and measured systems, differences in
+the glucose consumption rate and the ATP yield per glucose were likely responsible for the difference between the optimal and experimental systems.
+The glucose consumption rate was approximately 30 - 40 mM/h in the experimental system (even in the presence of amino acids).
+On the other hand, the constraint based simulation suggested the optimal glucose consumption rate was significantly less than the observed rate, approximately 1 - 7 mM/h (depending upon amino acid supplementation).
+In the constraint based simulation, the CFPS reaction produced only acetate as a by-product, but in the experimental system acetate, lactate, pyruvate, succinate and malate accumulated during the first hour of production. Thus, the constraint based simulation was more carbon efficient.
 Next, the energy produced per unit glucose was different between the optimal and experimental constrained system.
 In the optimal simulation, 12 ATPs were produced per glucose (the theoretical maximum for this network was 21),
 while the experimentally constrained simulation produced only 4 ATPs per glucose.
-[TODO JV: Think more about this].
+Thus, approximately 120 - 160 mM ATP/hr was produced in the experimental system, in contrast to 12 - 84 mM ATP/hr for the optimal simulations.
+We know from measurements that ATP did not accumulate in the experimental system, rather it was consumed by a variety of pathways that were not active
+in the optimal simulation. This suggested that CFPS retained a growth like operational memory that led to over consumption of glucose, and the over production of ATP.  
 
 
 % With amino acid supplementation, there was a comparable energy efficiency, despite the network's ability to synthesis amino acids.
