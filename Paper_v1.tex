@@ -302,14 +302,14 @@ The carbon yield for experimentally constrained CAT production was 6.2\% compare
 Given that the CAT productivity was similar between the simulated and measured systems, differences in
 the glucose consumption rate and byproduct accumulation were likely responsible for the difference between the optimal and experimental systems.
 The translation rate has been identified as the rate-limiting step for cell-free protein synthesis \cite{2005_underwood_biotech,2014_li_PlosOne}, thus increased glucose consumption only hindered the carbon yield of CAT.
-The experimental system was not as energy efficient as the optimal system which resulted in the increased glucose consumption. 
-Since CAT productivity could not be improved, the increased carbon consumption accumulated in byproducts such as pyruvate, acetate, lactate, succinate and malate. 
+The experimental system was not as energy efficient as the optimal system which resulted in the increased glucose consumption.
+Since CAT productivity could not be improved, the increased carbon consumption accumulated in byproducts such as pyruvate, acetate, lactate, succinate and malate.
 The accumulation of acetate and lactate also indicated that oxidative phosphorylation activity was limited.
-Thus to improve carbon yield for CFPS, energy efficiency should be improved to lower the glucose consumption rate, or the translation rate should be improved for increased protein productivity.  
+Thus to improve carbon yield for CFPS, energy efficiency should be improved to lower the glucose consumption rate, or the translation rate should be improved for increased protein productivity.
 %%%%%%%%%%%%%%%%%%%%
-However, it may also be hypothesized that only the amino acids supplied contribute to the carbon yield of the protein of interest, while glucose is used to energize CFPS. 
+However, it may also be hypothesized that only the amino acids supplied contribute to the carbon yield of the protein of interest, while glucose is used to energize CFPS.
 In this case, the carbon yield for the optimal and experimental systems was approximately 100\%.
-Therefore, the energy efficiency of CFPS is left to be improved. 
+Therefore, the energy efficiency of CFPS is left to be improved.
 %%%%%%%%%%%%%%%%%%%%%
 
 
@@ -391,17 +391,20 @@ ubiquinone was regenerated via \textit{nuo} activity, without relying on succina
 These first two cases where amino acids were available had similar performance, and their respective metabolic flux distributions had a 99\% correlation for all proteins.
 In the absence of amino acid supplementation (where all amino acids were synthesized \textit{de~novo} from glucose),
 the energy efficiency and carbon yield decreased; in this case the TCA cycle was largely complete and there was diversion of metabolic flux into the Entner-Doudoroff pathway to produce NADPH (Fig.~\ref{fig:flux}C).
-However, these simulations represent the theoretical optimum under different conditions.
-To more accurately describe system performance, we constrained the feasible solution space with experimental measurements
+However, these simulations represent the theoretical optimum.
+To more accurately describe actual metabolic flux, we constrained the feasible solution space with experimental measurements
 and estimated the optimal CAT flux distribution.
 
 The experimentally constrained optimal flux distribution had a 52\% similarity with the theoretically optimal flux distribution (Fig. \ref{fig:flux_exp}).
 Metabolic fluxes were constrained by experimental measurements of glucose, amino and organic acid consumption and production rates for the first hour of the reaction (supporting information). The low similarity suggested several differences between the solutions which could be exploited to improve CFPS performance.
-The largest discrepency was in oxidative phosphorylation reactions, where the experimental system relied heavily on \textit{cyd} rather than \textit{cyo} which was less efficient for energy generation.
-In addition, the \textit{pnt}1 reaction, which interconverts NADPH to NADH, was active in the experimental system and not in the optimal systems; this suggests CFPS may be limited by NADH.
-The next largest discrepency was in folate, purine and pyrimidine metabolism which were inactive in the optimum systems followed by amino acid biosynthesis. 
-The experimentally constrained system had a high flux for alanine and glutamine biosynthesis which accumulated in the media, whereas in the optimum cases there was no accumulation of amino acids. 
-The central carbon organic acids showed good agreement with the data with a coefficient of determination of R\textsuperscript{2}=0.92 (Fig.~\ref{fig:flux_exp}B).
+The largest discrepancy was in oxidative phosphorylation,
+where the experimental system relied heavily on \textit{cyd} rather than \textit{cyo} which was less efficient for energy generation.
+In addition, the \textit{pnt}1 reaction, which interconverts NADPH to NADH, was active in the experimental system and not in the optimal systems;
+this suggested CFPS may be limited by NADH.
+Next, folate, purine and pyrimidine metabolism and amino acid biosynthesis were inactive in the optimum systems, but active in the experimental system.
+In particular, the experimentally system had high alanine and glutamine biosynthetic flux (both accumulated in the media),
+while there was no accumulation of amino acids in the optimal simulations.
+Estimated organic acid flux showed good agreement with the data with a coefficient of determination of R\textsuperscript{2}~=~0.92 (Fig.~\ref{fig:flux_exp}B).
 Only certain amino acid synthesis reactions were blocked, since during the growth of \emph{E.~coli} not all amino acids were supplied (see Materials and Methods).
 During the cell-free reaction all amino acids were supplied, however glucose still traveled through all the major pathways, and the same metabolic precursors were still utilized for amino acid biosynthesis.
 In this case, it is unclear which substrate (glucose or amino acids) is used to power CFPS and may in fact be a combination of both.
