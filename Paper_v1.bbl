@@ -126,6 +126,15 @@ Hamilton,~J.~J., Dwivedi,~V., and Reed,~J.~L. (2013) Quantitative Assessment of
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
+\bibitem[Covert \latin{et~al.}(2004)Covert, Knight, Reed, Herrg{\aa}rd, and
+  Palsson]{Covert:2004aa}
+Covert,~M.~W., Knight,~E.~M., Reed,~J.~L., Herrg{\aa}rd,~M.~J., and
+  Palsson,~B.~{\O}. (2004) Integrating high-throughput and computational data
+  elucidates bacterial networks. \emph{Nature} \emph{429}, 92--6\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
 \bibitem[Varma and Palsson(1994)Varma, and Palsson]{Varma01101994}
 Varma,~A., and Palsson,~B.~O. (1994) Stoichiometric flux balance models
   quantitatively predict growth and metabolic by-product secretion in wild-type
@@ -158,15 +167,6 @@ O{\textquoteright}Brien,~E.~J., Lerman,~J.~A., Chang,~R.~L., Hyduke,~D.~R., and
   Palsson,~B.~{\O}. (2013) Genome-scale models of metabolism and gene
   expression extend and refine growth phenotype prediction. \emph{Molecular
   Systems Biology} \emph{9}\relax
-\mciteBstWouldAddEndPuncttrue
-\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
-{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
-\EndOfBibitem
-\bibitem[Covert \latin{et~al.}(2004)Covert, Knight, Reed, Herrg{\aa}rd, and
-  Palsson]{Covert:2004aa}
-Covert,~M.~W., Knight,~E.~M., Reed,~J.~L., Herrg{\aa}rd,~M.~J., and
-  Palsson,~B.~{\O}. (2004) Integrating high-throughput and computational data
-  elucidates bacterial networks. \emph{Nature} \emph{429}, 92--6\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
