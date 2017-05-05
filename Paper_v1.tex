@@ -102,7 +102,7 @@ Cell-free protein synthesis (CFPS) systems are arguably the most prominent examp
 However, CFPS is not new; CFPS in crude \textit{E.~coli} extracts has been used since the 1960s to explore fundamental biological mechanisms \cite{MATTHAEI:1961aa,NIRENBERG:1961aa}.
 Today, cell-free systems are used in a variety of applications ranging from therapeutic protein production \cite{Lu:2014aa} to synthetic biology \cite{Hodgman:2012aa}.
 However, if CFPS is to become a mainstream technology for advanced applications such as point of care manufacturing \cite{Pardee2016248}, we must first understand the performance limits and cost of these systems \cite{Jewett:2008aa}.
-One tool to address these questions is mathematical modeling.
+One tool to address these questions is constraint based modeling.
 
 % Interestingly, many of the challenges confronting \textit{in~vivo} genome scale kinetic modeling can potentially be overcome in a cell-free system.
 % For example, there is no complex transcriptional regulation to consider, transient metabolic measurements are easier to obtain, and we no longer have to consider cell growth.
@@ -155,6 +155,10 @@ The network described the major carbon and energy pathways, as well as amino aci
 Using this network, in combination with effective promoter models taken from Moon et al. \cite{Moon:2012ab}, and literature values for cell-free culture parameters (Table ~\ref{tbl:parameters}),
 we simulated the sequence specific production of two model proteins, chloramphenicol acetyltransferase (CAT) and dual emission green fluorescent protein (deGFP) using
 different \textit{E.~coli} cell-free extracts.
+In particular, we calculated the transcription rate using effective promoter models in combination with a maximum transcription rate estimated from literature.
+We then maximized the rate of translation, which was bounded from above by an estimate of the maximum translation rate from literature.
+The parameters in the transcription and translation models were largely derived from literature (Table ~\ref{tbl:parameters}).
+Both the transcription and translation rates were subject to resource constraints encoded by the metabolic network.
 The cell-free metabolic network, along with all model code and parameters, can be downloaded under an MIT software license from the Varnerlab website \cite{varnerlab}.
 
 Cell-free simulations of the time evolution of CAT and deGFP production were consistent with experimental measurements (Fig. ~\ref{fig:network}B and C).
@@ -303,7 +307,7 @@ largely accounted for by increased CO\textsubscript{2} production with supplemen
 The carbon yield for experimentally constrained CAT production was 6.2\% compared to the theoretical maximum of 58\% (Fig.~\ref{fig:Prof}F, dagger).
 Given that the CAT productivity was similar between the simulated and measured systems, differences in
 the glucose consumption rate and byproduct accumulation were likely responsible for the difference between the optimal and experimental systems.
-The translation rate has been identified as the rate-limiting step for cell-free protein synthesis \cite{2005_underwood_biotech,2014_li_PlosOne}, which was confirmed by the translation rate flux always hitting the upper bound in the ssFBA simulation, regardless of protein. 
+The translation rate has been identified as the rate-limiting step for cell-free protein synthesis \cite{2005_underwood_biotech,2014_li_PlosOne}, which was confirmed by the translation rate flux always hitting the upper bound in the ssFBA simulation, regardless of protein.
 Since CAT productivity could not be improved, the increased carbon consumption accumulated in byproducts such as pyruvate, acetate, lactate, succinate and malate.
 In addition, the accumulation of acetate and lactate suggested that oxidative phosphorylation activity was limited.
 Thus to improve carbon yield for CFPS, the translation rate should be improved for increased protein productivity, or energy efficiency should be improved to lower the glucose consumption rate.
@@ -401,7 +405,7 @@ The largest discrepancy was in oxidative phosphorylation,
 where the experimental system relied heavily on \textit{cyd} rather than \textit{cyo} which was less efficient for energy generation.
 In addition, the experimental system had a high flux through the \textit{zwf} yielding an abundance of NADPH used for amino acid biosynthesis.
 The remaining NADPH was interconverted to NADH via the \textit{pnt}1 reaction which was consumed to convert pyruvate to lactate.
-In contrast, the optimal solutions with amino acid supplementation had low activity in \textit{zwf} and \textit{pnt}1 reactions. 
+In contrast, the optimal solutions with amino acid supplementation had low activity in \textit{zwf} and \textit{pnt}1 reactions.
 Next, folate, purine, and pyrimidine metabolism along with amino acid biosynthesis were inactive in the optimal system, but active in the experimental system.
 In particular, the experimental system had high alanine and glutamine biosynthetic flux (both accumulated in the media),
 while there was no accumulation of amino acids in the optimal simulations.
@@ -639,7 +643,7 @@ Those solutions with the same or similar productivity but large changes in the m
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{acknowledgement}
 
-We thank Che-Hsiao Shih (Purdue University) for identification of DNA and protein sequences. 
+We thank Che-Hsiao Shih (Purdue University) for identification of DNA and protein sequences.
 This study was supported by an award from the US Army and Systems Biology of Trauma Induced Coagulopathy (W911NF-10-1-0376) to J.V. for the support of M.V.
 
 \end{acknowledgement}
