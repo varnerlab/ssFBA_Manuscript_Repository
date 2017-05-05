@@ -730,7 +730,8 @@ triangles: first principle prediction and excluded from formulating trendline.}
 \caption{Total order sensitivity analysis of CFPS.
 A. Total order sensitivity of the optimal CAT productivity with respect to metabolic and transcription/translation parameters.
 B. Total order sensitivity of the optimal CAT energy efficiency.
-Metabolic and transcription/translation parameters were varied for amino acid supplementation and synthesis (black), amino acid supplementation without synthesis (dark grey) and amino acid synthesis without supplementation (light gray).
+Metabolic and transcription/translation parameters were varied for amino acid supplementation and synthesis (black),
+amino acid supplementation without synthesis (dark grey) and amino acid synthesis without supplementation (light gray).
 Error bars represent a 95\% CI on the total-oder sensitivity index.}
 \label{fig:SI}
 \end{figure}
@@ -739,7 +740,11 @@ Error bars represent a 95\% CI on the total-oder sensitivity index.}
 
 \begin{figure}[t!]
 \includegraphics[width=1.00\textwidth]{./figs/Fig-5-FluxDistribition-Optimal.pdf}
-\caption{Flux profile for glycolysis, pentose phosphate pathway, Entner-Doudoroff pathway, TCA cycle, and oxidative phosphorylation, for three different cases: (A) amino acid uptake and synthesis, (B) amino acid uptake without synthesis, and (C) amino acid synthesis without uptake. Mean flux across the ensemble, normalized to glucose uptake flux. Thick arrows indicate flux to or from amino acids.}
+\caption{Flux profile for glycolysis, pentose phosphate pathway, Entner-Doudoroff pathway,
+TCA cycle, and oxidative phosphorylation, for: (A) amino acid supplementation and \textit{de~novo} synthesis,
+(B) amino acid supplementation without \textit{de~novo} synthesis, and
+(C) \textit{de~novo} amino acid synthesis without supplementation.
+Mean flux across the ensemble, normalized to glucose uptake flux. Thick arrows indicate flux to or from amino acids.}
 \label{fig:flux}
 \end{figure}
 
@@ -747,7 +752,10 @@ Error bars represent a 95\% CI on the total-oder sensitivity index.}
 
 \begin{figure}[t!]
 \includegraphics[width=0.7\textwidth]{./figs/Fig-4-OxyPhox-versus-Carbon-Yield.pdf}
-\caption{The deGFP carbon yield versus oxidative phosphorylation flux, across an ensemble of 1000 flux balance solutions, for amino acid uptake and synthesis (black), amino acid uptake without synthesis (dark grey), and amino acid synthesis without uptake (light gray).}
+\caption{The CAT carbon yield versus oxidative phosphorylation flux, across an ensemble of 1000 flux balance solutions,
+for amino acid supplementation and \textit{de~novo} synthesis (black),
+amino acid supplementation without \textit{de~novo} synthesis (dark grey),
+and \textit{de~novo} amino acid synthesis without supplementation (light gray).}
 \label{fig:oxphos_yield}
 \end{figure}
 
@@ -767,9 +775,11 @@ Mean flux across the ensemble, normalized to glucose uptake flux. Thick arrows i
 
 \begin{figure}[t!]
 \includegraphics[width=1.0\textwidth]{./figs/Fig-7-FluxDistribution-Analysis.pdf}
-\caption{The norm effect of pairwise knockouts of subgroups in the cell-free network.
-(A) CAT productivity norm compared to no knockouts in the experimentally constrained case.
-(B) Flux distribution norm compared to no knockouts in the experimentally constrained case.}
+\caption{Pairwise knockouts of reaction subgroup in the cell-free network.
+(A) Difference in the CAT productivity in the presence of reaction knockouts compared to no knockouts for the experimentally constrained case.
+(B) Difference in the optimal flux distribution in the presence of reaction knockouts compared to no knockouts in the experimentally constrained case.
+The difference between perturbed and wild-type productivity and flux distributions was quantified by the $l^{2}$ norm, and then normalized so the maximum change was 1.0.
+Red boxes indicate potential alternative optimal flux distributions.}
 \label{fig:norm}
 \end{figure}
 
