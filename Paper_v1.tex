@@ -124,7 +124,7 @@ In this study, we used sequence specific constraint based modeling to evaluate t
 A core \emph{E.~coli} cell-free metabolic model describing glycolysis, pentose phosphate pathway, energy metabolism, amino acid biosynthesis and degradation was developed from literature \cite{Feist:2007aa}; it was then augmented with sequence specific descriptions of promoter function, transcription and translation processes.
 Thus, the sequence specific constraint based approach explicitly coupled transcription and translation processes with the availability of metabolic resources in the CFPS reaction.
 We tested this approach by simulating the cell-free production of two model proteins, and then investigated the productivity, energy efficiency, and carbon yield for eight additional therapeutically relevant proteins.
-Productivity and carbon yield were found to be inversely proportional to carbon number, while energy efficiency was independent of protein size.
+Productivity and carbon yield were inversely proportional to carbon number, while energy efficiency was independent of protein size.
 Based upon these simulations, effective correlations for the productivity, carbon yield and energy efficiency as a function of protein length were developed.
 These correlation models were then independently validated with a protein not in the original data set.
 Further, global sensitivity analysis identified the key metabolic processes that controlled CFPS performance;
@@ -384,8 +384,10 @@ The optimum solutions only produced the required amount of amino acids necessary
 Optimal flux distributions predicted using constraint based approaches may not always be unique.
 Alternative optimal solutions have the same objective value, e.g., productivity, but different metabolic flux distributions.
 Several techniques such as flux variability analysis (FVA) \cite{Mahadevan2003264,Schuetz119} or mixed-integer approaches \cite{LEE2000711} can estimate alternative optima.
-In this study, we used flux variability analysis to estimate potential alternative optimal solutions for CAT production constrained by experimental measurements (Fig.~\ref{fig:norm}).
-FVA identified pathways required for CAT production; for example, deletion of the glycolysis/gluconoeogenesis or oxidative phosphorylation pathways resulted in no CAT production.
+In this study, we used group knockout analysis to estimate potential alternative optimal solutions for CAT production constrained by experimental measurements (Fig.~\ref{fig:norm}).
+In this approach, groups of reactions were removed from the metabolic network, and the translation rate was maximized.
+The difference in the productivity and flux distribution of the nominal and altered system was then calculated.
+Knockout analysis identified pathways required for CAT production; for example, deletion of the glycolysis/gluconoeogenesis or oxidative phosphorylation pathways resulted in no CAT production.
 Likewise, there were pathway knockouts that had no effect on productivity or the metabolic flux distribution, such as removal of isoleucine, leucine, histidine and valine biosynthesis.
 Globally, the constraint based simulation reached the same optimal CAT productivity for 40\% of the pairwise knockouts, while 92\% of these solutions had different flux distributions compared with the wild-type.
 For example, one of the features of the predicted optimal metabolic flux distribution was a high flux through the Entner-Douodoroff (ED) pathway.
@@ -409,12 +411,18 @@ A library of computational promoters, in combination with the cell-free constrai
 could enable the \emph{de~novo} design of circuits for optimal functionality and performance.
 We also developed effective correlation models for the productivity, energy efficiency and carbon yield as a function of protein size.
 Simulations of maltose binding protein expression showed good agreement with these correlation models, suggesting the effective correlations could be used to quickly prototype CFPS reactions.
-Furthermore, global sensitivity analysis identified oxygen uptake as being instrumental for maintaining a high energy efficiency and carbon yield.
-The translation rate was identified as the rate-limiting step for productivity.
-The model also suggested that cell-free systems can simultaneously operate aerobically and anaerobically, which can lead to inefficient production and should be addressed to optimize energy efficiency and carbon yield.
-In addition, our modeling approach could be expanded with a more detailed description of gene expression that has been utilized in a \emph{E. coli} genome scale model \cite{Brien693}.
-We would also like to include post-translation modifications required for proper protein folding and functionality.
-In conclusion, sequence specific constraint based modeling offers a novel means to \emph{a~priori} estimate the performance of cell-free synthetic circuits.
+Further, global sensitivity analysis identified the key metabolic processes that controlled CFPS performance;
+oxidative phosphorylation was vital to energy efficiency and carbon yield, while the translation rate was the most important for productivity.
+However, ATP was predicted to be produced by both substrate level and oxidative phosphorylation, as both lactate and acetate accumulated in the experimental system.
+While the results of this first study were promising, there are several issues to consider in future work.
+First, a more detailed description of transcription and translation reactions that has been utilized in other genome scale ME models e.g., O’Brien et al \cite{Brien693} could be adapted
+to a cell-free system. This would allow us to consider important facets of protein production, such as the role of chaperones in protein folding.
+We would also like to include post-translation modifications such as glycosylation that are important for the production of therapeutic proteins.
+In conclusion, sequence specific constraint based modeling of cell-free protein production offers a novel means to \emph{a~priori}
+estimate the optimal performance of cell-free synthetic circuits.
+
+% required for proper protein folding and functionality.
+%
 
 \clearpage
 
