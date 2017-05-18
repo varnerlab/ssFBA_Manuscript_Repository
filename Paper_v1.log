@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  18 MAY 2017 15:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  18 MAY 2017 15:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1446,11 +1446,11 @@ ut line 783.
 
 ] [36] [37] [38]) [39] (./Paper_v1.aux) ) 
 Here is how much of TeX's memory you used:
- 18443 strings out of 493089
- 329617 string characters out of 6134842
+ 18446 strings out of 493089
+ 329644 string characters out of 6134842
  417333 words of memory out of 5000000
  21247 multiletter control sequences out of 15000+600000
- 102973 words of font info for 395 fonts, out of 8000000 for 9000
+ 103128 words of font info for 397 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  60i,15n,94p,10408b,493s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fo
@@ -1472,7 +1472,7 @@ ts/type1/public/lm/lmssbx10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1
 ino/uplb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/palatino/upl
 bi8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/palatino/uplr8a.pf
 b></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on Paper_v1.pdf (39 pages, 1291245 bytes).
+Output written on Paper_v1.pdf (39 pages, 1291225 bytes).
 PDF statistics:
  570 PDF objects out of 1000 (max. 8388607)
  419 compressed objects within 5 object streams
