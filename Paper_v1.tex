@@ -122,13 +122,17 @@ However, constraint based methods are typically used to model \textit{in~vivo} p
 
 In this study, we used sequence specific constraint based modeling to evaluate the performance of \emph{E.~coli} cell-free protein synthesis.
 A core \emph{E.~coli} cell-free metabolic model describing glycolysis, pentose phosphate pathway, energy metabolism, amino acid biosynthesis and degradation was developed from literature \cite{Feist:2007aa}; it was then augmented with sequence specific descriptions of promoter function, transcription and translation processes.
-Thus, sequence specific constraint based modeling explicitly coupled transcription and translation with the availability of metabolic resources.
-We tested this approach by simulating the production of two model proteins, and then investigated the productivity, energy efficiency, and carbon yield of production for eight different proteins.
-It was observed that higher carbon number proteins typically had lower productivity rates and carbon yields than those of the lower carbon number proteins, whereas energy efficiency was independent of protein size.
-Model correlations were then independently validated with a protein not in the original data set.
-We compared the theoretical optimal solutions with an experimentally constrained case which suggested CFPS retained a growth-like operational memory that led to overconsumption of glucose.
-Further, global sensitivity analysis identified the key metabolic processes that controlled circuit performance, showing oxidative phosphorylation vital to energy efficiency and carbon yield, and translation rate most important for productivity.
-Taken together, sequence specific constraint based modeling offers a novel means to \emph{a~priori} estimate the performance of cell-free synthetic circuits.
+Thus, the sequence specific constraint based approach explicitly coupled transcription and translation processes with the availability of metabolic resources in the CFPS reaction.
+We tested this approach by simulating the cell-free production of two model proteins, and then investigated the productivity, energy efficiency, and carbon yield for eight additional therapeutically relevant proteins.
+Productivity and carbon yield were found to be inversely proportional to carbon number, while energy efficiency was independent of protein size.
+Based upon these simulations, effective correlations for the productivity, carbon yield and energy efficiency as a function of protein length were developed.
+These correlation models were then independently validated with a protein not in the original data set.
+Further, global sensitivity analysis identified the key metabolic processes that controlled CFPS performance;
+oxidative phosphorylation was vital to energy efficiency and carbon yield, while the translation rate was the most important for productivity.
+Lastly, we compared theoretically optimal flux distributions with an experimentally constrained flux distribution;
+this comparison suggested CFPS retained a growth-like operational memory that led to the overconsumption of glucose which negatively influenced carbon yield and energy efficiency.
+Taken together, sequence specific constraint based modeling of CFPS offered a novel means to \emph{a~priori} estimate the performance of a cell-free system, using only a limited number of
+of adjustable parameters.
 
 \clearpage
 
@@ -399,11 +403,12 @@ However, while $^{13}$C labeling techniques are well established for \emph{in~vi
 
 \subsection{Summary and conclusions}
 In this study, we developed a sequence specific constraint based modeling approach to predict the performance of cell-free protein synthesis reactions for a range of proteins.
-We showed first principle predictions for protein production of deGFP and CAT, which were in agreement with experimental measurements, under two different promoters and two different cell-free extract systems.
-We are currently working on expanding our library of promoters that can provide good estimates of performance for different proteins.
-Different promoters will help in the design \emph{de~novo} of circuits for optimal functionality and performance.
-This modeling approach suggested correlations for productivity, energy efficiency and carbon yield as a function of protein size.
-Maltose binding protein showed good agreement with these performance metrics under the established model correlations.
+We showed first principle predictions of the cell-free production of deGFP and CAT, which were in agreement with experimental measurements, under two different promoters.
+Here we considered only the P70a and T7 promoters, but we are currently expanding our library of possible promoters.
+A library of computational promoters, in combination with the cell-free constraints based approach,
+could enable the \emph{de~novo} design of circuits for optimal functionality and performance.
+We also developed effective correlation models for the productivity, energy efficiency and carbon yield as a function of protein size.
+Simulations of maltose binding protein expression showed good agreement with these correlation models, suggesting the effective correlations could be used to quickly prototype CFPS reactions.
 Furthermore, global sensitivity analysis identified oxygen uptake as being instrumental for maintaining a high energy efficiency and carbon yield.
 The translation rate was identified as the rate-limiting step for productivity.
 The model also suggested that cell-free systems can simultaneously operate aerobically and anaerobically, which can lead to inefficient production and should be addressed to optimize energy efficiency and carbon yield.
@@ -460,10 +465,9 @@ The objective of the sequence specific flux balance calculation was to maximize 
 The total glucose uptake rate was bounded by [0,40 mM/h] according to experimental data, while the amino acid uptake rates were bounded by [0,30 mM/h], but did not reach the maximum flux.
 Gene and protein sequences were taken from literature and are available in the Supporting Information.
 The sequence specific flux balance linear program was solved using the GNU Linear Programming Kit (GLPK) v4.55 \cite{GLPK}.
-For all cases, amino acid degradation reactions were blocked as these enzymes were knocked out during the cell-free extract preparation \cite{2005_calhoun_BiotechnologyProgress, Garamella:2016aa}.
-In the second case, all amino acid synthesis reactions were set to 0 mM/hr since \textit{E. coli} was grown in the presence of amino acids, thus these enzymes would not be present in the cell-free extract media.
-In the third case, amino acid uptake reactions were set to 0 mM/hr.
-In the experimentally constrained case, \textit{E. coli} was grown in the presence of 13 amino acids (alanine, arginine, cysteine, serine, aspartate, glutamate, and glutamine were excluded) \cite{Zawada:2003}, thus the synthesis reactions responsible for those 13 amino acid were set to 0 mM/hr.
+For all cases, amino acid degradation reactions were blocked as these enzymes were likely inactivated during the cell-free extract preparation \cite{2005_calhoun_BiotechnologyProgress, Garamella:2016aa}.
+In the absence of \textit{de~novo} amino acid synthesis, all amino acid synthesis reactions were set to 0 mM/hr.
+In the experimentally constrained simulations, \textit{E. coli} was grown in the presence of 13 amino acids (alanine, arginine, cysteine, serine, aspartate, glutamate, and glutamine were excluded) \cite{Zawada:2003}, thus the synthesis reactions responsible for those 13 amino acids were set to 0 mM/hr.
 
 
 % We estimated the theoretical maximum performance of the cell-free protein synthesis system using sequence specific flux balance analysis (ssFBA) \cite{Allen:2003aa}.
@@ -593,7 +597,7 @@ Reaction group knockouts were simulated by setting the flux bounds for all the r
 We grouped reactions in the cell-free network into 19 subgroups (available in Supporting Information).
 We computed the difference ($l^{2}$-norm) for CAT productivity in the presence and absence of pairwise reaction knockouts.
 Simultaneously, we computed the difference in the flux distribution ($l^{2}$-norm) for each pairwise reaction knockout compared to the flux distribution with no knockouts.
-Those solutions with the same or similar productivity but large changes in the metabolic flux distribution represent alternative optimal soluations.
+Those solutions with the same or similar productivity but large changes in the metabolic flux distribution represent alternative optimal solutions.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% The "Acknowledgement" section can be given in all manuscript
@@ -603,6 +607,8 @@ Those solutions with the same or similar productivity but large changes in the m
 \begin{acknowledgement}
 
 This study was supported by an award from the US Army and Systems Biology of Trauma Induced Coagulopathy (W911NF-10-1-0376) to J.V. for the support of M.V.
+The work was also supported by the Center on the Physics of Cancer Metabolism through Award Number 1U54CA210184-01 from the National Cancer Institute.
+The content is solely the responsibility of the authors and does not necessarily represent the official views of the National Cancer Institute or the National Institutes of Health.
 
 \end{acknowledgement}
 
