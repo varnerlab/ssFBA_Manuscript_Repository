@@ -6,32 +6,32 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: acs-Paper_v1.bib
 Database file #2: References_v1.bib
 Warning--entry type for "varnerlab" isn't style-file defined
---line 44 of file References_v1.bib
+--line 63 of file References_v1.bib
 Warning--entry type for "GLPK" isn't style-file defined
---line 640 of file References_v1.bib
+--line 642 of file References_v1.bib
 Warning--entry type for "SALIB" isn't style-file defined
---line 668 of file References_v1.bib
+--line 670 of file References_v1.bib
 achemso 2015/04/07 v3.10
 You've used 45 entries,
             2531 wiz_defined-function locations,
-            1084 strings with 16812 characters,
-and the built_in function-call counts, 16257 in all, are:
-= -- 1259
+            1085 strings with 16640 characters,
+and the built_in function-call counts, 16314 in all, are:
+= -- 1266
 > -- 1059
 < -- 22
 + -- 370
 - -- 325
-* -- 1834
-:= -- 2182
+* -- 1839
+:= -- 2189
 add.period$ -- 84
 call.type$ -- 45
 change.case$ -- 4
 chr.to.int$ -- 2
 cite$ -- 46
-duplicate$ -- 897
-empty$ -- 1071
+duplicate$ -- 899
+empty$ -- 1078
 format.name$ -- 389
-if$ -- 3193
+if$ -- 3207
 int.to.chr$ -- 0
 int.to.str$ -- 1
 missing$ -- 0
@@ -43,14 +43,14 @@ purify$ -- 0
 quote$ -- 0
 skip$ -- 44
 stack$ -- 0
-substring$ -- 840
-swap$ -- 949
+substring$ -- 849
+swap$ -- 951
 text.length$ -- 90
 text.prefix$ -- 0
 top$ -- 1
 type$ -- 306
 warning$ -- 0
-while$ -- 166
+while$ -- 168
 width$ -- 0
-write$ -- 579
+write$ -- 581
 (There were 3 warnings)

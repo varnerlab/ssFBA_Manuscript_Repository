@@ -64,11 +64,11 @@ Hodgman,~C.~E., and Jewett,~M.~C. (2012) Cell-free synthetic biology: thinking
 \EndOfBibitem
 \bibitem[Pardee \latin{et~al.}(2016)Pardee, Slomovic, Nguyen, Lee, Donghia,
   Burrill, Ferrante, McSorley, Furuta, Vernet, Lewandowski, Boddy, Joshi, and
-  Collins]{Pardee2016248}
+  Collins]{Pardee:2016aa}
 Pardee,~K., Slomovic,~S., Nguyen,~P.~Q., Lee,~J.~W., Donghia,~N., Burrill,~D.,
   Ferrante,~T., McSorley,~F.~R., Furuta,~Y., Vernet,~A., Lewandowski,~M.,
   Boddy,~C.~N., Joshi,~N.~S., and Collins,~J.~J. (2016) Portable, On-Demand
-  Biomolecular Manufacturing. \emph{Cell} \emph{167}, 248 -- 259.e12\relax
+  Biomolecular Manufacturing. \emph{Cell} \emph{167}, 248--59.e12\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
@@ -83,7 +83,7 @@ Lewis,~N.~E., Nagarajan,~H., and Palsson,~B.~{\O}. (2012) Constraining the
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
 \bibitem[Wiechert(2001)]{WIECHERT2001195}
-Wiechert,~W. (2001) 13C Metabolic Flux Analysis. \emph{Metabolic Engineering}
+Wiechert,~W. (2001) {13C Metabolic Flux Analysis}. \emph{Metabol. Eng.}
   \emph{3}, 195 -- 206\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
@@ -111,17 +111,17 @@ Schilling,~C.~H., Letscher,~D., and Palsson,~B.~O. (2000) Theory for the
 \bibitem[Henry \latin{et~al.}(2006)Henry, Broadbelt, and
   Hatzimanikatis]{Henry:2007}
 Henry,~C.~S., Broadbelt,~L.~J., and Hatzimanikatis,~V. (2006)
-  Thermodynamics-Based Metabolic Flux Analysis. \emph{Biophysical Journal}
-  \emph{92}, 192--1805\relax
+  {Thermodynamics-Based Metabolic Flux Analysis}. \emph{Biophys. J} \emph{92},
+  192--1805\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
 \bibitem[Hamilton \latin{et~al.}(2013)Hamilton, Dwivedi, and
   Reed]{Hamilton:2013}
-Hamilton,~J.~J., Dwivedi,~V., and Reed,~J.~L. (2013) Quantitative Assessment of
-  Thermodynamic Constraints on the Solution Space of Genome-Scale Metabolic
-  Models. \emph{Biophysical Journal} \emph{105}, 512--522\relax
+Hamilton,~J.~J., Dwivedi,~V., and Reed,~J.~L. (2013) {Quantitative Assessment
+  of Thermodynamic Constraints on the Solution Space of Genome-Scale Metabolic
+  Models}. \emph{Biophys J} \emph{105}, 512--522\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
@@ -136,19 +136,19 @@ Covert,~M.~W., Knight,~E.~M., Reed,~J.~L., Herrg{\aa}rd,~M.~J., and
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
 \bibitem[Varma and Palsson(1994)Varma, and Palsson]{Varma01101994}
-Varma,~A., and Palsson,~B.~O. (1994) Stoichiometric flux balance models
+Varma,~A., and Palsson,~B.~O. (1994) {Stoichiometric flux balance models
   quantitatively predict growth and metabolic by-product secretion in wild-type
-  Escherichia coli W3110. \emph{Applied and Environmental Microbiology}
-  \emph{60}, 3724--3731\relax
+  Escherichia coli W3110}. \emph{Appl. Environ. Microbiol.} \emph{60},
+  3724--3731\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
 \bibitem[S{\'a}nchez \latin{et~al.}(2015)S{\'a}nchez, Quintero, and
   Ochoa]{BTPR:BTPR2132}
-S{\'a}nchez,~C., Quintero,~J.~C., and Ochoa,~S. (2015) Flux balance analysis in
-  the production of clavulanic acid by Streptomyces clavuligerus.
-  \emph{Biotechnology Progress} \emph{31}, 1226--1236\relax
+S{\'a}nchez,~C., Quintero,~J.~C., and Ochoa,~S. (2015) {Flux balance analysis
+  in the production of clavulanic acid by Streptomyces clavuligerus}.
+  \emph{Biotechnol Prog} \emph{31}, 1226--1236\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
@@ -164,9 +164,9 @@ Edwards,~J.~S., and Palsson,~B.~O. (2000) Metabolic flux balance analysis and
 \bibitem[O{\textquoteright}Brien \latin{et~al.}(2013)O{\textquoteright}Brien,
   Lerman, Chang, Hyduke, and Palsson]{Brien693}
 O{\textquoteright}Brien,~E.~J., Lerman,~J.~A., Chang,~R.~L., Hyduke,~D.~R., and
-  Palsson,~B.~{\O}. (2013) Genome-scale models of metabolism and gene
-  expression extend and refine growth phenotype prediction. \emph{Molecular
-  Systems Biology} \emph{9}\relax
+  Palsson,~B.~{\O}. (2013) {Genome-scale models of metabolism and gene
+  expression extend and refine growth phenotype prediction}. \emph{{Mol. Sys.
+  Biol.}} \emph{9}, 693\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
@@ -256,9 +256,9 @@ Varnerlab, http://www.varnerlab.org/downloads/\relax
 \EndOfBibitem
 \bibitem[Calhoun and Swartz(2005)Calhoun, and
   Swartz]{2005_calhoun_BiotechnologyProgress}
-Calhoun,~K.~A., and Swartz,~J.~R. (2005) An Economical Method for Cell-Free
-  Protein Synthesis using Glucose and Nucleoside Monophosphates.
-  \emph{Biotechnology Progress} \emph{21}, 1146--53\relax
+Calhoun,~K.~A., and Swartz,~J.~R. (2005) {An Economical Method for Cell-Free
+  Protein Synthesis using Glucose and Nucleoside Monophosphates}.
+  \emph{Biotechnol Prog} \emph{21}, 1146--53\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
@@ -274,9 +274,9 @@ Garamella,~J., Marshall,~R., Rustad,~M., and Noireaux,~V. (2016) The All E.
 \EndOfBibitem
 \bibitem[Underwood \latin{et~al.}(2005)Underwood, Swartz, and
   Puglisi]{2005_underwood_biotech}
-Underwood,~K.~A., Swartz,~J.~R., and Puglisi,~J.~D. (2005) Quantitative
+Underwood,~K.~A., Swartz,~J.~R., and Puglisi,~J.~D. (2005) {Quantitative
   polysome analysis identifies limitations in bacterial cell-free protein
-  synthesis. \emph{Biotechnology and Bioengineering} \emph{91}, 425--35\relax
+  synthesis}. \emph{Biotech. Bioeng.} \emph{91}, 425--35\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
@@ -290,17 +290,18 @@ Li,~J., Gu,~L., Aach,~J., and Church,~G.~M. (2014) Improved Cell-Free RNA and
 \EndOfBibitem
 \bibitem[Mahadevan and Schilling(2003)Mahadevan, and
   Schilling]{Mahadevan2003264}
-Mahadevan,~R., and Schilling,~C. (2003) The effects of alternate optimal
-  solutions in constraint-based genome-scale metabolic models. \emph{Metabolic
-  Engineering} \emph{5}, 264 -- 276\relax
+Mahadevan,~R., and Schilling,~C. (2003) {The effects of alternate optimal
+  solutions in constraint-based genome-scale metabolic models}. \emph{Metab
+  Eng} \emph{5}, 264 -- 276\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
-\bibitem[Schuetz \latin{et~al.}(2007)Schuetz, Kuepfer, and Sauer]{Schuetz119}
+\bibitem[Schuetz \latin{et~al.}(2007)Schuetz, Kuepfer, and
+  Sauer]{Schuetz:2007aa}
 Schuetz,~R., Kuepfer,~L., and Sauer,~U. (2007) Systematic evaluation of
   objective functions for predicting intracellular fluxes in Escherichia coli.
-  \emph{Molecular Systems Biology} \emph{3}\relax
+  \emph{Mol Syst Biol} \emph{3}, 119\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
@@ -308,9 +309,8 @@ Schuetz,~R., Kuepfer,~L., and Sauer,~U. (2007) Systematic evaluation of
 \bibitem[Lee \latin{et~al.}(2000)Lee, Phalakornkule, Domach, and
   Grossmann]{LEE2000711}
 Lee,~S., Phalakornkule,~C., Domach,~M.~M., and Grossmann,~I.~E. (2000)
-  Recursive MILP model for finding all the alternate optima in LP models for
-  metabolic networks. \emph{Computers \& Chemical Engineering} \emph{24}, 711
-  -- 716\relax
+  {Recursive MILP model for finding all the alternate optima in LP models for
+  metabolic networks}. \emph{Comput. Chem. Eng.} \emph{24}, 711 -- 716\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
@@ -339,25 +339,25 @@ Jewett,~M., Voloshin,~A., and Swartz,~J. In \emph{Gene cloning and expression
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
 \bibitem[Kigawa \latin{et~al.}(1995)Kigawa, Muto, and Yokoyama]{Kigawa1995}
-Kigawa,~T., Muto,~Y., and Yokoyama,~S. (1995) Cell-free synthesis and amino
-  acid-selective stable isotope labeling of proteins for NMR analysis.
-  \emph{Journal of Biomolecular NMR} \emph{6}, 129--134\relax
+Kigawa,~T., Muto,~Y., and Yokoyama,~S. (1995) {Cell-free synthesis and amino
+  acid-selective stable isotope labeling of proteins for NMR analysis}. \emph{J
+  Biomolec NMR} \emph{6}, 129--134\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
 \bibitem[Jewett and Swartz(2004)Jewett, and Swartz]{BIT:BIT20026}
-Jewett,~M.~C., and Swartz,~J.~R. (2004) Mimicking the Escherichia coli
+Jewett,~M.~C., and Swartz,~J.~R. (2004) {Mimicking the Escherichia coli
   cytoplasmic environment activates long-lived and efficient cell-free protein
-  synthesis. \emph{Biotechnology and Bioengineering} \emph{86}, 19--26\relax
+  synthesis}. \emph{Biotech. Bioeng.} \emph{86}, 19--26\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
 \bibitem[Kim and Swartz(2001)Kim, and Swartz]{BIT:BIT1121}
-Kim,~D.-M., and Swartz,~J.~R. (2001) Regeneration of adenosine triphosphate
-  from glycolytic intermediates for cell-free protein synthesis.
-  \emph{Biotechnology and Bioengineering} \emph{74}, 309--316\relax
+Kim,~D.-M., and Swartz,~J.~R. (2001) {Regeneration of adenosine triphosphate
+  from glycolytic intermediates for cell-free protein synthesis}.
+  \emph{Biotech. Bioeng.} \emph{74}, 309--316\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
@@ -370,8 +370,8 @@ Kim,~D.-M., and Swartz,~J.~R. (2001) Regeneration of adenosine triphosphate
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
 \bibitem[Sobol(2001)]{SOBOL_METHOD}
-Sobol,~I. (2001) Global sensitivity indices for nonlinear mathematical models
-  and their Monte Carlo estimates. \emph{Mathematics and Computers in
+Sobol,~I. (2001) {Global sensitivity indices for nonlinear mathematical models
+  and their Monte Carlo estimates.} \emph{Mathematics and Computers in
   Simulation} \emph{55}, 271--80\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
@@ -380,9 +380,9 @@ Sobol,~I. (2001) Global sensitivity indices for nonlinear mathematical models
 \bibitem[Saltelli \latin{et~al.}(2010)Saltelli, Annoni, Azzini, Campolongo,
   Ratto, and Tarantola]{Saltelli:2010}
 Saltelli,~A., Annoni,~P., Azzini,~I., Campolongo,~F., Ratto,~M., and
-  Tarantola,~S. (2010) Variance based sensitivity analysis of model output.
-  Design and estimator for the total sensitivity index. \emph{Computer Physics
-  Communications} \emph{181}, 259--70\relax
+  Tarantola,~S. (2010) {Variance based sensitivity analysis of model output.
+  Design and estimator for the total sensitivity index.} \emph{Comp Phys Comm}
+  \emph{181}, 259--70\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
