@@ -176,7 +176,7 @@ Thus, it was unclear if the model could capture cell-free protein synthesis for 
 Cell-free simulations of the deGFP titer for a range of plasmid concentrations were consistent with experimental measurements (Fig.~\ref{fig:network}D).
 The titer at each plasmid concentration was calculated by multiplying the deGFP synthesis flux by the active time of production, approximately 8 hours in TXTL 2.0 \cite{Garamella:2016aa}.
 The mean of the ensemble (calculated by sampling the uncertainty in the model parameters) captured the saturation of deGFP production as a function of plasmid concentration (R\textsuperscript{2} = 0.97).
-However, while the mean and 95\% confidence estimate of the ensemble were consistent with measured deGFP levels, the model underpredicted the deGFP titer at the saturating plasmid concentration of 5 nM.
+However, while the mean and 95\% confidence estimate of the ensemble were consistent with measured deGFP levels, the model under predicted the deGFP titer at the saturating plasmid concentration of 5 nM.
 These results, in combination with the time-dependent CAT and deGFP simulations, validated our modeling approach, which required very few adjustable parameters.
 It also showed that the sequence specific template reactions and metabolic network were sufficient to predict the production of different proteins under different promoters and cell-free systems.
 Next, we used our modeling approach to better understand the theoretical performance limits of CFPS.
@@ -317,7 +317,7 @@ To better understand the effect of substrate utilization and the transcription/t
 Surprisingly, RNAP and ribosome abundance had only a modest effect; the translation elongation rate had the largest effect on protein productivity.
 On the other hand, oxygen and substrate consumption had the largest and second-largest influences on the energy efficiency and carbon yield, respectively.
 The significance of transcription/translation parameters was robust to amino acid supplementation, with the translation rate being the most sensitive across all cases (Fig.~\ref{fig:SI}A).
-This suggested that the translation elongation rate, and not transcriptional parameters, controlled productivity.
+This suggested that the translation elongation rate, and not transcription parameters, controlled productivity.
 Underwood and coworkers showed that an increase in ribosome levels did not significantly increase protein yields or rates; however, adding elongation factors increased protein synthesis rates by 27\% \cite{2005_underwood_biotech}.
 In addition, Li et al. increased the productivity by 5-fold of firefly luciferase in PURE CFPS by first improving the rate-limiting step, translation, followed by transcription by adjusting elongation factors, ribosome recycling factor, release factors, chaperones, BSA, and tRNAs \cite{2014_li_PlosOne}.
 In examining substrate utilization, glucose consumption was not important for productivity in the presence of amino acid supplementation.
@@ -335,6 +335,7 @@ Moreover, the connection between oxidative phosphorylation activity and other pe
 % since glucose acted as the sole source of carbon and energy for protein synthesis.
 
 To investigate the connection between carbon yield and oxidative phosphorylation further, we calculated the optimal CAT carbon yield as a function of the oxidative phosphorylation flux (Fig.~\ref{fig:oxphos_yield}).
+We calculated yield across an ensemble of 1000 flux balance solutions by varying the oxygen uptake rate with transcription and translation parameters.
 Oxidative phosphorylation had a strong effect on the carbon yield, both with and without amino acid supplementation.
 In the presence of amino acid supplementation, the carbon yield ranged from 20\% to approximately 60\%, depending on the oxidative phosphorylation flux.
 However, without amino acid supplementation, the carbon yield dropped to approximately 10\%, and reached a maximum of 50\%.
@@ -774,7 +775,7 @@ Mean flux across the ensemble (N = 100), normalized to glucose uptake flux. Thic
 
 \begin{figure}[t!]
 \includegraphics[width=0.7\textwidth]{./figs/Fig-4-OxyPhox-versus-Carbon-Yield.pdf}
-\caption{Optimal CAT carbon yield versus oxidative phosphorylation flux calculated across an ensemble (N = 1000) flux balance solutions (points).
+\caption{Optimal CAT carbon yield versus oxidative phosphorylation flux calculated across an ensemble (N = 1000) flux balance solutions (points) by varying the oxygen uptake rate with transcription and translation parameters.
 Carbon yield versus oxidative phosphorylation flux for amino acid supplementation and \textit{de~novo} synthesis (black),
 amino acid supplementation without \textit{de~novo} synthesis (dark grey),
 and \textit{de~novo} amino acid synthesis without supplementation (light gray).}
