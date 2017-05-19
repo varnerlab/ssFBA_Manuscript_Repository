@@ -365,7 +365,7 @@ In this case, ATP was produced by a combination of substrate level and oxidative
 These first two cases where amino acids were available had similar performance, and their respective metabolic flux distributions had a 99\% correlation for all proteins.
 In the absence of amino acid supplementation (where all amino acids were synthesized \textit{de~novo} from glucose), the energy efficiency and carbon yield decreased; in this case, the TCA cycle was largely complete and there was diversion of metabolic flux into the Entner-Doudoroff pathway to produce NADPH (Fig.~\ref{fig:flux}C).
 However, these simulations represent the theoretical optimum.
-To more accurately describe actual metabolic flux, we constrained the feasible solution space with experimental measurements and estimated the optimal CAT flux distribution.
+To more accurately describe the metabolic flux, we constrained the feasible solution space with experimental measurements and estimated the optimal CAT flux distribution.
 
 The experimentally constrained optimal flux distribution had a 52\% correlation with the theoretically optimal flux distribution (Fig. \ref{fig:flux_exp}).
 Metabolic fluxes were constrained by experimental measurements of glucose, amino and organic acid consumption and production rates for the first hour of the reaction (Supporting Information) and showed good agreement with the data with a coefficient of determination of R\textsuperscript{2}~=~0.92 (Fig.~\ref{fig:flux_exp}B).
@@ -377,16 +377,20 @@ In contrast, the optimal solutions with amino acid supplementation had low activ
 Folate, purine, and pyrimidine metabolism, along with amino acid biosynthesis, were inactive in the optimal system, but active in the experimental system.
 In particular, the experimental system had high alanine and glutamine biosynthetic flux (both accumulated in the media), while there was no accumulation of amino acids in the optimal simulations.
 Even though all amino acids were supplied in the reaction, glucose traveled through the major pathways and was utilized for amino acid biosynthesis.
-Thus, it is unclear which substrate (glucose or amino acids) was used to power CFPS, and it may in fact be a combination of both.
-The optimum solutions only produced the required amount of amino acids necessary; meanwhile, in the experimental system there was an accumulation of alanine, glutamine, pyruvate, lactate, acetate, malate, and succinate which contributed to some of the differences in the flux distributions. % and may have contributed to the inefficiency of carbon utilization.
+Thus, it is unclear which substrate (glucose or amino acids) was used to power CFPS, and may likely be a combination of both.
+Lastly, the optimal solution produced (or consumed) only the required amount of amino acids;
+meanwhile,  alanine, glutamine, pyruvate, lactate, acetate, malate, and succinate all accumulated in the experimental system.
+This accumulation contributed to the difference in flux distribution.
+
+% the experimental system there was an accumulation of  which contributed to some of the differences in the flux distributions. % and may have contributed to the inefficiency of carbon utilization.
 
 \subsubsection{Potential alternative metabolic optima}
 Optimal flux distributions predicted using constraint based approaches may not always be unique.
 Alternative optimal solutions have the same objective value, e.g., productivity, but different metabolic flux distributions.
-Several techniques such as flux variability analysis (FVA) \cite{Mahadevan2003264,Schuetz:2007aa} or mixed-integer approaches \cite{LEE2000711} can estimate alternative optima.
+Techniques such as flux variability analysis (FVA) \cite{Mahadevan2003264,Schuetz:2007aa} or mixed-integer approaches \cite{LEE2000711} can estimate alternative optima.
 In this study, we used group knockout analysis to estimate potential alternative optimal solutions for CAT production constrained by experimental measurements (Fig.~\ref{fig:norm}).
-In this approach, groups of reactions were removed from the metabolic network, and the translation rate was maximized.
-The difference in the productivity and flux distribution of the nominal and altered system was then calculated.
+Groups of reactions were removed from the metabolic network, and the translation rate was maximized.
+The difference between the nominal and altered system was then calculated.
 Knockout analysis identified pathways required for CAT production; for example, deletion of the glycolysis/gluconoeogenesis or oxidative phosphorylation pathways resulted in no CAT production.
 Likewise, there were pathway knockouts that had no effect on productivity or the metabolic flux distribution, such as removal of isoleucine, leucine, histidine and valine biosynthesis.
 Globally, the constraint based simulation reached the same optimal CAT productivity for 40\% of the pairwise knockouts, while 92\% of these solutions had different flux distributions compared with the wild-type.
@@ -583,14 +587,13 @@ $\texttt{q}_{m_{i}}$ denotes the uptake flux of the $i^{th}$ reactant, and $C_{m
 
 
 \subsection*{Quantification of uncertainty.}
-Experimental factors taken from literature, for example macromolecular concentrations or elongation rates, have uncertainty associated with their values.
+Experimental factors taken from literature, for example macromolecular concentrations or elongation rates, are uncertain.
 To quantify the influence of this uncertainty on model performance, we randomly sampled the expected physiological ranges for these parameters as determined from literature.
-An ensemble of N = 100 flux distributions was calculated for the three different cases we considered:
+An ensemble of flux distributions was calculated for the three different cases we considered:
 control (with amino acid synthesis and uptake), amino acid uptake without synthesis, and amino acid synthesis without uptake.
 The flux ensemble was calculated by randomly sampling the maximum glucose consumption rate within a range of 0 to 30 mM/h, (determined from experimental data)
 and randomly sampling RNA polymerase levels, ribosome levels, and elongation rates in a physiological range determined from literature.
-RNA polymerase levels were sampled between 60 and 80 nM, ribosome levels between 12 and 18 \textmu M, the RNA polymerase elongation rate between 20 and 30 nt/sec, and the ribosome elongation rate between 1.5 and 3 aa/s
-\cite{2005_underwood_biotech, Garamella:2016aa}.
+RNA polymerase levels were sampled between 60 and 80 nM, ribosome levels between 12 and 18 \textmu M, the RNA polymerase elongation rate between 20 and 30 nt/sec, and the ribosome elongation rate between 1.5 and 3 aa/s \cite{2005_underwood_biotech, Garamella:2016aa}.
 
 \subsection*{Global sensitivity analysis.}
 We conducted a global sensitivity analysis using the variance-based method of Sobol to estimate which parameters controlled the performance of the cell-free protein synthesis reaction \citep{SOBOL_METHOD}.
@@ -600,8 +603,8 @@ We used the sampling method of Saltelli \textit{et al.} \citep{Saltelli:2010} to
 where $N$ was a parameter proportional to the desired number of model evaluations and $d$ was the number of parameters in the model. In our case, $N$ = 1000 and $d$ = 7, so the total sensitivity indices were computed from 16,000 model evaluations. The variance-based sensitivity analysis was conducted using the SALib module encoded in the Python programming language \citep{SALIB}.
 
 \subsection*{Potential alternative optimal metabolic flux solutions.}
-We identified potential alternative optimal metabolic flux distributions by performing single and pairwise reaction group knockout simulations \cite{Mahadevan2003264}.
-Reaction group knockouts were simulated by setting the flux bounds for all the reactions involved in a group to zero.
+We identified potential alternative optimal flux distributions by performing single and pairwise reaction group knockout simulations.
+Reaction group knockouts were simulated by setting the flux bounds for all the reactions involved in a group to zero and then maximizing the translation rate.
 We grouped reactions in the cell-free network into 19 subgroups (available in Supporting Information).
 We computed the difference ($l^{2}$-norm) for CAT productivity in the presence and absence of pairwise reaction knockouts.
 Simultaneously, we computed the difference in the flux distribution ($l^{2}$-norm) for each pairwise reaction knockout compared to the flux distribution with no knockouts.
@@ -710,7 +713,12 @@ The following files are available free of charge.
 \begin{figure}[t!]
 \centering
 \includegraphics[width=1.00\textwidth]{./figs/Fig-1-Network-Validation-Simulations.pdf}
-\caption{Sequence specific flux balance analysis. A. Core metabolic network with glycolysis, pentose phoshate pathway, TCA cycle, Entner-Doudoroff pathway. Thick gray arrows indicate withdrawal of precursors for amino acid synthesis. B. CAT production under a T7 promoter in CFPS \textit{E.~coli} extract for 1 h under glucose consumption. Error bars denote the standard deviation of experimental measurements. C. deGFP production under a P70 promoter in TXTL 2.0 \textit{E.~coli} extract for 8 h under maltose consumption. Error bars denote a 10\% coefficient of variation. D. Predicted deGFP concentration at different plasmid concentrations versus measurements of deGFP synthesized in TXTL 2.0. 95\% CI (blue region) over the ensemble of 100 sets, mean of the ensemble (black line), and experimental measurements (dots).}
+\caption{Sequence specific flux balance analysis.
+A. Schematic of the core metabolic network describing glycolysis, pentose phosphate pathway, the TCA cycle and the Entner-Doudoroff pathway. Thick gray arrows indicate withdrawal of precursors for amino acid synthesis.
+B. CAT production under a T7 promoter in CFPS \textit{E.~coli} extract for 1 h using glucose as a carbon and energy source. Error bars denote the standard deviation of experimental measurements.
+C. deGFP production under a P70 promoter in TXTL 2.0 \textit{E.~coli} extract for 8 h using glucose as a carbon and energy source. Error bars denote a 10\% coefficient of variation.
+D. Predicted versus measured deGFP concentration as a function of plasmid concentration in TXTL 2.0.
+The blue region denotes the 95\% CI over an ensemble of N = 100 sets, the black line denotes the mean of the ensemble, and dots denote experimental measurements.}
 \label{fig:network}
 \end{figure}
 
@@ -741,12 +749,12 @@ triangles: first principle prediction and excluded from formulating trendline.}
 
 \begin{figure}[t!]
 \includegraphics[width=1.00\textwidth]{./figs/Fig-3-Sensitivity-Analysis.pdf}
-\caption{Total order sensitivity analysis of CFPS.
+\caption{Total order sensitivity analysis of the cell free production of CAT.
 A. Total order sensitivity of the optimal CAT productivity with respect to metabolic and transcription/translation parameters.
 B. Total order sensitivity of the optimal CAT energy efficiency.
 Metabolic and transcription/translation parameters were varied for amino acid supplementation and synthesis (black),
 amino acid supplementation without synthesis (dark grey) and amino acid synthesis without supplementation (light gray).
-Error bars represent a 95\% CI on the total-oder sensitivity index.}
+Error bars represent the 95\% CI of the total order sensitivity index.}
 \label{fig:SI}
 \end{figure}
 
@@ -754,11 +762,11 @@ Error bars represent a 95\% CI on the total-oder sensitivity index.}
 
 \begin{figure}[t!]
 \includegraphics[width=1.00\textwidth]{./figs/Fig-5-FluxDistribition-Optimal.pdf}
-\caption{Flux profile for glycolysis, pentose phosphate pathway, Entner-Doudoroff pathway,
-TCA cycle, and oxidative phosphorylation, for: (A) amino acid supplementation and \textit{de~novo} synthesis,
-(B) amino acid supplementation without \textit{de~novo} synthesis, and
-(C) \textit{de~novo} amino acid synthesis without supplementation.
-Mean flux across the ensemble, normalized to glucose uptake flux. Thick arrows indicate flux to or from amino acids.}
+\caption{Optimal metabolic flux distribution for CAT production.
+A. Optimal flux distribution in the presence of amino acid supplementation and \textit{de~novo} synthesis.
+B. Optimal flux distribution in the presence of amino acid supplementation without \textit{de~novo} synthesis.
+C. Optimal flux distribution with \textit{de~novo} amino acid synthesis in the absence of supplementation.
+Mean flux across the ensemble (N = 100), normalized to glucose uptake flux. Thick arrows indicate flux to or from amino acid biosynthesis pathways.}
 \label{fig:flux}
 \end{figure}
 
@@ -766,8 +774,8 @@ Mean flux across the ensemble, normalized to glucose uptake flux. Thick arrows i
 
 \begin{figure}[t!]
 \includegraphics[width=0.7\textwidth]{./figs/Fig-4-OxyPhox-versus-Carbon-Yield.pdf}
-\caption{The CAT carbon yield versus oxidative phosphorylation flux, across an ensemble of 1000 flux balance solutions,
-for amino acid supplementation and \textit{de~novo} synthesis (black),
+\caption{Optimal CAT carbon yield versus oxidative phosphorylation flux calculated across an ensemble (N = 1000) flux balance solutions (points).
+Carbon yield versus oxidative phosphorylation flux for amino acid supplementation and \textit{de~novo} synthesis (black),
 amino acid supplementation without \textit{de~novo} synthesis (dark grey),
 and \textit{de~novo} amino acid synthesis without supplementation (light gray).}
 \label{fig:oxphos_yield}
@@ -778,10 +786,11 @@ and \textit{de~novo} amino acid synthesis without supplementation (light gray).}
 
 \begin{figure}[t!]
 \includegraphics[width=1.00\textwidth]{./figs/Fig-6-FluxDistribition-Experimental.pdf}
-\caption{Constraint based simulation of CAT production for an experimentally constrained case.
-(A) Flux profile for glycolysis, pentose phosphate pathway, Entner-Doudoroff pathway, TCA cycle, and oxidative phosphorylation.
+\caption{Experimentally constraint based simulation of CAT production.
+A. Metabolic flux distribution for CAT production in the presence of experimental constraints for glucose, organic acid and amino acid consumption and production rates.
 Mean flux across the ensemble, normalized to glucose uptake flux. Thick arrows indicate flux to or from amino acids.
-(B) Central carbon metabolite measurements versus simulations over a one hour time course.}
+B. Central carbon metabolite measurements versus simulations over a 1 hour time course.
+The blue region denotes the 95\% CI over an ensemble of N = 100 sets, the black line denotes the mean of the ensemble, and dots denote experimental measurements.}
 \label{fig:flux_exp}
 \end{figure}
 
@@ -789,9 +798,9 @@ Mean flux across the ensemble, normalized to glucose uptake flux. Thick arrows i
 
 \begin{figure}[t!]
 \includegraphics[width=1.0\textwidth]{./figs/Fig-7-FluxDistribution-Analysis.pdf}
-\caption{Pairwise knockouts of reaction subgroup in the cell-free network.
-(A) Difference in the CAT productivity in the presence of reaction knockouts compared to no knockouts for the experimentally constrained case.
-(B) Difference in the optimal flux distribution in the presence of reaction knockouts compared to no knockouts in the experimentally constrained case.
+\caption{Pairwise knockouts of reaction subgroups in the cell-free network.
+A. Difference in the CAT productivity in the presence of reaction knockouts compared with no knockouts for experimentally constrained CAT production.
+B. Difference in the optimal flux distribution in the presence of reaction knockouts compared with no knockouts for experimentally constrained CAT production.
 The difference between perturbed and wild-type productivity and flux distributions was quantified by the $l^{2}$ norm, and then normalized so the maximum change was 1.0.
 Red boxes indicate potential alternative optimal flux distributions.}
 \label{fig:norm}
